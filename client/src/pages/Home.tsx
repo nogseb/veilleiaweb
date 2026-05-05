@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { veilleData } from "@/data/veille-s19";
 
-const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE"] as const;
+const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "INNOV MKT"] as const;
+
+function LogoSvg() {
+  return (
+    <svg fill="none" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
+      <rect fill="#000000" height="28" width="28" />
+      <rect fill="#ff3a52" height="4" width="12" x="4" y="4" />
+      <rect fill="#ffffff" height="2" width="20" x="4" y="12" />
+      <rect fill="#ffffff" height="2" width="14" x="4" y="18" />
+      <rect fill="#ffffff" height="2" width="8" x="4" y="22" />
+    </svg>
+  );
+}
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,13 +22,15 @@ function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#F5F4F0] border-b border-[#E5E2DC]">
         <div className="container flex items-center justify-between h-14">
-          <a href="/" className="text-sm tracking-[0.15em] uppercase text-[#0F0F10]">
-            VEILLE STRATÉGIQUE IA & WEB
+          <a href="/" className="flex items-center gap-2 text-sm tracking-[0.15em] uppercase text-[#0F0F10]">
+            <LogoSvg />
+            <span className="hidden sm:inline">VEILLE STRATÉGIQUE IA & WEB</span>
+            <span className="sm:hidden">VEILLE STRATÉGIQUE</span>
           </a>
           <nav className="hidden md:flex items-center gap-8">
             <a href="/" className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] border-b border-[#0F0F10] pb-0.5">VEILLE ACTUELLE</a>
-            <a href="#archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">ARCHIVES</a>
-            <a href="#about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">À PROPOS</a>
+            <a href="/archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">ARCHIVES</a>
+            <a href="/about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">À PROPOS</a>
           </nav>
           <button
             onClick={() => setMenuOpen(true)}
@@ -38,9 +52,9 @@ function Header() {
           <nav className="flex flex-col items-center gap-8">
             <a href="/" className="text-[#FF4757] text-3xl tracking-[0.1em] uppercase">VEILLE ACTUELLE</a>
             <div className="w-16 h-px bg-[#555]" />
-            <a href="#archives" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
+            <a href="/archives" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
             <div className="w-16 h-px bg-[#555]" />
-            <a href="#about" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
+            <a href="/about" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
           </nav>
         </div>
       )}
@@ -105,14 +119,46 @@ function StatDominante() {
   );
 }
 
+function DashboardPopover({ items, title, onClose }: { items: string[]; title: string; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        onClose();
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [onClose]);
+
+  return (
+    <div ref={ref} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 bg-white border border-[#E5E2DC] p-4 w-64 max-h-60 overflow-y-auto shadow-sm animate-in fade-in duration-150">
+      <div className="flex items-center justify-between pb-2 border-b border-[#E5E2DC] mb-2">
+        <span className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A]">{title}</span>
+        <button onClick={onClose} className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10]">X</button>
+      </div>
+      <ul className="space-y-1">
+        {items.map((item, i) => (
+          <li key={i} className="text-xs text-[#0F0F10] leading-relaxed pl-2 border-l-2 border-[#FF4757]">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Dashboard() {
+  const [openPopover, setOpenPopover] = useState<string | null>(null);
+
   const stats = [
-    { value: veilleData.domainsCount, label: "Domaines analysés" },
-    { value: veilleData.sourcesCount, label: "Sources citées" },
-    { value: veilleData.criticalCount, label: "Signaux critiques" },
-    { value: veilleData.importantCount, label: "Signaux importants" },
-    { value: veilleData.actionsCount, label: "Actions immédiates" },
-    { value: veilleData.emergingCount, label: "Tendances émergentes" },
+    { value: veilleData.domainsCount, label: "Domaines analysés", key: "domaines", items: veilleData.dashboardDetails.domaines },
+    { value: veilleData.sourcesCount, label: "Sources citées", key: "sources", items: veilleData.dashboardDetails.sources },
+    { value: veilleData.criticalCount, label: "Signaux critiques", key: "critiques", items: veilleData.dashboardDetails.critiques },
+    { value: veilleData.importantCount, label: "Signaux importants", key: "importants", items: veilleData.dashboardDetails.importants },
+    { value: veilleData.actionsCount, label: "Actions immédiates", key: "actions", items: veilleData.dashboardDetails.actions },
+    { value: veilleData.emergingCount, label: "Tendances émergentes", key: "emergents", items: veilleData.dashboardDetails.emergents },
   ];
 
   return (
@@ -122,10 +168,21 @@ function Dashboard() {
         <span className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A]">TABLEAU DE BORD</span>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-[#E5E2DC] border border-[#E5E2DC]">
-        {stats.map((stat, i) => (
-          <div key={i} className="bg-white p-6 text-center">
+        {stats.map((stat) => (
+          <div
+            key={stat.key}
+            className="relative bg-white p-6 text-center cursor-pointer hover:bg-[#FAFAF8] transition-colors duration-150"
+            onClick={() => setOpenPopover(openPopover === stat.key ? null : stat.key)}
+          >
             <div className="text-3xl text-[#FF4757] pb-1">{stat.value}</div>
             <div className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">{stat.label}</div>
+            {openPopover === stat.key && (
+              <DashboardPopover
+                items={stat.items}
+                title={stat.label}
+                onClose={() => setOpenPopover(null)}
+              />
+            )}
           </div>
         ))}
       </div>
@@ -158,7 +215,22 @@ function Badge({ type }: { type: string }) {
   return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-transparent text-[#0F0F10] border border-[#0F0F10]">À SURVEILLER</span>;
 }
 
+function NouveauBadge() {
+  return (
+    <span className="inline-block px-1.5 py-0.5 text-[9px] tracking-[0.1em] uppercase bg-[#FF4757] text-white ml-2 animate-pulse">
+      NOUVEAU
+    </span>
+  );
+}
+
+function hasChangedCriticality(domaine: typeof veilleData.domaines[0]) {
+  return domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;
+}
+
 function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines[0]; onClick: () => void }) {
+  const isNew = domaine.previousBadge === null;
+  const hasChanged = hasChangedCriticality(domaine);
+
   return (
     <div
       className="bg-white border border-[#E5E2DC] p-8 cursor-pointer hover:border-[#0F0F10] transition-colors duration-150"
@@ -168,7 +240,10 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
         <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
           {String(domaine.id).padStart(2, "0")} — {domaine.code}
         </span>
-        <Badge type={domaine.badge} />
+        <div className="flex items-center">
+          <Badge type={domaine.badge} />
+          {(isNew || hasChanged) && <NouveauBadge />}
+        </div>
       </div>
       <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] pb-3 leading-tight">
         {domaine.titre}
@@ -181,6 +256,9 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
 }
 
 function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaines[0]; onClose: () => void }) {
+  const isNew = domaine.previousBadge === null;
+  const hasChanged = hasChangedCriticality(domaine);
+
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/40" />
@@ -200,7 +278,19 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
             {String(domaine.id).padStart(2, "0")} — {domaine.code}
           </span>
           <Badge type={domaine.badge} />
+          {(isNew || hasChanged) && <NouveauBadge />}
         </div>
+
+        {hasChanged && (
+          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
+            Évolution : {domaine.previousBadge} → {domaine.badge}
+          </div>
+        )}
+        {isNew && (
+          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
+            Nouveau domaine cette semaine
+          </div>
+        )}
 
         <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] pb-4 leading-tight">
           {domaine.titre}
@@ -401,8 +491,8 @@ function Footer() {
       <div className="container flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <nav className="flex flex-wrap gap-6">
           <a href="/" className="text-xs tracking-[0.15em] uppercase text-[#F5F4F0] hover:text-[#FF4757] transition-colors duration-150">VEILLE ACTUELLE</a>
-          <a href="#archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
-          <a href="#about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
+          <a href="/archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
+          <a href="/about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
         </nav>
       </div>
     </footer>

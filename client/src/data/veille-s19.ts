@@ -2,10 +2,10 @@ export const veilleData = {
   week: 19,
   year: 2026,
   publicationDate: "5 mai 2026",
-  domainsCount: 8,
-  sourcesCount: 18,
+  domainsCount: 9,
+  sourcesCount: 20,
   criticalCount: 3,
-  importantCount: 4,
+  importantCount: 5,
   actionsCount: 6,
   emergingCount: 4,
 
@@ -22,12 +22,29 @@ export const veilleData = {
 
   syntheseExecutive: "La transition vers une recherche conversationnelle et générative (GEO) s'accélère massivement, avec 47% des requêtes Google désormais couvertes par les AI Overviews, entraînant une baisse de 38% du CTR organique classique. Côté architecture et gouvernance, l'intégration des agents IA en entreprise se structure avec de nouvelles plateformes (Google Gemini Enterprise, Microsoft Agent 365) mais encadrée par des exigences de conformité strictes (EU AI Act, deadline août 2026). Pour les équipes digitales, l'urgence est double : adapter les contenus pour exister dans les réponses générées par l'IA, et sécuriser l'utilisation des outils IA en interne.",
 
+  // Données pour les popovers du tableau de bord
+  dashboardDetails: {
+    domaines: ["Google AI", "Zero-Click / GEO", "Schema.org", "DXP / Headless", "CDP & Data", "UX / IA", "RAG / LLM", "Innovation Marketing", "Retail Media & Pub"],
+    sources: [
+      "Search Engine Journal", "blog.google", "Digital Applied", "Search Engine Land",
+      "National Law Review", "Search Engine Roundtable", "iovista", "MarTech.org",
+      "ISG / Yahoo Finance", "Oracle Blog", "Croct", "BrandLab", "arXiv",
+      "UX Matters", "Computerworld", "DLA Piper", "KNIME", "Forbes",
+      "Advertising Week", "MarTech Pulse"
+    ],
+    critiques: ["Google AI : Nouvelle vague d'utilisateurs transforme la recherche", "Zero-Click : Effondrement du CTR organique classique", "RAG / LLM : Gouvernance des agents IA et EU AI Act"],
+    importants: ["Schema.org : Le markup devient signal clé pour les LLM", "DXP / Headless : L'IA force la refonte des stacks MarTech", "CDP & Data : L'urgence de la résolution d'identité first-party", "UX / IA : Le design système remplace le design d'écran", "Retail Media : Explosion des investissements publicitaires"],
+    actions: ["Auditer la visibilité GEO", "Alléger le code source sous 2 Mo", "Déployer Schema.org exhaustif", "Cartographier les usages IA internes", "Préparer la résolution d'identité first-party", "Adapter la stratégie de contenu"],
+    emergents: ["UI Générative et adaptative", "Agents IA autonomes en entreprise", "Clean Rooms Data", "Marketing conversationnel omnicanal"],
+  },
+
   domaines: [
     {
       id: 1,
       code: "GOOGLE AI",
       titre: "NOUVELLE VAGUE D'UTILISATEURS TRANSFORME LA RECHERCHE",
       badge: "CRITIQUE",
+      previousBadge: "CRITIQUE",
       description: "Google confirme que les requêtes deviennent plus longues et complexes. Les utilisateurs découvrent la capacité du moteur à traiter des prompts. Les fan-out queries maintiennent le search classique en arrière-plan.",
       category: "GOOGLE",
       sources: [
@@ -46,6 +63,7 @@ export const veilleData = {
       code: "ZERO-CLICK",
       titre: "EFFONDREMENT DU CTR ORGANIQUE CLASSIQUE",
       badge: "CRITIQUE",
+      previousBadge: "CRITIQUE",
       description: "Les AI Overviews couvrent 47% des requêtes (vs 31% au Q1). CTR organique passe de 0.61 à 0.38 par recherche (-38%). Le GEO remplace le SEO traditionnel comme enjeu de direction générale.",
       category: "SEO",
       sources: [
@@ -65,6 +83,7 @@ export const veilleData = {
       code: "SCHEMA.ORG",
       titre: "LE MARKUP DEVIENT SIGNAL CLÉ POUR LES LLM",
       badge: "IMPORTANT",
+      previousBadge: "À SURVEILLER",
       description: "Les données structurées évoluent pour devenir le langage de base compris par les modèles d'IA générative. Google impose une limite de 2 Mo à Googlebot.",
       category: "SEO",
       sources: [
@@ -83,6 +102,7 @@ export const veilleData = {
       code: "DXP / HEADLESS",
       titre: "L'IA FORCE LA REFONTE DES STACKS MARTECH",
       badge: "IMPORTANT",
+      previousBadge: "IMPORTANT",
       description: "La croissance plate du secteur masque un pivot profond : l'IA au centre de la création de valeur. Migration vers des plateformes CXP unifiées et composables.",
       category: "ARCHI",
       sources: [
@@ -101,6 +121,7 @@ export const veilleData = {
       code: "CDP & DATA",
       titre: "L'URGENCE DE LA RÉSOLUTION D'IDENTITÉ FIRST-PARTY",
       badge: "IMPORTANT",
+      previousBadge: "IMPORTANT",
       description: "L'approche de la fin des cookies tiers impose clean rooms et résolution d'identité durable côté serveur. CDP et Data Warehouse doivent fonctionner de concert.",
       category: "CDP",
       sources: [
@@ -119,6 +140,7 @@ export const veilleData = {
       code: "UX / IA",
       titre: "LE DESIGN SYSTÈME REMPLACE LE DESIGN D'ÉCRAN",
       badge: "IMPORTANT",
+      previousBadge: "IMPORTANT",
       description: "L'UI générative modifie le rôle des designers : concevoir des systèmes d'orchestration capables de générer des interfaces en temps réel selon le contexte.",
       category: "UX",
       sources: [
@@ -138,6 +160,7 @@ export const veilleData = {
       code: "RAG / LLM",
       titre: "GOUVERNANCE DES AGENTS IA ET EU AI ACT",
       badge: "CRITIQUE",
+      previousBadge: "IMPORTANT",
       description: "Microsoft (Agent 365) et Google (Gemini Enterprise) lancent des outils de gouvernance. EU AI Act : amendes jusqu'à 35M€ ou 7% du CA mondial dès août 2026.",
       category: "IA",
       sources: [
@@ -159,8 +182,9 @@ export const veilleData = {
       code: "INNOVATION MKT",
       titre: "L'ÈRE DU MARKETING CONVERSATIONNEL CONTINU",
       badge: "À SURVEILLER",
+      previousBadge: "À SURVEILLER",
       description: "Fin du marketing blast. Conversations personnalisées continues via email, SMS, WhatsApp. Retail Media atteint 197 Md$ en 2026 (16% des dépenses pub mondiales).",
-      category: "IA",
+      category: "INNOV MKT",
       sources: [
         { nom: "Forbes", url: "https://www.forbes.com/sites/rogerdooley/2026/05/01/kitkats-faraday-wrapper-shows-how-smart-packaging-should-work/" },
         { nom: "Advertising Week", url: "https://advertisingweek.com/retail-media-needs-dooh-connectivity/" },
@@ -172,6 +196,26 @@ export const veilleData = {
         "Fin du marketing blast : les marques passent aux conversations continues pilotées par l'IA",
         "Google Marketing Live 2026 (20 mai) : nouveaux outils de mesure pour l'ère IA",
         "Social video dépasse CTV en dépenses totales, portée par la personnalisation IA",
+      ],
+    },
+    {
+      id: 9,
+      code: "RETAIL MEDIA",
+      titre: "EXPLOSION DES INVESTISSEMENTS PUBLICITAIRES RETAIL",
+      badge: "IMPORTANT",
+      previousBadge: null,
+      description: "Le Retail Media devient le 3e canal publicitaire mondial avec 197 Md$ en 2026. La connexion DOOH et la mesure cross-canal restent les défis majeurs pour les annonceurs.",
+      category: "INNOV MKT",
+      sources: [
+        { nom: "Advertising Week", url: "https://advertisingweek.com/retail-media-needs-dooh-connectivity/" },
+        { nom: "eMarketer", url: "https://www.emarketer.com/content/retail-media-ad-spending-2026" },
+      ],
+      details: [
+        "Retail Media : 197 Md$ en 2026, soit 16% des dépenses publicitaires mondiales (vs 11% en 2023)",
+        "Amazon Ads, Walmart Connect et Instacart dominent le marché US",
+        "Le DOOH (Digital Out-of-Home) manque de connectivité avec les réseaux retail media",
+        "La mesure d'attribution cross-canal reste le principal frein à l'adoption",
+        "Les retailers européens (Carrefour Links, Criteo) accélèrent leurs offres",
       ],
     },
   ],
@@ -259,3 +303,4 @@ export const veilleData = {
 };
 
 export type VeilleData = typeof veilleData;
+export type Domaine = typeof veilleData.domaines[0];
