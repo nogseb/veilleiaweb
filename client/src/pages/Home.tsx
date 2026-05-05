@@ -1,66 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { veilleData } from "@/data/veille-s19";
+import { Header, Footer } from "@/components/Layout";
 
 const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "INNOV MKT"] as const;
-
-function LogoSvg() {
-  return (
-    <svg fill="none" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
-      <rect fill="#000000" height="28" width="28" />
-      <rect fill="#ff3a52" height="4" width="12" x="4" y="4" />
-      <rect fill="#ffffff" height="2" width="20" x="4" y="12" />
-      <rect fill="#ffffff" height="2" width="14" x="4" y="18" />
-      <rect fill="#ffffff" height="2" width="8" x="4" y="22" />
-    </svg>
-  );
-}
-
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#F5F4F0] border-b border-[#E5E2DC]">
-        <div className="container flex items-center justify-between h-14">
-          <a href="/" className="flex items-center gap-2 text-sm tracking-[0.15em] uppercase text-[#0F0F10]">
-            <LogoSvg />
-            <span className="hidden sm:inline">VEILLE STRATÉGIQUE IA & WEB</span>
-            <span className="sm:hidden">VEILLE STRATÉGIQUE</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] border-b border-[#0F0F10] pb-0.5">VEILLE ACTUELLE</a>
-            <a href="/archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">ARCHIVES</a>
-            <a href="/about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150">À PROPOS</a>
-          </nav>
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] md:hidden"
-          >
-            MENU
-          </button>
-        </div>
-      </header>
-
-      {menuOpen && (
-        <div className="fixed inset-0 z-[100] bg-[#2C2E33] flex flex-col items-center justify-center transition-opacity duration-200">
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-5 right-6 text-white text-sm tracking-[0.15em] uppercase"
-          >
-            FERMER
-          </button>
-          <nav className="flex flex-col items-center gap-8">
-            <a href="/" className="text-[#FF4757] text-3xl tracking-[0.1em] uppercase">VEILLE ACTUELLE</a>
-            <div className="w-16 h-px bg-[#555]" />
-            <a href="/archives" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
-            <div className="w-16 h-px bg-[#555]" />
-            <a href="/about" className="text-white text-3xl tracking-[0.1em] uppercase hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
-          </nav>
-        </div>
-      )}
-    </>
-  );
-}
 
 function Metadata() {
   return (
@@ -76,7 +18,7 @@ function Metadata() {
 
 function HeroTitle() {
   return (
-    <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] uppercase text-[#0F0F10] pb-12">
+    <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] pb-12">
       VEILLE<br />
       <span className="text-[#FF4757]">STRATÉGIQUE</span><br />
       IA & WEB
@@ -92,7 +34,7 @@ function SignalMajeur() {
         <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">{veilleData.signalMajeur.label}</span>
       </div>
       <div className="border-l-4 border-[#FF4757] pl-6 py-2">
-        <p className="text-lg uppercase tracking-[0.02em] text-[#0F0F10] leading-snug">
+        <p className="text-lg uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] leading-snug">
           {veilleData.signalMajeur.title}
         </p>
       </div>
@@ -103,13 +45,13 @@ function SignalMajeur() {
 function StatDominante() {
   return (
     <section className="pb-16 flex flex-col md:flex-row items-start gap-6 md:gap-12">
-      <div className="text-[clamp(4rem,12vw,8rem)] leading-none text-[#0F0F10] tracking-tight">
+      <div className="text-[clamp(4rem,12vw,8rem)] leading-none text-[#0F0F10] dark:text-[#F5F4F0] tracking-tight">
         {veilleData.statDominante.chiffre}
       </div>
       <div className="flex-1">
         <div className="flex items-center gap-3 pb-2">
-          <div className="w-8 h-px bg-[#0F0F10]" />
-          <h3 className="text-sm tracking-[0.15em] uppercase text-[#0F0F10]">{veilleData.statDominante.titre}</h3>
+          <div className="w-8 h-px bg-[#0F0F10] dark:bg-[#F5F4F0]" />
+          <h3 className="text-sm tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">{veilleData.statDominante.titre}</h3>
         </div>
         <p className="text-sm text-[#8A8A8A] leading-relaxed max-w-xl">
           {veilleData.statDominante.description}
@@ -133,14 +75,14 @@ function DashboardPopover({ items, title, onClose }: { items: string[]; title: s
   }, [onClose]);
 
   return (
-    <div ref={ref} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 bg-white border border-[#E5E2DC] p-4 w-64 max-h-60 overflow-y-auto shadow-sm animate-in fade-in duration-150">
-      <div className="flex items-center justify-between pb-2 border-b border-[#E5E2DC] mb-2">
+    <div ref={ref} className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 bg-white dark:bg-[#2C2E33] border border-[#E5E2DC] dark:border-[#444] p-4 w-64 max-h-60 overflow-y-auto shadow-sm animate-in fade-in duration-150">
+      <div className="flex items-center justify-between pb-2 border-b border-[#E5E2DC] dark:border-[#444] mb-2">
         <span className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A]">{title}</span>
-        <button onClick={onClose} className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10]">X</button>
+        <button onClick={onClose} className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0]">X</button>
       </div>
       <ul className="space-y-1">
         {items.map((item, i) => (
-          <li key={i} className="text-xs text-[#0F0F10] leading-relaxed pl-2 border-l-2 border-[#FF4757]">
+          <li key={i} className="text-xs text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-2 border-l-2 border-[#FF4757]">
             {item}
           </li>
         ))}
@@ -167,11 +109,11 @@ function Dashboard() {
         <div className="w-12 h-px bg-[#FF4757]" />
         <span className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A]">TABLEAU DE BORD</span>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-[#E5E2DC] border border-[#E5E2DC]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-[#E5E2DC] dark:bg-[#333] border border-[#E5E2DC] dark:border-[#333]">
         {stats.map((stat) => (
           <div
             key={stat.key}
-            className="relative bg-white p-6 text-center cursor-pointer hover:bg-[#FAFAF8] transition-colors duration-150"
+            className="relative bg-white dark:bg-[#1A1A1D] p-6 text-center cursor-pointer hover:bg-[#FAFAF8] dark:hover:bg-[#222] transition-colors duration-150"
             onClick={() => setOpenPopover(openPopover === stat.key ? null : stat.key)}
           >
             <div className="text-3xl text-[#FF4757] pb-1">{stat.value}</div>
@@ -194,10 +136,10 @@ function SyntheseExecutive() {
   return (
     <section className="pb-16">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16">
-        <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase text-[#0F0F10]">
+        <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">
           SYNTHÈSE<br />EXÉCUTIVE
         </h2>
-        <p className="text-base text-[#0F0F10] leading-relaxed self-center">
+        <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed self-center">
           {veilleData.syntheseExecutive}
         </p>
       </div>
@@ -210,9 +152,9 @@ function Badge({ type }: { type: string }) {
     return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#FF4757] text-white">CRITIQUE</span>;
   }
   if (type === "IMPORTANT") {
-    return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#0F0F10] text-white">IMPORTANT</span>;
+    return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#0F0F10] text-white dark:bg-[#F5F4F0] dark:text-[#0F0F10]">IMPORTANT</span>;
   }
-  return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-transparent text-[#0F0F10] border border-[#0F0F10]">À SURVEILLER</span>;
+  return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-transparent text-[#0F0F10] dark:text-[#F5F4F0] border border-[#0F0F10] dark:border-[#F5F4F0]">À SURVEILLER</span>;
 }
 
 function NouveauBadge() {
@@ -233,7 +175,7 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
 
   return (
     <div
-      className="bg-white border border-[#E5E2DC] p-8 cursor-pointer hover:border-[#0F0F10] transition-colors duration-150"
+      className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
       onClick={onClick}
     >
       <div className="flex items-start justify-between pb-4">
@@ -245,7 +187,7 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
           {(isNew || hasChanged) && <NouveauBadge />}
         </div>
       </div>
-      <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] pb-3 leading-tight">
+      <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">
         {domaine.titre}
       </h3>
       <p className="text-sm text-[#8A8A8A] leading-relaxed">
@@ -263,12 +205,12 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/40" />
       <div
-        className="relative bg-white w-full max-w-[720px] max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200"
+        className="relative bg-white dark:bg-[#1A1A1D] w-full max-w-[720px] max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] transition-colors duration-150"
+          className="absolute top-4 right-4 text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
         >
           FERMER
         </button>
@@ -292,13 +234,13 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
           </div>
         )}
 
-        <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] pb-4 leading-tight">
+        <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight">
           {domaine.titre}
         </h2>
 
-        <div className="w-full h-px bg-[#0F0F10] mb-6" />
+        <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
 
-        <p className="text-base text-[#0F0F10] leading-relaxed pb-6">
+        <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">
           {domaine.description}
         </p>
 
@@ -306,7 +248,7 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
           <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4>
           <ul className="space-y-2">
             {domaine.details.map((detail, i) => (
-              <li key={i} className="text-sm text-[#0F0F10] leading-relaxed pl-4 border-l-2 border-[#E5E2DC]">
+              <li key={i} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">
                 {detail}
               </li>
             ))}
@@ -357,8 +299,8 @@ function AnalyseParDomaine() {
             onClick={() => setActiveFilter(cat)}
             className={`px-4 py-2 text-xs tracking-[0.15em] uppercase transition-colors duration-150 ${
               activeFilter === cat
-                ? "bg-[#0F0F10] text-white"
-                : "bg-transparent text-[#0F0F10] border border-[#E5E2DC] hover:border-[#0F0F10]"
+                ? "bg-[#0F0F10] text-white dark:bg-[#F5F4F0] dark:text-[#0F0F10]"
+                : "bg-transparent text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#444] hover:border-[#0F0F10] dark:hover:border-[#888]"
             }`}
           >
             {cat}
@@ -366,7 +308,7 @@ function AnalyseParDomaine() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
         {filteredDomaines.map((domaine) => (
           <DomaineCard
             key={domaine.id}
@@ -429,7 +371,7 @@ function SignauxEmergents() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-16 pb-10">
-        <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase text-[#0F0F10]">
+        <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">
           SIGNAUX<br />ÉMERGENTS
         </h2>
         <p className="text-sm text-[#8A8A8A] leading-relaxed self-center">
@@ -439,9 +381,9 @@ function SignauxEmergents() {
 
       <div className="space-y-0">
         {veilleData.signauxEmergents.map((signal, i) => (
-          <div key={i} className="flex items-start justify-between py-5 border-t border-[#E5E2DC]">
+          <div key={i} className="flex items-start justify-between py-5 border-t border-[#E5E2DC] dark:border-[#333]">
             <div className="flex-1">
-              <h4 className="text-base uppercase tracking-[0.02em] text-[#0F0F10] pb-1">{signal.titre}</h4>
+              <h4 className="text-base uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-1">{signal.titre}</h4>
               <p className="text-sm text-[#8A8A8A]">{signal.description}</p>
             </div>
             <span className="text-xs tracking-[0.1em] uppercase text-[#FF4757] ml-4 whitespace-nowrap">{signal.horizon}</span>
@@ -485,24 +427,10 @@ function TendancesPassees() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="bg-[#0F0F10] text-[#F5F4F0] py-12 border-t border-[#333]">
-      <div className="container flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <nav className="flex flex-wrap gap-6">
-          <a href="/" className="text-xs tracking-[0.15em] uppercase text-[#F5F4F0] hover:text-[#FF4757] transition-colors duration-150">VEILLE ACTUELLE</a>
-          <a href="/archives" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">ARCHIVES</a>
-          <a href="/about" className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#FF4757] transition-colors duration-150">À PROPOS</a>
-        </nav>
-      </div>
-    </footer>
-  );
-}
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F4F0] overflow-x-hidden">
-      <Header />
+    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
+      <Header activePage="home" />
       <div className="container">
         <Metadata />
         <HeroTitle />

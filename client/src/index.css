@@ -53,6 +53,28 @@
   --ring: oklch(0.62 0.22 18);
 }
 
+.dark {
+  --background: oklch(0.13 0.01 0);
+  --foreground: oklch(0.96 0.005 80);
+  --card: oklch(0.18 0.008 0);
+  --card-foreground: oklch(0.96 0.005 80);
+  --popover: oklch(0.18 0.008 0);
+  --popover-foreground: oklch(0.96 0.005 80);
+  --primary: oklch(0.62 0.22 18);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.22 0.008 0);
+  --secondary-foreground: oklch(0.96 0.005 80);
+  --muted: oklch(0.5 0.01 0);
+  --muted-foreground: oklch(0.5 0.01 0);
+  --accent: oklch(0.22 0.008 0);
+  --accent-foreground: oklch(0.96 0.005 80);
+  --destructive: oklch(0.62 0.22 18);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.3 0.005 0);
+  --input: oklch(0.3 0.005 0);
+  --ring: oklch(0.62 0.22 18);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -63,6 +85,17 @@
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  /* Masquer le badge Made with Manus */
+  #manus-runtime-badge,
+  [data-manus-badge],
+  div[style*="Made with Manus"],
+  a[href*="manus.im"][style],
+  .manus-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }
 
