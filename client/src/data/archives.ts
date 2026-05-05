@@ -1,4 +1,5 @@
 import { veilleData } from "./veille-s19";
+import { s16, s15, s14, s13, s12, s11, s10 } from "./archives-history";
 
 export interface ArchiveEdition {
   week: number;
@@ -147,7 +148,7 @@ const s17: ArchiveEdition = {
 };
 
 // Liste complète des archives (triées par semaine décroissante)
-export const allArchives: ArchiveEdition[] = [s19, s18, s17];
+export const allArchives: ArchiveEdition[] = [s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 
 // Fonction utilitaire pour récupérer une édition par numéro de semaine
 export function getEditionByWeek(week: number): ArchiveEdition | undefined {
