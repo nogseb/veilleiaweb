@@ -47,7 +47,7 @@ function ThemeToggle() {
 }
 
 interface HeaderProps {
-  activePage?: "home" | "archives" | "about";
+  activePage?: "home" | "archives" | "about" | "timeline";
 }
 
 export function Header({ activePage = "home" }: HeaderProps) {
@@ -70,6 +70,7 @@ export function Header({ activePage = "home" }: HeaderProps) {
           <nav className="hidden md:flex items-center gap-8">
             <a href="/" className={navLinkClass("home")}>VEILLE ACTUELLE</a>
             <a href="/archives" className={navLinkClass("archives")}>ARCHIVES</a>
+            <a href="/timeline" className={navLinkClass("timeline")}>TIMELINE</a>
             <a href="/about" className={navLinkClass("about")}>À PROPOS</a>
             <ThemeToggle />
           </nav>
@@ -97,6 +98,8 @@ export function Header({ activePage = "home" }: HeaderProps) {
             <a href="/" className={`text-3xl tracking-[0.1em] uppercase ${activePage === "home" ? "text-[#FF4757]" : "text-white hover:text-[#FF4757]"} transition-colors duration-150`}>VEILLE ACTUELLE</a>
             <div className="w-16 h-px bg-[#555]" />
             <a href="/archives" className={`text-3xl tracking-[0.1em] uppercase ${activePage === "archives" ? "text-[#FF4757]" : "text-white hover:text-[#FF4757]"} transition-colors duration-150`}>ARCHIVES</a>
+            <div className="w-16 h-px bg-[#555]" />
+            <a href="/timeline" className={`text-3xl tracking-[0.1em] uppercase ${activePage === "timeline" ? "text-[#FF4757]" : "text-white hover:text-[#FF4757]"} transition-colors duration-150`}>TIMELINE</a>
             <div className="w-16 h-px bg-[#555]" />
             <a href="/about" className={`text-3xl tracking-[0.1em] uppercase ${activePage === "about" ? "text-[#FF4757]" : "text-white hover:text-[#FF4757]"} transition-colors duration-150`}>À PROPOS</a>
           </nav>

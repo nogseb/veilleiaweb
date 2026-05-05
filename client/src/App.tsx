@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Archives from "./pages/Archives";
 import About from "./pages/About";
 import WeekDetail from "./pages/WeekDetail";
+import Timeline from "./pages/Timeline";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/archives"} component={Archives} />
       <Route path={"/semaine/:week"} component={WeekDetail} />
+      <Route path={"/timeline"} component={Timeline} />
       <Route path={"/about"} component={About} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
