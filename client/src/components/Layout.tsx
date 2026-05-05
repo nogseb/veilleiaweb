@@ -21,7 +21,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="flex items-center gap-1.5 px-2 py-1 text-[10px] tracking-[0.15em] uppercase border border-[#E5E2DC] dark:border-[#444] hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
+      className="flex items-center justify-center w-8 h-8 border border-[#E5E2DC] dark:border-[#444] hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
       title={theme === "light" ? "Mode sombre" : "Mode clair"}
     >
       {theme === "light" ? (
@@ -41,7 +41,7 @@ function ThemeToggle() {
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
       )}
-      <span className="hidden sm:inline">{theme === "light" ? "SOMBRE" : "CLAIR"}</span>
+
     </button>
   );
 }
