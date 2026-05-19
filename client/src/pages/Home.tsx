@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import { veilleData } from "@/data/veille-s19";
+import { veilleData } from "@/data/veille-s21";
 import { Header, Footer } from "@/components/Layout";
 
-const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "INNOV MKT"] as const;
+const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "INNOV MKT"] as const;
 
 function Metadata() {
   return (

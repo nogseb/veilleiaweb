@@ -1,4 +1,4 @@
-import { archivesSummary, allArchives } from "@/data/archives";
+import { archives as allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 
 export default function Archives() {
@@ -22,7 +22,7 @@ export default function Archives() {
         </p>
 
         <div className="space-y-0">
-          {archivesSummary.map((archive) => {
+          {allArchives.map((archive) => {
             const isCurrent = archive.week === latestWeek;
             const href = isCurrent ? "/" : `/semaine/${archive.week}`;
 
@@ -51,9 +51,9 @@ export default function Archives() {
                 </div>
 
                 <div className="flex items-center gap-4 text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">
-                  <span>{archive.domaines} dom.</span>
-                  <span>{archive.sources} src.</span>
-                  <span className="text-[#FF4757]">{archive.critiques} crit.</span>
+                  <span>{archive.domainsCount} dom.</span>
+                  <span>{archive.sourcesCount} src.</span>
+                  <span className="text-[#FF4757]">{archive.criticalCount} crit.</span>
                   {isCurrent && (
                     <span className="px-2 py-0.5 text-[10px] bg-[#FF4757] text-white">ACTUELLE</span>
                   )}
@@ -65,7 +65,7 @@ export default function Archives() {
 
         <div className="flex items-center justify-between pt-12 border-t border-[#E5E2DC] dark:border-[#333] mt-8">
           <span className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A]">
-            {archivesSummary.length} éditions disponibles
+            {allArchives.length} éditions disponibles
           </span>
         </div>
       </div>
