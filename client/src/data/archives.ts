@@ -16,7 +16,7 @@ export interface ArchiveEdition {
   emergingCount: number;
   syntheseExecutive: string;
   statDominante: { chiffre: string; titre: string; description: string };
-  domaines: Array<Omit<typeof veilleData.domaines[0], 'previousBadge'> & { previousBadge: string | null }>;
+  domaines: Array<Omit<typeof veilleData.domaines[0], 'previousBadge' | 'longDescription'> & { previousBadge: string | null; longDescription?: string }>;
   actions: typeof veilleData.actions;
   signauxEmergents: typeof veilleData.signauxEmergents;
   tendancesPassees: typeof veilleData.tendancesPassees;

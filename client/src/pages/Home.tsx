@@ -198,80 +198,141 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
 }
 
 function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaines[0]; onClose: () => void }) {
+  const [isFlipped, setIsFlipped] = useState(false);
   const isNew = domaine.previousBadge === null;
   const hasChanged = hasChangedCriticality(domaine);
+  const hasLongDescription = Boolean(domaine.longDescription);
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/40" />
       <div
-        className="relative bg-white dark:bg-[#1A1A1D] w-full max-w-[720px] max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200"
+        className="relative w-full max-w-[720px]"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
-        >
-          FERMER
-        </button>
-
-        <div className="flex items-center gap-3 pb-3">
-          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
-            {String(domaine.id).padStart(2, "0")} — {domaine.code}
-          </span>
-          <Badge type={domaine.badge} />
-          {(isNew || hasChanged) && <NouveauBadge />}
-        </div>
-
-        {hasChanged && (
-          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
-            Évolution : {domaine.previousBadge} → {domaine.badge}
-          </div>
-        )}
-        {isNew && (
-          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
-            Nouveau domaine cette semaine
-          </div>
-        )}
-
-        <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight">
-          {domaine.titre}
-        </h2>
-
-        <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
-
-        <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">
-          {domaine.description}
-        </p>
-
-        <div className="pb-6">
-          <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4>
-          <ul className="space-y-2">
-            {domaine.details.map((detail, i) => (
-              <li key={i} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">
-                {detail}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">SOURCES</h4>
-          <ul className="space-y-1">
-            {domaine.sources.map((source, i) => (
-              <li key={i}>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#FF4757] underline hover:no-underline"
+        {!isFlipped ? (
+          /* FACE AVANT */
+          <div className="relative bg-white dark:bg-[#1A1A1D] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4">
+              {hasLongDescription && (
+                <button
+                  onClick={() => setIsFlipped(true)}
+                  title="Voir l'analyse complète"
+                  className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150 flex items-center gap-1.5"
                 >
-                  {source.nom} →
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+                  ANALYSE
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                </button>
+              )}
+              <button
+                onClick={onClose}
+                title="Fermer la modale"
+                className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
+              >
+                FERMER
+              </button>
+            </div>
+
+            <div className="flex items-center gap-3 pb-3">
+              <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
+                {String(domaine.id).padStart(2, "0")} — {domaine.code}
+              </span>
+              <Badge type={domaine.badge} />
+              {(isNew || hasChanged) && <NouveauBadge />}
+            </div>
+
+            {hasChanged && (
+              <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
+                Évolution : {domaine.previousBadge} → {domaine.badge}
+              </div>
+            )}
+            {isNew && (
+              <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
+                Nouveau domaine cette semaine
+              </div>
+            )}
+
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight pr-32">
+              {domaine.titre}
+            </h2>
+
+            <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
+
+            <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">
+              {domaine.description}
+            </p>
+
+            <div className="pb-6">
+              <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4>
+              <ul className="space-y-2">
+                {domaine.details.map((detail, i) => (
+                  <li key={i} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">SOURCES</h4>
+              <ul className="space-y-1">
+                {domaine.sources.map((source, i) => (
+                  <li key={i}>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#FF4757] underline hover:no-underline"
+                    >
+                      {source.nom} →
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : (
+          /* FACE ARRIÈRE */
+          <div className="relative bg-[#0F0F10] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4">
+              <button
+                onClick={() => setIsFlipped(false)}
+                title="Retour à la synthèse"
+                className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#F5F4F0] transition-colors duration-150 flex items-center gap-1.5"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                RETOUR
+              </button>
+              <button
+                onClick={onClose}
+                title="Fermer la modale"
+                className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#F5F4F0] transition-colors duration-150"
+              >
+                FERMER
+              </button>
+            </div>
+
+            <div className="flex items-center gap-3 pb-3">
+              <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
+                {String(domaine.id).padStart(2, "0")} — {domaine.code}
+              </span>
+              <Badge type={domaine.badge} />
+            </div>
+
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#F5F4F0] pb-4 leading-tight pr-32">
+              {domaine.titre}
+            </h2>
+
+            <div className="flex items-center gap-3 pb-6">
+              <div className="w-8 h-px bg-[#FF4757]" />
+              <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">ANALYSE COMPLÈTE</span>
+            </div>
+
+            <p className="text-base text-[#E5E2DC] leading-relaxed">
+              {domaine.longDescription}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
