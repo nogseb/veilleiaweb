@@ -1,4 +1,5 @@
-import { veilleData } from "./veille-s26";
+import { veilleData } from "./veille-s27";
+import { veilleData as s26Data } from "./veille-s26";
 import { veilleData as s25Data } from "./veille-s25";
 import { veilleData as s24Data } from "./veille-s24";
 import { veilleData as s23Data } from "./veille-s23";
@@ -25,8 +26,8 @@ export interface ArchiveEdition {
   dashboardDetails: typeof veilleData.dashboardDetails;
 }
 
-// Semaine 26 — édition actuelle (données complètes depuis veille-s26.ts)
-const s26: ArchiveEdition = {
+// Semaine 27 — édition actuelle (données complètes depuis veille-s27.ts)
+const s27: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -44,6 +45,27 @@ const s26: ArchiveEdition = {
   signauxEmergents: veilleData.signauxEmergents,
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
+};
+
+// Semaine 26
+const s26: ArchiveEdition = {
+  week: s26Data.week,
+  year: s26Data.year,
+  date: s26Data.publicationDate,
+  signalMajeur: s26Data.signalMajeur.title,
+  domainsCount: s26Data.domainsCount,
+  sourcesCount: s26Data.sourcesCount,
+  criticalCount: s26Data.criticalCount,
+  importantCount: s26Data.importantCount,
+  actionsCount: s26Data.actionsCount,
+  emergingCount: s26Data.emergingCount,
+  syntheseExecutive: s26Data.syntheseExecutive,
+  statDominante: s26Data.statDominante,
+  domaines: s26Data.domaines,
+  actions: s26Data.actions,
+  signauxEmergents: s26Data.signauxEmergents,
+  tendancesPassees: s26Data.tendancesPassees,
+  dashboardDetails: s26Data.dashboardDetails,
 };
 
 // Semaine 25
@@ -346,10 +368,10 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 
 // Export de l'édition courante
-export const currentEdition = s26;
+export const currentEdition = s27;
 
 // Alias pour compatibilité
 export const allArchives = archives;
