@@ -1,4 +1,5 @@
-import { veilleData } from "./veille-s30";
+import { veilleS31 as veilleData } from "./veille-s31";
+import { veilleData as s30Data } from "./veille-s30";
 import { veilleData as s29Data } from "./veille-s29";
 import { veilleData as s28Data } from "./veille-s28";
 import { veilleData as s27Data } from "./veille-s27";
@@ -29,8 +30,8 @@ export interface ArchiveEdition {
   dashboardDetails: typeof veilleData.dashboardDetails;
 }
 
-// Semaine 30 — édition actuelle (données complètes depuis veille-s30.ts)
-const s30: ArchiveEdition = {
+// Semaine 31 — édition actuelle (données complètes depuis veille-s31.ts)
+const s31: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -48,6 +49,27 @@ const s30: ArchiveEdition = {
   signauxEmergents: veilleData.signauxEmergents,
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
+};
+
+// Semaine 30
+const s30: ArchiveEdition = {
+  week: s30Data.week,
+  year: s30Data.year,
+  date: s30Data.publicationDate,
+  signalMajeur: s30Data.signalMajeur.title,
+  domainsCount: s30Data.domainsCount,
+  sourcesCount: s30Data.sourcesCount,
+  criticalCount: s30Data.criticalCount,
+  importantCount: s30Data.importantCount,
+  actionsCount: s30Data.actionsCount,
+  emergingCount: s30Data.emergingCount,
+  syntheseExecutive: s30Data.syntheseExecutive,
+  statDominante: s30Data.statDominante,
+  domaines: s30Data.domaines,
+  actions: s30Data.actions,
+  signauxEmergents: s30Data.signauxEmergents,
+  tendancesPassees: s30Data.tendancesPassees,
+  dashboardDetails: s30Data.dashboardDetails,
 };
 
 // Semaine 29
@@ -434,10 +456,10 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 
 // Export de l'édition courante
-export const currentEdition = s30;
+export const currentEdition = s31;
 
 // Alias pour compatibilité
 export const allArchives = archives;
