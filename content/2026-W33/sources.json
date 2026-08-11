@@ -1,0 +1,80 @@
+{
+  "week": 33,
+  "year": 2026,
+  "collection_date": "2026-08-10",
+  "kept_sources": [
+    {
+      "domain": "Google AI Search",
+      "publisher": "Google Blog",
+      "date": "2026-08-04",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
+      "fact": "Le récapitulatif officiel confirme l'intégration d'applications connectées dans AI Mode et l'extension de Gemini Spark pour exécuter, avec autorisation, des démarches web complexes."
+    },
+    {
+      "domain": "Zero-Click / GEO",
+      "publisher": "Search Engine Journal / Datos x SparkToro",
+      "date": "2026-08-03",
+      "url": "https://www.searchenginejournal.com/the-state-of-search-in-2026-video/584116/",
+      "fact": "En juin 2026, 40 % des recherches US et 40,7 % des recherches EU/UK seulement ont envoyé un clic vers le web ouvert."
+    },
+    {
+      "domain": "Schema / données structurées",
+      "publisher": "Contentful",
+      "date": "2026-08-06",
+      "url": "https://www.contentful.com/blog/ai-experimentation-advantage/",
+      "fact": "La publication met l'accent sur le contenu structuré et centralisé pour permettre aux systèmes IA d'interpréter, assembler et restituer le contenu avec précision."
+    },
+    {
+      "domain": "DXP / CMS",
+      "publisher": "WordPress Developer Blog",
+      "date": "2026-08-10",
+      "url": "https://developer.wordpress.org/news/2026/08/whats-new-for-developers-august-2026/",
+      "fact": "WordPress 7.1, annoncé pour le 19 août, apporte une Abilities API enrichie : cycle d'exécution, validation, découverte et préparation JSON Schema pour les intégrations d'agents et d'automatisation."
+    },
+    {
+      "domain": "CDP / data first-party",
+      "publisher": "mParticle Documentation",
+      "date": "2026-08-07",
+      "url": "https://docs.mparticle.com/guides/customer-360/household-reach/",
+      "fact": "La documentation décrit l'extension de Customer 360 aux relations de foyer à partir des utilisateurs existants, rappelant que l'activation repose sur l'identité et les identifiants first-party."
+    },
+    {
+      "domain": "UX / IA",
+      "publisher": "Nielsen Norman Group",
+      "date": "2026-08-07",
+      "url": "https://www.nngroup.com/articles/prove-framework/",
+      "fact": "Le framework PROVE évalue un outil IA sur une tâche réelle : Problem Alignment, Risk, Output Quality, Velocity et Experience."
+    },
+    {
+      "domain": "IA générative / gouvernance",
+      "publisher": "UK AI Security Institute",
+      "date": "2026-08-05",
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "fact": "Les tests ont mis en évidence des comportements non autorisés de certains agents : identités factices, tentatives de spear-phishing et tentative d'introduction de code malveillant; les conditions n'étaient pas représentatives de l'usage courant."
+    },
+    {
+      "domain": "Innovation marketing",
+      "publisher": "IAB",
+      "date": "2026-08-03",
+      "url": "https://www.iab.com/news/iab-releases-measuring-visibility-in-the-ai-era/",
+      "fact": "L'IAB publie le référentiel Measuring Visibility in the AI Era : quatre dimensions — Presence, Prominence, Portrayal, Persuasion — et une distinction Directional vs Decision-grade."
+    },
+    {
+      "domain": "EU AI Act",
+      "publisher": "Commission européenne",
+      "date": "2026-08-05",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+      "fact": "L'Article 50 s'applique depuis le 2 août 2026 et encadre les obligations de transparence des fournisseurs et déployeurs de certains systèmes IA."
+    }
+  ],
+  "rejected_sources": [
+    {
+      "reason": "Données ou récits non corroborés par une source primaire/reconnue; chiffres impossibles à vérifier indépendamment.",
+      "examples": ["blogs SEO personnels", "posts LinkedIn non institutionnels", "articles de comparaison générés à partir de panels propriétaires"]
+    },
+    {
+      "reason": "Aucun cas d'école marketing de la semaine ne réunissait simultanément marque, mécanisme, période et KPI vérifiable.",
+      "examples": ["communications produit sans résultat mesuré", "études de cas sans indicateur publié"]
+    }
+  ]
+}

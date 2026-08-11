@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { veilleS32 as veilleData } from "../data/veille-s32";
+import { veilleS33 as veilleData } from "../data/veille-s33";
 import { Header, Footer } from "@/components/Layout";
 
 const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "INNOV MKT"] as const;
