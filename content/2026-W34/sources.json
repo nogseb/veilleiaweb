@@ -1,0 +1,78 @@
+{
+  "week": 34,
+  "year": 2026,
+  "publication_date": "2026-08-17",
+  "domains_covered": 5,
+  "kept_sources": [
+    {
+      "domain": "Google AI Search",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-08-11",
+      "url": "https://www.seroundtable.com/google-search-console-ai-report-live-41850.html",
+      "verified_fact": "Le rapport Search Console sur les fonctions génératives est étendu à davantage de propriétés. Il expose les impressions, pages, pays, appareils et dates, mais pas les clics ni les requêtes ; l'accès reste conditionné à un volume d'impressions suffisant."
+    },
+    {
+      "domain": "Google AI Search / Innovation marketing",
+      "publisher": "Google Blog",
+      "date": "2026-08-10",
+      "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+      "verified_fact": "Google annonce des résumés IA et notifications sur la page d'accueil de Google Analytics, des cartes d'insights dans Google Ads, des dashboards par prompts dans Google Ads puis Google Analytics, ainsi qu'un benchmark basé sur des moyennes anonymisées. L'offre est indiquée en bêta pour des comptes anglophones."
+    },
+    {
+      "domain": "Zero-Click / GEO",
+      "publisher": "Search Engine Land",
+      "date": "2026-08-11",
+      "url": "https://searchengineland.com/ai-search-performance-measurment-framework-484546",
+      "verified_fact": "Le cadre proposé suit l'accès IA, la visibilité, le trafic référent, la demande aval et les résultats business. L'article rappelle que les interactions AI Overviews et AI Mode ne sont pas nettement attribuables comme trafic IA dans GA4."
+    },
+    {
+      "domain": "Zero-Click / GEO",
+      "publisher": "Search Engine Land",
+      "date": "2026-08-14",
+      "url": "https://searchengineland.com/llm-traffic-converts-differently-what-to-do-484964",
+      "verified_fact": "L'article recommande une expérience post-citation riche en preuve et en approfondissement, des parcours de qualification adaptés, et un recueil déclaratif de l'origine IA. Son chiffre de conversion provient du seul dataset de l'auteur et n'est pas employé comme benchmark général."
+    },
+    {
+      "domain": "UX / IA conversationnelle",
+      "publisher": "Nielsen Norman Group",
+      "date": "2026-08-14",
+      "url": "https://www.nngroup.com/articles/eval-ai-output/",
+      "verified_fact": "NN/g recommande de tester plusieurs inputs représentatifs, plusieurs exécutions par input, puis de restituer la moyenne, l'intervalle de confiance et les deux variabilités : entre inputs et entre exécutions."
+    },
+    {
+      "domain": "IA générative / gouvernance",
+      "publisher": "OpenAI",
+      "date": "2026-08-12",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work/",
+      "verified_fact": "Dans son échantillon entreprise, OpenAI indique que les organisations du top 10 % mensuel en tokens par utilisateur actif produisent 8,3 fois plus de tokens que les organisations typiques. Le rapport relie la profondeur d'usage à des workflows partagés, aux données, aux permissions, à la gouvernance et à la revue humaine."
+    },
+    {
+      "domain": "IA générative / gouvernance",
+      "publisher": "Anthropic",
+      "date": "2026-08",
+      "url": "https://www.anthropic.com/aug-2026-risk-report",
+      "verified_fact": "Le rapport fait passer de very low à low l'évaluation de risque du désalignement dans des contextes à forts enjeux, notamment en raison de l'incertitude accrue après des incidents en évaluations cyber. Il documente monitoring, sandboxing, classifiers et contrôles d'accès."
+    },
+    {
+      "domain": "UX / transparence IA",
+      "publisher": "Smashing Magazine",
+      "date": "2026-08-13",
+      "url": "https://www.smashingmagazine.com/2026/08/eu-guidelines-ai-labelling/",
+      "verified_fact": "La synthèse pratique des textes de la Commission rappelle les obligations de transparence applicables aux chatbots, agents, deepfakes et à certains textes d'intérêt public ; elle insiste sur un marquage visible, explicite et accessible, plutôt qu'un pictogramme ambigu seul."
+    }
+  ],
+  "rejected_sources": [
+    {
+      "reason": "Aucun fait récent et qualifié n'a été trouvé dans la fenêtre hebdomadaire pour Schema.org, les DXP/CMS composables ou les CDP/résolution d'identité. Les contenus trouvés étaient principalement pédagogiques, comparatifs ou promotionnels.",
+      "action": "Ces trois domaines sont masqués dans l'édition S34."
+    },
+    {
+      "reason": "Aucun cas d'école marketing de la semaine ne réunissait simultanément marque, agence si connue, période, mécanisme et KPI source vérifiable.",
+      "action": "La section cas d'école est masquée."
+    },
+    {
+      "reason": "Les statistiques de conversion LLM issues d'un dataset privé d'auteur ne peuvent pas être généralisées.",
+      "action": "Les recommandations méthodologiques sont conservées, mais les taux ne sont pas repris."
+    }
+  ]
+}
