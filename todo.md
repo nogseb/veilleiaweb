@@ -2,6 +2,14 @@
 
 ## Mesure first-party de la veille
 
+- [x] Vérifier que la session GA4 authentifiée est bien accessible depuis le navigateur contrôlé.
+- [x] Vérifier l'accès à la propriété GA4 associée à `G-NZ24YB5E5N` une fois la session partagée accessible.
+- [ ] Déclarer `domain_code`, `week_number`, `content_route` et `source_publisher` comme dimensions personnalisées d'événement dans GA4.
+- [ ] Créer l'exploration GA4 « Domaines × Sources lues ».
+- [x] Ajouter l'événement GA4 `archives_consultees` uniquement après consentement.
+- [x] Garantir un seul événement `archives_consultees` par affichage de page malgré les re-renders React.
+- [ ] Après publication, déclencher une visite consentie sur le domaine live puis attendre la réception des paramètres dans GA4 avant leur déclaration.
+- [ ] Tester, publier et synchroniser la mise à jour GitHub.
 - [x] Définir les paramètres GA4 autorisés pour les ouvertures d’analyse et les clics sources.
 - [x] Envoyer `analyse_ouverte` et `source_lue` uniquement après consentement GA4.
 - [x] Documenter les dimensions personnalisées et les rapports GA4 à créer.

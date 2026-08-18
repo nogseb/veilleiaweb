@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildGa4EngagementParameters, GA4_MEASUREMENT_ID, shouldLoadGa4 } from "./ga4";
+import { buildGa4EngagementParameters, createSingleEventGuard, ga4EngagementEvents, GA4_MEASUREMENT_ID, shouldLoadGa4 } from "./ga4";
 
 describe("garde-fou GA4", () => {
   it("utilise l'identifiant de mesure fourni", () => {
@@ -19,5 +19,15 @@ describe("garde-fou GA4", () => {
       content_route: "home",
       source_publisher: "Google",
     });
+  });
+
+  it("réserve un événement dédié à la consultation de la page Archives", () => {
+    expect(ga4EngagementEvents).toContain("archives_consultees");
+  });
+
+  it("n'autorise qu'un seul événement Archives par montage de page", () => {
+    const guard = createSingleEventGuard();
+    expect(guard()).toBe(true);
+    expect(guard()).toBe(false);
   });
 });

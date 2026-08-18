@@ -2,7 +2,7 @@ export const GA4_MEASUREMENT_ID = "G-NZ24YB5E5N";
 const GA4_CONSENT_KEY = "tbs_veille_ga4_consent";
 
 export type Ga4Consent = "unknown" | "granted" | "denied";
-export const ga4EngagementEvents = ["analyse_ouverte", "source_lue"] as const;
+export const ga4EngagementEvents = ["analyse_ouverte", "source_lue", "archives_consultees"] as const;
 export type Ga4EngagementEvent = (typeof ga4EngagementEvents)[number];
 
 type Ga4EngagementInput = {
@@ -14,6 +14,15 @@ type Ga4EngagementInput = {
 
 export function shouldLoadGa4(consent: Ga4Consent): boolean {
   return consent === "granted";
+}
+
+export function createSingleEventGuard() {
+  let sent = false;
+  return () => {
+    if (sent) return false;
+    sent = true;
+    return true;
+  };
 }
 
 export function buildGa4EngagementParameters(input: Ga4EngagementInput) {
@@ -82,5 +91,11 @@ export function applyGa4Consent(consent: Exclude<Ga4Consent, "unknown">) {
 export function trackGa4Engagement(eventName: Ga4EngagementEvent, input: Ga4EngagementInput): boolean {
   if (typeof window === "undefined" || readGa4Consent() !== "granted" || !window.gtag) return false;
   window.gtag("event", eventName, buildGa4EngagementParameters(input));
+  return true;
+}
+
+export function trackGa4ArchivesView(): boolean {
+  if (typeof window === "undefined" || readGa4Consent() !== "granted" || !window.gtag) return false;
+  window.gtag("event", "archives_consultees", { content_route: "archives" });
   return true;
 }

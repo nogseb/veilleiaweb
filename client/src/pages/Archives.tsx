@@ -1,14 +1,18 @@
 import { archives as allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
-import { useEffect } from "react";
+import { createSingleEventGuard, trackGa4ArchivesView } from "@/lib/ga4";
+import { useEffect, useRef } from "react";
 
 export default function Archives() {
   const latestWeek = allArchives[0]?.week;
   const { track } = useFirstPartyAnalytics({ route: "archives" });
+  const archivesEventGuard = useRef(createSingleEventGuard());
 
   useEffect(() => {
+    if (!archivesEventGuard.current()) return;
     track({ name: "archive_view" });
+    trackGa4ArchivesView();
   }, [track]);
 
   return (
