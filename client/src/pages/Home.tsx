@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { veilleS34 as veilleData } from "../data/veille-s34";
 import { Header, Footer } from "@/components/Layout";
+import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 
 const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "INNOV MKT"] as const;
 
@@ -197,7 +198,7 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
   );
 }
 
-function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaines[0]; onClose: () => void }) {
+function DomaineModal({ domaine, onClose, onTrack }: { domaine: typeof veilleData.domaines[0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const isNew = domaine.previousBadge === null;
   const hasChanged = hasChangedCriticality(domaine);
@@ -216,7 +217,10 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
             <div className="absolute top-4 right-4 flex items-center gap-4">
               {hasLongDescription && (
                 <button
-                  onClick={() => setIsFlipped(true)}
+                  onClick={() => {
+                    onTrack({ name: "domain_analysis_flip", domainCode: domaine.code });
+                    setIsFlipped(true);
+                  }}
                   title="Voir l'analyse complète"
                   className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150 flex items-center gap-1.5"
                 >
@@ -282,6 +286,7 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
                       href={source.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom })}
                       className="text-sm text-[#FF4757] underline hover:no-underline"
                     >
                       {source.nom} →
@@ -341,6 +346,7 @@ function DomaineModal({ domaine, onClose }: { domaine: typeof veilleData.domaine
 function AnalyseParDomaine() {
   const [activeFilter, setActiveFilter] = useState<string>("TOUS");
   const [selectedDomaine, setSelectedDomaine] = useState<typeof veilleData.domaines[0] | null>(null);
+  const { track } = useFirstPartyAnalytics({ route: "home", week: veilleData.week, trackEdition: true });
 
   const filteredDomaines = activeFilter === "TOUS"
     ? veilleData.domaines
@@ -374,13 +380,16 @@ function AnalyseParDomaine() {
           <DomaineCard
             key={domaine.id}
             domaine={domaine}
-            onClick={() => setSelectedDomaine(domaine)}
+            onClick={() => {
+              track({ name: "domain_open", domainCode: domaine.code });
+              setSelectedDomaine(domaine);
+            }}
           />
         ))}
       </div>
 
       {selectedDomaine && (
-        <DomaineModal domaine={selectedDomaine} onClose={() => setSelectedDomaine(null)} />
+        <DomaineModal domaine={selectedDomaine} onTrack={track} onClose={() => setSelectedDomaine(null)} />
       )}
     </section>
   );

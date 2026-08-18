@@ -3,6 +3,7 @@ import { useParams } from "wouter";
 import { getEditionByWeek, allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 import type { ArchiveEdition } from "@/data/archives";
+import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 
 function Badge({ type }: { type: string }) {
   if (type === "CRITIQUE") {
@@ -52,7 +53,7 @@ function DashboardPopover({ items, title, onClose }: { items: string[]; title: s
   );
 }
 
-function DomaineModal({ domaine, onClose }: { domaine: ArchiveEdition["domaines"][0]; onClose: () => void }) {
+function DomaineModal({ domaine, onClose, onTrack }: { domaine: ArchiveEdition["domaines"][0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
   const isNew = domaine.previousBadge === null;
   const hasChanged = domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;
 
@@ -119,6 +120,7 @@ function DomaineModal({ domaine, onClose }: { domaine: ArchiveEdition["domaines"
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom })}
                   className="text-sm text-[#FF4757] underline hover:no-underline"
                 >
                   {source.nom} →
@@ -138,6 +140,7 @@ export default function WeekDetail() {
   const edition = getEditionByWeek(weekNum);
   const [openPopover, setOpenPopover] = useState<string | null>(null);
   const [selectedDomaine, setSelectedDomaine] = useState<ArchiveEdition["domaines"][0] | null>(null);
+  const { track } = useFirstPartyAnalytics({ route: "archives", week: weekNum, trackEdition: true });
 
   // Navigation entre semaines
   const currentIndex = allArchives.findIndex((a) => a.week === weekNum);
@@ -274,7 +277,10 @@ export default function WeekDetail() {
                 <div
                   key={domaine.id}
                   className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
-                  onClick={() => setSelectedDomaine(domaine)}
+                  onClick={() => {
+                    track({ name: "domain_open", domainCode: domaine.code });
+                    setSelectedDomaine(domaine);
+                  }}
                 >
                   <div className="flex items-start justify-between pb-4">
                     <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
@@ -396,7 +402,7 @@ export default function WeekDetail() {
       <Footer />
 
       {selectedDomaine && (
-        <DomaineModal domaine={selectedDomaine} onClose={() => setSelectedDomaine(null)} />
+        <DomaineModal domaine={selectedDomaine} onTrack={track} onClose={() => setSelectedDomaine(null)} />
       )}
     </div>
   );

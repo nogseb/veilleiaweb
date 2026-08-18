@@ -1,8 +1,15 @@
 import { archives as allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
+import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
+import { useEffect } from "react";
 
 export default function Archives() {
   const latestWeek = allArchives[0]?.week;
+  const { track } = useFirstPartyAnalytics({ route: "archives" });
+
+  useEffect(() => {
+    track({ name: "archive_view" });
+  }, [track]);
 
   return (
     <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
@@ -30,6 +37,7 @@ export default function Archives() {
               <a
                 key={archive.week}
                 href={href}
+                onClick={() => track({ name: "archive_edition_open", week: archive.week, target: isCurrent ? "current_edition" : "archive_edition" })}
                 className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 py-6 border-t border-[#E5E2DC] dark:border-[#333] hover:bg-white/50 dark:hover:bg-white/5 transition-colors duration-150 px-4 -mx-4"
               >
                 <div className="flex items-center gap-4 min-w-[180px]">

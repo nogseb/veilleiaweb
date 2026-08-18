@@ -9,8 +9,9 @@ import Archives from "./pages/Archives";
 import About from "./pages/About";
 import WeekDetail from "./pages/WeekDetail";
 import Timeline from "./pages/Timeline";
-
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/semaine/:week"} component={WeekDetail} />
       <Route path={"/timeline"} component={Timeline} />
       <Route path={"/about"} component={About} />
+      <Route path={"/pilotage"} component={AnalyticsDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -1,5 +1,6 @@
 import { Header, Footer } from "@/components/Layout";
 import { allArchives } from "@/data/archives";
+import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 
 // Extraire tous les domaines uniques à travers toutes les semaines
 const allDomainCodes = Array.from(
@@ -88,6 +89,8 @@ function getEvolutionIndicator(
 }
 
 export default function Timeline() {
+  useFirstPartyAnalytics({ route: "timeline" });
+
   return (
     <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] transition-colors duration-200">
       <Header activePage="timeline" />
