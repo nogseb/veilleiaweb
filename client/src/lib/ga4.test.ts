@@ -30,4 +30,17 @@ describe("garde-fou GA4", () => {
     expect(guard()).toBe(true);
     expect(guard()).toBe(false);
   });
+
+  it("autorise une nouvelle tentative si le consentement n'était pas encore accordé", () => {
+    let sent = false;
+    const guard = createSingleEventGuard();
+    const attempt = (canSend: boolean) => {
+      if (!guard()) return false;
+      if (!canSend) return false;
+      sent = true;
+      return true;
+    };
+    expect(attempt(false)).toBe(false);
+    expect(sent).toBe(false);
+  });
 });

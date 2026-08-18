@@ -5,7 +5,10 @@ export default function AnalyticsConsent() {
   const [consent, setConsent] = useState<Ga4Consent>(() => readGa4Consent());
 
   useEffect(() => {
-    if (consent === "granted") applyGa4Consent("granted");
+    if (consent === "granted") {
+      applyGa4Consent("granted");
+      window.dispatchEvent(new Event("ga4-consent-granted"));
+    }
   }, [consent]);
 
   useEffect(() => {

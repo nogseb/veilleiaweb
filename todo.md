@@ -8,6 +8,7 @@
 - [ ] Créer l'exploration GA4 « Domaines × Sources lues ».
 - [x] Ajouter l'événement GA4 `archives_consultees` uniquement après consentement.
 - [x] Garantir un seul événement `archives_consultees` par affichage de page malgré les re-renders React.
+- [ ] Rejouer les événements de page après consentement GA4 afin que la première visite consentie soit bien mesurée.
 - [ ] Après publication, déclencher une visite consentie sur le domaine live puis attendre la réception des paramètres dans GA4 avant leur déclaration.
 - [ ] Tester, publier et synchroniser la mise à jour GitHub.
 - [x] Définir les paramètres GA4 autorisés pour les ouvertures d’analyse et les clics sources.

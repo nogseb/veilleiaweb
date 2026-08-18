@@ -2,18 +2,25 @@ import { archives as allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { createSingleEventGuard, trackGa4ArchivesView } from "@/lib/ga4";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export default function Archives() {
   const latestWeek = allArchives[0]?.week;
   const { track } = useFirstPartyAnalytics({ route: "archives" });
-  const archivesEventGuard = useRef(createSingleEventGuard());
+  const firstPartyArchiveGuard = useRef(createSingleEventGuard());
+  const ga4ArchiveGuard = useRef(createSingleEventGuard());
+  const trackArchiveGa4 = useCallback(() => {
+    if (!ga4ArchiveGuard.current()) return;
+    const sent = trackGa4ArchivesView();
+    if (!sent) ga4ArchiveGuard.current = createSingleEventGuard();
+  }, []);
 
   useEffect(() => {
-    if (!archivesEventGuard.current()) return;
-    track({ name: "archive_view" });
-    trackGa4ArchivesView();
-  }, [track]);
+    if (firstPartyArchiveGuard.current()) track({ name: "archive_view" });
+    trackArchiveGa4();
+    window.addEventListener("ga4-consent-granted", trackArchiveGa4);
+    return () => window.removeEventListener("ga4-consent-granted", trackArchiveGa4);
+  }, [track, trackArchiveGa4]);
 
   return (
     <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
