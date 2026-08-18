@@ -40,3 +40,36 @@ La quatrième dimension d’événement, **Éditeur de source** (`source_publish
 Une exploration GA4 au format libre a été créée le 18 août 2026 et nommée **« Domaines × Sources lues »**. Sa configuration de lignes, colonnes, métrique et filtre est en cours de finalisation.
 
 Dans le sélecteur de variables de l’exploration, l’onglet **Personnalisé** expose les quatre dimensions nouvellement créées. Les variables à affecter sont : lignes = Domaine, colonnes = Éditeur de source, métrique = Nombre d’événements, filtre = Nom de l’événement exactement `source_lue`.
+
+Après actualisation du sélecteur, la dimension **Domaine** a été ajoutée aux variables de l’exploration le 18 août 2026. Les dimensions personnalisées sont désormais disponibles à l’ajout par recherche dans ce sélecteur.
+
+Les variables **Domaine** et **Éditeur de source** ont été ajoutées à l’exploration. La ligne par défaut « Ville » a été retirée et remplacée par **Domaine** ; l’exploration croise désormais la dimension éditoriale attendue en ligne.
+
+La dimension par défaut « Catégorie de l’appareil » a ensuite été retirée des colonnes. Le sélecteur de colonnes est ouvert pour affecter **Éditeur de source**.
+
+La matrice de l’exploration utilise désormais **Domaine** en ligne, **Éditeur de source** en colonne et **Nombre d’événements** comme unique métrique. Les dimensions et métriques par défaut qui faussaient ce périmètre ont été retirées.
+
+L’exploration enregistrée **« Domaines × Sources lues »** est finalisée avec la configuration suivante :
+
+| Zone | Configuration |
+|---|---|
+| Lignes | Domaine (`domain_code`) |
+| Colonnes | Éditeur de source (`source_publisher`) |
+| Valeur | Nombre d’événements |
+| Filtre | Nom de l’événement correspond exactement à `source_lue` |
+| Période initiale | 28 derniers jours |
+
+Le tableau peut rester vide durant le délai de traitement initial de GA4 : cette absence de ligne ne modifie pas la configuration enregistrée.
+
+Le 18 août 2026, le domaine publié a confirmé un consentement GA4 `granted`, le chargement de `gtag.js` et l’envoi de `archives_consultees` avec `content_route=archives`. La reprise de l’événement lors de la première visite consentie fonctionne donc sur le domaine live.
+
+Une session GA4 consentie a ensuite chargé la page d’accueil publiée afin de contrôler les événements d’interaction `analyse_ouverte` et `source_lue` dans les mêmes conditions.
+
+La vérification live du 18 août 2026 confirme les deux événements restants dans `dataLayer` après consentement :
+
+| Interaction | Événement GA4 | Paramètres confirmés |
+|---|---|---|
+| Ouverture de la carte Google AI | `analyse_ouverte` | `domain_code=GOOGLE AI`, `week_number=34`, `content_route=home` |
+| Clic sur Search Engine Roundtable | `source_lue` | `domain_code=GOOGLE AI`, `week_number=34`, `content_route=home`, `source_publisher=Search Engine Roundtable` |
+
+Les événements de consultation et d’interaction actuellement prévus sont donc déclenchés sur le domaine publié uniquement lorsque le consentement GA4 est accordé.

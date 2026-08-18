@@ -8,11 +8,12 @@
 - [x] Vérifier que la session GA4 authentifiée est bien accessible depuis le navigateur contrôlé.
 - [x] Vérifier l'accès à la propriété GA4 associée à `G-NZ24YB5E5N` une fois la session partagée accessible.
 - [x] Déclarer `domain_code`, `week_number`, `content_route` et `source_publisher` comme dimensions personnalisées d'événement dans GA4.
-- [ ] Créer l'exploration GA4 « Domaines × Sources lues ».
+- [x] Créer l'exploration GA4 « Domaines × Sources lues ».
 - [x] Ajouter l'événement GA4 `archives_consultees` uniquement après consentement.
 - [x] Garantir un seul événement `archives_consultees` par affichage de page malgré les re-renders React.
-- [ ] Rejouer les événements de page après consentement GA4 afin que la première visite consentie soit bien mesurée.
-- [ ] Après publication, déclencher une visite consentie sur le domaine live puis attendre la réception des paramètres dans GA4 avant leur déclaration.
+- [x] Rejouer l'événement Archives après consentement GA4 afin que la première visite consentie soit bien mesurée.
+- [x] Vérifier les événements `analyse_ouverte` et `source_lue` sur le domaine publié après consentement GA4.
+- [x] Après publication, déclencher une visite consentie sur le domaine live puis attendre la réception des paramètres dans GA4 avant leur déclaration.
 - [ ] Tester, publier et synchroniser la mise à jour GitHub.
 - [x] Définir les paramètres GA4 autorisés pour les ouvertures d’analyse et les clics sources.
 - [x] Envoyer `analyse_ouverte` et `source_lue` uniquement après consentement GA4.
