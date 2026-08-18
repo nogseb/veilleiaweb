@@ -2,6 +2,9 @@
 
 ## Mesure first-party de la veille
 
+- [x] Remplacer le statut niveau 2 de `/stats` par le lien direct Google Analytics fourni.
+- [x] Valider la compilation et le build du nouveau lien `/stats`.
+- [ ] Valider, publier et synchroniser la modification de libellé `/stats`.
 - [x] Vérifier que la session GA4 authentifiée est bien accessible depuis le navigateur contrôlé.
 - [x] Vérifier l'accès à la propriété GA4 associée à `G-NZ24YB5E5N` une fois la session partagée accessible.
 - [x] Déclarer `domain_code`, `week_number`, `content_route` et `source_publisher` comme dimensions personnalisées d'événement dans GA4.

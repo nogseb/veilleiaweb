@@ -112,7 +112,7 @@ function AnalyticsDashboardContent() {
           <div>
             <p className="text-xs tracking-[0.16em] uppercase text-[#FF4757]">Mesure first-party</p>
             <h1 className="pt-2 text-4xl leading-none uppercase text-[#0F0F10] md:text-6xl">Statistiques<br />Veille IA &amp; WEB</h1>
-            <p className="pt-4 text-sm leading-relaxed text-[#8A8A8A]">Audience agrégée active. Le niveau 2 utilise une session first-party pseudonyme validée par le DPO.</p>
+            <p className="pt-4 text-sm leading-relaxed text-[#8A8A8A]">Statistiques GA disponible en <a href="https://analytics.google.com/analytics/web/?authuser=1#/a404975011p550318512/reports/intelligenthome" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[#FF4757] underline underline-offset-2 hover:text-[#0F0F10]">Google Analytics <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /></a></p>
           </div>
           <div className="flex flex-wrap gap-2">
             <Button variant="outline" onClick={() => logout.mutate()} className="rounded-none border-[#E5E2DC] bg-transparent text-[#0F0F10]">
