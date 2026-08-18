@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { veilleS34 as veilleData } from "../data/veille-s34";
 import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
+import { trackGa4Engagement } from "@/lib/ga4";
 
 const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "INNOV MKT"] as const;
 
@@ -286,7 +287,10 @@ function DomaineModal({ domaine, onClose, onTrack }: { domaine: typeof veilleDat
                       href={source.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom })}
+                      onClick={() => {
+                        onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom });
+                        trackGa4Engagement("source_lue", { domainCode: domaine.code, sourcePublisher: source.nom, week: veilleData.week, route: "home" });
+                      }}
                       className="text-sm text-[#FF4757] underline hover:no-underline"
                     >
                       {source.nom} →
@@ -382,6 +386,7 @@ function AnalyseParDomaine() {
             domaine={domaine}
             onClick={() => {
               track({ name: "domain_open", domainCode: domaine.code });
+              trackGa4Engagement("analyse_ouverte", { domainCode: domaine.code, week: veilleData.week, route: "home" });
               setSelectedDomaine(domaine);
             }}
           />

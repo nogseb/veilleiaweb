@@ -4,6 +4,7 @@ import { getEditionByWeek, allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 import type { ArchiveEdition } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
+import { trackGa4Engagement } from "@/lib/ga4";
 
 function Badge({ type }: { type: string }) {
   if (type === "CRITIQUE") {
@@ -53,7 +54,7 @@ function DashboardPopover({ items, title, onClose }: { items: string[]; title: s
   );
 }
 
-function DomaineModal({ domaine, onClose, onTrack }: { domaine: ArchiveEdition["domaines"][0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
+function DomaineModal({ domaine, onClose, onTrack, week }: { domaine: ArchiveEdition["domaines"][0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"]; week: number }) {
   const isNew = domaine.previousBadge === null;
   const hasChanged = domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;
 
@@ -120,7 +121,10 @@ function DomaineModal({ domaine, onClose, onTrack }: { domaine: ArchiveEdition["
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom })}
+                  onClick={() => {
+                    onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom });
+                    trackGa4Engagement("source_lue", { domainCode: domaine.code, sourcePublisher: source.nom, week, route: "archives" });
+                  }}
                   className="text-sm text-[#FF4757] underline hover:no-underline"
                 >
                   {source.nom} →
@@ -279,6 +283,7 @@ export default function WeekDetail() {
                   className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
                   onClick={() => {
                     track({ name: "domain_open", domainCode: domaine.code });
+                    trackGa4Engagement("analyse_ouverte", { domainCode: domaine.code, week: edition.week, route: "archives" });
                     setSelectedDomaine(domaine);
                   }}
                 >
@@ -402,7 +407,7 @@ export default function WeekDetail() {
       <Footer />
 
       {selectedDomaine && (
-        <DomaineModal domaine={selectedDomaine} onTrack={track} onClose={() => setSelectedDomaine(null)} />
+        <DomaineModal domaine={selectedDomaine} onTrack={track} week={edition.week} onClose={() => setSelectedDomaine(null)} />
       )}
     </div>
   );
