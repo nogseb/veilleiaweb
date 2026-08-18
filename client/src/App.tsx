@@ -10,6 +10,7 @@ import About from "./pages/About";
 import WeekDetail from "./pages/WeekDetail";
 import Timeline from "./pages/Timeline";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
+import AnalyticsConsent from "./components/AnalyticsConsent";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -33,6 +34,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <AnalyticsConsent />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

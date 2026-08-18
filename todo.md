@@ -2,6 +2,11 @@
 
 ## Mesure first-party de la veille
 
+- [x] Remplacer le titre « Pilotage de la veille » par « Statistiques Veille IA & WEB » sur `/stats`.
+- [x] Auditer la balise Umami existante et vérifier l'absence de chargement GA4 avant consentement.
+- [x] Ajouter GA4 `G-NZ24YB5E5N` avec chargement et envoi conditionnels au consentement.
+- [x] Exposer un contrôle de consentement clair, sans modifier la charte éditoriale de la veille.
+- [x] Tester les états sans consentement et avec consentement, puis publier et synchroniser GitHub.
 - [x] Remplacer l’accès OAuth du tableau de bord par une session protégée par mot de passe côté serveur.
 - [x] Déplacer la route de pilotage vers `/stats` et retirer l’accès `/pilotage`.
 - [x] Ajouter une mire d’authentification par mot de passe, sans exposer le secret au navigateur.

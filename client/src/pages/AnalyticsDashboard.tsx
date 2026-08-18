@@ -111,8 +111,8 @@ function AnalyticsDashboardContent() {
         <div className="flex flex-col justify-between gap-5 border-b border-[#E5E2DC] pb-6 md:flex-row md:items-end">
           <div>
             <p className="text-xs tracking-[0.16em] uppercase text-[#FF4757]">Mesure first-party</p>
-            <h1 className="pt-2 text-4xl leading-none uppercase text-[#0F0F10] md:text-6xl">Pilotage<br />de la veille</h1>
-            <p className="pt-4 text-sm leading-relaxed text-[#8A8A8A]">Audience agrégée active. Le niveau 2 — session pseudonyme et parcours — reste désactivé en attente de validation DPO.</p>
+            <h1 className="pt-2 text-4xl leading-none uppercase text-[#0F0F10] md:text-6xl">Statistiques<br />Veille IA &amp; WEB</h1>
+            <p className="pt-4 text-sm leading-relaxed text-[#8A8A8A]">Audience agrégée active. Le niveau 2 utilise une session first-party pseudonyme validée par le DPO.</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <Button variant="outline" onClick={() => logout.mutate()} className="rounded-none border-[#E5E2DC] bg-transparent text-[#0F0F10]">
