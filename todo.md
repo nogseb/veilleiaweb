@@ -4,7 +4,7 @@
 
 - [x] Vérifier que la session GA4 authentifiée est bien accessible depuis le navigateur contrôlé.
 - [x] Vérifier l'accès à la propriété GA4 associée à `G-NZ24YB5E5N` une fois la session partagée accessible.
-- [ ] Déclarer `domain_code`, `week_number`, `content_route` et `source_publisher` comme dimensions personnalisées d'événement dans GA4.
+- [x] Déclarer `domain_code`, `week_number`, `content_route` et `source_publisher` comme dimensions personnalisées d'événement dans GA4.
 - [ ] Créer l'exploration GA4 « Domaines × Sources lues ».
 - [x] Ajouter l'événement GA4 `archives_consultees` uniquement après consentement.
 - [x] Garantir un seul événement `archives_consultees` par affichage de page malgré les re-renders React.

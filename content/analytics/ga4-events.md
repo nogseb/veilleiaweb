@@ -28,3 +28,15 @@ Le 18 août 2026, l’accès à la propriété **Veille IA & WEB** a été confi
 La page des définitions personnalisées est accessible à l’URL interne `#/a404975011p550318512/admin/customdefinitions/hub`. Elle ne comporte aucune définition existante au moment de la configuration, et propose l’action **Créer une dimension personnalisée**.
 
 Lors de la configuration, GA4 indique qu’aucune donnée n’a encore été reçue par la propriété. Le sélecteur de paramètre ne reconnaît donc pas encore `domain_code`. La création des dimensions et de l’exploration est reportée jusqu’à ce qu’une consultation consentie du **domaine publié** ait alimenté la propriété ; ce délai de disponibilité côté GA4 est indépendant de l’instrumentation déjà testée dans l’environnement de prévisualisation.
+
+Après le déclenchement d’une consultation consentie sur le domaine publié, la dimension d’événement **Domaine** (`domain_code`) a été créée dans la propriété **Veille IA & WEB** le 18 août 2026. Elle est visible dans Définitions personnalisées avec une portée **Événement**.
+
+La dimension d’événement **Semaine** (`week_number`) a également été créée avec une portée **Événement**. Les deux dimensions sont maintenant visibles dans la liste des Définitions personnalisées de la propriété.
+
+La dimension d’événement **Route de contenu** (`content_route`) a ensuite été créée, elle aussi avec une portée **Événement**. Trois des quatre paramètres requis sont donc déclarés dans GA4.
+
+La quatrième dimension d’événement, **Éditeur de source** (`source_publisher`), a été créée avec une portée **Événement**. La propriété **Veille IA & WEB** expose donc désormais les quatre paramètres demandés : `domain_code`, `week_number`, `content_route` et `source_publisher`.
+
+Une exploration GA4 au format libre a été créée le 18 août 2026 et nommée **« Domaines × Sources lues »**. Sa configuration de lignes, colonnes, métrique et filtre est en cours de finalisation.
+
+Dans le sélecteur de variables de l’exploration, l’onglet **Personnalisé** expose les quatre dimensions nouvellement créées. Les variables à affecter sont : lignes = Domaine, colonnes = Éditeur de source, métrique = Nombre d’événements, filtre = Nom de l’événement exactement `source_lue`.
