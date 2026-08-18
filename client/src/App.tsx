@@ -19,7 +19,7 @@ function Router() {
       <Route path={"/semaine/:week"} component={WeekDetail} />
       <Route path={"/timeline"} component={Timeline} />
       <Route path={"/about"} component={About} />
-      <Route path={"/pilotage"} component={AnalyticsDashboard} />
+      <Route path={"/stats"} component={AnalyticsDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

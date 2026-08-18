@@ -3,6 +3,7 @@ import { ANALYTICS_LEVEL2_ENABLED } from "../shared/analytics";
 import { buildAnalyticsDailyKey, classifyReferrer } from "./analytics";
 import { appRouter } from "./routers";
 import type { TrpcContext } from "./_core/context";
+import { createStatsSession, STATS_SESSION_COOKIE } from "./statsAuth";
 
 describe("analytics first-party", () => {
   it("classe les référents sans stocker leur URL brute", () => {
@@ -42,7 +43,7 @@ describe("analytics first-party", () => {
     await expect(caller.analytics.status()).resolves.toEqual({ level1Enabled: true, level2Enabled: true });
   });
 
-  it("refuse le tableau de bord analytics sans rôle administrateur", async () => {
+  it("refuse le tableau de bord analytics sans session `/stats`", async () => {
     const caller = appRouter.createCaller({
       user: null,
       req: { headers: {} },
@@ -50,5 +51,21 @@ describe("analytics first-party", () => {
     } as TrpcContext);
 
     await expect(caller.analytics.dashboard({ days: 7 })).rejects.toMatchObject({ code: "FORBIDDEN" });
+  });
+
+  it("autorise les agrégats avec une session `/stats` signée", async () => {
+    const session = createStatsSession();
+    const caller = appRouter.createCaller({
+      user: null,
+      req: { headers: { cookie: `${STATS_SESSION_COOKIE}=${session}` } },
+      res: {},
+    } as TrpcContext);
+
+    const result = await caller.analytics.dashboard({ days: 7 });
+    expect(result).toMatchObject({
+      totals: expect.objectContaining({ pageViews: expect.any(Number), editionViews: expect.any(Number) }),
+      daily: expect.any(Array),
+      editions: expect.any(Array),
+    });
   });
 });

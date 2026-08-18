@@ -2,6 +2,10 @@
 
 ## Mesure first-party de la veille
 
+- [x] Remplacer l’accès OAuth du tableau de bord par une session protégée par mot de passe côté serveur.
+- [x] Déplacer la route de pilotage vers `/stats` et retirer l’accès `/pilotage`.
+- [x] Ajouter une mire d’authentification par mot de passe, sans exposer le secret au navigateur.
+- [x] Tester le refus, la connexion, la déconnexion et l’accès aux agrégats avant publication (11 tests Vitest validés).
 - [x] Activer le niveau 2 après validation formelle du DPO, puis vérifier le mode de collecte et le hachage de session.
 - [x] Activer l'architecture full-stack, la base de données et les rôles d'administration.
 - [x] Implémenter la collecte niveau 1 : audience agrégée sans identifiant persistant.

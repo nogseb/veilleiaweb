@@ -1,9 +1,7 @@
-import DashboardLayout from "@/components/DashboardLayout";
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
-import { BarChart3, CheckCircle2, Clock3, ExternalLink, Eye, FileText, Layers3, ShieldCheck } from "lucide-react";
+import { BarChart3, CheckCircle2, Clock3, ExternalLink, Eye, FileText, Layers3, LockKeyhole, LogOut } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useAuth } from "@/_core/hooks/useAuth";
 import { useState } from "react";
 
 const rangeOptions = [
@@ -50,22 +48,51 @@ function RankedList({ title, items, empty }: { title: string; items: Array<{ lab
   );
 }
 
+function StatsLogin({ onAuthenticated }: { onAuthenticated: () => void }) {
+  const [password, setPassword] = useState("");
+  const login = trpc.statsAccess.login.useMutation({ onSuccess: onAuthenticated });
+
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-[#F5F4F0] p-6">
+      <form
+        className="w-full max-w-md border border-[#E5E2DC] bg-white p-8 md:p-10"
+        onSubmit={event => {
+          event.preventDefault();
+          login.mutate({ password });
+        }}
+      >
+        <LockKeyhole className="h-7 w-7 text-[#FF4757]" strokeWidth={1.5} />
+        <p className="pt-6 text-xs tracking-[0.16em] uppercase text-[#FF4757]">Accès protégé</p>
+        <h1 className="pt-2 text-4xl leading-none uppercase text-[#0F0F10]">Statistiques<br />de la veille</h1>
+        <p className="pt-5 text-sm leading-relaxed text-[#8A8A8A]">Saisissez le mot de passe communiqué par l’équipe éditoriale.</p>
+        <label className="mt-7 block text-[10px] tracking-[0.14em] uppercase text-[#8A8A8A]" htmlFor="stats-password">Mot de passe</label>
+        <input
+          id="stats-password"
+          autoFocus
+          type="password"
+          autoComplete="current-password"
+          value={password}
+          onChange={event => setPassword(event.target.value)}
+          className="mt-2 w-full rounded-none border border-[#0F0F10] bg-white px-3 py-3 text-base text-[#0F0F10] outline-none focus:border-[#FF4757]"
+          required
+        />
+        {login.error && <p className="pt-3 text-sm text-[#FF4757]">Mot de passe incorrect. Réessayez.</p>}
+        <Button type="submit" disabled={login.isPending} className="mt-6 w-full rounded-none bg-[#FF4757] text-white hover:bg-[#e63e4e]">
+          {login.isPending ? "Vérification…" : "Accéder aux statistiques"}
+        </Button>
+      </form>
+    </main>
+  );
+}
+
 function AnalyticsDashboardContent() {
-  const { user, loading } = useAuth();
   const [days, setDays] = useState<7 | 30 | 90>(30);
-  const dashboard = trpc.analytics.dashboard.useQuery({ days }, { enabled: Boolean(user?.role === "admin") });
+  const access = trpc.statsAccess.status.useQuery();
+  const dashboard = trpc.analytics.dashboard.useQuery({ days }, { enabled: Boolean(access.data?.authenticated) });
+  const logout = trpc.statsAccess.logout.useMutation({ onSuccess: () => access.refetch() });
 
-  if (loading) return null;
-
-  if (!user || user.role !== "admin") {
-    return (
-      <div className="mx-auto max-w-xl border border-[#E5E2DC] bg-white p-8">
-        <ShieldCheck className="h-7 w-7 text-[#FF4757]" strokeWidth={1.5} />
-        <h1 className="pt-5 text-3xl uppercase text-[#0F0F10]">Accès réservé</h1>
-        <p className="pt-3 text-sm leading-relaxed text-[#8A8A8A]">Cet espace est accessible aux administrateurs de la veille uniquement.</p>
-      </div>
-    );
-  }
+  if (access.isLoading) return <main className="min-h-screen bg-[#F5F4F0]" />;
+  if (!access.data?.authenticated) return <StatsLogin onAuthenticated={() => access.refetch()} />;
 
   if (dashboard.isLoading) {
     return <p className="text-sm uppercase tracking-[0.12em] text-[#8A8A8A]">Chargement des indicateurs…</p>;
@@ -88,6 +115,9 @@ function AnalyticsDashboardContent() {
             <p className="pt-4 text-sm leading-relaxed text-[#8A8A8A]">Audience agrégée active. Le niveau 2 — session pseudonyme et parcours — reste désactivé en attente de validation DPO.</p>
           </div>
           <div className="flex flex-wrap gap-2">
+            <Button variant="outline" onClick={() => logout.mutate()} className="rounded-none border-[#E5E2DC] bg-transparent text-[#0F0F10]">
+              <LogOut className="mr-2 h-4 w-4" /> Quitter
+            </Button>
             {rangeOptions.map(option => (
               <Button
                 key={option.value}
@@ -162,9 +192,5 @@ function AnalyticsDashboardContent() {
 }
 
 export default function AnalyticsDashboard() {
-  return (
-    <DashboardLayout>
-      <AnalyticsDashboardContent />
-    </DashboardLayout>
-  );
+  return <AnalyticsDashboardContent />;
 }
