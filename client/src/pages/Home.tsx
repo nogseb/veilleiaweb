@@ -204,7 +204,7 @@ function BonusCard({ onClick }: { onClick: () => void }) {
 
   return (
     <article
-      className="col-span-2 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
+      className="col-span-2 sm:col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
       onClick={onClick}
     >
       <div className="max-w-[calc(50%-0.25rem)] sm:max-w-md">
