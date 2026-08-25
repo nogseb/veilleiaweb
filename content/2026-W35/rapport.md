@@ -1,6 +1,6 @@
 # Veille IA & Web — Semaine 35 — 2026
 
-**Publication : 25 août 2026.** Cette édition couvre les informations publiées et vérifiées entre le 18 et le 25 août 2026. Elle comporte **8 domaines d’analyse** et **12 sources citées**.
+**Publication : 25 août 2026.** Cette édition couvre les informations publiées et vérifiées entre le 18 et le 25 août 2026. Elle comporte **8 domaines d’analyse**, une carte bonus éditoriale hors périmètre et **13 sources citées**.
 
 > ## Signal majeur — Search devient une interface générative
 >
@@ -17,7 +17,7 @@
 | Indicateur | Valeur | Lecture opérationnelle |
 |---|---:|---|
 | Domaines analysés | 8 | Couverture complète du périmètre éditorial |
-| Sources citées | 12 | Sources primaires, institutionnelles, académiques ou éditoriales vérifiées |
+| Sources citées | 13 | Sources primaires, institutionnelles, académiques ou éditoriales vérifiées |
 | Signaux critiques | 3 | UI générative Google, robustesse JSON-LD, gouvernance des agents |
 | Signaux importants | 4 | GEO par préférence, CMS agent-ready, CDP contexte, UX de curation |
 | Actions immédiates | 6 | SEO technique, contenu, architecture, gouvernance et mesure |
@@ -78,6 +78,12 @@ La recherche Google poursuit son évolution d’une surface de réponses vers un
 
 **Implication TBS Education.** Traiter le référentiel des formations comme un flux stratégique : informations complètes, structurées, à jour et cohérentes entre site, CRM, plateformes de diffusion et outils IA. Pour toute expérimentation marketing IA, définir une comparaison, une attribution, un coût complet et un seuil de décision avant de conclure à un gain.
 
+## Carte bonus — Robotique
+
+> **3 000 produits présentés en cinq jours.** Au World Robot Conference 2026 de Pékin, Associated Press rapporte des démonstrations de robots humanoïdes boxant, dansant ou jouant au tennis de table, mais aussi l’échec d’un robot à plier une chemise après plusieurs minutes d’essais.[^11]
+
+Cette carte est volontairement **hors des huit domaines et de leurs compteurs**. Le contraste entre démonstration spectaculaire et tâche domestique simple rappelle que la maturité se mesure d’abord sur une tâche bornée, sûre et répétable — une grille de lecture utile avant tout projet d’automatisation ou de robotique de service.
+
 ## Actions prioritaires
 
 | Priorité | Action | Responsable indicatif |
@@ -111,3 +117,4 @@ La recherche Google poursuit son évolution d’une surface de réponses vers un
 [^8]: [Simmons & Simmons, *AI View: August 2026*, 19 août 2026](https://www.simmons-simmons.com/en/publications/cmt09z0uq0056uzywe1qk2rmr/ai-view:august-2026).
 [^9]: [Microsoft Advertising, *How businesses win when AI does the shopping*, 21 août 2026](https://about.ads.microsoft.com/en/blog/post/august-2026/how-businesses-win-when-ai-does-the-shopping).
 [^10]: [Marketing Dive, *ANA cautions marketers against overreliance on retail media data*, 18 août 2026](https://www.marketingdive.com/news/ana-cautions-marketers-against-overreliance-on-retail-media-data/828109/).
+[^11]: [Associated Press, *From robot dogs to helpers, China puts robotics ambitions on display at world conference*, 19 août 2026](https://apnews.com/article/china-robot-conference-951ebd3cddaccf5afcedc68174ba626a).

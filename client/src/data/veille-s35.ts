@@ -3,7 +3,7 @@ export const veilleS35 = {
   year: 2026,
   publicationDate: "25 août 2026",
   domainsCount: 8,
-  sourcesCount: 12,
+  sourcesCount: 13,
   criticalCount: 3,
   importantCount: 4,
   actionsCount: 6,
@@ -24,7 +24,7 @@ export const veilleS35 = {
 
   dashboardDetails: {
     domaines: ["Google AI / Search", "Zero-Click / GEO", "Schema.org", "DXP / Headless", "CDP & Data", "UX / IA", "IA / Gouvernance", "Innovation Marketing"],
-    sources: ["Google Blog", "TechCrunch", "Search Engine Journal", "Search Engine Roundtable", "Optimizely", "CMSWire", "UX Tigers", "Harvard Law School Forum", "VentureBeat", "Simmons & Simmons", "Microsoft Advertising", "Marketing Dive"],
+    sources: ["Google Blog", "TechCrunch", "Search Engine Journal", "Search Engine Roundtable", "Optimizely", "CMSWire", "UX Tigers", "Harvard Law School Forum", "VentureBeat", "Simmons & Simmons", "Microsoft Advertising", "Marketing Dive", "Associated Press"],
     critiques: ["Google AI Search : l’UI générative commence son déploiement dans AI Overviews — le résultat devient une expérience, pas seulement une réponse", "Schema.org : Googlebot n’effectue plus qu’un passage de déséchappement HTML pour JSON-LD — un markup fragile peut désormais perdre sa lisibilité", "IA / Gouvernance : l’Article 50 est applicable et les agents doivent être limités par mandat, droits, validation et journalisation"],
     importants: ["Zero-Click / GEO : Preferred Sources transforme la préférence déclarée en signal de distribution ; 345 000 sources ont déjà été sélectionnées", "DXP / Headless : les CMS industrialisent contenu structuré, visibilité agentique et assistants éditoriaux", "CDP & Data : le CDP devient une couche de contexte fiable pour les agents, au-delà du profil unifié", "UX / IA : un bot d’entretien IA approfondit seulement 4,9 % de ses tours — profondeur et neutralité doivent être conçues"],
     actions: ["Auditer les contenus TBS Education susceptibles d’alimenter une UI générative : simulations, comparateurs, quiz, preuves et ressources réutilisables", "Lancer une vérification automatisée de tous les JSON-LD : parse JSON strict, rendu serveur, absence de double échappement et validation Rich Results", "Mettre en place un suivi mensuel de la préférence de marque dans les surfaces Google, les citations IA et les parcours post-citation", "Définir une grille d’architecture agent-ready pour le CMS/CDP : contenu structuré, API, droits, données fiables, journalisation et validation", "Maintenir un inventaire des assistants et agents utilisés par TBS Education avec propriétaire métier, données accessibles, actions autorisées et point de contrôle humain", "Pour toute expérimentation marketing IA, exiger une mesure indépendante ou un protocole de test documenté avant de comparer des performances entre plateformes"],
@@ -199,6 +199,16 @@ export const veilleS35 = {
       longDescription: "Le commerce agentique transforme une donnée longtemps traitée comme une contrainte opérationnelle — le flux produit — en actif de visibilité et de conversion. Le 21 août, Microsoft Advertising cite Adobe Analytics : pendant les fêtes 2025, le trafic retail provenant de l’IA aurait progressé de 693 % sur un an et, au T1 2026, les visiteurs référés par IA auraient converti 42 % mieux que le trafic non-IA. Ces chiffres concernent le retail et ne sont pas transposables aux parcours de recrutement étudiant. Le signal reste pertinent : un assistant recommande ce qu’il peut identifier, comparer et justifier grâce à des données complètes et fraîches. Pour TBS Education, l’équivalent d’un flux produit est un référentiel de formation structuré : programme, niveau, durée, campus, modalités, conditions d’admission, calendrier, débouchés, coût et sources de preuve. L’enjeu est de rendre ces informations cohérentes entre site, CRM, plateformes de diffusion et réponses d’assistants. En parallèle, l’ANA appelle à une mesure retail media plus comparable et indépendante. Cette mise en garde vaut pour toute promesse d’IA marketing : sans définitions d’attribution, sans groupe de comparaison et sans accès aux données brutes, un tableau de bord plateforme ne suffit pas à conclure à un impact incrémental." 
     }
   ],
+
+  bonus: {
+    label: "BONUS — ROBOTIQUE",
+    titre: "LES ROBOTS HUMANOÏDES SAVENT DANSER, PAS ENCORE PLIER UNE CHEMISE",
+    chiffre: "3 000",
+    statLabel: "PRODUITS PRÉSENTÉS EN CINQ JOURS",
+    description: "Au World Robot Conference 2026 de Pékin, environ 3 000 produits ont été exposés. Entre démonstrations de boxe, danse et tennis de table, Associated Press rapporte qu’un robot n’a pas réussi à plier une chemise après plusieurs minutes d’essais.",
+    perspective: "Le fun fact cache un signal utile : la démonstration publique progresse plus vite que l’autonomie polyvalente. Pour les organisations, la bonne question n’est pas « quel robot impressionne ? », mais « quelle tâche bornée, mesurable et sûre peut déjà être industrialisée ? ».",
+    source: { nom: "Associated Press", url: "https://apnews.com/article/china-robot-conference-951ebd3cddaccf5afcedc68174ba626a", date: "19 août 2026" }
+  },
 
   actions: [
     { id: 1, titre: "Cartographier les questions candidat où une UI générative apporte une valeur démontrable, puis renforcer les contenus de référence, preuves et ressources nécessaires", domaine: "SEARCH / CONTENU", responsable: "SEO + ÉDITORIAL" },

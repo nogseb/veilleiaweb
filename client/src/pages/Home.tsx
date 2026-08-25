@@ -199,6 +199,40 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
   );
 }
 
+function BonusCard({ onTrack }: { onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
+  const bonus = veilleData.bonus;
+
+  return (
+    <article className="bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-8 flex flex-col justify-between min-h-[320px] hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150">
+      <div>
+        <div className="flex items-start justify-between gap-4 pb-6">
+          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
+          <span className="text-[10px] tracking-[0.1em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] border border-[#0F0F10] dark:border-[#E5E2DC] px-2 py-0.5">FUN FACT</span>
+        </div>
+        <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
+        <p className="text-[10px] tracking-[0.15em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] pb-5">{bonus.statLabel}</p>
+        <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">{bonus.titre}</h3>
+        <p className="text-sm text-[#2C2E33] dark:text-[#E5E2DC] leading-relaxed">{bonus.description}</p>
+      </div>
+      <div className="pt-6 mt-6 border-t border-[#8A8A8A] dark:border-[#4A4C52]">
+        <p className="text-xs text-[#2C2E33] dark:text-[#8A8A8A] leading-relaxed pb-4">{bonus.perspective}</p>
+        <a
+          href={bonus.source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            onTrack({ name: "source_click", domainCode: "BONUS", sourcePublisher: bonus.source.nom });
+            trackGa4Engagement("source_lue", { domainCode: "BONUS", sourcePublisher: bonus.source.nom, week: veilleData.week, route: "home" });
+          }}
+          className="text-xs tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
+        >
+          SOURCE — {bonus.source.nom} →
+        </a>
+      </div>
+    </article>
+  );
+}
+
 function DomaineModal({ domaine, onClose, onTrack }: { domaine: typeof veilleData.domaines[0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const isNew = domaine.previousBadge === null;
@@ -391,6 +425,7 @@ function AnalyseParDomaine() {
             }}
           />
         ))}
+        {activeFilter === "TOUS" && <BonusCard onTrack={track} />}
       </div>
 
       {selectedDomaine && (

@@ -14,7 +14,8 @@
     {"title":"Enterprises winning with AI agents are limiting how much the agents can do alone","publisher":"VentureBeat","date":"2026-08-22","url":"https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone","domains":["IA générative en production"]},
     {"title":"AI View: August 2026","publisher":"Simmons & Simmons","date":"2026-08-19","url":"https://www.simmons-simmons.com/en/publications/cmt09z0uq0056uzywe1qk2rmr/ai-view:august-2026","domains":["IA générative en production"]},
     {"title":"How businesses win when AI does the shopping","publisher":"Microsoft Advertising","date":"2026-08-21","url":"https://about.ads.microsoft.com/en/blog/post/august-2026/how-businesses-win-when-ai-does-the-shopping","domains":["Innovation marketing"]},
-    {"title":"ANA cautions marketers against overreliance on retail media data","publisher":"Marketing Dive","date":"2026-08-18","url":"https://www.marketingdive.com/news/ana-cautions-marketers-against-overreliance-on-retail-media-data/828109/","domains":["Innovation marketing"]}
+    {"title":"ANA cautions marketers against overreliance on retail media data","publisher":"Marketing Dive","date":"2026-08-18","url":"https://www.marketingdive.com/news/ana-cautions-marketers-against-overreliance-on-retail-media-data/828109/","domains":["Innovation marketing"]},
+    {"title":"From robot dogs to helpers, China puts robotics ambitions on display at world conference","publisher":"Associated Press","date":"2026-08-19","url":"https://apnews.com/article/china-robot-conference-951ebd3cddaccf5afcedc68174ba626a","domains":["Bonus éditorial / robotique"],"evidence":"Environ 3 000 produits exposés ; démonstrations humanoïdes et échec rapporté d’un robot à plier une chemise"}
   ],
   "rejected": [
     {"title":"AI-Generated Ads Outperform Human Designers in Live Campaign","publisher":"INFORMS","date":"2026-08-04","reason":"Hors fenêtre éditoriale de 7 jours"},

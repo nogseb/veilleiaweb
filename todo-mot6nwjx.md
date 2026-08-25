@@ -9,4 +9,9 @@
 - [x] Remplacer la source UX/UI hors fenêtre par une source qualifiée de la semaine S35
 - [x] Archiver la S34 et positionner la S35 comme édition courante
 - [x] Valider le build, les tests et l'affichage de la S35
-- [ ] Sauvegarder un checkpoint et synchroniser GitHub
+- [x] Sauvegarder un checkpoint et synchroniser GitHub
+- [x] Sélectionner une information prospective bonus, vérifiable et compatible avec la S35
+- [x] Ajouter une carte bonus éditoriale hors des données et compteurs des huit domaines obligatoires
+- [x] Remplacer l’aplat sombre initialement prévu par une trame hachurée conforme à la charte, sans traiter le bonus comme un domaine
+- [x] Vérifier la lisibilité de la trame hachurée en thèmes clair et sombre
+- [ ] Valider le build, l’affichage et la synchronisation GitHub de la carte bonus
