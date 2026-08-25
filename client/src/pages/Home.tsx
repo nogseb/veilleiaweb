@@ -177,7 +177,7 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
 
   return (
     <div
-      className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
+      className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-5 sm:p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
       onClick={onClick}
     >
       <div className="flex items-start justify-between pb-4">
@@ -189,47 +189,111 @@ function DomaineCard({ domaine, onClick }: { domaine: typeof veilleData.domaines
           {(isNew || hasChanged) && <NouveauBadge />}
         </div>
       </div>
-      <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">
+      <h3 className="text-base sm:text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">
         {domaine.titre}
       </h3>
-      <p className="text-sm text-[#8A8A8A] leading-relaxed">
+      <p className="text-xs sm:text-sm text-[#8A8A8A] leading-relaxed">
         {domaine.description}
       </p>
     </div>
   );
 }
 
-function BonusCard({ onTrack }: { onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
+function BonusCard({ onClick }: { onClick: () => void }) {
   const bonus = veilleData.bonus;
 
   return (
-    <article className="bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-8 flex flex-col justify-between min-h-[320px] hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150">
-      <div>
-        <div className="flex items-start justify-between gap-4 pb-6">
+    <article
+      className="col-span-2 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
+      onClick={onClick}
+    >
+      <div className="max-w-[calc(50%-0.25rem)] sm:max-w-md">
+        <div className="flex items-start justify-between gap-4 pb-5">
           <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
           <span className="text-[10px] tracking-[0.1em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] border border-[#0F0F10] dark:border-[#E5E2DC] px-2 py-0.5">FUN FACT</span>
         </div>
         <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
-        <p className="text-[10px] tracking-[0.15em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] pb-5">{bonus.statLabel}</p>
-        <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">{bonus.titre}</h3>
-        <p className="text-sm text-[#2C2E33] dark:text-[#E5E2DC] leading-relaxed">{bonus.description}</p>
-      </div>
-      <div className="pt-6 mt-6 border-t border-[#8A8A8A] dark:border-[#4A4C52]">
-        <p className="text-xs text-[#2C2E33] dark:text-[#8A8A8A] leading-relaxed pb-4">{bonus.perspective}</p>
-        <a
-          href={bonus.source.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => {
-            onTrack({ name: "source_click", domainCode: "BONUS", sourcePublisher: bonus.source.nom });
-            trackGa4Engagement("source_lue", { domainCode: "BONUS", sourcePublisher: bonus.source.nom, week: veilleData.week, route: "home" });
-          }}
-          className="text-xs tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
-        >
-          SOURCE — {bonus.source.nom} →
-        </a>
+        <p className="text-[10px] tracking-[0.15em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] pb-4">{bonus.statLabel}</p>
+        <h3 className="text-base sm:text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-5 leading-tight">{bonus.titre}</h3>
+        <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">OUVRIR LE BONUS →</span>
       </div>
     </article>
+  );
+}
+
+function BonusModal({ onClose, onTrack }: { onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"] }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const bonus = veilleData.bonus;
+
+  return (
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="relative w-full max-w-[720px]" onClick={(e) => e.stopPropagation()}>
+        {!isFlipped ? (
+          <div className="relative bg-white dark:bg-[#1A1A1D] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4">
+              <button
+                onClick={() => {
+                  onTrack({ name: "domain_analysis_flip", domainCode: "BONUS" });
+                  setIsFlipped(true);
+                }}
+                title="Voir l'analyse complète"
+                className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150 flex items-center gap-1.5"
+              >
+                ANALYSE
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+              </button>
+              <button onClick={onClose} title="Fermer la modale" className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150">FERMER</button>
+            </div>
+
+            <div className="flex items-center gap-3 pb-3">
+              <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
+              <span className="text-[10px] tracking-[0.1em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#0F0F10] dark:border-[#F5F4F0] px-2 py-0.5">FUN FACT</span>
+            </div>
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight pr-32">{bonus.titre}</h2>
+            <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
+            <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
+            <p className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] pb-6">{bonus.statLabel}</p>
+            <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">{bonus.description}</p>
+            <div className="pb-6">
+              <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4>
+              <ul className="space-y-2">
+                {bonus.details.map((detail, i) => <li key={i} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">{detail}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">SOURCE</h4>
+              <a
+                href={bonus.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  onTrack({ name: "source_click", domainCode: "BONUS", sourcePublisher: bonus.source.nom });
+                  trackGa4Engagement("source_lue", { domainCode: "BONUS", sourcePublisher: bonus.source.nom, week: veilleData.week, route: "home" });
+                }}
+                className="text-sm text-[#FF4757] underline hover:no-underline"
+              >
+                {bonus.source.nom} — {bonus.source.date} →
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div className="relative bg-[#0F0F10] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4">
+              <button onClick={() => setIsFlipped(false)} title="Retour à la synthèse" className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#F5F4F0] transition-colors duration-150 flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                RETOUR
+              </button>
+              <button onClick={onClose} title="Fermer la modale" className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#F5F4F0] transition-colors duration-150">FERMER</button>
+            </div>
+            <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#F5F4F0] pb-4 pt-3 leading-tight pr-32">{bonus.titre}</h2>
+            <div className="flex items-center gap-3 pb-6"><div className="w-8 h-px bg-[#FF4757]" /><span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">ANALYSE COMPLÈTE</span></div>
+            <p className="text-base text-[#E5E2DC] leading-relaxed">{bonus.longDescription}</p>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -384,6 +448,7 @@ function DomaineModal({ domaine, onClose, onTrack }: { domaine: typeof veilleDat
 function AnalyseParDomaine() {
   const [activeFilter, setActiveFilter] = useState<string>("TOUS");
   const [selectedDomaine, setSelectedDomaine] = useState<typeof veilleData.domaines[0] | null>(null);
+  const [isBonusOpen, setIsBonusOpen] = useState(false);
   const { track } = useFirstPartyAnalytics({ route: "home", week: veilleData.week, trackEdition: true });
 
   const filteredDomaines = activeFilter === "TOUS"
@@ -413,7 +478,7 @@ function AnalyseParDomaine() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
         {filteredDomaines.map((domaine) => (
           <DomaineCard
             key={domaine.id}
@@ -425,12 +490,17 @@ function AnalyseParDomaine() {
             }}
           />
         ))}
-        {activeFilter === "TOUS" && <BonusCard onTrack={track} />}
+        {activeFilter === "TOUS" && <BonusCard onClick={() => {
+          track({ name: "domain_open", domainCode: "BONUS" });
+          trackGa4Engagement("analyse_ouverte", { domainCode: "BONUS", week: veilleData.week, route: "home" });
+          setIsBonusOpen(true);
+        }} />}
       </div>
 
       {selectedDomaine && (
         <DomaineModal domaine={selectedDomaine} onTrack={track} onClose={() => setSelectedDomaine(null)} />
       )}
+      {isBonusOpen && <BonusModal onTrack={track} onClose={() => setIsBonusOpen(false)} />}
     </section>
   );
 }

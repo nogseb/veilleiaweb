@@ -206,7 +206,14 @@ export const veilleS35 = {
     chiffre: "3 000",
     statLabel: "PRODUITS PRÉSENTÉS EN CINQ JOURS",
     description: "Au World Robot Conference 2026 de Pékin, environ 3 000 produits ont été exposés. Entre démonstrations de boxe, danse et tennis de table, Associated Press rapporte qu’un robot n’a pas réussi à plier une chemise après plusieurs minutes d’essais.",
+    details: [
+      "Environ 3 000 produits ont été présentés pendant cinq jours au World Robot Conference 2026 de Pékin",
+      "Des robots humanoïdes ont notamment boxé, dansé et joué au tennis de table lors des démonstrations",
+      "Un robot n’a pas réussi à plier une chemise après plusieurs minutes d’essais",
+      "Un humanoïde d’assistance émotionnelle présenté par UBTECH est annoncé à 168 000 yuans, soit plus de 24 000 dollars"
+    ],
     perspective: "Le fun fact cache un signal utile : la démonstration publique progresse plus vite que l’autonomie polyvalente. Pour les organisations, la bonne question n’est pas « quel robot impressionne ? », mais « quelle tâche bornée, mesurable et sûre peut déjà être industrialisée ? ».",
+    longDescription: "Le World Robot Conference de Pékin offre un instantané utile de la robotique humanoïde en 2026. Associated Press rapporte qu’environ 3 000 produits ont été exposés pendant cinq jours, avec des démonstrations de robots boxant, dansant ou jouant au tennis de table. Pourtant, la même source décrit un robot incapable de plier une chemise après plusieurs minutes d’essais. Ce contraste n’est pas anecdotique : la performance dans une démonstration scénarisée ne prouve pas l’autonomie dans un environnement variable. Certaines machines sont déjà commercialisées pour des usages ciblés, comme l’assistance émotionnelle, mais le passage à une exécution robuste de tâches quotidiennes reste partiel. Pour TBS Education, ce bonus suggère une règle de prudence applicable à toute automatisation : partir d’une tâche précise, mesurer qualité, sécurité, temps de reprise et coût total, puis seulement élargir le périmètre. La valeur ne vient pas de l’apparence humanoïde ; elle vient d’un niveau de fiabilité démontré dans un contexte réel, avec une supervision proportionnée aux risques.",
     source: { nom: "Associated Press", url: "https://apnews.com/article/china-robot-conference-951ebd3cddaccf5afcedc68174ba626a", date: "19 août 2026" }
   },
 

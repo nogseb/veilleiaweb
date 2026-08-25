@@ -15,3 +15,5 @@
 - [x] Remplacer l’aplat sombre initialement prévu par une trame hachurée conforme à la charte, sans traiter le bonus comme un domaine
 - [x] Vérifier la lisibilité de la trame hachurée en thèmes clair et sombre
 - [ ] Valider le build, l’affichage et la synchronisation GitHub de la carte bonus
+- [x] Étendre visuellement la trame hachurée sur deux colonnes mobile tout en contraignant le texte du bonus à une colonne
+- [x] Raccourcir la carte bonus et déplacer le détail, les liens et la source dans une modale Flip Card
