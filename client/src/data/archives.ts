@@ -1,4 +1,5 @@
-import { veilleS35 as veilleData } from "./veille-s35";
+import { veilleS36 as veilleData } from "./veille-s36";
+import { veilleS35 as s35Data } from "./veille-s35";
 import { veilleS34 as s34Data } from "./veille-s34";
 import { veilleS33 as s33Data } from "./veille-s33";
 import { veilleS32 as s32Data } from "./veille-s32";
@@ -32,10 +33,11 @@ export interface ArchiveEdition {
   signauxEmergents: typeof veilleData.signauxEmergents;
   tendancesPassees: typeof veilleData.tendancesPassees;
   dashboardDetails: typeof veilleData.dashboardDetails;
+  bonus?: typeof veilleData.bonus;
 }
 
-// Semaine 35 — édition actuelle (données complètes depuis veille-s35.ts)
-const s35: ArchiveEdition = {
+// Semaine 36 — édition actuelle (données complètes depuis veille-s36.ts)
+const s36: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -53,6 +55,29 @@ const s35: ArchiveEdition = {
   signauxEmergents: veilleData.signauxEmergents,
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
+  bonus: veilleData.bonus,
+};
+
+// Semaine 35
+const s35: ArchiveEdition = {
+  week: s35Data.week,
+  year: s35Data.year,
+  date: s35Data.publicationDate,
+  signalMajeur: s35Data.signalMajeur.title,
+  domainsCount: s35Data.domainsCount,
+  sourcesCount: s35Data.sourcesCount,
+  criticalCount: s35Data.criticalCount,
+  importantCount: s35Data.importantCount,
+  actionsCount: s35Data.actionsCount,
+  emergingCount: s35Data.emergingCount,
+  syntheseExecutive: s35Data.syntheseExecutive,
+  statDominante: s35Data.statDominante,
+  domaines: s35Data.domaines,
+  actions: s35Data.actions,
+  signauxEmergents: s35Data.signauxEmergents,
+  tendancesPassees: s35Data.tendancesPassees,
+  dashboardDetails: s35Data.dashboardDetails,
+  bonus: s35Data.bonus,
 };
 
 // Semaine 34
@@ -544,9 +569,9 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 // Export de l'édition courante
-export const currentEdition = s35;
+export const currentEdition = s36;
 
 // Alias pour compatibilité
 export const allArchives = archives;

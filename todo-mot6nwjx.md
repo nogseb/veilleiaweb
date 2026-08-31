@@ -19,3 +19,16 @@
 - [x] Étendre visuellement la trame hachurée sur deux colonnes mobile tout en contraignant le texte du bonus à une colonne
 - [x] Raccourcir la carte bonus et déplacer le détail, les liens et la source dans une modale Flip Card
 - [x] Conserver la double largeur du bonus en mobile et appliquer la largeur standard en desktop
+- [x] Synchroniser la variante desktop de la carte bonus sur GitHub
+- [x] Diagnostiquer l’échec de déploiement et vérifier l’absence de cause applicative
+- [ ] Préparer la reprise de publication après résolution de la dépendance d’infrastructure
+- [x] Vérifier l’état GitHub et l’édition courante avant de produire la S36
+- [x] Collecter et vérifier les sources de la S36 dans la fenêtre hebdomadaire
+- [x] Rédiger les données S36, le rapport et le registre des sources
+- [x] Archiver la S35, afficher la S36 et conserver la carte Bonus distincte
+- [x] Valider le build et les tests de la S36
+- [x] Vérifier explicitement la S36 en mobile et desktop, y compris la carte et la modale Bonus ainsi que l’archive S35
+- [x] Ouvrir et retourner la modale Bonus de la S36 et de l’archive S35 sur les vues mobile et desktop
+- [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus sur la S36
+- [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus dans l’archive S35
+- [ ] Synchroniser la S36 et l’archive S35 enrichie vers GitHub

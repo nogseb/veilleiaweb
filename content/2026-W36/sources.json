@@ -1,0 +1,25 @@
+{
+  "week": 36,
+  "year": 2026,
+  "window": "2026-08-24 to 2026-08-31",
+  "kept": [
+    {"title":"Google AI Overviews Pushing Searchers Into AI Mode, Drops Show More Button","publisher":"Search Engine Roundtable","date":"2026-08-28","url":"https://www.seroundtable.com/google-ai-overviews-push-ai-mode-responses-41974.html","domains":["Google AI Search"]},
+    {"title":"Google’s August 2026 spam update hit rankings harder than normal","publisher":"Search Engine Land","date":"2026-08-27","url":"https://searchengineland.com/google-august-2026-spam-update-ranking-impact-485980","domains":["Google AI Search","Zero-Click / GEO"],"evidence":"Analyse SE Ranking portant sur 100 000 mots-clés US et 20 secteurs ; 82 % de hausse des URL sorties du top 10 vers le top 100 par rapport à une période témoin."},
+    {"title":"AI search is here, but marketers still call it SEO","publisher":"Search Engine Land","date":"2026-08-24","url":"https://searchengineland.com/ai-search-marketers-call-it-seo-485574","domains":["Zero-Click / GEO"],"evidence":"Enquête Fractl auprès de 343 décideurs marketing US ; données déclaratives."},
+    {"title":"Update to the Site Reputation Policy","publisher":"Google Search Central","date":"2026-08-28","url":"https://developers.google.com/search/blog/2026/08/update-site-reputation-policy","domains":["Google AI Search","Zero-Click / GEO"]},
+    {"title":"October 2026 changes to the Display & Video 360 API and Structured Data Files","publisher":"Google Ads Developer Blog","date":"2026-08-27","url":"https://ads-developers.googleblog.com/2026/08/october-2026-changes-to-display-video.html","domains":["Schema.org et données structurées"]},
+    {"title":"Webflow Brings Site Automation to ChatGPT & Codex","publisher":"CMSWire","date":"2026-08-26","url":"https://www.cmswire.com/digital-experience/webflow-brings-site-automation-to-chatgpt-codex/","domains":["DXP / CMS headless"]},
+    {"title":"Better data starts with treating people like people","publisher":"MarTech.org","date":"2026-08-27","url":"https://martech.org/better-data-starts-with-treating-people-like-people/","domains":["CDP / Data first-party"]},
+    {"title":"The latest AI-powered martech news and releases","publisher":"MarTech.org","date":"2026-08-27","url":"https://martech.org/the-latest-ai-powered-martech-news-and-releases/","domains":["CDP / Data first-party"],"evidence":"Revue d’annonces fournisseurs, utilisée sans reprendre de résultat de performance."},
+    {"title":"The Custodial Era of UX: Cleaning Up After AI","publisher":"Nielsen Norman Group","date":"2026-08-28","url":"https://www.nngroup.com/articles/ai-ux-debt/","domains":["UX/UI conversationnelle"]},
+    {"title":"Introducing the Admin plugin for ChatGPT Work and Codex","publisher":"OpenAI","date":"2026-08-25","url":"https://openai.com/index/introducing-admin-plugin/","domains":["IA générative en production"],"evidence":"Cas interne OpenAI : environ 45 % du volume de tickets IT résolus par les workflows déployés."},
+    {"title":"The Hugging Face incident and the road ahead","publisher":"OpenAI","date":"2026-08-26","url":"https://openai.com/index/hugging-face-incident-and-the-road-ahead/","domains":["IA générative en production"],"evidence":"Utilisé pour les principes publiés d’isolation, contrôle des accès et monitoring ; détails techniques d’exploitation exclus."},
+    {"title":"Commerce and Retail Media Glossary 2026","publisher":"IAB Australia","date":"2026-08-25","url":"https://www.iabaustralia.com.au/resource/commerce-and-retail-media-glossary-2026/","domains":["Innovation marketing"]},
+    {"title":"Previewing the Model Hardware Standard","publisher":"Anthropic","date":"2026-08-27","url":"https://www.anthropic.com/news/model-hardware-standard-research-preview","domains":["Bonus éditorial / robotique"],"evidence":"Recherche sur une spécification de pilotage encadré d’équipements programmables par agents."}
+  ],
+  "rejected": [
+    {"title":"How businesses win when AI does the shopping","publisher":"Microsoft Advertising","date":"2026-08-21","reason":"Source primaire utile mais publiée avant la fenêtre éditoriale S36."},
+    {"title":"AI Search Citation Sources","publisher":"Search Engine Journal / Trendos","date":"2026-08-26","reason":"Contenu explicitement sponsorisé ; exclusion conformément aux règles de veille."},
+    {"title":"Cas d’école IA marketing repérés via recherche","reason":"Aucun cas retenu : absence de KPI attribuable à une source primaire dans la fenêtre de veille."}
+  ]
+}

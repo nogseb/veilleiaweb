@@ -138,12 +138,69 @@ function DomaineModal({ domaine, onClose, onTrack, week }: { domaine: ArchiveEdi
   );
 }
 
+function BonusCard({ bonus, onClick }: { bonus: NonNullable<ArchiveEdition["bonus"]>; onClick: () => void }) {
+  return (
+    <article
+      className="col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
+      onClick={onClick}
+    >
+      <div className="max-w-md">
+        <div className="flex items-start justify-between gap-4 pb-5">
+          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
+          <span className="text-[10px] tracking-[0.1em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] border border-[#0F0F10] dark:border-[#E5E2DC] px-2 py-0.5">FUN FACT</span>
+        </div>
+        <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
+        <p className="text-[10px] tracking-[0.15em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] pb-4">{bonus.statLabel}</p>
+        <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-5 leading-tight">{bonus.titre}</h3>
+        <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">OUVRIR LE BONUS →</span>
+      </div>
+    </article>
+  );
+}
+
+function BonusModal({ bonus, onClose, onTrack, week }: { bonus: NonNullable<ArchiveEdition["bonus"]>; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"]; week: number }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="relative w-full max-w-[720px]" onClick={(event) => event.stopPropagation()}>
+        {!isFlipped ? (
+          <div className="relative bg-white dark:bg-[#1A1A1D] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4">
+              <button onClick={() => { onTrack({ name: "domain_analysis_flip", domainCode: "BONUS" }); setIsFlipped(true); }} className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150">ANALYSE</button>
+              <button onClick={onClose} className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150">FERMER</button>
+            </div>
+            <div className="flex items-center gap-3 pb-3"><span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span><span className="text-[10px] tracking-[0.1em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#0F0F10] dark:border-[#F5F4F0] px-2 py-0.5">FUN FACT</span></div>
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight pr-32">{bonus.titre}</h2>
+            <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
+            <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
+            <p className="text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] pb-6">{bonus.statLabel}</p>
+            <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">{bonus.description}</p>
+            <div className="pb-6"><h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4><ul className="space-y-2">{bonus.details.map((detail, index) => <li key={index} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">{detail}</li>)}</ul></div>
+            <div><h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">SOURCE</h4><a href={bonus.source.url} target="_blank" rel="noopener noreferrer" onClick={() => { onTrack({ name: "source_click", domainCode: "BONUS", sourcePublisher: bonus.source.nom }); trackGa4Engagement("source_lue", { domainCode: "BONUS", sourcePublisher: bonus.source.nom, week, route: "archives" }); }} className="text-sm text-[#FF4757] underline hover:no-underline">{bonus.source.nom} — {bonus.source.date} →</a></div>
+          </div>
+        ) : (
+          <div className="relative bg-[#0F0F10] w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200">
+            <div className="absolute top-4 right-4 flex items-center gap-4"><button onClick={() => setIsFlipped(false)} className="text-sm tracking-[0.15em] uppercase text-[#FF4757] hover:text-[#F5F4F0] transition-colors duration-150">RETOUR</button><button onClick={onClose} className="text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#F5F4F0] transition-colors duration-150">FERMER</button></div>
+            <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
+            <h2 className="text-2xl uppercase tracking-[0.02em] text-[#F5F4F0] pb-4 pt-3 leading-tight pr-32">{bonus.titre}</h2>
+            <div className="flex items-center gap-3 pb-6"><div className="w-8 h-px bg-[#FF4757]" /><span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">ANALYSE COMPLÈTE</span></div>
+            <p className="text-base text-[#E5E2DC] leading-relaxed">{bonus.longDescription}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function WeekDetail() {
   const params = useParams<{ week: string }>();
   const weekNum = parseInt(params.week || "0", 10);
   const edition = getEditionByWeek(weekNum);
   const [openPopover, setOpenPopover] = useState<string | null>(null);
   const [selectedDomaine, setSelectedDomaine] = useState<ArchiveEdition["domaines"][0] | null>(null);
+  const [selectedBonus, setSelectedBonus] = useState<NonNullable<ArchiveEdition["bonus"]> | null>(null);
   const { track } = useFirstPartyAnalytics({ route: "archives", week: weekNum, trackEdition: true });
 
   // Navigation entre semaines
@@ -305,6 +362,7 @@ export default function WeekDetail() {
                 </div>
               );
             })}
+            {edition.bonus && <BonusCard bonus={edition.bonus} onClick={() => { track({ name: "domain_open", domainCode: "BONUS" }); trackGa4Engagement("analyse_ouverte", { domainCode: "BONUS", week: edition.week, route: "archives" }); setSelectedBonus(edition.bonus!); }} />}
           </div>
         </section>
       </div>
@@ -408,6 +466,9 @@ export default function WeekDetail() {
 
       {selectedDomaine && (
         <DomaineModal domaine={selectedDomaine} onTrack={track} week={edition.week} onClose={() => setSelectedDomaine(null)} />
+      )}
+      {selectedBonus && (
+        <BonusModal bonus={selectedBonus} onTrack={track} week={edition.week} onClose={() => setSelectedBonus(null)} />
       )}
     </div>
   );
