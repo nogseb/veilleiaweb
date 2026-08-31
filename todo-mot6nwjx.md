@@ -21,7 +21,7 @@
 - [x] Conserver la double largeur du bonus en mobile et appliquer la largeur standard en desktop
 - [x] Synchroniser la variante desktop de la carte bonus sur GitHub
 - [x] Diagnostiquer l’échec de déploiement et vérifier l’absence de cause applicative
-- [ ] Préparer la reprise de publication après résolution de la dépendance d’infrastructure
+- [x] Préparer la reprise de publication via le checkpoint S36 validé
 - [x] Vérifier l’état GitHub et l’édition courante avant de produire la S36
 - [x] Collecter et vérifier les sources de la S36 dans la fenêtre hebdomadaire
 - [x] Rédiger les données S36, le rapport et le registre des sources
@@ -31,4 +31,4 @@
 - [x] Ouvrir et retourner la modale Bonus de la S36 et de l’archive S35 sur les vues mobile et desktop
 - [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus sur la S36
 - [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus dans l’archive S35
-- [ ] Synchroniser la S36 et l’archive S35 enrichie vers GitHub
+- [x] Synchroniser la S36 et l’archive S35 enrichie vers GitHub
