@@ -1,0 +1,24 @@
+{
+  "week": 37,
+  "year": 2026,
+  "window": "2026-09-01 to 2026-09-07",
+  "kept": [
+    {"title":"Google Search Console Generative AI Performance Reports & Controls Go Live","publisher":"Search Engine Roundtable","date":"2026-09-01","url":"https://www.seroundtable.com/google-search-console-generative-ai-tools-live-41984.html","domains":["Google AI Search"]},
+    {"title":"The September 2026 Google Webmaster Report","publisher":"Search Engine Roundtable","date":"2026-09-01","url":"https://www.seroundtable.com/sept-2026-google-webmaster-report-41979.html","domains":["Google AI Search"]},
+    {"title":"The Most Cited Domains in Google AI Overviews","publisher":"Ahrefs","date":"2026-09-02","url":"https://ahrefs.com/blog/most-cited-domains-ai-overviews/","domains":["Zero-Click / GEO"],"evidence":"Analyse Brand Radar sur plus de 3 millions de requêtes américaines ; YouTube 22,9 %, Reddit 18,5 % et Facebook 10,1 % de la part de mentions des 50 premiers domaines cités."},
+    {"title":"Does Structured Data Actually Improve Answer Engine Citations?","publisher":"CMSWire","date":"2026-09-03","url":"https://www.cmswire.com/digital-marketing/does-structured-data-actually-improve-answer-engine-citations/","domains":["Schema.org et données structurées"],"evidence":"Analyse relayant une étude Ahrefs appariée sur 1 885 pages ; pas de hausse mesurable des citations AI Mode ou ChatGPT après ajout de JSON-LD."},
+    {"title":"Why Webflow Faces a Pivotal Moment in Its Digital Experience Evolution","publisher":"CMSWire","date":"2026-09-03","url":"https://www.cmswire.com/digital-experience/why-webflow-faces-a-pivotal-moment-in-its-digital-experience-evolution/","domains":["DXP / CMS headless"],"evidence":"Chiffre d’adoption MCP attribué à Webflow via CMSWire : d’environ 2 % à plus de 50 % des clients entreprise en 2026."},
+    {"title":"The next CDP decision goes beyond the CDP","publisher":"MarTech","date":"2026-09-04","url":"https://martech.org/the-next-cdp-decision-goes-beyond-the-cdp/","domains":["CDP / Data first-party"]},
+    {"title":"Audience Activation: What It Is and How It Works","publisher":"LiveRamp","date":"2026-09-03","url":"https://liveramp.com/blog/audience-activation","domains":["CDP / Data first-party"],"evidence":"55 % des marketeurs déclarent une donnée first-party totalement ou partiellement cloisonnée ; statistique attribuée par LiveRamp à eMarketer."},
+    {"title":"Test Complex Interactions Earlier with AI Prototyping","publisher":"Nielsen Norman Group","date":"2026-09-04","url":"https://www.nngroup.com/articles/test-earlier-with-ai/","domains":["UX/UI conversationnelle"]},
+    {"title":"How AI-native companies turn workflows into operating capability","publisher":"OpenAI","date":"2026-09-01","url":"https://openai.com/index/ai-native-company-workflows/","domains":["IA générative en production"],"evidence":"D’après OpenAI, les entreprises du décile supérieur de son étude génèrent 8,3× plus de tokens par utilisateur actif que le décile médian, contre 2,6× en janvier."},
+    {"title":"Path to Astra: critical capabilities and frontier safeguards","publisher":"OpenAI","date":"2026-09-01","url":"https://openai.com/index/path-to-astra/","domains":["IA générative en production"],"evidence":"OpenAI qualifie Astra de premier modèle au seuil Critical de son Preparedness Framework pour la cybersécurité."},
+    {"title":"Future of Measurement Report 2026","publisher":"IAB Australia","date":"2026-09-01","url":"https://www.iabaustralia.com.au/resource/future-of-measurement-report-2026/","domains":["Innovation marketing"]},
+    {"title":"IFA 2026: Humanoid robots on the runway, Physical AI and intelligent helpers for everyday life","publisher":"IFA Berlin","date":"2026-09-05","url":"https://www.ifa-berlin.com/press-releases/ifa2026-humanoid-robots","domains":["Bonus éditorial / robotique"]}
+  ],
+  "rejected": [
+    {"title":"Résultats d’éditeurs de logiciels sur Schema.org, CDP ou agents","reason":"Articles promotionnels centrés sur leur propre solution ; exclus conformément aux règles de veille."},
+    {"title":"Cas d’école IA marketing repérés pendant la collecte","reason":"Aucun KPI primaire, attribué à une marque, à une période et à un mécanisme n’a été validé dans la fenêtre S37."},
+    {"title":"Publications non datées ou antérieures au 1er septembre 2026","reason":"Exclues de la fenêtre éditoriale de la S37."}
+  ]
+}

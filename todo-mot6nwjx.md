@@ -32,3 +32,13 @@
 - [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus sur la S36
 - [x] Contrôler au viewport desktop les faces avant et arrière de la modale Bonus dans l’archive S35
 - [x] Synchroniser la S36 et l’archive S35 enrichie vers GitHub
+- [x] Vérifier la baseline S36, la semaine ISO et la sauvegarde GitHub avant S37
+- [x] Collecter et qualifier les sources S37 dans la fenêtre hebdomadaire
+- [x] Rédiger les données, le rapport et le registre de sources S37
+- [x] Archiver la S36, afficher la S37 et conserver les cartes Bonus distinctes
+- [x] Valider le build, les tests et les modales Bonus en mobile et desktop
+- [ ] Sauvegarder le checkpoint S37 et synchroniser GitHub
+- [x] Vérifier explicitement en mobile l’ouverture et le flip de la modale Bonus S37
+- [x] Vérifier explicitement en mobile et desktop l’ouverture et le flip de la modale Bonus archivée S36
+- [x] Vérifier explicitement en mobile l’ouverture et le flip de la modale Bonus S37
+- [x] Vérifier explicitement en mobile et desktop l’ouverture et le flip de la modale Bonus archivée S36
