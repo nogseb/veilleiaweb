@@ -42,3 +42,12 @@
 - [x] Vérifier explicitement en mobile et desktop l’ouverture et le flip de la modale Bonus archivée S36
 - [x] Vérifier explicitement en mobile l’ouverture et le flip de la modale Bonus S37
 - [x] Vérifier explicitement en mobile et desktop l’ouverture et le flip de la modale Bonus archivée S36
+- [x] Vérifier la baseline S37, la semaine ISO et la sauvegarde GitHub avant S38
+- [x] Collecter et qualifier les sources S38 dans la fenêtre hebdomadaire
+- [x] Rédiger les données, le rapport et le registre de sources S38
+- [ ] Archiver la S37, afficher la S38 et conserver les cartes Bonus distinctes
+- [ ] Valider le build, les tests et les modales Bonus en mobile et desktop pour la S38
+- [ ] Sauvegarder le checkpoint S38 et synchroniser GitHub
+- [x] Vérifier une source hebdomadaire explicite sur Schema.org ou JSON-LD pour le domaine 3 de la S38
+- [x] Vérifier une source hebdomadaire distincte sur l’innovation marketing ou le commerce agentique pour le domaine 8 de la S38
+- [x] Contrôler la cohérence des 9 sources S38, des 8 domaines et du Bonus distinct avant intégration

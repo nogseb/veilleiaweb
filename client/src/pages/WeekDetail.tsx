@@ -141,10 +141,10 @@ function DomaineModal({ domaine, onClose, onTrack, week }: { domaine: ArchiveEdi
 function BonusCard({ bonus, onClick }: { bonus: NonNullable<ArchiveEdition["bonus"]>; onClick: () => void }) {
   return (
     <article
-      className="col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
+      className="col-span-2 sm:col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
       onClick={onClick}
     >
-      <div className="max-w-md">
+      <div className="max-w-[calc(50%-0.25rem)] sm:max-w-md">
         <div className="flex items-start justify-between gap-4 pb-5">
           <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">HORS DOMAINES — {bonus.label}</span>
           <span className="text-[10px] tracking-[0.1em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] border border-[#0F0F10] dark:border-[#E5E2DC] px-2 py-0.5">FUN FACT</span>
@@ -330,7 +330,7 @@ export default function WeekDetail() {
             <div className="w-12 h-px bg-[#FF4757]" />
             <span className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A]">ANALYSE PAR DOMAINE</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
             {edition.domaines.map((domaine) => {
               const isNew = domaine.previousBadge === null;
               const hasChanged = domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;

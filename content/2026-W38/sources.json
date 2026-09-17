@@ -1,0 +1,20 @@
+{
+  "edition": "S38 — 14 septembre 2026",
+  "window": "8 au 14 septembre 2026",
+  "sourcesCount": 9,
+  "sources": [
+    {"id": 1, "domain": "Google AI Search", "publisher": "Search Engine Roundtable", "date": "2026-09-08", "url": "https://www.seroundtable.com/recap-09-08-2026-42041.html", "type": "veille spécialisée", "use": "Tests observés AI Mode et citations AI Overviews"},
+    {"id": 2, "domain": "Zero-click / GEO", "publisher": "Semrush", "date": "2026-09-08", "url": "https://www.semrush.com/blog/manufacturing-seo-ai-search/", "type": "étude avec méthodologie publiée", "use": "Dissociation AI Overviews, mentions, citations et trafic"},
+    {"id": 3, "domain": "Schema.org / données structurées", "publisher": "Search Engine Journal", "date": "2026-09-09", "url": "https://www.searchenginejournal.com/brands-are-tracking-ai-visibility-but-are-they-measuring-the-right-things/587888/", "type": "analyse de données Ahrefs relayée", "use": "Test JSON-LD et citations génératives"},
+    {"id": 4, "domain": "DXP / CMS headless", "publisher": "CMSWire", "date": "2026-09-10", "url": "https://www.cmswire.com/digital-experience/what-happens-when-ai-agents-inherit-your-messy-content-repository/", "type": "analyse spécialisée", "use": "Gouvernance des contenus-source dans un CMS agentique"},
+    {"id": 5, "domain": "CDP / identité", "publisher": "Commanders Act / First-id", "date": "2026-09-09", "url": "https://www.commandersact.com/news/commanders-act-and-first-id-join-forces-to-help-brands-take-back-control-of-their-marketing-identity/", "type": "annonce fournisseur", "use": "Mécanisme consentement-identité-CDP-activation, sans KPI de performance"},
+    {"id": 6, "domain": "UX conversationnelle", "publisher": "Nielsen Norman Group", "date": "2026-09-11", "url": "https://www.nngroup.com/articles/test-earlier-with-ai/", "type": "référence UX", "use": "Prototypage interactif et test des cas limites"},
+    {"id": 7, "domain": "IA générative / gouvernance", "publisher": "Anthropic", "date": "2026-09-10", "url": "https://www.anthropic.com/threat-intelligence-report-september-2026", "type": "rapport primaire", "use": "Risques et contrôles des agents utilisant des outils"},
+    {"id": 8, "domain": "Innovation marketing", "publisher": "IAB", "date": "2026-09-10", "url": "https://www.iab.com/insights/2026-outlook-study-september-update/", "type": "étude professionnelle", "use": "Découverte IA, visibilité de marque et mesure parmi les priorités média"},
+    {"id": 9, "domain": "Bonus robotique", "publisher": "Reuters", "date": "2026-09-14", "url": "https://www.reuters.com/business/media-telecom/ipo-humanoid-robot-maker-boston-dynamics-unlikely-2027-executive-says-2026-09-14/", "type": "presse de référence", "use": "Écart entre objectifs de robotique humanoïde et déploiement industriel à grande échelle"}
+  ],
+  "excluded": [
+    {"reason": "Aucun changement substantiel de l’EU AI Act, daté de la fenêtre hebdomadaire et pertinent pour le périmètre TBS Education, n’a été retenu."},
+    {"reason": "Les données de visibilité produit issues de fournisseurs sont traitées comme observations de périmètre limité et ne sont pas utilisées comme données de marché."}
+  ]
+}
