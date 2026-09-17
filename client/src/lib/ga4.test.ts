@@ -1,9 +1,18 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { buildGa4EngagementParameters, createSingleEventGuard, ga4EngagementEvents, GA4_MEASUREMENT_ID, shouldLoadGa4 } from "./ga4";
 
 describe("garde-fou GA4", () => {
   it("utilise l'identifiant de mesure fourni", () => {
     expect(GA4_MEASUREMENT_ID).toBe("G-NZ24YB5E5N");
+  });
+
+  it("installe la balise Google dans le document racine avec un consentement refusé par défaut", () => {
+    const documentHtml = readFileSync(new URL("../../index.html", import.meta.url), "utf8");
+
+    expect(documentHtml).toMatch(/<head>\s*<!-- Google tag \(gtag\.js\) -->\s*<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-NZ24YB5E5N"><\/script>/);
+    expect(documentHtml).toContain("gtag('consent', 'default', { analytics_storage: 'denied' });");
+    expect(documentHtml).toContain("gtag('config', 'G-NZ24YB5E5N', { send_page_view: false });");
   });
 
   it("n'autorise le chargement de GA4 qu'après consentement explicite", () => {

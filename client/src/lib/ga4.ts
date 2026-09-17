@@ -65,24 +65,15 @@ export function applyGa4Consent(consent: Exclude<Ga4Consent, "unknown">) {
   window.localStorage.setItem(GA4_CONSENT_KEY, consent);
 
   if (!shouldLoadGa4(consent)) {
-    window.gtag?.("consent", "update", { analytics_storage: "denied" });
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || gtag;
+    window.gtag("consent", "update", { analytics_storage: "denied" });
     removeGaCookies();
     return;
   }
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = gtag;
-  window.gtag("consent", "default", { analytics_storage: "denied" });
-
-  if (!document.getElementById("ga4-script")) {
-    const script = document.createElement("script");
-    script.id = "ga4-script";
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-  }
-
-  window.gtag("js", new Date());
+  window.gtag = window.gtag || gtag;
   window.gtag("consent", "update", { analytics_storage: "granted" });
   window.gtag("config", GA4_MEASUREMENT_ID);
 }
