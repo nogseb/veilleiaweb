@@ -51,3 +51,9 @@
 - [x] Vérifier une source hebdomadaire explicite sur Schema.org ou JSON-LD pour le domaine 3 de la S38
 - [x] Vérifier une source hebdomadaire distincte sur l’innovation marketing ou le commerce agentique pour le domaine 8 de la S38
 - [x] Contrôler la cohérence des 9 sources S38, des 8 domaines et du Bonus distinct avant intégration
+- [x] Vérifier la baseline S38, la semaine ISO et la sauvegarde GitHub avant S39
+- [x] Collecter et qualifier les sources S39 dans la fenêtre du 15 au 21 septembre 2026
+- [x] Rédiger les données S39, le rapport, le registre de sources et le cas d’école Siemens
+- [x] Archiver la S38, afficher la S39 et conserver les cartes Bonus distinctes
+- [x] Valider l’intégrité éditoriale, TypeScript, build, 23 tests et les modales Bonus en mobile et desktop
+- [ ] Sauvegarder le checkpoint S39, publier WebDev et synchroniser GitHub

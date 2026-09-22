@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { currentEdition, getEditionByWeek } from "./archives";
 
-describe("S38 archive integration", () => {
-  it("exposes S38 as the current eight-domain edition", () => {
-    expect(currentEdition.week).toBe(38);
+describe("S39 archive integration", () => {
+  it("exposes S39 as the current eight-domain edition", () => {
+    expect(currentEdition.week).toBe(39);
     expect(currentEdition.year).toBe(2026);
     expect(currentEdition.domainsCount).toBe(8);
     expect(currentEdition.domaines).toHaveLength(8);
@@ -11,13 +11,13 @@ describe("S38 archive integration", () => {
     expect(currentEdition.bonus).toBeDefined();
   });
 
-  it("keeps S37 available as an archive with its distinct Bonus", () => {
-    const s37 = getEditionByWeek(37);
+  it("keeps S38 available as an archive with its distinct Bonus", () => {
+    const s38 = getEditionByWeek(38);
 
-    expect(s37).toBeDefined();
-    expect(s37?.domainsCount).toBe(8);
-    expect(s37?.domaines).toHaveLength(8);
-    expect(s37?.bonus?.label).toContain("BONUS #10");
-    expect(s37?.bonus?.source.nom).toBe("IFA Berlin");
+    expect(s38).toBeDefined();
+    expect(s38?.domainsCount).toBe(8);
+    expect(s38?.domaines).toHaveLength(8);
+    expect(s38?.bonus?.label).toContain("BONUS #10");
+    expect(s38?.bonus?.source.nom).toBe("Reuters");
   });
 });

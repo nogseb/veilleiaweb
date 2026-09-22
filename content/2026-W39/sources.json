@@ -1,0 +1,27 @@
+{
+  "edition": "S39 — 21 septembre 2026",
+  "window": "15 au 21 septembre 2026",
+  "sourcesCount": 9,
+  "sources": [
+    {"id": 1, "domain": "Google AI Search", "publisher": "Search Engine Roundtable", "date": "2026-09-17", "url": "https://www.seroundtable.com/google-local-knowledge-panel-ai-overview-42105.html", "type": "observation éditoriale vérifiée", "use": "Panneau local Google Business Profile labellisé AI Overview et suivi de type AI Mode", "caveat": "Observation non officielle, sans preuve de déploiement global ni métrique de trafic."},
+    {"id": 2, "domain": "Zero-click / GEO", "publisher": "Search Engine Land", "date": "2026-09-15", "url": "https://searchengineland.com/ai-overviews-paid-search-fight-influence-generate-demand-488451", "type": "analyse professionnelle", "use": "Cadre Fight / Influence / Generate demand pour l’arbitrage SEO et PPC", "caveat": "Cadre d’analyse, non étude indépendante ni démonstration causale."},
+    {"id": 3, "domain": "Schema.org / données structurées", "publisher": "Schema.org", "date": "2026-09-16", "url": "https://schema.org/docs/releases.html", "type": "release officielle", "use": "Version 30.1 : passeports numériques de produits et attributs de données e-commerce", "caveat": "Ne prouve ni adoption par Google Search ni gain SEO."},
+    {"id": 4, "domain": "DXP / CMS headless", "publisher": "CMSWire", "date": "2026-09-15", "url": "https://www.cmswire.com/digital-experience/another-digital-experience-platform-dxp-bites-the-dust/", "type": "analyse sectorielle", "use": "Repositionnement d’Acquia, Contentstack et Optimizely autour de l’agentic et de la gouvernance", "caveat": "Interprétation sectorielle ; le recul du label DXP ne prouve pas la disparition des capacités."},
+    {"id": 5, "domain": "CDP / identité", "publisher": "CDP.com / Treasure AI", "date": "2026-09-16", "url": "https://cdp.com/glossary/first-party-data/", "type": "guide éditorial fournisseur", "use": "Chaîne ingestion, résolution d’identité, activation, confidentialité et consentement", "caveat": "Source fournisseur retenue à titre complémentaire ; aucun chiffre de performance n’est utilisé."},
+    {"id": 6, "domain": "UX conversationnelle", "publisher": "Nielsen Norman Group", "date": "2026-09-18", "url": "https://www.nngroup.com/articles/designing-ai-study-guide/", "type": "study guide UX", "use": "Valeur d’usage avant chatbot, fonctions étroites, prompts contextualisés et relais humain", "caveat": "Guide agrégateur, non nouvelle étude utilisateur chiffrée."},
+    {"id": 7, "domain": "IA générative / gouvernance", "publisher": "OpenAI", "date": "2026-09-17", "url": "https://openai.com/index/astra-for-law/", "type": "annonce fournisseur", "use": "Astra for Law : sources autorisées, permissions, confidentialité, revue et benchmark juridique", "caveat": "Benchmark privé et fournisseur, non indépendant et non transposable au contexte TBS Education."},
+    {"id": 8, "domain": "Innovation marketing", "publisher": "LinkedIn Marketing Solutions", "date": "2026-09-15", "url": "https://www.linkedin.com/business/marketing/blog/events/siemens-case-study-outcomes", "type": "customer story / cas d’école", "use": "Séquence full-funnel Siemens pour Hannover Messe 2026 et KPI de lead", "caveat": "Résultats publiés par la plateforme média, sans audit indépendant ni méthodologie complète."},
+    {"id": 9, "domain": "Bonus robotique", "publisher": "MIT News", "date": "2026-09-17", "url": "https://news.mit.edu/2026/robotic-lab-runs-optics-experiments-on-demand-0917", "type": "publication scientifique institutionnelle", "use": "Laboratoire d’optique robotisé reconfigurable et démonstration de cavité laser", "caveat": "Démonstration de laboratoire, sans preuve de déploiement industriel ni comparaison de coût ou de taux d’erreur."}
+  ],
+  "excluded": [
+    {"domain": "Google AI Search", "reason": "Article Search Engine Journal du 14 septembre hors fenêtre et reprises/compilations non retenues."},
+    {"domain": "Zero-click / GEO", "reason": "Sources hors whitelist prioritaire, chiffres non primaires et article Search Engine Land du 14 septembre exclus."},
+    {"domain": "Schema.org", "reason": "Mises à jour Google Search Central de la fenêtre jugées non spécifiques aux données structurées."},
+    {"domain": "DXP / CMS", "reason": "Comparatifs promotionnels sans date de publication précise et guides hors fenêtre exclus."},
+    {"domain": "CDP / identité", "reason": "Annonces d’événement ou contenus principalement publicitaires sans traitement substantiel du domaine exclus."},
+    {"domain": "UX conversationnelle", "reason": "Publications hors fenêtre et pages d’index non autonomes exclues."},
+    {"domain": "IA générative / gouvernance", "reason": "Rapports sans date primaire explicite, panoramas moins ciblés et publications hors fenêtre exclus."},
+    {"domain": "Innovation marketing", "reason": "Listes de tendances, contenus sponsorisés et cas sans KPI vérifiable exclus."},
+    {"domain": "Bonus robotique", "reason": "Une seule source institutionnelle détaillée est conservée pour le Bonus distinct."}
+  ]
+}
