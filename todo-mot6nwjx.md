@@ -56,4 +56,11 @@
 - [x] Rédiger les données S39, le rapport, le registre de sources et le cas d’école Siemens
 - [x] Archiver la S38, afficher la S39 et conserver les cartes Bonus distinctes
 - [x] Valider l’intégrité éditoriale, TypeScript, build, 23 tests et les modales Bonus en mobile et desktop
-- [ ] Sauvegarder le checkpoint S39, publier WebDev et synchroniser GitHub
+- [x] Sauvegarder le checkpoint S39 et synchroniser GitHub
+- [ ] Publier le checkpoint S39 via WebDev et vérifier la production
+- [x] Vérifier la baseline S39, la semaine ISO et la sauvegarde GitHub avant S40
+- [x] Collecter et qualifier les sources S40 dans la fenêtre du 22 au 28 septembre 2026
+- [x] Rédiger les données S40, le rapport, le registre de sources et le cas Target avec réserve d’attribution
+- [x] Archiver la S39, afficher la S40 et conserver les cartes Bonus distinctes
+- [x] Valider l’intégrité éditoriale, TypeScript, build, 26 tests et les modales Bonus en mobile et desktop
+- [ ] Sauvegarder le checkpoint S40, publier via WebDev et synchroniser GitHub

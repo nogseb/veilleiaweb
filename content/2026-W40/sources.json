@@ -1,0 +1,155 @@
+{
+  "edition": "S40 — 28 septembre 2026",
+  "window": "22 au 28 septembre 2026",
+  "sourcesCount": 11,
+  "sources": [
+    {
+      "id": 1,
+      "domain": "Google AI Search",
+      "publisher": "Google Search Central Blog",
+      "date": "2026-09-24",
+      "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc?hl=en",
+      "type": "annonce institutionnelle / source primaire",
+      "use": "Rapports Search Console pour la recherche web multimodale, y compris les fonctionnalités d’IA générative.",
+      "caveat": "Aucun volume, taux de clic, trafic ou KPI de performance n’est publié."
+    },
+    {
+      "id": 2,
+      "domain": "Zero-click / GEO",
+      "publisher": "OtterlyAI",
+      "date": "2026-09-22",
+      "url": "https://otterly.ai/blog/ai-search-updates-september/",
+      "type": "analyse propriétaire / observation originale",
+      "use": "Variations des parts de citations LinkedIn et YouTube par moteur IA, sur 1 600 prompts et sept moteurs.",
+      "caveat": "Étude propriétaire sur des rapports sectoriels américains ; citations, trafic et conversion ne sont pas assimilables."
+    },
+    {
+      "id": 3,
+      "domain": "Schema.org / données structurées",
+      "publisher": "Google Search Central",
+      "date": "2026-09-24",
+      "url": "https://developers.google.com/search/updates",
+      "type": "journal officiel de mises à jour documentaires",
+      "use": "Évolutions VideoObject (`creator`, `author`, `interactionStatistic`) et Merchant listings (`priceType`, prix soldés).",
+      "caveat": "Changements de documentation, sans KPI SEO, adoption ou résultats enrichis publiés."
+    },
+    {
+      "id": 4,
+      "domain": "DXP / CMS headless",
+      "publisher": "Liferay",
+      "date": "2026-09-23",
+      "url": "https://www.liferay.com/w/liferay-announces-general-availability-of-liferay-content-marketing-platform",
+      "type": "annonce officielle d’éditeur DXP",
+      "use": "Disponibilité générale de Liferay Content Marketing Platform et intégration native avec le CMS, les permissions et la publication.",
+      "caveat": "Annonce fournisseur sans cas client ni KPI de campagne ; la période d’essai n’est pas un indicateur de valeur."
+    },
+    {
+      "id": 5,
+      "domain": "CDP / identité",
+      "publisher": "Okta",
+      "date": "2026-09-22",
+      "url": "https://www.okta.com/newsroom/press-releases/industry-leaders-form-the-blueprint-alliance/",
+      "type": "annonce officielle / source primaire",
+      "use": "Principes d’identité, permissions, délégation, surveillance et réponse réversible pour les agents connectés aux données.",
+      "caveat": "Architecture de sécurité agentique ; aucun KPI de collecte, CRM, CDP ou performance marketing n’est publié."
+    },
+    {
+      "id": 6,
+      "domain": "UX conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-09-23",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "type": "note de version / source primaire",
+      "use": "Continuité voix-texte, plugins dans Voice et poursuite d’une tâche en texte dans Work.",
+      "caveat": "Annonce de produit sans KPI d’expérience utilisateur, d’adoption, de satisfaction ou de conversion."
+    },
+    {
+      "id": 7,
+      "domain": "UX conversationnelle",
+      "publisher": "Microsoft",
+      "date": "2026-09-25",
+      "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "type": "annonce officielle de produit / source primaire",
+      "use": "Distinction entre Chat, Cowork, Code et Autopilot ; objectif et limites utilisateur, permissions, audit et gouvernance.",
+      "caveat": "Annonce fournisseur, sans KPI d’expérience utilisateur ou de productivité utilisable comme benchmark."
+    },
+    {
+      "id": 8,
+      "domain": "IA générative / gouvernance",
+      "publisher": "Governor of California / State of California",
+      "date": "2026-09-23",
+      "url": "https://www.gov.ca.gov/2026/09/23/governor-newsom-announces-world-leading-experts-to-deliver-on-his-ai-executive-order-including-advancing-creation-of-a-kill-switch/",
+      "type": "annonce institutionnelle officielle",
+      "use": "Propositions de vérification indépendante, audit, transparence, évaluation des risques et mécanisme d’arrêt pour des modèles frontier.",
+      "caveat": "Cadre politique proposé ; aucune performance de modèle, taux d’hallucination ou mesure de production n’est fournie."
+    },
+    {
+      "id": 9,
+      "domain": "Innovation marketing",
+      "publisher": "Target",
+      "date": "2026-09-22",
+      "url": "https://corporate.target.com/news-features/article/2026/09/inside-out-campaign",
+      "type": "source primaire de marque",
+      "use": "Mécanisme omnicanal de la campagne nationale Inside Out : créateurs, activations, télévision, streaming, digital, social et audio.",
+      "caveat": "Source de marque sans résultat de campagne isolé ni démonstration causale."
+    },
+    {
+      "id": 10,
+      "domain": "Innovation marketing",
+      "publisher": "Marketing Dive",
+      "date": "2026-09-23",
+      "url": "https://www.marketingdive.com/news/targets-new-campaign-puts-design-legacy-at-center-of-marketing/831116/",
+      "type": "analyse éditoriale reconnue",
+      "use": "Confirmation du dispositif Target et contexte T2 2026 : +3,8 % de ventes comparables et +3,6 % de trafic.",
+      "caveat": "Les résultats sont ceux du plan de redressement Target au T2 ; ils ne sont pas attribués causalement à la campagne Inside Out."
+    },
+    {
+      "id": 11,
+      "domain": "Bonus robotique",
+      "publisher": "International Federation of Robotics",
+      "date": "2026-09-24",
+      "url": "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+      "type": "communiqué institutionnel / source primaire IFR",
+      "use": "Stock opérationnel mondial record de 5 millions de robots industriels en 2025 et plus de 600 000 installations sur l’année.",
+      "caveat": "Le chiffre décrit des robots industriels opérationnels ; il ne mesure ni productivité, ni emploi, ni performance d’un cas d’usage."
+    }
+  ],
+  "excluded": [
+    {
+      "domain": "Google AI Search",
+      "reason": "Annonce Google du 3 juin 2026 sur les rapports des fonctionnalités génératives, utile mais hors fenêtre hebdomadaire."
+    },
+    {
+      "domain": "Zero-click / GEO",
+      "reason": "Sources antérieures au 22 septembre, non datées ou avec des chiffres sans méthode et périmètre vérifiables."
+    },
+    {
+      "domain": "Schema.org",
+      "reason": "Schema.org 30.1 est daté du 16 septembre 2026, donc hors fenêtre ; guides non primaires et non datés exclus."
+    },
+    {
+      "domain": "DXP / CMS",
+      "reason": "Reprise GlobeNewswire du communiqué Liferay, comparatifs promotionnels et contenus sans observation propre exclus."
+    },
+    {
+      "domain": "CDP / identité",
+      "reason": "Annonces principalement financières, reprises de communiqué et guides fournisseurs sans fait daté ou analyse propre exclus."
+    },
+    {
+      "domain": "UX conversationnelle",
+      "reason": "Guides UX hors fenêtre, contenus communautaires et publications sans source institutionnelle datée exclus."
+    },
+    {
+      "domain": "IA générative / gouvernance",
+      "reason": "Pages de référence non datées dans la période, contenus promotionnels et articles secondaires exclus."
+    },
+    {
+      "domain": "Innovation marketing",
+      "reason": "Contenus sponsorisés, annonces MarTech sans cas et KPI, ou chiffres non attribués à une campagne exclus."
+    },
+    {
+      "domain": "Bonus robotique",
+      "reason": "Publications institutionnelles hors fenêtre et contenus fournisseurs à tonalité promotionnelle exclus."
+    }
+  ]
+}
