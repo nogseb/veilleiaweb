@@ -2,7 +2,8 @@
 
 **Édition contrôlée :** Semaine 40 — 2026  
 **Date de contrôle :** 29 septembre 2026  
-**Prévisualisation :** `https://3000-i2jrock0a8q5v53cu4ghm-16f713a4.us1.manus.computer/`
+**Prévisualisation :** `https://3000-i2jrock0a8q5v53cu4ghm-16f713a4.us1.manus.computer/`  
+**Publication WebDev :** réussie sur `veilleiaweb.digital` depuis le checkpoint `3888ad99`.
 
 ## Intégrité éditoriale
 
@@ -44,6 +45,16 @@
 
 Les 11 URL du registre ont été testées : huit ont répondu `HTTP 200` avec l’agent de vérification. Trois éditeurs (OtterlyAI, OpenAI Help et Marketing Dive) ont renvoyé `HTTP 403` au client direct, comportement anti-bot attendu ; leurs pages ont néanmoins été lues avec l’extracteur web lors de la qualification éditoriale et les contenus associés sont accessibles à cette étape. Aucun fait ou chiffre non attribué n’a été ajouté.
 
+## Production et sauvegarde
+
+| Élément | Résultat |
+|---|---|
+| Publication WebDev | Réussie : confirmation « Votre site a été mis à jour ! » depuis le navigateur propriétaire |
+| Accueil production | `https://veilleiaweb.digital/` renvoie `HTTP 200` et affiche S40, 28 septembre 2026, 8 domaines, 11 sources et le signal 1 600 |
+| Archive production | `https://veilleiaweb.digital/semaine/39` renvoie `HTTP 200` et affiche S39 avec 8 domaines, 9 sources et son Bonus MIT News |
+| Checkpoint | `3888ad99` — S40 validée avant publication |
+| GitHub | `nogseb/veilleiaweb`, branche `main`, commit `3888ad99` synchronisé avant la clôture documentaire |
+
 ## Conclusion
 
-La prévisualisation S40 est prête au checkpoint et à la publication WebDev. La sauvegarde GitHub doit être synchronisée après le checkpoint final ; elle ne constitue pas le mécanisme de déploiement.
+La S40 est publiée en production et la S39 est correctement archivée. La clôture documentaire et la synchronisation GitHub finale suivent cette vérification.
