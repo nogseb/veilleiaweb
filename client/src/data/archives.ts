@@ -1,4 +1,5 @@
-import { veilleS40 as veilleData } from "./veille-s40";
+import { veilleS41 as veilleData } from "./veille-s41";
+import { veilleS40 as s40Data } from "./veille-s40";
 import { veilleS39 as s39Data } from "./veille-s39";
 import { veilleS38 as s38Data } from "./veille-s38";
 import { veilleS37 as s37Data } from "./veille-s37";
@@ -40,8 +41,8 @@ export interface ArchiveEdition {
   bonus?: typeof veilleData.bonus;
 }
 
-// Semaine 40 — édition actuelle (données complètes depuis veille-s40.ts)
-const s40: ArchiveEdition = {
+// Semaine 41 — édition actuelle (données complètes depuis veille-s41.ts)
+const s41: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -60,6 +61,28 @@ const s40: ArchiveEdition = {
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
   bonus: veilleData.bonus,
+};
+
+// Semaine 40
+const s40: ArchiveEdition = {
+  week: s40Data.week,
+  year: s40Data.year,
+  date: s40Data.publicationDate,
+  signalMajeur: s40Data.signalMajeur.title,
+  domainsCount: s40Data.domainsCount,
+  sourcesCount: s40Data.sourcesCount,
+  criticalCount: s40Data.criticalCount,
+  importantCount: s40Data.importantCount,
+  actionsCount: s40Data.actionsCount,
+  emergingCount: s40Data.emergingCount,
+  syntheseExecutive: s40Data.syntheseExecutive,
+  statDominante: s40Data.statDominante,
+  domaines: s40Data.domaines,
+  actions: s40Data.actions,
+  signauxEmergents: s40Data.signauxEmergents,
+  tendancesPassees: s40Data.tendancesPassees,
+  dashboardDetails: s40Data.dashboardDetails,
+  bonus: s40Data.bonus,
 };
 
 // Semaine 39
@@ -661,9 +684,9 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 // Export de l'édition courante
-export const currentEdition = s40;
+export const currentEdition = s41;
 
 // Alias pour compatibilité
 export const allArchives = archives;

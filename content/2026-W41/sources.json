@@ -1,0 +1,119 @@
+{
+  "edition": "S41 — 5 octobre 2026",
+  "window": "29 septembre au 5 octobre 2026",
+  "domainsCount": 3,
+  "hiddenDomainsCount": 5,
+  "sourcesCount": 7,
+  "sources": [
+    {
+      "id": 1,
+      "domain": "Google AI Search",
+      "publisher": "Google Search",
+      "date": "2026-10-01",
+      "url": "https://blog.google/products-and-platforms/products/search/coffee-tips-google-search/",
+      "type": "publication officielle de produit",
+      "use": "Cas d’usage AI Mode comparatif, local et personnalisé.",
+      "caveat": "Article illustratif sans KPI de trafic, visibilité, déploiement ou performance."
+    },
+    {
+      "id": 2,
+      "domain": "Zero-click / GEO",
+      "publisher": "M+C Saatchi Performance",
+      "date": "2026-09-29",
+      "url": "https://www.mcsaatchiperformance.com/news/generative-engine-optimization-data-trends-and-tactics/",
+      "type": "analyse de marché datée",
+      "use": "Distinction GEO entre mentions, citations, part de voix, clics et visites.",
+      "caveat": "Les statistiques citées sont attribuées à des tiers et portent surtout sur les États-Unis ; elles ne sont pas un KPI TBS Education."
+    },
+    {
+      "id": 3,
+      "domain": "Zero-click / GEO",
+      "publisher": "Google Search Central",
+      "date": "2026-10-01",
+      "url": "https://developers.google.com/search/updates",
+      "type": "journal officiel de mises à jour documentaires",
+      "use": "Mise à jour du guide sur les contenus générés par IA : valeur ajoutée, exactitude et vérification humaine.",
+      "caveat": "Clarification documentaire, sans mesure de citation, trafic ou performance GEO."
+    },
+    {
+      "id": 4,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-09-29",
+      "url": "https://openai.com/index/introducing-dots/",
+      "type": "annonce officielle de produit",
+      "use": "Agents persistants accessibles par conversation, applications connectées et conservation de contexte.",
+      "caveat": "Déclaration fournisseur sans évaluation indépendante de qualité UX, adoption ou performance."
+    },
+    {
+      "id": 5,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-09-29",
+      "url": "https://openai.com/index/how-we-build-safety-security-and-privacy-into-dots/",
+      "type": "documentation officielle de sécurité produit",
+      "use": "Permissions, règles, Activity View, approbations, arrêt et relais utilisateur pour les actions sensibles.",
+      "caveat": "Mécanismes déclarés par l’éditeur ; aucun taux indépendant d’incident ou de réduction du risque."
+    },
+    {
+      "id": 6,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-10-02",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6/",
+      "type": "guide officiel de déploiement",
+      "use": "Frontières d’autonomie, entrée humaine, suivi du succès, de la latence et du coût par tâche réussie.",
+      "caveat": "Guide technique ; aucun protocole d’étude UX ni KPI indépendant de satisfaction."
+    },
+    {
+      "id": 7,
+      "domain": "Bonus robotique",
+      "publisher": "MIT News",
+      "date": "2026-09-29",
+      "url": "https://news.mit.edu/2026/powered-by-muscle-cells-paper-thin-robot-swims-through-watery-maze-0929",
+      "type": "source institutionnelle avec référence scientifique",
+      "use": "Robot nageur biohybride ultrafin, cellules musculaires sensibles à la lumière et preuve de concept en laboratoire.",
+      "caveat": "Démonstration en boîte de Petri, non commercialisée ; les usages environnementaux sont prospectifs."
+    }
+  ],
+  "hiddenDomains": [
+    {
+      "domain": "Schema.org / données structurées",
+      "reason": "Aucune publication officielle qualifiée dans la fenêtre ; la mise à jour VideoObject du 24 septembre est hors période."
+    },
+    {
+      "domain": "DXP / CMS headless / composable",
+      "reason": "Aucune publication vérifiée, datée et qualifiée dans la fenêtre ; les contenus pertinents trouvés sont hors période ou promotionnels."
+    },
+    {
+      "domain": "CDP / data first-party / identité",
+      "reason": "Aucune source ne réunit simultanément fenêtre, périmètre CDP/identité/consentement et preuve vérifiable."
+    },
+    {
+      "domain": "IA générative en production / gouvernance",
+      "reason": "Aucune actualité qualifiée dans la fenêtre sur le RAG, les agents, l’audit, les hallucinations, la sécurité ou l’EU AI Act opérationnel."
+    },
+    {
+      "domain": "Innovation marketing / cas d’école",
+      "reason": "Aucun cas ne réunit marque, période, mécanisme et KPI vérifiable dans une source admissible."
+    }
+  ],
+  "excluded": [
+    {
+      "domain": "Google AI Search",
+      "reason": "Reporting multimodal Search Console du 24 septembre et documentation de référence du rapport IA générative : hors fenêtre ou sans fait nouveau S41."
+    },
+    {
+      "domain": "Zero-click / GEO",
+      "reason": "Articles Search Engine Land, Similarweb et Digital Applied antérieurs à la fenêtre ; chiffres sans méthode directement vérifiée non repris comme KPI."
+    },
+    {
+      "domain": "UX / IA conversationnelle",
+      "reason": "AISI du 28 septembre et Twilio du 22 septembre hors fenêtre ; Aloware du 1er octobre écarté faute de méthode et KPI vérifiable."
+    },
+    {
+      "domain": "Bonus robotique",
+      "reason": "IFR du 28 septembre, prépublications de septembre et newsletters de reprise exclus pour respecter la date de la source primaire."
+    }
+  ]
+}
