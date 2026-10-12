@@ -1,0 +1,217 @@
+{
+  "edition": "S42 — 12 octobre 2026",
+  "window": "6 au 12 octobre 2026",
+  "domainsCount": 6,
+  "hiddenDomainsCount": 2,
+  "sourcesCount": 16,
+  "sources": [
+    {
+      "id": 1,
+      "domain": "Google AI Search",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-10-09",
+      "url": "https://www.seroundtable.com/google-updates-reader-revenue-manager-42261.html",
+      "type": "analyse éditoriale datée",
+      "use": "Mention de la surface From your subscriptions dans Google Search, AI Mode, AI Overviews et Gemini.",
+      "caveat": "Source secondaire ; aucun KPI de visibilité, de classement, d’impressions ou de trafic."
+    },
+    {
+      "id": 2,
+      "domain": "Google AI Search",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-10-11",
+      "url": "https://www.seroundtable.com/google-search-console-performance-report-delayed-42271.html",
+      "type": "observation éditoriale datée",
+      "use": "Retard observé du rapport général de performance Search Console, supérieur à 64 heures puis ramené à environ 44 heures.",
+      "caveat": "Cause non confirmée par Google ; aucun lien spécifique avec les rapports AI Overviews ou AI Mode n’est établi."
+    },
+    {
+      "id": 3,
+      "domain": "Google AI Search",
+      "publisher": "Google Search Central",
+      "date": "2026-10-06",
+      "url": "https://developers.google.com/search/blog/2026/10/seo-learning-paths?hl=en",
+      "type": "publication officielle pédagogique",
+      "use": "Parcours de formation sur Search Console, rapports de performance, Insights, exports et API.",
+      "caveat": "Publication de formation ; elle n’annonce aucune fonctionnalité AI Overviews ou AI Mode et ne publie aucun KPI AI Search."
+    },
+    {
+      "id": 4,
+      "domain": "Schema.org / données structurées",
+      "publisher": "W3C JSON-LD Working Group",
+      "date": "2026-10-07",
+      "url": "https://www.w3.org/events/meetings/c3c86d05-0391-4490-a686-3038acfdb231/20261007T120000/",
+      "type": "agenda officiel de groupe de travail",
+      "use": "YAML-LD, CBOR-LD, issues des spécifications et préparation de JSON-LD 1.2 principalement fondé sur des errata.",
+      "caveat": "Agenda de réunion, non compte rendu ; aucune adoption de standard, date de livraison ou KPI n’est établi."
+    },
+    {
+      "id": 5,
+      "domain": "Schema.org / données structurées",
+      "publisher": "JSON for Linking Data W3C Community Group",
+      "date": "2026-10-12",
+      "url": "https://json-ld.org/requirements/latest/",
+      "type": "Final Community Group Report",
+      "use": "Exigences conceptuelles JSON-LD, dont l’expression d’un graphe de données liées dans un document JSON valide.",
+      "caveat": "Document expérimental explicitement ni standard W3C ni engagé sur la voie de standardisation W3C."
+    },
+    {
+      "id": 6,
+      "domain": "CDP / first-party data / identité",
+      "publisher": "W3C",
+      "date": "2026-10-07",
+      "url": "https://www.w3.org/press-releases/2026/data-breaches-identity-theft-and-revocation-a-real-world-case-study-on-why-w3c-is-developing-verifiable-credential-barcodes/",
+      "type": "communiqué institutionnel",
+      "use": "Contrôle d’état, révocation et Bitstring Status List pour les justificatifs vérifiables.",
+      "caveat": "Sujet centré sur l’identité, non sur une CDP marketing ; le chiffre d’environ 160 millions de scans exposés est attribué à des journalistes et non audité par le W3C."
+    },
+    {
+      "id": 7,
+      "domain": "CDP / first-party data / identité",
+      "publisher": "CDP.com",
+      "date": "2026-10-11",
+      "url": "https://cdp.com/articles/what-is-first-party-data-and-why-is-it-so-important/",
+      "type": "analyse spécialisée",
+      "use": "Traces de consentement : finalité, horodatage, version de politique et juridiction ; articulation avec la first-party data.",
+      "caveat": "Source spécialisée avec placements commerciaux, non autorité réglementaire ni mesure indépendante ; ses chiffres BCG/Google sont historiques."
+    },
+    {
+      "id": 8,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-10-07",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "type": "annonce officielle de produit",
+      "use": "Intelligent UI : texte, visuels et composants interactifs rendus progressivement ; chiffres déclaratifs sur l’usage et la vitesse de réponse.",
+      "caveat": "Annonce fournisseur ; méthodologie et échantillon des évaluations non détaillés ; absence de validation UX indépendante."
+    },
+    {
+      "id": 9,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-10-09",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "type": "notes de version officielles",
+      "use": "Composer predictions dans Codex : suggestion acceptée, relue ou modifiée avant envoi, désactivable dans les réglages.",
+      "caveat": "Aucune donnée sur taux d’acceptation, erreurs, charge cognitive ou confiance."
+    },
+    {
+      "id": 10,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "OpenAI",
+      "date": "2026-10-08",
+      "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes",
+      "type": "notes de version officielles",
+      "use": "Plugins gérés par rôle avec états Available, Install ou Disabled et maintien des permissions d’espace et de rôle.",
+      "caveat": "Documentation fournisseur sans mesure d’adoption, de compréhension des permissions ou de taux d’erreur."
+    },
+    {
+      "id": 11,
+      "domain": "UX / IA conversationnelle",
+      "publisher": "Anthropic Trust Center",
+      "date": "2026-10-06",
+      "url": "https://trust.anthropic.com/",
+      "type": "Accessibility Conformance Report fournisseur",
+      "use": "ACR Claude Code CLI : mode lecteur d’écran linéaire, menus numérotés, annonces d’état et signalisation de fin ou d’attente.",
+      "caveat": "Déclaration fournisseur ; la matrice détaillée, les non-conformités et les méthodes complètes ne sont pas publiées sur la page retenue."
+    },
+    {
+      "id": 12,
+      "domain": "IA générative en production / gouvernance",
+      "publisher": "Commission européenne — DG CONNECT",
+      "date": "2026-10-06",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act",
+      "type": "cadre institutionnel mis à jour",
+      "use": "Compétences de l’AI Office, pouvoirs d’enquête et d’évaluation, plafonds de sanctions et calendrier d’applicabilité AI Act.",
+      "caveat": "Cadre et calendrier ; aucune sanction ou action d’enforcement précise n’est rapportée dans la semaine ; pas de KPI RAG ou d’agent."
+    },
+    {
+      "id": 13,
+      "domain": "Innovation marketing / cas d’école",
+      "publisher": "ADWEEK",
+      "date": "2026-10-06",
+      "url": "https://www.adweek.com/brand-marketing/adweek-team-visionary-awards-2026-better-together/",
+      "type": "cas éditorial avec KPI rapportés",
+      "use": "Chili’s × neuf créateurs TikTok : engagement, portée, commandes rapportées et poids du Triple Dipper dans les ventes.",
+      "caveat": "Pas de définition des commandes, de période comparative, de dépense, de revenu incrémental ou de groupe témoin ; causalité business non établie."
+    },
+    {
+      "id": 14,
+      "domain": "Bonus robotique",
+      "publisher": "MIT News",
+      "date": "2026-10-07",
+      "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
+      "type": "source institutionnelle avec travaux de recherche",
+      "use": "SANDO : tous les obstacles dynamiques évités dans 12 vols UAV et garanties de sécurité selon les hypothèses du modèle.",
+      "caveat": "Résultats dépendants du modèle, notamment d’une borne de vitesse des obstacles ; 12 vols ne généralisent pas à toutes situations."
+    },
+    {
+      "id": 15,
+      "domain": "Bonus robotique",
+      "publisher": "U.S. Department of Energy",
+      "date": "2026-10-08",
+      "url": "https://www.energy.gov/science/articles/doe-announces-four-national-laboratory-led-selections-advance-robotics-and",
+      "type": "annonce institutionnelle de sélection",
+      "use": "Quatre projets de robotique pour la découverte scientifique autonome ; 30 M$ annoncés au total, dont 2 M$ pour FY2026.",
+      "caveat": "Sélections de projets et non résultats expérimentaux ; financements futurs conditionnels."
+    },
+    {
+      "id": 16,
+      "domain": "Bonus robotique",
+      "publisher": "Agility Robotics",
+      "date": "2026-10-06",
+      "url": "https://www.agilityrobotics.com/content/agility-robotics-to-livestream-analyst-investor-day-today",
+      "type": "communiqué d’entreprise",
+      "use": "Heures d’opération réelle et valeur de commandes pluriannuelles revendiquées pour Digit 5.",
+      "caveat": "Chiffres auto-déclarés ; les 300 M$ correspondent à une valeur potentielle de commandes à mai 2026, non à un revenu de période."
+    }
+  ],
+  "hiddenDomains": [
+    {
+      "domain": "Zero-click / GEO",
+      "reason": "Aucun contenu ne réunit simultanément fenêtre stricte, accessibilité, analyse indépendante et niveau de preuve requis ; les pistes ouvertes étaient sponsorisées, auto-promotionnelles, hors fenêtre ou non vérifiables."
+    },
+    {
+      "domain": "DXP / CMS headless / composable",
+      "reason": "Les pages ouvertes étaient antérieures à la fenêtre, événementielles sans publication S42 démontrée, ou promotionnelles/non suffisamment documentées."
+    }
+  ],
+  "excluded": [
+    {
+      "domain": "Google AI Search",
+      "reason": "Les données chiffrées de couverture AI Overviews et le lancement antérieur des rapports génératifs Search Console sont hors fenêtre et ne sont pas recyclés."
+    },
+    {
+      "domain": "Zero-click / GEO",
+      "reason": "OGTool est auto-promotionnel, l’article Search Engine Journal est sponsorisé, et les études de fond accessibles sont antérieures à la fenêtre."
+    },
+    {
+      "domain": "Schema.org / données structurées",
+      "reason": "Schema.org 30.1 est daté du 16 septembre ; la documentation Google ouverte est antérieure. Ils restent du contexte, pas une actualité S42."
+    },
+    {
+      "domain": "DXP / CMS headless / composable",
+      "reason": "CMSWire, Contentful et MACH ouverts sont hors fenêtre ou de nature promotionnelle/événementielle."
+    },
+    {
+      "domain": "CDP / first-party data / identité",
+      "reason": "Les annonces événementielles sans analyse ou KPI et les contenus fournisseurs hors fenêtre n’ont pas été retenus."
+    },
+    {
+      "domain": "UX / IA conversationnelle",
+      "reason": "Les annonces antérieures sur agents, permissions et accessibilité sont exclues au profit des quatre sources datées de la fenêtre."
+    },
+    {
+      "domain": "IA générative en production / gouvernance",
+      "reason": "Les rapports de menace, annonces produit et sources de régulation non datées ou antérieures à la fenêtre ne sont pas utilisés comme signal S42."
+    },
+    {
+      "domain": "Innovation marketing / cas d’école",
+      "reason": "Les contenus paywallés non auditables, publications hors fenêtre et cas sans KPI vérifiable ont été écartés."
+    },
+    {
+      "domain": "Bonus robotique",
+      "reason": "Les newsletters de reprise, pages d’index et résultats antérieurs au 6 octobre ont été écartés au profit de sources datées et ouvertes."
+    }
+  ]
+}

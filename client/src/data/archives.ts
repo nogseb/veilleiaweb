@@ -1,4 +1,5 @@
-import { veilleS41 as veilleData } from "./veille-s41";
+import { veilleS42 as veilleData } from "./veille-s42";
+import { veilleS41 as s41Data } from "./veille-s41";
 import { veilleS40 as s40Data } from "./veille-s40";
 import { veilleS39 as s39Data } from "./veille-s39";
 import { veilleS38 as s38Data } from "./veille-s38";
@@ -41,8 +42,8 @@ export interface ArchiveEdition {
   bonus?: typeof veilleData.bonus;
 }
 
-// Semaine 41 — édition actuelle (données complètes depuis veille-s41.ts)
-const s41: ArchiveEdition = {
+// Semaine 42 — édition actuelle (données complètes depuis veille-s42.ts)
+const s42: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -61,6 +62,28 @@ const s41: ArchiveEdition = {
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
   bonus: veilleData.bonus,
+};
+
+// Semaine 41 — archive (données complètes depuis veille-s41.ts)
+const s41: ArchiveEdition = {
+  week: s41Data.week,
+  year: s41Data.year,
+  date: s41Data.publicationDate,
+  signalMajeur: s41Data.signalMajeur.title,
+  domainsCount: s41Data.domainsCount,
+  sourcesCount: s41Data.sourcesCount,
+  criticalCount: s41Data.criticalCount,
+  importantCount: s41Data.importantCount,
+  actionsCount: s41Data.actionsCount,
+  emergingCount: s41Data.emergingCount,
+  syntheseExecutive: s41Data.syntheseExecutive,
+  statDominante: s41Data.statDominante,
+  domaines: s41Data.domaines,
+  actions: s41Data.actions,
+  signauxEmergents: s41Data.signauxEmergents,
+  tendancesPassees: s41Data.tendancesPassees,
+  dashboardDetails: s41Data.dashboardDetails,
+  bonus: s41Data.bonus,
 };
 
 // Semaine 40
@@ -684,9 +707,9 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 // Export de l'édition courante
-export const currentEdition = s41;
+export const currentEdition = s42;
 
 // Alias pour compatibilité
 export const allArchives = archives;

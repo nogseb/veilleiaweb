@@ -64,3 +64,11 @@
 - [x] Archiver la S39, afficher la S40 et conserver les cartes Bonus distinctes
 - [x] Valider l’intégrité éditoriale, TypeScript, build, 26 tests et les modales Bonus en mobile et desktop
 - [x] Sauvegarder le checkpoint S40, publier via WebDev et synchroniser GitHub (checkpoint 3888ad99, production et GitHub vérifiés)
+- [x] Collecter et qualifier les sources S41 dans la fenêtre du 29 septembre au 5 octobre 2026
+- [x] Rédiger et intégrer la S41 avec 3 domaines qualifiés, 5 domaines masqués et un Bonus distinct
+- [x] Valider la S41, son archive S40 et les modales Bonus sur desktop et mobile
+- [x] Collecter et qualifier les sources S42 dans la fenêtre du 6 au 12 octobre 2026
+- [x] Rédiger les données S42, le rapport, le registre de 16 sources et le cas Chili’s avec réserve d’attribution
+- [x] Archiver la S41, afficher la S42 et préserver les cartes Bonus distinctes
+- [x] Valider l’intégrité éditoriale, TypeScript, build, 32 tests et les modales Bonus en mobile et desktop pour la S42
+- [ ] Sauvegarder le checkpoint S42, publier via WebDev et synchroniser GitHub
