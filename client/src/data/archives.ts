@@ -1,4 +1,5 @@
-import { veilleS42 as veilleData } from "./veille-s42";
+import { veilleS43 as veilleData } from "./veille-s43";
+import { veilleS42 as s42Data } from "./veille-s42";
 import { veilleS41 as s41Data } from "./veille-s41";
 import { veilleS40 as s40Data } from "./veille-s40";
 import { veilleS39 as s39Data } from "./veille-s39";
@@ -21,6 +22,31 @@ import { veilleData as s23Data } from "./veille-s23";
 import { veilleData as s22Data } from "./veille-s22";
 import { s16, s15, s14, s13, s12, s11, s10 } from "./archives-history";
 
+type ArchiveDomain = {
+  id: number;
+  code: string;
+  titre: string;
+  badge: string;
+  previousBadge: string | null;
+  description: string;
+  category: string;
+  sources: Array<{ nom: string; url: string }>;
+  details: string[];
+  longDescription?: string;
+};
+
+type ArchiveBonus = {
+  label: string;
+  titre: string;
+  chiffre: string;
+  statLabel: string;
+  description: string;
+  details: string[];
+  perspective: string;
+  longDescription: string;
+  source: { nom: string; url: string; date: string };
+};
+
 export interface ArchiveEdition {
   week: number;
   year: number;
@@ -34,16 +60,23 @@ export interface ArchiveEdition {
   emergingCount: number;
   syntheseExecutive: string;
   statDominante: { chiffre: string; titre: string; description: string };
-  domaines: Array<Omit<typeof veilleData.domaines[0], 'previousBadge' | 'longDescription'> & { previousBadge: string | null; longDescription?: string }>;
-  actions: typeof veilleData.actions;
-  signauxEmergents: typeof veilleData.signauxEmergents;
-  tendancesPassees: typeof veilleData.tendancesPassees;
-  dashboardDetails: typeof veilleData.dashboardDetails;
-  bonus?: typeof veilleData.bonus;
+  domaines: ArchiveDomain[];
+  actions: Array<{ id: number; titre: string; domaine: string; responsable: string }>;
+  signauxEmergents: Array<{ titre: string; description: string; horizon: string }>;
+  tendancesPassees: Array<{ titre: string; description: string }>;
+  dashboardDetails: {
+    domaines: string[];
+    sources: string[];
+    critiques: string[];
+    importants: string[];
+    actions: string[];
+    emergents: string[];
+  };
+  bonus?: ArchiveBonus;
 }
 
-// Semaine 42 — édition actuelle (données complètes depuis veille-s42.ts)
-const s42: ArchiveEdition = {
+// Semaine 43 — édition actuelle (données complètes depuis veille-s43.ts)
+const s43: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
@@ -62,6 +95,28 @@ const s42: ArchiveEdition = {
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
   bonus: veilleData.bonus,
+};
+
+// Semaine 42 — archive (données complètes depuis veille-s42.ts)
+const s42: ArchiveEdition = {
+  week: s42Data.week,
+  year: s42Data.year,
+  date: s42Data.publicationDate,
+  signalMajeur: s42Data.signalMajeur.title,
+  domainsCount: s42Data.domainsCount,
+  sourcesCount: s42Data.sourcesCount,
+  criticalCount: s42Data.criticalCount,
+  importantCount: s42Data.importantCount,
+  actionsCount: s42Data.actionsCount,
+  emergingCount: s42Data.emergingCount,
+  syntheseExecutive: s42Data.syntheseExecutive,
+  statDominante: s42Data.statDominante,
+  domaines: s42Data.domaines,
+  actions: s42Data.actions,
+  signauxEmergents: s42Data.signauxEmergents,
+  tendancesPassees: s42Data.tendancesPassees,
+  dashboardDetails: s42Data.dashboardDetails,
+  bonus: s42Data.bonus,
 };
 
 // Semaine 41 — archive (données complètes depuis veille-s41.ts)
@@ -707,9 +762,9 @@ const s17: ArchiveEdition = {
 };
 
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = [s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 // Export de l'édition courante
-export const currentEdition = s42;
+export const currentEdition = s43;
 
 // Alias pour compatibilité
 export const allArchives = archives;

@@ -1,0 +1,130 @@
+{
+  "edition": "S43 — 19 octobre 2026",
+  "window": "13 au 19 octobre 2026",
+  "domainsCount": 3,
+  "hiddenDomainsCount": 5,
+  "sourcesCount": 6,
+  "researchSelectionUrlCount": 10,
+  "sources": [
+    {
+      "id": 1,
+      "domain": "Google AI Search",
+      "publisher": "Google",
+      "date": "2026-10-15",
+      "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+      "type": "annonce officielle",
+      "use": "Liens inline plus visibles, test de sources officielles avec contexte, carrousels d’articles récents, liens connexes illustrés, profils cliquables de créateurs/éditeurs et déclaration sur Preferred Sources.",
+      "caveat": "Google ne chiffre ni les liens, ni les zones/langues, ni le CTR ou le trafic ; plusieurs évolutions sont des tests et la progression Preferred Sources n’a ni volume ni méthode publiés."
+    },
+    {
+      "id": 2,
+      "domain": "Schema.org / données structurées",
+      "publisher": "Google Search Central",
+      "date": "2026-10-17",
+      "url": "https://developers.google.com/search/updates",
+      "type": "journal officiel de documentation",
+      "use": "Retrait de host group, ajout de vehicle listing structured data et clarification du fuseau horaire dans Article structured data.",
+      "caveat": "Journal de documentation sans étude d’impact ni KPI ; la page affiche une dernière mise à jour au 16 octobre UTC malgré une entrée au 17 octobre."
+    },
+    {
+      "id": 3,
+      "domain": "Schema.org / données structurées",
+      "publisher": "W3C JSON-LD Working Group",
+      "date": "2026-10-18",
+      "url": "https://www.w3.org/groups/wg/json-ld/activity/",
+      "type": "activité institutionnelle de groupe de travail",
+      "use": "Activités des 15, 17 et 18 octobre sur mf:includes, buffering de contextes scopés, @nest et Language Maps.",
+      "caveat": "Issues, commentaires et pull requests en cours ; pas de changement normatif adopté. La page est indiquée comme bêta."
+    },
+    {
+      "id": 4,
+      "domain": "Innovation marketing / MarTech",
+      "publisher": "CMSWire",
+      "date": "2026-10-13",
+      "url": "https://www.cmswire.com/digital-marketing/is-the-era-of-martech-absolutes-over-buyers-are-going-hybrid/",
+      "type": "analyse éditoriale",
+      "use": "Modèle de stack hybride : streaming/batch, déterministe/probabiliste, règles métier/agents ; supervision humaine pour les décisions coûteuses ou irréversibles.",
+      "caveat": "Analyse signée par un responsable marketing de solutions MarTech, sans échantillon, protocole quantitatif ni cas de campagne documenté."
+    },
+    {
+      "id": 5,
+      "domain": "Innovation marketing / MarTech",
+      "publisher": "CMSWire",
+      "date": "2026-10-16",
+      "url": "https://www.cmswire.com/digital-marketing/why-are-marketers-still-paying-for-martech-they-never-use/",
+      "type": "analyse éditoriale avec chiffres attribués",
+      "use": "Capacités de stack utilisées, budget MarTech, hausse de dépenses prévue et difficulté d’intégration data, chiffres attribués à Gartner et à une enquête MarTech.",
+      "caveat": "Les méthodes complètes, tailles d’échantillon, dates de terrain et marges d’erreur ne sont pas détaillées dans l’article consulté ; il ne mesure pas une campagne."
+    },
+    {
+      "id": 6,
+      "domain": "Bonus robotique",
+      "publisher": "arXiv",
+      "date": "2026-10-15",
+      "url": "https://arxiv.org/abs/2610.22372",
+      "type": "preprint de recherche primaire",
+      "use": "Benchmark LIBERO-PeRM : cinq suites, 312 tâches et évaluation de préférences robotisées exprimées en langage.",
+      "caveat": "Preprint non évalué par les pairs à cette date ; résultats en simulation LIBERO et absence de taux de réussite globaux détaillés dans le résumé consulté."
+    }
+  ],
+  "hiddenDomains": [
+    {
+      "domain": "Zero-Click / GEO",
+      "reason": "Aucune publication ne réunit simultanément la fenêtre stricte, le périmètre et un niveau de preuve vérifiable. Les pistes pertinentes étaient antérieures ou des pages d’index."
+    },
+    {
+      "domain": "DXP / CMS headless / composable",
+      "reason": "Les contenus vérifiés étaient antérieurs, sans date exploitable dans la fenêtre, événementiels ou promotionnels."
+    },
+    {
+      "domain": "CDP / first-party data / identité",
+      "reason": "Aucun contenu autorisé, directement pertinent et non promotionnel ne franchit le seuil ; l’article MarTech du 14 octobre annonçait une table ronde sans donnée ni résultat nouveau."
+    },
+    {
+      "domain": "UX / IA conversationnelle",
+      "reason": "Les contenus les plus proches ont été écartés pour ancienneté, éditeur non autorisé ou preuve insuffisante."
+    },
+    {
+      "domain": "IA générative en production / gouvernance",
+      "reason": "Aucun signal ne réunit nouveauté, fait vérifiable, portée directe sur la production/gouvernance et niveau de preuve suffisant."
+    }
+  ],
+  "excluded": [
+    {
+      "domain": "Google AI Search",
+      "reason": "La documentation Preferred Sources du 18 septembre est conservée dans les notes de contexte, mais n’est pas citée dans la veille S43 car elle est hors fenêtre."
+    },
+    {
+      "domain": "Zero-Click / GEO",
+      "reason": "Les études SparkToro/Similarweb, Ahrefs et Search Engine Land retrouvées sont antérieures à la fenêtre du 13–19 octobre."
+    },
+    {
+      "domain": "Schema.org / données structurées",
+      "reason": "JSON-LD Requirements est un document expérimental dont la date du 13 octobre n’est pas reprise dans le corps consulté ; il ne porte pas la qualification ni le compteur des sources publiées."
+    },
+    {
+      "domain": "DXP / CMS headless / composable",
+      "reason": "CMSWire 2025, MACH Alliance 2025, Contentful juin 2026 et Sanity 1er octobre sont hors fenêtre."
+    },
+    {
+      "domain": "CDP / first-party data / identité",
+      "reason": "L’article MarTech du 14 octobre est une promotion de table ronde ; la session W3C pertinente est du 28 octobre, donc hors fenêtre."
+    },
+    {
+      "domain": "UX / IA conversationnelle",
+      "reason": "Les contenus Nielsen Norman Group et W3C ouverts sont antérieurs à la fenêtre ; les autres pistes ne figurent pas dans la liste prioritaire ou manquent de preuve."
+    },
+    {
+      "domain": "IA générative en production / gouvernance",
+      "reason": "L’article CMSWire du 16 octobre est une analyse sans étude primaire, méthode, KPI ni cas de déploiement vérifiable ; les pages AI Act officielles ouvertes étaient générales et non datées dans la fenêtre."
+    },
+    {
+      "domain": "Innovation marketing / cas d’école",
+      "reason": "Aucun cas ne réunit marque, période, mécanisme, KPI chiffré et URL réellement consultée ; les sources publiées décrivent les stacks, pas une campagne."
+    },
+    {
+      "domain": "Bonus robotique",
+      "reason": "Les sources MIT antérieures, les événements et les éditeurs non autorisés ont été écartés ; seul le preprint arXiv porte les faits publiés."
+    }
+  ]
+}
