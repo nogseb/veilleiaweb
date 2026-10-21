@@ -71,10 +71,10 @@
 - [x] Rédiger les données S42, le rapport, le registre de 16 sources et le cas Chili’s avec réserve d’attribution
 - [x] Archiver la S41, afficher la S42 et préserver les cartes Bonus distinctes
 - [x] Valider l’intégrité éditoriale, TypeScript, build, 32 tests et les modales Bonus en mobile et desktop pour la S42
-- [ ] Sauvegarder le checkpoint S42, publier via WebDev et synchroniser GitHub
+- [x] Sauvegarder le checkpoint S42 et synchroniser GitHub ; rendre la S42 accessible en archive lors de la publication S43
 - [x] Collecter et qualifier les sources S43 dans la fenêtre du 13 au 19 octobre 2026
 - [x] Rédiger les données S43, le rapport et le registre de 6 sources qualifiées
 - [x] Masquer cinq domaines sans signal hebdomadaire conforme plutôt que de les remplir par des contenus faibles ou hors fenêtre
 - [x] Archiver la S42, afficher la S43 et préserver les cartes Bonus distinctes
 - [x] Valider l’intégrité éditoriale, TypeScript, build, 35 tests, les sources et les modales Bonus S43/S42 en mobile et desktop
-- [ ] Sauvegarder le checkpoint S43, publier via WebDev et synchroniser GitHub
+- [x] Sauvegarder le checkpoint S43, publier via WebDev et synchroniser GitHub (checkpoint 41a9c676, production et GitHub vérifiés)
