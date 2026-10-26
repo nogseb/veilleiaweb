@@ -1,38 +1,17 @@
-# Vérification — Veille IA & Web S43 corrigée
+# Validation de la consolidation S43
 
-**Date de vérification :** 26 octobre 2026  
-**Édition :** S43 — publication éditoriale du 21 octobre 2026  
-**Périmètre :** intégration du rapport `veille-ia-web-S43-2026.md` fourni par Sébastien Noguès.
+## État au 26 octobre 2026
 
-## Intégrité éditoriale
+- Huit domaines obligatoires, dans l’ordre convenu. Mesure id 9 hors domaines, Bonus id 10 distinct.
+- 22 URL uniques référencées au registre ; les documents de fond et les rappels historiques ne sont pas présentés comme autant d’annonces nouvelles.
+- S44 courante ; S43 consolidée archivée. Les nouveautés PHP2Shell, Digital Omnibus et monitoring OpenAI ne sont annoncées qu’en S44.
+- TypeScript valide, 37 tests passés et build réussi. Avertissement non bloquant de taille de bundle conservé.
+- Neuf modales d’analyse contrôlées par édition : huit domaines et mesure. Sources, synthèse et analyse complète disponibles sur les deux faces.
+- Contrôle des interactions sur desktop 1440 px et mobile 375 px, thèmes clair et sombre ; aucun overflow de page.
+- Bonus hachuré : pleine largeur mobile et largeur standard desktop. Source et deux faces contrôlées.
+- Tous les filtres de l’accueil retournent la catégorie correspondante.
+- Réponses HTTP et extraction publique des pages protégées consignées dans `controle-liens-consolides.json`.
 
-- Édition : **S43 / 2026**, datée du **21 octobre 2026**.
-- Analyses affichées : **9**, dans l’ordre éditorial fourni : Google AI, Zero-Click/GEO, robots et données structurées, CMS/DXP, CDP/data/identité, mesure, UX/agents, IA/gouvernance puis innovation marketing.
-- Sources citées : **32 URLs uniques** dans `sources.json` ; les 4 exceptions de période ou de contexte sont explicitées dans le registre.
-- Bonus : **Bonus #10 — Geek fact**, distinct des analyses et exclu des compteurs de domaines.
-- Cas d’école : **Currys**, documenté dans `cas-ecole.md` à partir du communiqué IPA du 1er octobre, retenu dans la fenêtre élargie de 30 jours et assorti de sa limite de source.
-- Correction appliquée : les fausses attributions d’entrées Google Search Central d’octobre 2026 ont été retirées ; la carte « robots / data » repose désormais sur les conditions Meta et la gouvernance des bots Cloudflare, conformément au rapport fourni.
+## Publication
 
-## Contrôles automatisés
-
-| Contrôle | Résultat |
-|---|---|
-| `npx tsx scripts/verify-s43-data.ts` | Réussi : 9 analyses, 32 sources documentées et Bonus distinct. |
-| `pnpm run check` | Réussi. |
-| `pnpm test` | Réussi : 10 fichiers, 35 tests. |
-| `pnpm run build` | Réussi. Avertissement Vite non bloquant sur la taille d’un chunk existant. |
-| `git diff --check` | Réussi : aucune erreur d’espacement. |
-| URLs citées | 30 réponses HTTP 200 et 2 réponses HTTP 403 de protection anti-bot, pour Search Engine Land ; les deux URLs restent consignées avec leur source dans le rapport fourni. |
-
-## Contrôles visuels et interactifs
-
-- Captures plein format contrôlées en **desktop 1440 × 1080** et **mobile 375 × 812** sur S43 et l’archive S42.
-- Les neuf cartes, le filtre additionnel **MESURE**, les compteurs **9 domaines / 32 sources** et l’ordre des analyses sont visibles dans le preview.
-- La charte existante est préservée : palette, typographie, badges, sections sombres et trame hachurée de la carte Bonus.
-- Carte Bonus S43 et Bonus S42 archivée : face avant, lien source, bouton `ANALYSE`, face d’analyse et bouton `RETOUR` validés en desktop et mobile.
-  - desktop : largeur standard **373 px** dans une grille de **1120 px** ;
-  - mobile : largeur double colonne **327 px**, égale à la largeur de la grille.
-
-## Résultat
-
-La correction S43 est validée. Elle doit être sauvegardée sur GitHub et sera rendue publiquement accessible comme archive complète lors de la publication de la S44.
+Checkpoint prêt à sauvegarder ; GitHub à synchroniser. L’interface Manus demande actuellement une connexion du propriétaire : la version consolidée n’est pas annoncée comme publiée avant contrôle de production.

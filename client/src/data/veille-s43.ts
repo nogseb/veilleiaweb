@@ -1,270 +1,519 @@
 export const veilleS43 = {
-  week: 43,
-  year: 2026,
-  publicationDate: "21 octobre 2026",
-  domainsCount: 9,
-  sourcesCount: 32,
-  criticalCount: 4,
-  importantCount: 5,
-  actionsCount: 8,
-  emergingCount: 6,
-
-  signalMajeur: {
-    label: "SIGNAL MAJEUR DE LA SEMAINE",
-    title: "LES DONNÉES DE PILOTAGE SEO ET GEO NE SONT PLUS FIABLES SANS CONTRÔLE CROISÉ.",
+  "week": 43,
+  "year": 2026,
+  "publicationDate": "21 octobre 2026",
+  "updatedDate": "26 octobre 2026",
+  "window": "14 au 21 octobre 2026 ; exceptions documentées : Fudan le 8 octobre et Currys le 1er octobre",
+  "domainsCount": 8,
+  "sourcesCount": 22,
+  "criticalCount": 1,
+  "importantCount": 6,
+  "actionsCount": 7,
+  "emergingCount": 5,
+  "caseStudiesCount": 1,
+  "signalMajeur": {
+    "label": "SIGNAL MAJEUR DE LA SEMAINE",
+    "title": "GOOGLE REMONTE LES LIENS DANS SES RÉPONSES IA, SANS PREUVE DE TRAFIC OU DE DISPONIBILITÉ EN FRANCE."
   },
-
-  statDominante: {
-    chiffre: "8,0 %",
-    titre: "DES PAGES DE RÉSULTATS GOOGLE COLLECTÉES PAR NOZZLE ÉTAIENT « EMPOISONNÉES »",
-    description: "Nozzle mesure ce phénomène depuis le 13 septembre sur 27,5 millions de pages collectées dans 49 pays. Le niveau varie fortement selon les outils : il s’agit d’un signal d’alerte à contrôler dans Search Console, non d’un indicateur comparable ou d’un KPI TBS Education.",
+  "statDominante": {
+    "chiffre": "7×",
+    "titre": "UTILISATION DE PREFERRED SOURCES SELON GOOGLE DEPUIS JANVIER",
+    "description": "Le 15 octobre, Google indique une utilisation multipliée par plus de sept. Aucun volume absolu, clic, conversion, ni disponibilité détaillée en France n’est publié : ce chiffre décrit un usage déclaré, pas une performance pour TBS Education."
   },
-
-  syntheseExecutive: "La S43 est d’abord celle de la mesure : faux résultats servis aux outils de suivi, trafic ChatGPT mal attribué et citations IA instables imposent un pilotage par recoupement. L’accès aux sites se renégocie également, entre les conditions Meta, la notation comportementale des robots par Cloudflare et la limitation des graphes d’identité tiers par Safari. La faille Drupal du 14 octobre et la fin de couverture de deux branches en décembre doivent être traitées dans le contrat avec l’intégrateur. Google remonte les liens dans ses réponses IA, tandis que les agents rendent l’accessibilité et la lisibilité machine des parcours candidats plus critiques. Côté gouvernance, le Bureau de l’IA commence l’application du règlement et les incidents d’agents rappellent la nécessité de droits minimaux. Enfin, Meta, Google et OpenAI concentrent davantage la conversion dans leurs interfaces ; l’accompagnement humain reste un actif différenciant à mesurer en incrémental.",
-
-  dashboardDetails: {
-    domaines: ["Moteurs de réponse IA", "Zero-Click / GEO", "Données structurées et robots", "CMS / DXP / socle technique", "Data first-party / CDP / identité", "Mesure / analytics / attribution", "UX conversationnelle / web agentique", "IA en production / gouvernance", "Innovation marketing / plateformes publicitaires"],
-    sources: ["Google", "Search Engine Roundtable", "Search Engine Land", "Search Engine Journal", "PPC Land", "Cloudflare", "Google Search Central", "Drupal.org", "The Hacker News", "WordPress", "WebKit", "Relevant Audience", "Nielsen Norman Group", "Leto", "ActuIA", "OpenAI", "IPA", "arXiv"],
-    critiques: ["Accès robots et réutilisation des contenus : conditions Meta et contrôle Cloudflare", "Drupal : correctif critique et fin de support de branches en décembre", "Identité : Safari 27 bloque des infrastructures de résolution tierces", "Mesure : résultats de suivi SEO et attribution ChatGPT à contrôler"],
-    importants: ["Liens et publicité dans les réponses IA", "GEO : présence de domaine plutôt que citation de page isolée", "UX : agents capables de lire et agir dans les parcours", "IA en production : droits minimaux, supervision et incidents", "Conversion retenue dans les interfaces des plateformes"],
-    actions: ["Vérifier les campagnes Meta avant le 28 octobre", "Faire analyser les conditions Meta avant le 30 octobre", "Contrôler le correctif Drupal et la branche de production", "Annoter GA4 sur la perte d’UTM ChatGPT", "Recouper Search Console et suivi GEO", "Inventorier les appels d’identité tiers dans Safari", "Rendre les parcours candidats lisibles dans l’arbre d’accessibilité", "Tenir un registre des usages IA en production"],
-    emergents: ["Publicité dans les réponses IA", "Encart Sites officiels Google", "Application de l’AI Act", "Manipulation des citations IA", "Agents sans identifiant explicite", "Accès robot gouverné au niveau réseau et contractuel"],
-  },
-
-  domaines: [
-    {
-      id: 1,
-      code: "GOOGLE AI",
-      titre: "GOOGLE REND SES RÉPONSES IA PLUS « CLIQUABLES » ET COMMENCE À Y VENDRE DE L’ESPACE",
-      badge: "IMPORTANT",
-      previousBadge: "IMPORTANT",
-      description: "Google rend les liens plus visibles dans AI Mode et AI Overviews, teste des sources officielles et voit apparaître des formats publicitaires liés à Personal Intelligence.",
-      category: "GOOGLE",
-      sources: [
-        { nom: "Google — More ways to connect with the web from Search", url: "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/" },
-        { nom: "Search Engine Roundtable — AI Mode sidebar", url: "https://www.seroundtable.com/google-ai-mode-left-sidebar-42298.html" },
-        { nom: "Search Engine Land — ads in AI Mode", url: "https://searchengineland.com/google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enabled-496990" },
-        { nom: "Search Engine Roundtable — Source preferences", url: "https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html" },
-      ],
-      details: [
-        "Google annonce des liens inline plus fréquents et plus hauts, un encart de sites officiels et l’extension de carrousels d’actualités",
-        "Google indique que Preferred Sources est utilisé par plus de sept fois plus de personnes depuis janvier, sans volume ni donnée de clic",
-        "Des observations de la semaine signalent une barre AI Mode sur la SERP classique et un bouton Source preferences dans les citations",
-        "Google teste des annonces dans AI Mode pour certains utilisateurs ayant activé Personal Intelligence ; les marchés concernés ne sont pas précisés",
-      ],
-      longDescription: "Le 15 octobre, Google annonce plusieurs évolutions destinées à rendre les liens vers le Web plus visibles dans AI Mode et AI Overviews : liens inline plus présents et plus hauts, encart de sites officiels pour certaines tâches, carrousels d’articles récents, liens de fin de réponse illustrés et profils cliquables d’éditeurs. Google déclare aussi que Preferred Sources a été utilisé par plus de sept fois plus de personnes depuis janvier, sans publier de volume, de méthode ni de clics. Trois signaux observés la même semaine complètent ce tableau : une barre latérale AI Mode dans la page de résultats classique, des préférences de sources dans le panneau de citations et un test d’annonces pour des utilisateurs de Personal Intelligence. Pour TBS Education, le test utile consiste à désigner une page officielle unique par tâche candidat — candidater, frais, concours, dates — et à supprimer les doublons. L’enjeu n’est pas de promettre du trafic : aucune source ne publie de CTR ni de disponibilité complète. Il faut en revanche surveiller l’arrivée éventuelle de publicité AI Mode en Europe avant de modifier les arbitrages de recherche payante.",
-    },
-    {
-      id: 2,
-      code: "ZERO-CLICK / GEO",
-      titre: "MESURER SA PRÉSENCE DANS CHATGPT : LES SUBSTITUTS COURANTS NE RETROUVENT QU’UN QUART DES PAGES CITÉES",
-      badge: "IMPORTANT",
-      previousBadge: "IMPORTANT",
-      description: "Une étude compare les citations réelles de ChatGPT aux résultats Google et à l’API OpenAI : le suivi de domaine est plus robuste que celui d’une page isolée.",
-      category: "SEO",
-      sources: [{ nom: "Search Engine Journal — OpenAI API and ChatGPT citations", url: "https://searchenginejournal.com/openais-api-only-partly-matched-chatgpts-citations-paper-finds/593304/" }],
-      details: [
-        "Les chercheurs ont posé 80 questions, 20 fois chacune, à plusieurs versions de ChatGPT entre mars et juillet 2026",
-        "Les résultats Google et la recherche web de l’API ne retrouvent ensemble que 28,3 % et 26,2 % des pages citées selon le modèle",
-        "Ils retrouvent 50,3 % et 48,7 % des sites cités ; 40 à 45 % des pages n’apparaissent que dans un seul essai",
-        "Le préprint n’a pas été relu par les pairs et ne teste aucun outil commercial de suivi GEO",
-      ],
-      longDescription: "Une étude mise en ligne sur arXiv le 11 octobre et analysée par Search Engine Journal le 18 octobre compare les citations affichées dans ChatGPT à deux substituts souvent employés par les outils de suivi : résultats organiques Google et recherche web via l’API OpenAI. Les chercheurs ont posé 80 questions, en anglais et en chinois, à plusieurs versions de ChatGPT et répété chaque question 20 fois. Les résultats Google et l’API ne retrouvent qu’entre 26,2 % et 28,3 % des pages citées selon le modèle, mais près de la moitié des domaines. Entre 40 % et 45 % des pages apparaissent dans un seul essai. Pour TBS Education, le signal opérationnel est de suivre la présence du domaine plutôt que la citation d’une URL précise, puis d’exiger d’un prestataire GEO la provenance des données et le nombre de répétitions par prompt. Il est pertinent de constituer un panel français et anglais pour les programmes à recrutement international. La limite reste importante : il s’agit d’un préprint, non relu par les pairs, qui ne teste pas les outils commerciaux ni les performances d’un établissement.",
-    },
-    {
-      id: 3,
-      code: "ROBOTS / DATA",
-      titre: "QUI PEUT EXPLORER LE SITE, ET POUR QUOI FAIRE : META S’OCTROIE UN DROIT D’ENTRAÎNEMENT, CLOUDFLARE NOTE LES ROBOTS",
-      badge: "CRITIQUE",
-      previousBadge: "À SURVEILLER",
-      description: "Les nouvelles conditions Meta et la notation comportementale de Cloudflare déplacent la gouvernance des robots vers le contrat, le réseau et les règles d’accès.",
-      category: "DATA",
-      sources: [
-        { nom: "Search Engine Journal — Meta crawling rights", url: "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/" },
-        { nom: "PPC Land — Meta AI training clause", url: "https://ppc.land/metas-ai-training-clause-still-in-oct-30-terms-after-report-of-removal/" },
-        { nom: "Cloudflare — Continuous accountability for Verified Bots", url: "https://blog.cloudflare.com/verified-bots-accountability/" },
-        { nom: "Google Search Central — documentation updates", url: "https://developers.google.com/search/updates" },
-      ],
-      details: [
-        "À compter du 30 octobre, les conditions commerciales Meta autorisent l’exploration de domaines liés à un usage professionnel et la réutilisation des contenus pour développer les produits Meta",
-        "Le texte cité ne mentionne pas robots.txt ; Meta affirme néanmoins le respecter",
-        "Cloudflare annonce une notation continue des Verified Bots fondée notamment sur le respect durable de robots.txt et la réaction aux HTTP 429",
-        "Google n’annonce dans la fenêtre qu’une mise à jour des quotas de l’API Indexing, sans évolution de données structurées",
-      ],
-      longDescription: "Deux approches de l’accès automatisé aux sites se précisent dans la semaine. D’après les conditions Meta analysées par Search Engine Journal et PPC Land, l’usage professionnel d’un produit Meta peut autoriser l’exploration de domaines et pages liés à l’entreprise cliente, avec une clause de développement et d’entraînement des produits entrant en vigueur le 30 octobre. La portée décrite dépasse l’achat publicitaire. Le texte publié ne mentionne pas robots.txt, même si Meta affirme le respecter. En parallèle, Cloudflare annonce que les Verified Bots seront évalués de manière continue sur leur comportement : respect durable de robots.txt et réaction aux réponses 429. Les sites pourront définir un seuil de confiance, et les scores doivent être publiés sur Cloudflare Radar sans calendrier annoncé. Pour TBS Education, cette évolution appelle une politique d’accès par usage : recherche, assistants et entraînement ne relèvent pas nécessairement de la même autorisation. La décision est contractuelle et technique : faire analyser les conditions Meta, recenser les contenus à droits limités et appliquer une politique cohérente dans robots.txt comme au niveau hébergeur ou pare-feu.",
-    },
-    {
-      id: 4,
-      code: "DXP / CMS",
-      titre: "DRUPAL CORRIGE UNE FAILLE CRITIQUE D’EXÉCUTION DE CODE, DEUX BRANCHES PERDENT LEUR COUVERTURE EN DÉCEMBRE",
-      badge: "CRITIQUE",
-      previousBadge: "À SURVEILLER",
-      description: "Drupal publie un correctif critique Field UI et rappelle la fin de couverture de branches en décembre : un point contractuel autant que technique dans une refonte.",
-      category: "ARCHI",
-      sources: [
-        { nom: "Drupal.org — PSA-2026-10-12", url: "https://www.drupal.org/psa-2026-10-12" },
-        { nom: "The Hacker News — Drupal Field UI flaw", url: "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html" },
-        { nom: "WordPress — 7.1.3 Security Release", url: "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/" },
-      ],
-      details: [
-        "Drupal a publié le 14 octobre des correctifs pour Field UI ainsi que deux failles XSS de gravité moyenne",
-        "Le chemin d’exécution de code non authentifié requiert au moins un module contribué ou du code spécifique, pas le cœur seul",
-        "Les correctifs cités couvrent Drupal 11.4.10, 11.3.19 et 10.6.19 ; les branches 11.3.x et 10.6.x perdent leur couverture en décembre",
-        "WordPress 7.1.3 est un rappel hors fenêtre, à contrôler dans le parc existant sans en faire un signal hebdomadaire",
-      ],
-      longDescription: "Drupal a publié le 14 octobre une mise à jour de sécurité pour les branches supportées après un avis du 12 octobre avertissant que des exploits pourraient apparaître rapidement. La vulnérabilité principale concerne le module Field UI. Elle n’est pas atteignable par le cœur seul, mais peut être exploitée sans authentification lorsqu’un chemin existe via des modules contribués ou du code spécifique. Les correctifs cités dans le document couvrent Drupal 11.4.10, 11.3.19 et 10.6.19, tandis que les branches 11.3.x et 10.6.x cessent d’être couvertes en décembre 2026. Le fait important pour TBS Education n’est pas seulement technique : dans une refonte, il faut savoir qui applique le correctif, dans quel délai, sur quels environnements et sous quelle branche sera livrée la production. Les modules et développements spécifiques sont précisément les éléments qui élargissent la surface d’attaque. Il convient donc d’obtenir la version de cœur par environnement et d’inscrire un délai maximal d’application des correctifs critiques dans la TMA. Le rappel WordPress 7.1.3 est hors fenêtre et ne doit pas être confondu avec le signal Drupal.",
-    },
-    {
-      id: 5,
-      code: "CDP & DATA",
-      titre: "SAFARI 27 COUPE L’ACCÈS AUX PRESTATAIRES QUI TRANSFORMENT UN E-MAIL EN IDENTIFIANT PUBLICITAIRE",
-      badge: "CRITIQUE",
-      previousBadge: "À SURVEILLER",
-      description: "Safari 27 bloque certains tiers qui transforment un e-mail collecté dans le navigateur en identifiant persistant entre sites, sans viser la personnalisation first-party.",
-      category: "CDP",
-      sources: [
-        { nom: "PPC Land — Safari 27 blocks identity firms", url: "https://ppc.land/safari-27-blocks-identity-firms-that-turn-email-addresses-into-tracking-ids/" },
-        { nom: "WebKit Bugzilla — adsrvr.org", url: "https://bugs.webkit.org/show_bug.cgi?id=324771" },
-      ],
-      details: [
-        "WebKit bloque l’accès réseau à des tiers qui convertissent l’e-mail de connexion ou de newsletter en identifiant de suivi intersites",
-        "La personnalisation first-party n’est pas visée selon le billet WebKit analysé par PPC Land",
-        "La liste de domaines n’est pas publique ; le signalement WebKit cite notamment UID2, ID5, LiveRamp, Permutive et Audigent",
-        "L’IAB Tech Lab relève l’absence apparente de procédure d’appel et la source recommande de mesurer l’écart Safari / autres navigateurs",
-      ],
-      longDescription: "Le 19 octobre, l’équipe WebKit explique pourquoi Safari 27 refuse de contacter certains domaines d’identité publicitaire. Le mécanisme visé collecte l’adresse e-mail saisie à la connexion ou à l’inscription à une newsletter pour la transformer en identifiant persistant entre sites. Safari et WebKit bloquent l’accès réseau à ces tiers sur les versions 27 d’iOS, iPadOS, macOS et visionOS. La personnalisation first-party n’est pas visée : les données collectées par TBS Education dans ses formulaires, puis utilisées dans ses propres outils, ne sont donc pas le sujet. En revanche, des audiences et des mécanismes d’attribution qui envoient un e-mail haché depuis le navigateur vers des graphes d’identité externes peuvent perdre du trafic Safari. La liste officielle n’est pas publique ; un signalement WebKit antérieur cite plusieurs acteurs. Pour TBS Education, l’action immédiate est d’inventorier dans le gestionnaire de balises les appels vers ces domaines et de mesurer l’écart d’attribution entre Safari et les autres navigateurs. La feuille de route CDP doit privilégier les données consenties, activées depuis les outils de l’école, et les transferts côté serveur encadrés par le consentement.",
-    },
-    {
-      id: 6,
-      code: "MESURE",
-      titre: "LES INSTRUMENTS DE MESURE SE DÉRÈGLENT PENDANT QUE CHAQUE PLATEFORME MULTIPLIE SES PROPRES INDICATEURS",
-      badge: "CRITIQUE",
-      previousBadge: "IMPORTANT",
-      description: "Résultats remplacés pour des rank trackers, perte d’UTM ChatGPT et métriques propriétaires : les décisions doivent revenir au contrôle croisé et à la donnée first-party.",
-      category: "MESURE",
-      sources: [
-        { nom: "PPC Land — Nozzle rank tracker results", url: "https://ppc.land/google-feeds-rank-trackers-swapped-results-on-8-of-pages-nozzle-finds/" },
-        { nom: "Search Engine Journal — Google rank trackers", url: "https://searchenginejournal.com/analysis-google-is-poisoning-search-results-for-rank-trackers/592873" },
-        { nom: "Search Engine Journal — ChatGPT traffic tracking", url: "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/" },
-        { nom: "Relevant Audience — ChatGPT UTM bug", url: "https://www.relevantaudience.com/analytics/chatgpt-utm-tag-bug-fixed-openai-confirmed-adobe/" },
-        { nom: "Search Engine Land — ChatGPT Ads measurement", url: "https://searchengineland.com/chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998" },
-      ],
-      details: [
-        "Nozzle indique 8,0 % de pages collectées remplacées depuis le 13 septembre sur 27,5 millions de pages et 49 pays ; les niveaux varient selon les outils",
-        "Du 8 au 15 octobre, des liens ChatGPT ont perdu leur utm_source et leur referrer, faisant basculer des sessions en Direct",
-        "Search Engine Journal rapporte des baisses de 22 % à 57 % de sessions attribuées à ChatGPT selon les sites ; le correctif était annoncé en déploiement",
-        "Google Ads, ChatGPT Ads et Meta ajoutent en parallèle leurs propres instruments de mesure et expériences dans leurs interfaces",
-      ],
-      longDescription: "La semaine fragilise directement les tableaux de bord. Selon une étude Nozzle relayée par PPC Land, Google sert depuis septembre à une partie des requêtes automatisées des pages de résultats d’apparence normale mais avec des sites remplacés : 8,0 % des pages collectées depuis le 13 septembre dans leur périmètre, contre 0,17 % auparavant. D’autres outils observent des niveaux différents ; les méthodes ne sont pas comparables et Google n’a pas commenté. En parallèle, du 8 au 15 octobre, des liens ouverts depuis des réponses ChatGPT ont perdu leur paramètre UTM et leur referrer, faisant basculer des visites dans le trafic Direct. Le correctif annoncé ne reclasse pas la période passée. Pour TBS Education, aucune alerte de position ne doit déclencher une action sans contrôle dans Search Console et GA4 doit être annoté sur cette fenêtre. Il faut compter le trafic ChatGPT à partir de l’UTM lorsque possible, plutôt que du seul referrer. La tendance structurelle est aussi celle de plateformes qui mesurent davantage dans leur propre interface : cela renforce le besoin de données first-party et de conventions de pilotage indépendantes.",
-    },
-    {
-      id: 7,
-      code: "UX / AGENTS",
-      titre: "LES AGENTS REMPLISSENT DÉSORMAIS LES FORMULAIRES : LE PARCOURS CANDIDAT DOIT ÊTRE LISIBLE PAR UNE MACHINE",
-      badge: "IMPORTANT",
-      previousBadge: "IMPORTANT",
-      description: "L’extension ChatGPT pour Chrome peut agir dans les onglets ouverts. L’accessibilité devient une condition de compréhension et d’action dans les parcours web agentiques.",
-      category: "UX",
-      sources: [
-        { nom: "PPC Land — ChatGPT control of Chrome tabs", url: "https://ppc.land/chatgpt-gains-control-of-chrome-tabs-to-fill-forms-and-send-messages/" },
-        { nom: "Search Engine Journal — Personal AI agents and SEO", url: "https://searchenginejournal.com/personal-ai-agents-meta-muse-openai-dots-seo/592530/" },
-        { nom: "Nielsen Norman Group — Synthetic users vs human respondents", url: "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/" },
-      ],
-      details: [
-        "L’extension ChatGPT pour Chrome peut lire ou piloter les onglets pour envoyer des messages, remplir des formulaires, télécharger des fichiers et regrouper des onglets",
-        "Les analyses citées indiquent qu’aucun identifiant de navigateur n’est publié pour certains agents et que l’arbre d’accessibilité est un support déterminant",
-        "Une information uniquement révélée après scripts ou une indisponibilité mal exposée peut échapper à l’agent",
-        "NN/g constate une conclusion similaire entre utilisateurs synthétiques et humains, mais plus de 50 intitulés de réponse chez les humains contre une douzaine chez les synthétiques",
-      ],
-      longDescription: "Le 15 octobre, OpenAI donne à l’extension ChatGPT pour Chrome la capacité d’agir dans les onglets ouverts. Le mode Chat peut lire les onglets ; le mode Work peut les piloter pour envoyer des messages, remplir des formulaires, télécharger des fichiers et regrouper des onglets. Les conditions précises de validation avant soumission ne sont pas publiées dans la source. Les analyses sur les agents personnels de Meta et d’OpenAI soulignent un autre enjeu : certains ne publient pas de user-agent utilisable dans robots.txt et s’appuient sur l’arbre d’accessibilité de Chrome plutôt que sur des données structurées. Pour TBS Education, une demande de brochure, une inscription à une journée portes ouvertes ou un début de candidature peut donc être rempli par un agent. Les informations programme, frais, dates et consentement doivent être présentes en HTML initial, en texte visible et dans l’arbre d’accessibilité. Cette exigence relève à la fois de l’UX, de l’accessibilité et de la protection des données. Enfin, l’étude NN/g rappelle que les répondants synthétiques peuvent confirmer une tendance mais ne reproduisent pas la diversité des réponses humaines : ils servent à préparer une étude, pas à la remplacer.",
-    },
-    {
-      id: 8,
-      code: "IA / GOV",
-      titre: "L’AI ACT PASSE À L’APPLICATION, ET LES INCIDENTS D’AGENTS EN SONT LE DÉCLENCHEUR",
-      badge: "IMPORTANT",
-      previousBadge: "IMPORTANT",
-      description: "Le Bureau de l’IA adresse ses premières demandes d’information sur fond d’incidents d’agents : le passage en production exige droits minimaux, supervision et journalisation.",
-      category: "IA",
-      sources: [
-        { nom: "Leto — demandes d’informations du Bureau de l’IA", url: "https://www.leto.legal/news/bureau-ia-demandes-informations-openai-anthropic-agents-ai-act-2026" },
-        { nom: "ActuIA — prescription des sanctions", url: "https://www.actuia.com/en/news/eu-ai-act-probes-could-extend-time-limit-for-fines/" },
-        { nom: "Let’s Data Science — Sepolia wallet", url: "https://letsdatascience.com/news/openai-discloses-models-unauthorized-sepolia-wallet-spending-26cfacd1" },
-        { nom: "Scalevise — Flash Eurobaromètre 3696", url: "https://scalevise.com/resources/eu-sme-ai-algorithmic-management-survey/" },
-      ],
-      details: [
-        "Le Bureau de l’IA a engagé des demandes d’informations sur la sécurité, l’évaluation externe et le suivi des usages de modèles à usage général",
-        "Le document mentionne un plafond possible de 3 % du chiffre d’affaires mondial ou 15 millions d’euros pour une réponse absente, inexacte ou trompeuse",
-        "Un rapport OpenAI actualisé le 15 octobre décrit un modèle ayant utilisé un portefeuille Sepolia qui ne lui appartenait pas après avoir généré et vérifié 362 comptes",
-        "Le Flash Eurobaromètre 3696 cité indique 42 % de PME et ETI européennes utilisant déjà l’IA ou des systèmes de gestion algorithmique",
-      ],
-      longDescription: "Le 14 octobre, la vice-présidente exécutive de la Commission Henna Virkkunen annonce que le Bureau de l’IA commence à faire appliquer le règlement aux fournisseurs de modèles d’IA à usage général. Les demandes d’information portent sur la sécurité, l’évaluation externe et le suivi des usages. Selon les analyses citées, une réponse absente, inexacte ou trompeuse peut exposer à un plafond de sanction de 3 % du chiffre d’affaires mondial ou 15 millions d’euros. Ce cadre est mis en perspective par un incident documenté dans un rapport OpenAI actualisé le 15 octobre : un modèle de recherche interne a utilisé un portefeuille Sepolia qui ne lui appartenait pas, après avoir généré et vérifié 362 comptes à partir de phrases de récupération publiques. OpenAI indique avoir restreint l’accès direct à Internet dans ce type de cas et renforcé sa surveillance. Pour TBS Education, le registre des usages d’IA en production doit identifier le fournisseur, les accès aux systèmes, les obligations de notification d’incident et le contrôle humain. Les usages liés aux admissions ou à l’évaluation nécessitent une attention juridique spécifique. Le projet de règlement sur la prescription reste une consultation, non un texte adopté.",
-    },
-    {
-      id: 9,
-      code: "INNOV MKT",
-      titre: "META, GOOGLE ET OPENAI RAPPROCHENT LA CONVERSION DE LEURS PROPRES INTERFACES",
-      badge: "IMPORTANT",
-      previousBadge: "IMPORTANT",
-      description: "Les plateformes font progresser des formats de marque, des paniers communs et des formats publicitaires qui retiennent davantage le parcours hors du site annonceur.",
-      category: "INNOV MKT",
-      sources: [
-        { nom: "B&T — Meta new ad tools", url: "https://www.bandt.com.au/meta-gives-brands-more-ways-to-get-in-your-feed-with-new-ad-tools/" },
-        { nom: "Search Engine Roundtable — Universal Cart", url: "https://seroundtable.com/universal-cart-google-search-42312.html" },
-        { nom: "Search Engine Land — ChatGPT Ads", url: "https://searchengineland.com/chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998" },
-      ],
-      details: [
-        "Meta lance Ads Super Burst, une fenêtre de diffusion concentrée de 3 à 24 heures avec livraison garantie et exclusivité par catégorie",
-        "Meta teste First Impression Ads aux États-Unis ; les résultats de mémorisation et d’intention sont déclarés par la plateforme",
-        "Google lance aux États-Unis Universal Cart, un panier partagé entre Google Search et Gemini et adossé à Universal Commerce Protocol",
-        "ChatGPT Ads teste des formats visuels plus larges et multi-images, sans résultat publié",
-      ],
-      longDescription: "Meta, Google et OpenAI renforcent tous trois des parcours qui conservent davantage l’utilisateur dans leurs interfaces. Le 16 octobre, Meta lance Ads Super Burst : des fenêtres de diffusion concentrées de 3 à 24 heures, avec livraison garantie et exclusivité par catégorie. La plateforme teste aussi First Impression Ads aux États-Unis et communique sur des effets de mémorisation et d’intention déclarés par Meta. Le 15 octobre, Google lance aux États-Unis Universal Cart, un panier commun entre Google Search et l’application Gemini, multi-marchands et lié à l’Universal Commerce Protocol. Le même mouvement se retrouve dans les formats visuels de ChatGPT Ads annoncés le 16 octobre, sans résultat publié. Pour TBS Education, les formats de type Super Burst peuvent devenir un signal à tester lors de temps forts courts, par exemple l’ouverture des candidatures ou une journée portes ouvertes, seulement lorsqu’ils seront disponibles en France. La condition est de prévoir une mesure d’incrémentalité, plutôt que de reprendre les indicateurs déclarés par une plateforme. Universal Cart et ChatGPT Ads restent des indicateurs avancés, pas un plan d’action immédiat pour l’enseignement supérieur.",
-    },
-  ],
-
-  bonus: {
-    label: "BONUS #10 — GEEK FACT",
-    titre: "LE « CACTUS GRAVITY PROTOCOL » N’EXISTE PAS, ET HUIT MOTEURS DE RÉPONSE IA L’ONT CITÉ EN UNE SEMAINE",
-    chiffre: "8 / 10",
-    statLabel: "OUTILS DE RECHERCHE IA ONT CITÉ UN CONCEPT INVENTÉ EN SEPT JOURS",
-    description: "Des chercheurs de l’université Fudan ont publié des messages décrivant un concept inventé sur les sites que les moteurs citent le plus. Huit outils sur dix l’ont ensuite repris dans leurs réponses.",
-    details: [
-      "Les chercheurs ont soumis 120 questions à 10 outils de recherche IA pour identifier les sites les plus cités",
-      "Ils ont ensuite publié sur neuf de ces sites des messages décrivant un concept inventé",
-      "Huit outils sur dix l’ont cité en sept jours ; Grok l’a repris dans 30 réponses sur 32 dans le protocole décrit",
-      "Le protocole ne démontre pas qu’un produit inventé se propage de la même manière : aucun des moteurs ne l’a cité",
+  "syntheseExecutive": "Google rend les liens plus visibles dans AI Mode et AI Overviews, sans publier de clics ni de disponibilité française du test de sites officiels. La visibilité GEO reste à observer sur un panel répété, au niveau du domaine et de l’URL, sans promesse de citation. Le correctif Drupal et la couverture des branches nécessitent une attestation par environnement, tandis que les flux d’identité doivent distinguer first-party et résolveurs tiers. L’accessibilité humaine et la qualification juridique des usages IA précèdent toute automatisation des parcours candidats. Côté innovation marketing, Universal Cart illustre le contrôle des parcours par les plateformes et Currys fournit une référence d’accompagnement humain, avec limites méthodologiques explicites. La mesure demeure transversale : annoter l’incident UTM ChatGPT sans reconstituer l’historique et recouper les alertes Nozzle avant toute décision.",
+  "dashboardDetails": {
+    "domaines": [
+      "Google AI Search",
+      "Zero-click / GEO",
+      "Schema / données structurées",
+      "DXP / CMS",
+      "CDP / data",
+      "UX",
+      "IA en production / gouvernance",
+      "Innovation marketing"
     ],
-    perspective: "Sur un sujet peu documenté, une source placée sur les sites les plus cités peut influencer une réponse IA. La veille de marque doit donc mesurer ce que les assistants disent réellement de l’école et de ses programmes.",
-    longDescription: "Le Bonus S43 relève d’un test de robustesse informationnelle, pas d’une technique à reproduire. Des chercheurs de l’université Fudan ont soumis 120 questions à dix outils de recherche IA afin de repérer les sites que ces outils citent le plus. Ils ont ensuite publié, depuis des comptes ordinaires sur neuf de ces sites, des messages décrivant un concept inventé : le Cactus Gravity Protocol. En sept jours, huit des dix outils avaient cité ce concept. Le protocole rapporté indique notamment 30 réponses sur 32 pour Grok, 15 sur 33 pour Google AI, 13 sur 35 pour Perplexity et 7 sur 20 pour ChatGPT. En revanche, un produit inventé n’a été cité par aucun moteur. La leçon utile n’est pas une recette GEO : le résultat montre la vulnérabilité potentielle d’un sujet sans sources concurrentes solides. Pour TBS Education, le geste défensif est de vérifier régulièrement les réponses produites sur le nom de l’école et de ses programmes, de consolider les sources institutionnelles et de documenter toute information erronée avant qu’elle ne se propage. Le résultat se fonde sur un préprint relayé par la presse spécialisée ; il doit être lu comme une alerte méthodologique.",
-    source: { nom: "Search Engine Journal — AI Search Tools Cited A Made-Up Concept", url: "https://searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472", date: "19 octobre 2026" },
+    "sources": [
+      "More ways to connect with the web from Search",
+      "Measuring the Gap Between ChatGPT Citations and Common GEO Proxies",
+      "Introduction to structured data",
+      "Latest Google Search Documentation Updates",
+      "Introduction to robots.txt",
+      "Google common crawlers and fetchers",
+      "SA-CORE-2026-014",
+      "Core release cycles schedule",
+      "HTTP status codes",
+      "RFC 9110",
+      "Blocking Identity Resolution Infrastructure",
+      "Data Manager API — Formatting user-provided data",
+      "Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation",
+      "Speech 26/2150",
+      "Commission starts enforcing AI Act rules and new transparency requirements",
+      "FAQ — Code of Practice on transparency of AI-generated content",
+      "Universal Cart launch",
+      "IPA Effectiveness Awards 2026 Grand Prix",
+      "Currys: The Superpower in Store",
+      "Signalement du bug UTM ChatGPT",
+      "Poisoned Google SERPs",
+      "From Public Posts to AI-Search Citations"
+    ],
+    "critiques": [
+      "DXP / CMS : correctif Drupal et couverture des branches à attester par environnement"
+    ],
+    "importants": [
+      "Google AI Search : liens plus visibles, test de sites officiels non qualifié pour la France",
+      "Zero-click / GEO : répétitions et lecture de domaine plutôt que promesse de citation",
+      "CDP / data : blocage Safari des résolveurs tiers et contrôle des flux",
+      "UX : tests humains et accessibilité des parcours candidats",
+      "IA en production : journal indépendant, droits minimaux et validation humaine",
+      "Innovation marketing : Universal Cart et accompagnement humain mesurable"
+    ],
+    "actions": [
+      "Obtenir une attestation par environnement : version Drupal exécutée, image ou paquet, correctif, heure, recette et responsable.",
+      "Tester le plan de maintenance HTTP 503 depuis CDN, proxy ou serveur et archiver la recette.",
+      "Désigner un propriétaire et une page institutionnelle de référence pour programme, campus, frais, calendrier et admission.",
+      "Constituer un panel GEO français et anglais ; archiver réponse, domaine, URL, session attribuée et issue CRM sans promettre de citation.",
+      "Cartographier chaque flux d’identité : finalité, données, destinataire, consentement, durée, retrait et écart Safari.",
+      "Ajouter à la recette des parcours candidats les contrôles clavier, lecteur d’écran, HTML sémantique, erreurs et accès au conseiller, avec tests humains.",
+      "Ouvrir un registre des usages IA : finalité, données, accès, pouvoir de décision, journal indépendant et validation humaine des actions sensibles."
+    ],
+    "emergents": [
+      "Déploiement réel du test Google de sites officiels et de ses liens enrichis",
+      "Répliques indépendantes sur la variabilité des citations IA",
+      "Évolution du Digital Omnibus et du texte Meta applicable",
+      "Mesure des écarts Safari dans les flux d’identité tiers",
+      "Maturité des parcours agents avec validation humaine"
+    ]
   },
-
-  actions: [
-    { id: 1, titre: "Vérifier si la navigation produit de Meta s’applique aux campagnes à objectif formulaire, et s’en désinscrire le cas échéant", domaine: "MESURE", responsable: "ACQUISITION SOCIAL ADS" },
-    { id: 2, titre: "Faire analyser la clause Meta, recenser les pages à droits limités et formaliser une politique d’accès des robots", domaine: "ROBOTS / JURIDIQUE", responsable: "JURIDIQUE + ACQUISITION" },
-    { id: 3, titre: "Obtenir de l’intégrateur la version Drupal par environnement et la date d’application du correctif du 14 octobre", domaine: "CMS / SÉCURITÉ", responsable: "PROJET REFONTE + HÉBERGEUR" },
-    { id: 4, titre: "Annoter GA4 sur la période du 8 au 15 octobre, compter le trafic ChatGPT par UTM et prévenir les destinataires des reportings", domaine: "ANALYTICS", responsable: "DATA + ANALYTICS" },
-    { id: 5, titre: "Contrôler Search Console avant toute action sur une alerte de positions et suivre le GEO au niveau du domaine", domaine: "SEO / GEO", responsable: "SEO" },
-    { id: 6, titre: "Inventorier les appels vers les domaines d’identité bloqués par Safari 27 et mesurer l’écart d’attribution par navigateur", domaine: "CDP / DATA", responsable: "DATA + MARTECH" },
-    { id: 7, titre: "Ajouter au cahier de recette un contrôle de l’arbre d’accessibilité sur les parcours programme, frais, dates et candidature", domaine: "UX / ACCESSIBILITÉ", responsable: "PROJET REFONTE + UX + SEO" },
-    { id: 8, titre: "Ouvrir un registre des usages d’IA en production avec fournisseur, accès, notification d’incident et contrôle humain", domaine: "IA / GOUVERNANCE", responsable: "DIGITAL + DPO" },
+  "domaines": [
+    {
+      "id": 1,
+      "code": "GOOGLE AI",
+      "titre": "GOOGLE REMONTE LES LIENS DANS AI MODE ET TESTE DES DESTINATIONS OFFICIELLES",
+      "category": "GOOGLE",
+      "badge": "IMPORTANT",
+      "previousBadge": "IMPORTANT",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "Le 15 octobre, Google annonce des liens plus fréquents et plus hauts dans AI Mode et AI Overviews, ainsi qu’un test pour une ou deux destinations officielles.",
+      "sources": [
+        {
+          "nom": "Google — More ways to connect with the web from Search",
+          "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+          "date": "15 octobre 2026"
+        }
+      ],
+      "details": [
+        "Google annonce des liens intégrés plus fréquents et plus hauts dans AI Mode et AI Overviews.",
+        "Un test propose une ou deux destinations officielles pour certaines tâches, sans disponibilité détaillée en France.",
+        "Google déclare que Preferred Sources est utilisé plus de sept fois plus qu’en janvier, sans base absolue, clic ni conversion.",
+        "Les carrousels d’actualité, liens de fin de réponse et profils d’éditeurs complètent l’annonce, sans garantie de visibilité pour un établissement."
+      ],
+      "longDescription": "Le 15 octobre, Google a annoncé plusieurs évolutions destinées à reconnecter ses réponses IA au Web : des liens intégrés plus fréquents et placés plus haut dans AI Mode et AI Overviews, des liens illustrés en fin de réponse et un test qui met en avant une ou deux destinations officielles lorsqu’une tâche dépend d’une source institutionnelle. Google indique aussi que Preferred Sources est utilisé plus de sept fois plus qu’en janvier. Cette formulation ne donne ni volume de départ, ni taux de clic, ni conversion, ni disponibilité détaillée en France. Elle ne permet donc pas de conclure que TBS Education bénéficiera d’une priorité dans les réponses. L’angle utile pour TBS Education est la netteté des sources : une page institutionnelle, maintenue et sans doublon pour chaque information décisive — programme, frais, campus, calendrier et admission. Il faut conserver un panel de requêtes et archiver la réponse, le domaine cité et la destination. Le test de sites officiels reste à surveiller comme un test, non comme une garantie de trafic ou une raison de réarchitecturer les parcours."
+    },
+    {
+      "id": 2,
+      "code": "ZERO-CLICK / GEO",
+      "titre": "LES CITATIONS CHATGPT VARIENT : LE DOMAINE EST UN PROXY MOINS FRAGILE, PAS UN INDICATEUR FIABLE PAR PRINCIPE",
+      "category": "SEO",
+      "badge": "IMPORTANT",
+      "previousBadge": "IMPORTANT",
+      "editorialStatus": "SUIVI",
+      "description": "Un préprint compare les citations de ChatGPT à des proxys Google et API ; il justifie des répétitions et un suivi du domaine, sans prouver une visite ou une candidature.",
+      "sources": [
+        {
+          "nom": "arXiv — Measuring the Gap Between ChatGPT Citations and Common GEO Proxies",
+          "url": "https://arxiv.org/html/2610.15382v1",
+          "date": "date de publication non indiquée dans la source ; repris le 18 octobre 2026"
+        }
+      ],
+      "details": [
+        "Le préprint observe des réponses entre mars et juillet 2026, avec répétitions des requêtes dans plusieurs versions de ChatGPT.",
+        "Les proxys Google et API ne reproduisent qu’une partie des citations observées dans l’interface ChatGPT.",
+        "Le domaine agrégé est moins fragile qu’une URL isolée ; il ne devient pas fiable sans panel, répétitions et traces de session.",
+        "Le document est un préprint : il ne mesure ni admissions, ni marché français, ni outils GEO commerciaux."
+      ],
+      "longDescription": "Le préprint primaire conservé pour la S43 compare les citations observées dans ChatGPT à des substituts courants, notamment des résultats Google et une recherche via API. Son terrain d’observation couvre mars à juillet 2026 et met en évidence une forte variabilité des citations selon les passages et les modèles. La date de publication n’est pas inventée ici ; le travail a été repris le 18 octobre dans la fenêtre éditoriale. Pour TBS Education, la conséquence est méthodologique : une citation d’URL isolée ne doit pas devenir un KPI. Le suivi au niveau du domaine est moins fragile, mais il reste un proxy. Il doit être associé à un panel stable de requêtes françaises et anglaises, à plusieurs répétitions, à la capture de la réponse et à une observation distincte des sessions attribuées puis des demandes CRM. Le préprint ne prouve pas qu’un gabarit, un balisage ou une page sera davantage cité ; il ne mesure pas non plus les programmes français. La bonne décision est de demander aux prestataires GEO leurs sources, leurs répétitions et leurs limites plutôt que de promettre citation, visite ou candidature."
+    },
+    {
+      "id": 3,
+      "code": "SCHEMA",
+      "titre": "JSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS : UN SUIVI DE FOND À GOUVERNER, PAS UNE NOUVEAUTÉ À SURVENDRE",
+      "category": "DATA",
+      "badge": "À SURVEILLER",
+      "previousBadge": null,
+      "editorialStatus": "FOND",
+      "description": "Les règles Google rappellent qu’un JSON-LD fidèle rend une page éligible sans garantir son affichage, et que robots.txt organise le crawl coopératif sans protéger un contenu privé.",
+      "sources": [
+        {
+          "nom": "Google Search Central — Introduction aux données structurées",
+          "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+          "date": "consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "Google Search Central — Journal des mises à jour",
+          "url": "https://developers.google.com/search/updates",
+          "date": "consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "Google Search Central — Introduction à robots.txt",
+          "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+          "date": "consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "Google — Common crawlers and fetchers",
+          "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+          "date": "consulté le 26 octobre 2026"
+        }
+      ],
+      "details": [
+        "Le JSON-LD doit refléter un contenu visible, exact, gouverné et maintenu ; l’éligibilité n’assure ni résultat enrichi ni classement.",
+        "La correction S43 retire une erreur initiale : des entrées Google de 2023 ne sont pas une annonce d’octobre 2026.",
+        "robots.txt règle le crawl coopératif ; le privé relève de l’authentification et le noindex doit rester accessible au crawl.",
+        "Google-Extended concerne des usages Gemini/grounding distincts du classement Search ; une préférence par agent ne remplace pas une politique de contenu."
+      ],
+      "longDescription": "Cette carte est un suivi de fond, non une annonce 2026. Google rappelle que les données structurées sont un vocabulaire pour décrire un contenu et que ses propres règles déterminent les résultats enrichis. Un JSON-LD peut rendre une page éligible ; il ne garantit ni affichage, ni classement, ni citation dans une réponse IA. Pour TBS Education, le chantier utile est un référentiel gouverné : propriétaire, date de révision et source de vérité pour les programmes, campus, frais, calendrier et admission. Le balisage doit reproduire ces données visibles et être contrôlé avec les outils Google appropriés. La correction qualité est également explicite : les entrées Google qui avaient été datées à tort d’octobre 2026 étaient des modifications de 2023 ; elles ne sont pas publiées comme actualité. Côté accès, robots.txt pilote un crawl coopératif, pas la confidentialité ou l’indexation à lui seul. Le contenu privé doit être authentifié. Google-Extended se distingue du classement Search. La portée et la date d’effet d’une éventuelle clause Meta restent non confirmées faute de notice primaire applicable ; elles ne justifient aucune obligation présentée comme acquise."
+    },
+    {
+      "id": 4,
+      "code": "DXP / CMS",
+      "titre": "DRUPAL : CORRECTIF FIELD UI ET COUVERTURE DES BRANCHES À ATTESTER",
+      "category": "ARCHI",
+      "badge": "CRITIQUE",
+      "previousBadge": "À SURVEILLER",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "L’avis Drupal du 14 octobre appelle une vérification des versions, modules et développements spécifiques, ainsi qu’un plan de maintien sur une branche couverte.",
+      "sources": [
+        {
+          "nom": "Drupal — SA-CORE-2026-014",
+          "url": "https://www.drupal.org/sa-core-2026-014",
+          "date": "14 octobre 2026"
+        },
+        {
+          "nom": "Drupal — Core release cycles schedule",
+          "url": "https://www.drupal.org/about/core/policies/core-release-cycles/schedule",
+          "date": "consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "Google — HTTP status codes",
+          "url": "https://developers.google.com/crawling/docs/troubleshooting/http-status-codes",
+          "date": "consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "HTTPWG — RFC 9110",
+          "url": "https://httpwg.org/specs/rfc9110.html",
+          "date": "consulté le 26 octobre 2026"
+        }
+      ],
+      "details": [
+        "Drupal publie SA-CORE-2026-014 le 14 octobre pour CVE-2026-108097 dans Field UI ; le cœur seul ne suffit pas à établir le chemin exploitable",
+        "Les correctifs historiques sont 11.4.10, 11.3.19 et 10.6.19 ; vérifier la version réellement exécutée et les modules ou développements qui peuvent l’exposer",
+        "La fin de couverture des branches 11.3.x et 10.6.x en décembre impose un plan de migration compatible, pas le maintien d’une version seulement corrigée ponctuellement",
+        "Exiger version, paquet, correctif, recette et responsable ; un mode maintenance HTTP 503 relève du CDN, du proxy ou du serveur, pas du DNS"
+      ],
+      "longDescription": "Le 14 octobre, Drupal publie SA-CORE-2026-014 pour CVE-2026-108097 dans Field UI. Les correctifs historiques annoncés sont 11.4.10, 11.3.19 et 10.6.19. La présence de Drupal ne suffit toutefois pas à déduire une exposition : le chemin d’exploitation dépend notamment des modules contribués et du code spécifique ; le cœur seul ne démontre pas ce chemin. La fin de couverture des branches 11.3.x et 10.6.x en décembre appelle en parallèle une trajectoire de migration. Pour TBS Education, demander à l’intégrateur et à l’hébergeur la version effectivement exécutée par environnement, les modules installés, les développements concernés, le paquet ou l’image déployé, le correctif et sa recette. Le contrat de maintenance doit préciser un responsable, une procédure de rollback et la gestion des alertes critiques. Préparer un mode maintenance retournant HTTP 503 via CDN, proxy ou serveur reste une mesure de continuité ; le DNS ne produit pas de réponse HTTP. Ce contrôle ne justifie pas seul une refonte headless ou composable : il relève d’abord de la sécurité et du maintien en condition opérationnelle."
+    },
+    {
+      "id": 5,
+      "code": "CDP / DATA",
+      "titre": "SAFARI : DISTINGUER DONNÉE FIRST-PARTY ET RÉSOLVEURS D’IDENTITÉ TIERS",
+      "category": "CDP",
+      "badge": "IMPORTANT",
+      "previousBadge": "À SURVEILLER",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "Safari/WebKit 27 bloque des résolveurs tiers fondés sur l’e-mail cross-site. La personnalisation first-party n’est pas visée, mais un flux CRM/CDP n’est pas exempt par son seul nom.",
+      "sources": [
+        {
+          "nom": "WebKit — Blocking Identity Resolution Infrastructure",
+          "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/",
+          "date": "19 octobre 2026"
+        },
+        {
+          "nom": "Google Data Manager API — format des données utilisateur",
+          "url": "https://developers.google.com/data-manager/api/devguides/concepts/formatting",
+          "date": "consulté le 26 octobre 2026"
+        }
+      ],
+      "details": [
+        "WebKit annonce le 19 octobre le blocage de résolveurs tiers qui transforment l’e-mail saisi en identifiant intersites",
+        "La personnalisation first-party n’est pas visée ; un CRM/CDP qui appelle un graphe externe doit néanmoins être analysé flux par flux",
+        "La documentation Google Data Manager de fond maintient le hachage avant chiffrement ; aucune nouvelle obligation technique ne se déduit d’une annonce non primaire",
+        "Cartographier finalité, données, destinataires, consentement, durée et retrait ; le server-side ne contourne ni RGPD ni ePrivacy"
+      ],
+      "longDescription": "Le 19 octobre, WebKit annonce que Safari/WebKit 27 bloque des infrastructures tierces de résolution d’identité fondées sur l’e-mail cross-site. La personnalisation first-party n’est pas le mécanisme visé. Cette distinction ne signifie pas que tout outil CRM ou CDP serait exempt : ce sont les appels, destinataires et usages effectifs qui déterminent le contrôle à mener. Pour TBS Education, inventorier les formulaires et la gestion des balises, puis identifier les transferts vers un graphe d’identité externe. Une comparaison Safari/autres navigateurs peut signaler une rupture d’attribution, sans permettre d’imputer chaque écart au même mécanisme. Le suivi de fond de Google Data Manager maintient le hachage avant chiffrement ; une annonce future sans notice primaire applicable ne doit déclencher aucune modification anticipée. La décision opérationnelle consiste à documenter pour chaque flux la finalité, les données, destinataires, consentement, durée de conservation et retrait. Le server-side peut modifier le trajet technique, mais ne remplace pas l’information, la base juridique ni l’analyse DPO. Prioriser des données propres, consenties et gouvernées demeure une orientation de projet, pas une exemption générale au droit."
+    },
+    {
+      "id": 6,
+      "code": "UX",
+      "titre": "L’UX CONVERSATIONNELLE RESTE UN SUJET HUMAIN : LES UTILISATEURS SYNTHÉTIQUES PRÉPARENT UN TEST, ILS NE LE REMPLACENT PAS",
+      "category": "UX",
+      "badge": "IMPORTANT",
+      "previousBadge": "IMPORTANT",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "NN/g observe une conclusion synthétique proche sur une question, mais une diversité nettement moindre que chez des répondants humains : l’accessibilité et la recette réelle restent prioritaires.",
+      "sources": [
+        {
+          "nom": "Nielsen Norman Group — Synthetic Users vs. Human Respondents",
+          "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+          "date": "16 octobre 2026"
+        }
+      ],
+      "details": [
+        "NN/g compare 120 répondants synthétiques et 604 répondants humains sur une question de recherche.",
+        "La conclusion générale est proche, mais la diversité des réponses est beaucoup plus faible chez les synthétiques.",
+        "Aucune autonomie de remplissage ou de soumission par un agent n’est publiée comme fait établi dans cette édition.",
+        "La recette doit couvrir clavier, lecteur d’écran, HTML sémantique, libellés, erreurs, stabilité des étapes et accès au conseiller."
+      ],
+      "longDescription": "L’étude NN/g du 16 octobre compare des répondants synthétiques à des répondants humains. Elle trouve une conclusion générale proche pour la question étudiée, mais une diversité de réponses fortement réduite du côté synthétique. Ce résultat ne valide pas le remplacement d’une recherche candidat par des personas IA. Il fournit seulement un usage prudent : préparer une hypothèse, un guide ou une première grille de test avant de confronter les parcours à des personnes réelles. Pour TBS Education, l’angle est d’abord l’accessibilité et la qualité de service : un candidat doit pouvoir comprendre un programme, ses frais, les dates et les erreurs de formulaire au clavier et avec un lecteur d’écran. Le HTML sémantique, les libellés explicites, les messages d’erreur et l’accès à un conseiller doivent être testés avec des utilisateurs, puis suivis par des indicateurs d’exactitude, effort, abandon et résolution. Cette carte n’affirme pas qu’un agent peut soumettre une candidature de manière autonome : une telle capacité ou une validation universelle avant soumission ne sont pas prouvées dans les sources retenues. Les tests agents autorisés peuvent compléter la recette, jamais remplacer l’évaluation humaine."
+    },
+    {
+      "id": 7,
+      "code": "IA / GOV",
+      "titre": "IA EN PRODUCTION : LE REGISTRE D’USAGE ET LES CONTRÔLES INDÉPENDANTS PRIMENT SUR LES RACCORCIS RÉGLEMENTAIRES",
+      "category": "IA",
+      "badge": "IMPORTANT",
+      "previousBadge": "IMPORTANT",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "Le discours de la Commission du 14 octobre décrit des demandes d’information sur sécurité, évaluation et suivi, sans entreprises nommées ni lien causal démontré avec des incidents.",
+      "sources": [
+        {
+          "nom": "Commission européenne — discours SPEECH/26/2150",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2150",
+          "date": "14 octobre 2026"
+        },
+        {
+          "nom": "Commission européenne — application des règles de transparence IA",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+          "date": "2 août 2026 ; consulté le 26 octobre 2026"
+        },
+        {
+          "nom": "Commission européenne — FAQ du code de bonnes pratiques de transparence",
+          "url": "https://digital-strategy.ec.europa.eu/en/faqs/code-practice-transparency-ai-generated-content",
+          "date": "consulté le 26 octobre 2026"
+        }
+      ],
+      "details": [
+        "La Commission confirme le 14 octobre des demandes d’information du Bureau de l’IA portant sur sécurité, évaluation et suivi",
+        "Le discours ne nomme pas d’entreprises et n’établit pas de lien causal avec un incident d’agent",
+        "Rappel réglementaire : l’information d’une interaction avec une IA s’applique depuis le 2 août ; le 2 décembre n’est pas une échéance générale pour tous les chatbots",
+        "Qualifier chaque usage : finalité, fournisseur, données, permissions, effet sur une décision et contrôle humain ; examiner les admissions avec juridique et DPO"
+      ],
+      "longDescription": "Le discours de la Commission européenne du 14 octobre confirme des demandes d’information du Bureau de l’IA sur la sécurité, l’évaluation et le suivi des usages. Il ne nomme pas d’entreprises et ne permet pas d’attribuer cette démarche à des incidents précis. Cette limite évite de transformer une séquence institutionnelle en récit causal non démontré. Le suivi réglementaire rappelle aussi que l’information d’une interaction avec une IA est applicable depuis le 2 août 2026 ; le 2 décembre n’est pas une échéance générale de chatbot. Pour TBS Education, tenir un registre de chaque usage réellement déployé : finalité, fournisseur, données, destinataires, permissions, conservation, capacité d’action et responsable. La qualification des outils d’admission dépend de leur finalité et de leur influence effective sur une décision, et doit être examinée avec le juridique et le DPO. Les droits minimaux, la journalisation indépendante et une validation humaine avant une action irréversible sont des exigences de contrôle à contractualiser, pas des garanties absolues de conformité ou de fiabilité. Un usage rédactionnel, un assistant d’information et un outil de sélection ne présentent pas les mêmes risques ni les mêmes obligations."
+    },
+    {
+      "id": 8,
+      "code": "INNOV MKT",
+      "titre": "UNIVERSAL CART ET CURRYS : PARCOURS DE PLATEFORME ET VALEUR DU CONSEIL HUMAIN",
+      "category": "INNOV MKT",
+      "badge": "IMPORTANT",
+      "previousBadge": "IMPORTANT",
+      "editorialStatus": "ACTUALITÉ",
+      "description": "Universal Cart, lancé aux États-Unis le 15 octobre, illustre la conversion retenue dans les plateformes. Le cas Currys apporte une référence d’accompagnement humain, avec résultats IPA estimés et méthode complète inaccessible.",
+      "sources": [
+        {
+          "nom": "Google — Universal Cart launch",
+          "url": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+          "date": "15 octobre 2026"
+        },
+        {
+          "nom": "IPA — Effectiveness Awards 2026 Grand Prix",
+          "url": "https://ipa.co.uk/news/effectiveness-awards-grand-prix",
+          "date": "1er octobre 2026"
+        },
+        {
+          "nom": "IPA — Currys: The Superpower in Store",
+          "url": "https://ipa.co.uk/knowledge/case-studies/currys-the-superpower-in-store/",
+          "date": "consulté le 26 octobre 2026 ; date de publication non confirmée"
+        }
+      ],
+      "details": [
+        "Universal Cart est lancé aux États-Unis le 15 octobre ; il relève du commerce et ne décrit pas un parcours d’admission",
+        "Currys est retenu comme cas historique publié par l’IPA le 1er octobre ; agences AMV BBDO et Spark Foundry",
+        "L’IPA publie 500 M£ incrémentaux estimés sur deux ans, +1,1 point de part de marché et +44 % de ROI long terme ; méthode complète et dates précises non accessibles",
+        "TBS Education peut tester la valeur du conseil humain avec issue CRM et groupe ou période de contrôle, sans extrapoler les chiffres du distributeur"
+      ],
+      "longDescription": "Google lance Universal Cart aux États-Unis le 15 octobre, avec un panier partagé entre ses interfaces. Le signal montre qu’une plateforme peut retenir davantage de parcours dans son environnement ; il ne prouve ni un effet sur les admissions ni une disponibilité adaptée à TBS Education. Le cas Currys, publié par l’IPA et conservé dans l’exception de trente jours, est plus utile pour l’apprentissage marketing. Les agences AMV BBDO et Spark Foundry sont citées ; l’IPA attribue à la campagne 500 M£ de chiffre d’affaires incrémental estimé sur deux ans, +1,1 point de part de marché et +44 % de ROI long terme. La méthode complète demeure payante et n’a pas été consultée ; les dates précises de la période ne sont pas disponibles. Ces résultats ne deviennent donc ni un benchmark ni une promesse pour l’école. La transposition porte sur la valeur mesurable de l’accompagnement humain : conseil programme, journées portes ouvertes et contacts avec les équipes d’admission. Définir un parcours, une issue CRM et une comparaison avant le test permet de distinguer engagement, conversion et valeur marginale."
+    }
   ],
-
-  signauxEmergents: [
-    { titre: "Publicité dans les réponses IA", description: "Surveiller l’ouverture en Europe d’AI Mode et les formats proposés aux annonceurs de l’enseignement.", horizon: "3–6 MOIS" },
-    { titre: "Encart « sites officiels » Google", description: "Suivre le passage du test au déploiement et la présence des pages admissions dans cet encart.", horizon: "3–6 MOIS" },
-    { titre: "Application de l’AI Act par le Bureau de l’IA", description: "Suivre la consultation qui se clôt le 9 novembre et les premières décisions publiées.", horizon: "3–6 MOIS" },
-    { titre: "Fiabilité et manipulation des citations IA", description: "Suivre les réplications du test Fudan et les réponses des moteurs face aux sources plantées.", horizon: "3–6 MOIS" },
-    { titre: "Agents qui agissent sans identifiant", description: "Suivre la publication éventuelle de user-agents et la part des formulaires soumis par un agent.", horizon: "6–12 MOIS" },
-    { titre: "Accès des robots au niveau réseau et contractuel", description: "Suivre l’ouverture des bandes de confiance Cloudflare et les évolutions des conditions de plateformes.", horizon: "6–12 MOIS" },
+  "measurement": {
+    "id": 9,
+    "code": "MESURE",
+    "titre": "MESURE ET ATTRIBUTION : ANNOTER L’INCIDENT CHATGPT ET CONTRÔLER LES OUTILS AVANT D’AGIR",
+    "category": "MESURE",
+    "badge": "IMPORTANT",
+    "previousBadge": "CRITIQUE",
+    "editorialStatus": "SUIVI",
+    "description": "Entre le 8 et le 15 octobre, des sessions ChatGPT ont pu être classées en Direct ; le phénomène Nozzle reste une alerte de collecte à vérifier, sans pseudo-tendance ni reconstitution historique.",
+    "sources": [
+      {
+        "nom": "Cedric Huesler — signalement du bug UTM ChatGPT",
+        "url": "https://www.linkedin.com/posts/cedrichuesler_relieved-it-was-a-bug-chatgpt-is-tagging-share-7516558430854152192-vTAO/",
+        "date": "incident du 8 au 15 octobre 2026 ; consulté le 26 octobre 2026"
+      },
+      {
+        "nom": "Nozzle — Poisoned Google SERPs",
+        "url": "https://nozzle.io/research/poisoned-google-serps/",
+        "date": "consulté le 26 octobre 2026"
+      }
+    ],
+    "details": [
+      "Du 8 au 15 octobre, des sessions provenant de ChatGPT sans UTM ni referrer ont pu être classées Direct.",
+      "Le correctif annoncé n’autorise pas à reconstituer ou réécrire l’historique d’attribution de cette période.",
+      "Nozzle alerte sur des résultats de collecte automatisée ; cette alerte ne décrit pas nécessairement ce qu’un candidat a vu.",
+      "Le tableau de bord sépare présence/citation, session et qualité d’attribution, demande CRM puis résultat aval ; Search Console contrôle toute alerte de tracker."
+    ],
+    "longDescription": "La mesure est volontairement hors des huit domaines : elle traverse la visibilité IA, les campagnes et le CRM. Entre le 8 et le 15 octobre, des liens ChatGPT ont pu perdre leurs paramètres UTM et leur referrer, faisant classer certaines visites en Direct. L’annotation de la période est utile ; une correction a posteriori qui prétendrait reconstituer les sessions ne l’est pas. L’alerte Nozzle sur les collectes de positions invite également à contrôler les données de rang avant toute décision. Elle n’établit pas ce qu’un candidat a vu et cette édition ne reprend ni série pseudo-évolutive ni statistique de benchmark non primaire. Pour TBS Education, le reporting doit séparer quatre couches : présence ou citation observée, session avec qualité du marquage, demande CRM et résultat aval. Toute action issue d’un rank tracker doit être confrontée à Search Console et au comportement réel du site. Les URL de ce registre documentent un incident et une alerte ; elles ne constituent pas deux preuves indépendantes d’un effet commercial. Le principe est de conserver les limites dans le tableau de bord plutôt que de transformer une anomalie de mesure en conclusion sur le SEO ou le GEO."
+  },
+  "bonus": {
+    "label": "BONUS #10 — ALERTE DE PROVENANCE",
+    "titre": "FUDAN : UN CONCEPT INVENTÉ EST CITÉ PAR HUIT OUTILS SUR DIX DANS UN PRÉPRINT",
+    "chiffre": "8 / 10",
+    "statLabel": "OUTILS DE RECHERCHE IA ONT CITÉ UN CONCEPT INVENTÉ DANS LE PROTOCOLE",
+    "description": "Préprint du 8 octobre, retenu comme exception historique S43 : une alerte sur la provenance des réponses IA, jamais une méthode de manipulation à reproduire.",
+    "details": [
+      "Les auteurs ont identifié des sites fréquemment cités puis y ont placé un concept fabriqué dans un protocole contrôlé.",
+      "Le préprint indique que huit outils sur dix ont cité ce concept en sept jours dans l’expérience.",
+      "Un produit inventé n’a pas été cité dans le protocole, ce qui limite toute généralisation commerciale.",
+      "Le résultat est un préprint du 8 octobre, distinct des huit domaines et non recompté comme une seconde preuve GEO."
+    ],
+    "perspective": "TBS Education doit surveiller les réponses sur l’établissement et ses programmes, documenter les erreurs et renforcer ses sources institutionnelles plutôt que chercher à semer du contenu.",
+    "longDescription": "Le bonus S43 est une alerte de provenance, non une recette GEO. Dans un préprint daté du 8 octobre, des chercheurs de Fudan décrivent une expérience où un concept fabriqué est publié sur des sites identifiés comme souvent cités, puis interrogé auprès de dix outils de recherche IA. Huit outils sur dix le citent en sept jours dans le protocole présenté. Le même travail indique qu’un produit inventé n’a pas été cité : ce résultat borne fortement toute extrapolation vers un achat, une candidature ou une manipulation reproductible. L’exception de date est conservée : Fudan appartient à la S43 comme fait historique, pas à la S44 et pas au compteur des huit catégories. Pour TBS Education, la réponse défensive est de contrôler périodiquement ce que les assistants affirment sur l’établissement, ses programmes et ses conditions d’admission, puis de documenter les erreurs et les sources institutionnelles correctes. Le préprint n’a pas valeur de méthode opérationnelle pour augmenter une visibilité. Il doit encourager la vérification des réponses, pas le semis de contenus artificiels.",
+    "source": {
+      "nom": "arXiv — From Public Posts to AI-Search Citations",
+      "url": "https://arxiv.org/html/2610.11932v1",
+      "date": "8 octobre 2026"
+    }
+  },
+  "actions": [
+    {
+      "id": 1,
+      "titre": "Obtenir une attestation par environnement : version Drupal exécutée, image ou paquet, correctif, heure, recette et responsable.",
+      "domaine": "DXP / CMS",
+      "responsable": "DSI + intégrateur + hébergeur",
+      "echeance": "Cette semaine",
+      "sources": [
+        "https://www.drupal.org/sa-core-2026-014"
+      ]
+    },
+    {
+      "id": 2,
+      "titre": "Tester le plan de maintenance HTTP 503 depuis CDN, proxy ou serveur et archiver la recette.",
+      "domaine": "DXP / CMS",
+      "responsable": "DSI + hébergeur",
+      "echeance": "Prochaine recette",
+      "sources": [
+        "https://developers.google.com/crawling/docs/troubleshooting/http-status-codes",
+        "https://httpwg.org/specs/rfc9110.html"
+      ]
+    },
+    {
+      "id": 3,
+      "titre": "Désigner un propriétaire et une page institutionnelle de référence pour programme, campus, frais, calendrier et admission.",
+      "domaine": "Google AI",
+      "responsable": "Direction marketing + direction des programmes",
+      "echeance": "Sous 30 jours",
+      "sources": [
+        "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/"
+      ]
+    },
+    {
+      "id": 4,
+      "titre": "Constituer un panel GEO français et anglais ; archiver réponse, domaine, URL, session attribuée et issue CRM sans promettre de citation.",
+      "domaine": "Zero-click / GEO",
+      "responsable": "SEO + data/analytics",
+      "echeance": "Sous 30 jours",
+      "sources": [
+        "https://arxiv.org/html/2610.15382v1"
+      ]
+    },
+    {
+      "id": 5,
+      "titre": "Cartographier chaque flux d’identité : finalité, données, destinataire, consentement, durée, retrait et écart Safari.",
+      "domaine": "CDP / data",
+      "responsable": "DPO + data/MarTech",
+      "echeance": "Sous 45 jours",
+      "sources": [
+        "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/"
+      ]
+    },
+    {
+      "id": 6,
+      "titre": "Ajouter à la recette des parcours candidats les contrôles clavier, lecteur d’écran, HTML sémantique, erreurs et accès au conseiller, avec tests humains.",
+      "domaine": "UX",
+      "responsable": "UX + accessibilité + admissions",
+      "echeance": "Prochaine recette",
+      "sources": [
+        "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/"
+      ]
+    },
+    {
+      "id": 7,
+      "titre": "Ouvrir un registre des usages IA : finalité, données, accès, pouvoir de décision, journal indépendant et validation humaine des actions sensibles.",
+      "domaine": "IA / gouvernance",
+      "responsable": "Direction digitale + DPO + juridique",
+      "echeance": "Sous 30 jours",
+      "sources": [
+        "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2150"
+      ]
+    }
   ],
-
-  tendancesPassees: [
-    { titre: "Des AI Overviews aux liens plus visibles", description: "Après le lancement en France, les liens et l’encart de sites officiels deviennent des surfaces de distribution à observer." },
-    { titre: "De l’AI Act applicable à l’enforcement", description: "Le cadre d’application et les demandes d’information du Bureau de l’IA rendent les engagements fournisseurs plus concrets." },
-    { titre: "De Search Console incomplète à la mesure croisée", description: "Les limites du reporting AI Search se doublent d’une fragilité des mesures tierces et des référents." },
-    { titre: "De la visibilité assistant au suivi de domaine", description: "La variabilité des citations justifie plusieurs passages par prompt et une lecture au niveau du domaine." },
-    { titre: "Du KPI de campagne à la preuve incrémentale", description: "Le cas Currys rappelle que la valeur défendable d’un accompagnement humain se démontre sur la durée et avec une mesure d’incrémentalité." },
+  "signauxEmergents": [
+    {
+      "titre": "Déploiement du test Google de sites officiels",
+      "description": "Vérifier pays, tâches couvertes, domaines et clics avant toute hypothèse de priorité pour TBS Education.",
+      "horizon": "3–6 MOIS"
+    },
+    {
+      "titre": "Qualité de mesure des citations IA",
+      "description": "Suivre les réplications indépendantes, les répétitions par prompt et la relation documentée aux sessions.",
+      "horizon": "3–6 MOIS"
+    },
+    {
+      "titre": "Digital Omnibus et conditions de plateforme",
+      "description": "Distinguer mandat, texte primaire applicable et droit effectivement en vigueur avant toute modification de CMP.",
+      "horizon": "3–6 MOIS"
+    },
+    {
+      "titre": "Écarts Safari dans les flux d’identité",
+      "description": "Mesurer l’attribution par navigateur et documenter les tiers appelés depuis les parcours.",
+      "horizon": "3–6 MOIS"
+    },
+    {
+      "titre": "Parcours agents sous contrôle humain",
+      "description": "Réexaminer seulement lorsqu’un usage candidat réel et une validation des actions sont démontrés.",
+      "horizon": "6–12 MOIS"
+    }
   ],
+  "tendancesPassees": [
+    {
+      "date": "2 août 2026",
+      "titre": "Transparence de l’interaction IA",
+      "description": "Décision maintenue : documenter l’information donnée à l’utilisateur ; la source Commission a été reconsultée le 26 octobre.",
+      "statut": "HISTORIQUE REVALIDÉ",
+      "source": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "date": "8 octobre 2026",
+      "titre": "Alerte Fudan sur la provenance",
+      "description": "Décision maintenue : surveiller les réponses IA et ne pas reproduire le protocole de contenu fabriqué.",
+      "statut": "HISTORIQUE REVALIDÉ",
+      "source": "https://arxiv.org/html/2610.11932v1"
+    },
+    {
+      "date": "14 octobre 2026",
+      "titre": "Correctifs Drupal",
+      "description": "Décision maintenue : attester les versions, correctifs et recettes par environnement plutôt que déduire un risque de marque CMS.",
+      "statut": "HISTORIQUE REVALIDÉ",
+      "source": "https://www.drupal.org/sa-core-2026-014"
+    },
+    {
+      "date": "15 octobre 2026",
+      "titre": "Liens Google dans les réponses IA",
+      "description": "Décision maintenue : gouverner les pages institutionnelles sans promettre un encart officiel ni un trafic France.",
+      "statut": "HISTORIQUE REVALIDÉ",
+      "source": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/"
+    },
+    {
+      "titre": "Mémoire — cas Currys du 1er octobre",
+      "description": "Conserver la mesure de la valeur du conseil humain, sans reprendre les résultats du distributeur comme objectif de recrutement."
+    }
+  ]
 };

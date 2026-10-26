@@ -78,3 +78,13 @@
 - [x] Valider la correction S43 : intégrité, TypeScript, build, 35 tests, 32 URLs et Bonus S43/S42 en mobile et desktop
 - [ ] Sauvegarder la correction S43 sur GitHub et la rendre accessible comme archive complète lors de la publication S44
 - [ ] Produire, valider, publier et sauvegarder la S44
+
+
+## Consolidation S43/S44 validée — 26 octobre 2026
+
+- [x] Intégrer huit catégories par semaine, mesure transversale et Bonus distinct.
+- [x] Corriger les doubles attributions, les dénominateurs et les dates ; registres S43 : 22 URL, S44 : 34 URL.
+- [x] Contrôler TypeScript, 37 tests et build.
+- [x] Contrôler les neuf analyses et le Bonus, mobile/desktop, clair/sombre.
+- [ ] Sauvegarder le checkpoint et synchroniser la consolidation sur GitHub.
+- [ ] Publier via WebDev après connexion du propriétaire et vérifier la production.

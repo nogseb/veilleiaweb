@@ -31,7 +31,8 @@ type ArchiveDomain = {
   previousBadge: string | null;
   description: string;
   category: string;
-  sources: Array<{ nom: string; url: string }>;
+  editorialStatus?: string;
+  sources: Array<{ nom: string; url: string; date?: string }>;
   details: string[];
   longDescription?: string;
 };
@@ -62,6 +63,8 @@ export interface ArchiveEdition {
   syntheseExecutive: string;
   statDominante: { chiffre: string; titre: string; description: string };
   domaines: ArchiveDomain[];
+  measurement?: ArchiveDomain;
+  caseStudiesCount?: number;
   actions: Array<{ id: number; titre: string; domaine: string; responsable: string }>;
   signauxEmergents: Array<{ titre: string; description: string; horizon: string }>;
   tendancesPassees: Array<{ titre: string; description: string }>;
@@ -91,6 +94,8 @@ const s44: ArchiveEdition = {
   syntheseExecutive: veilleData.syntheseExecutive,
   statDominante: veilleData.statDominante,
   domaines: veilleData.domaines,
+  measurement: veilleData.measurement,
+  caseStudiesCount: veilleData.caseStudiesCount,
   actions: veilleData.actions,
   signauxEmergents: veilleData.signauxEmergents,
   tendancesPassees: veilleData.tendancesPassees,
@@ -113,6 +118,8 @@ const s43: ArchiveEdition = {
   syntheseExecutive: s43Data.syntheseExecutive,
   statDominante: s43Data.statDominante,
   domaines: s43Data.domaines,
+  measurement: s43Data.measurement,
+  caseStudiesCount: s43Data.caseStudiesCount,
   actions: s43Data.actions,
   signauxEmergents: s43Data.signauxEmergents,
   tendancesPassees: s43Data.tendancesPassees,

@@ -5,6 +5,7 @@ import { Header, Footer } from "@/components/Layout";
 import type { ArchiveEdition } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
+import AnalysisModal, { analysisLabel } from "@/components/AnalysisModal";
 
 function Badge({ type }: { type: string }) {
   if (type === "CRITIQUE") {
@@ -50,90 +51,6 @@ function DashboardPopover({ items, title, onClose }: { items: string[]; title: s
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-function DomaineModal({ domaine, onClose, onTrack, week }: { domaine: ArchiveEdition["domaines"][0]; onClose: () => void; onTrack: ReturnType<typeof useFirstPartyAnalytics>["track"]; week: number }) {
-  const isNew = domaine.previousBadge === null;
-  const hasChanged = domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;
-
-  return (
-    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={onClose}>
-      <div className="absolute inset-0 bg-black/40" />
-      <div
-        className="relative bg-white dark:bg-[#1A1A1D] w-full max-w-[720px] max-h-[80vh] overflow-y-auto p-8 md:p-10 animate-in fade-in duration-200"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-sm tracking-[0.15em] uppercase text-[#8A8A8A] hover:text-[#0F0F10] dark:hover:text-[#F5F4F0] transition-colors duration-150"
-        >
-          FERMER
-        </button>
-
-        <div className="flex items-center gap-3 pb-3">
-          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
-            {String(domaine.id).padStart(2, "0")} — {domaine.code}
-          </span>
-          <Badge type={domaine.badge} />
-          {(isNew || hasChanged) && <NouveauBadge />}
-        </div>
-
-        {hasChanged && (
-          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
-            Évolution : {domaine.previousBadge} → {domaine.badge}
-          </div>
-        )}
-        {isNew && (
-          <div className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">
-            Nouveau domaine cette semaine
-          </div>
-        )}
-
-        <h2 className="text-2xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-4 leading-tight">
-          {domaine.titre}
-        </h2>
-
-        <div className="w-full h-px bg-[#0F0F10] dark:bg-[#F5F4F0] mb-6" />
-
-        <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pb-6">
-          {domaine.description}
-        </p>
-
-        <div className="pb-6">
-          <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">POINTS CLÉS</h4>
-          <ul className="space-y-2">
-            {domaine.details.map((detail, i) => (
-              <li key={i} className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed pl-4 border-l-2 border-[#E5E2DC] dark:border-[#444]">
-                {detail}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A] pb-3">SOURCES</h4>
-          <ul className="space-y-1">
-            {domaine.sources.map((source, i) => (
-              <li key={i}>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    onTrack({ name: "source_click", domainCode: domaine.code, sourcePublisher: source.nom });
-                    trackGa4Engagement("source_lue", { domainCode: domaine.code, sourcePublisher: source.nom, week, route: "archives" });
-                  }}
-                  className="text-sm text-[#FF4757] underline hover:no-underline"
-                >
-                  {source.nom} →
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
     </div>
   );
 }
@@ -331,7 +248,7 @@ export default function WeekDetail() {
             <span className="text-xs tracking-[0.15em] uppercase text-[#8A8A8A]">ANALYSE PAR DOMAINE</span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E2DC] dark:bg-[#333]">
-            {edition.domaines.map((domaine) => {
+            {[...edition.domaines, ...(edition.measurement ? [edition.measurement] : [])].map((domaine) => {
               const isNew = domaine.previousBadge === null;
               const hasChanged = domaine.previousBadge !== null && domaine.previousBadge !== domaine.badge;
               return (
@@ -346,13 +263,14 @@ export default function WeekDetail() {
                 >
                   <div className="flex items-start justify-between pb-4">
                     <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">
-                      {String(domaine.id).padStart(2, "0")} — {domaine.code}
+                      {analysisLabel(domaine)}
                     </span>
                     <div className="flex items-center">
                       <Badge type={domaine.badge} />
                       {(isNew || hasChanged) && <NouveauBadge />}
                     </div>
                   </div>
+                  {domaine.editorialStatus && <p className="text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-2">{domaine.editorialStatus}</p>}
                   <h3 className="text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-3 leading-tight">
                     {domaine.titre}
                   </h3>
@@ -465,7 +383,7 @@ export default function WeekDetail() {
       <Footer />
 
       {selectedDomaine && (
-        <DomaineModal domaine={selectedDomaine} onTrack={track} week={edition.week} onClose={() => setSelectedDomaine(null)} />
+        <AnalysisModal content={selectedDomaine} onTrack={track} week={edition.week} route="archives" onClose={() => setSelectedDomaine(null)} />
       )}
       {selectedBonus && (
         <BonusModal bonus={selectedBonus} onTrack={track} week={edition.week} onClose={() => setSelectedBonus(null)} />

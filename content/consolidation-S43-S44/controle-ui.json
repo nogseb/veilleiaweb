@@ -1,0 +1,969 @@
+{
+  "checkedAt": "2026-10-26",
+  "results": [
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 5,
+          "flip": true,
+          "complete": true,
+          "words": 169
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "CONTRÔLES IA : SÉPARER LES PERMISSIONS, LE JOURNAL ET LA VALIDATION HUMAINE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 186
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 5,
+          "flip": true,
+          "complete": true,
+          "words": 169
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "CONTRÔLES IA : SÉPARER LES PERMISSIONS, LE JOURNAL ET LA VALIDATION HUMAINE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 186
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/semaine/43",
+      "width": 1440,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMAÀ SURVEILLERNOUVEAUFONDJSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS :",
+          "04 — DXP / CMSCRITIQUENOUVEAUACTUALITÉDRUPAL : CORRECTIF FIELD UI ET COUVER",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA / GOV",
+          "08 — INNOV MKT",
+          "TRANSVERSAL — MESURE"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "GOOGLE REMONTE LES LIENS DANS AI MODE ET TESTE DES DESTINATIONS OFFICIELLES",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 2,
+          "title": "LES CITATIONS CHATGPT VARIENT : LE DOMAINE EST UN PROXY MOINS FRAGILE, PAS UN INDICATEUR FIABLE PAR PRINCIPE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS : UN SUIVI DE FOND À GOUVERNER, PAS UNE NOUVEAUTÉ À SURVENDRE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 4,
+          "title": "DRUPAL : CORRECTIF FIELD UI ET COUVERTURE DES BRANCHES À ATTESTER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 171
+        },
+        {
+          "index": 5,
+          "title": "SAFARI : DISTINGUER DONNÉE FIRST-PARTY ET RÉSOLVEURS D’IDENTITÉ TIERS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 175
+        },
+        {
+          "index": 6,
+          "title": "L’UX CONVERSATIONNELLE RESTE UN SUJET HUMAIN : LES UTILISATEURS SYNTHÉTIQUES PRÉPARENT UN TEST, ILS NE LE REMPLACENT PAS",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "IA EN PRODUCTION : LE REGISTRE D’USAGE ET LES CONTRÔLES INDÉPENDANTS PRIMENT SUR LES RACCORCIS RÉGLEMENTAIRES",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 8,
+          "title": "UNIVERSAL CART ET CURRYS : PARCOURS DE PLATEFORME ET VALEUR DU CONSEIL HUMAIN",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 179
+        },
+        {
+          "index": 9,
+          "title": "MESURE ET ATTRIBUTION : ANNOTER L’INCIDENT CHATGPT ET CONTRÔLER LES OUTILS AVANT D’AGIR",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 195
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/semaine/43",
+      "width": 1440,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMAÀ SURVEILLERNOUVEAUFONDJSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS :",
+          "04 — DXP / CMSCRITIQUENOUVEAUACTUALITÉDRUPAL : CORRECTIF FIELD UI ET COUVER",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA / GOV",
+          "08 — INNOV MKT",
+          "TRANSVERSAL — MESURE"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "GOOGLE REMONTE LES LIENS DANS AI MODE ET TESTE DES DESTINATIONS OFFICIELLES",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 2,
+          "title": "LES CITATIONS CHATGPT VARIENT : LE DOMAINE EST UN PROXY MOINS FRAGILE, PAS UN INDICATEUR FIABLE PAR PRINCIPE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS : UN SUIVI DE FOND À GOUVERNER, PAS UNE NOUVEAUTÉ À SURVENDRE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 4,
+          "title": "DRUPAL : CORRECTIF FIELD UI ET COUVERTURE DES BRANCHES À ATTESTER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 171
+        },
+        {
+          "index": 5,
+          "title": "SAFARI : DISTINGUER DONNÉE FIRST-PARTY ET RÉSOLVEURS D’IDENTITÉ TIERS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 175
+        },
+        {
+          "index": 6,
+          "title": "L’UX CONVERSATIONNELLE RESTE UN SUJET HUMAIN : LES UTILISATEURS SYNTHÉTIQUES PRÉPARENT UN TEST, ILS NE LE REMPLACENT PAS",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "IA EN PRODUCTION : LE REGISTRE D’USAGE ET LES CONTRÔLES INDÉPENDANTS PRIMENT SUR LES RACCORCIS RÉGLEMENTAIRES",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 8,
+          "title": "UNIVERSAL CART ET CURRYS : PARCOURS DE PLATEFORME ET VALEUR DU CONSEIL HUMAIN",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 179
+        },
+        {
+          "index": 9,
+          "title": "MESURE ET ATTRIBUTION : ANNOTER L’INCIDENT CHATGPT ET CONTRÔLER LES OUTILS AVANT D’AGIR",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 195
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/",
+      "width": 375,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 5,
+          "flip": true,
+          "complete": true,
+          "words": 169
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "CONTRÔLES IA : SÉPARER LES PERMISSIONS, LE JOURNAL ET LA VALIDATION HUMAINE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 186
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "width": 375,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 5,
+          "flip": true,
+          "complete": true,
+          "words": 169
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "CONTRÔLES IA : SÉPARER LES PERMISSIONS, LE JOURNAL ET LA VALIDATION HUMAINE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 186
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/semaine/43",
+      "width": 375,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMAÀ SURVEILLERNOUVEAUFONDJSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS :",
+          "04 — DXP / CMSCRITIQUENOUVEAUACTUALITÉDRUPAL : CORRECTIF FIELD UI ET COUVER",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA / GOV",
+          "08 — INNOV MKT",
+          "TRANSVERSAL — MESURE"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "GOOGLE REMONTE LES LIENS DANS AI MODE ET TESTE DES DESTINATIONS OFFICIELLES",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 2,
+          "title": "LES CITATIONS CHATGPT VARIENT : LE DOMAINE EST UN PROXY MOINS FRAGILE, PAS UN INDICATEUR FIABLE PAR PRINCIPE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS : UN SUIVI DE FOND À GOUVERNER, PAS UNE NOUVEAUTÉ À SURVENDRE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 4,
+          "title": "DRUPAL : CORRECTIF FIELD UI ET COUVERTURE DES BRANCHES À ATTESTER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 171
+        },
+        {
+          "index": 5,
+          "title": "SAFARI : DISTINGUER DONNÉE FIRST-PARTY ET RÉSOLVEURS D’IDENTITÉ TIERS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 175
+        },
+        {
+          "index": 6,
+          "title": "L’UX CONVERSATIONNELLE RESTE UN SUJET HUMAIN : LES UTILISATEURS SYNTHÉTIQUES PRÉPARENT UN TEST, ILS NE LE REMPLACENT PAS",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "IA EN PRODUCTION : LE REGISTRE D’USAGE ET LES CONTRÔLES INDÉPENDANTS PRIMENT SUR LES RACCORCIS RÉGLEMENTAIRES",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 8,
+          "title": "UNIVERSAL CART ET CURRYS : PARCOURS DE PLATEFORME ET VALEUR DU CONSEIL HUMAIN",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 179
+        },
+        {
+          "index": 9,
+          "title": "MESURE ET ATTRIBUTION : ANNOTER L’INCIDENT CHATGPT ET CONTRÔLER LES OUTILS AVANT D’AGIR",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 195
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/semaine/43",
+      "width": 375,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMAÀ SURVEILLERNOUVEAUFONDJSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS :",
+          "04 — DXP / CMSCRITIQUENOUVEAUACTUALITÉDRUPAL : CORRECTIF FIELD UI ET COUVER",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA / GOV",
+          "08 — INNOV MKT",
+          "TRANSVERSAL — MESURE"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "GOOGLE REMONTE LES LIENS DANS AI MODE ET TESTE DES DESTINATIONS OFFICIELLES",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 2,
+          "title": "LES CITATIONS CHATGPT VARIENT : LE DOMAINE EST UN PROXY MOINS FRAGILE, PAS UN INDICATEUR FIABLE PAR PRINCIPE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS ET PRÉFÉRENCES D’AGENTS : UN SUIVI DE FOND À GOUVERNER, PAS UNE NOUVEAUTÉ À SURVENDRE",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 4,
+          "title": "DRUPAL : CORRECTIF FIELD UI ET COUVERTURE DES BRANCHES À ATTESTER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 171
+        },
+        {
+          "index": 5,
+          "title": "SAFARI : DISTINGUER DONNÉE FIRST-PARTY ET RÉSOLVEURS D’IDENTITÉ TIERS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 175
+        },
+        {
+          "index": 6,
+          "title": "L’UX CONVERSATIONNELLE RESTE UN SUJET HUMAIN : LES UTILISATEURS SYNTHÉTIQUES PRÉPARENT UN TEST, ILS NE LE REMPLACENT PAS",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "IA EN PRODUCTION : LE REGISTRE D’USAGE ET LES CONTRÔLES INDÉPENDANTS PRIMENT SUR LES RACCORCIS RÉGLEMENTAIRES",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 8,
+          "title": "UNIVERSAL CART ET CURRYS : PARCOURS DE PLATEFORME ET VALEUR DU CONSEIL HUMAIN",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 179
+        },
+        {
+          "index": 9,
+          "title": "MESURE ET ATTRIBUTION : ANNOTER L’INCIDENT CHATGPT ET CONTRÔLER LES OUTILS AVANT D’AGIR",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 195
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    }
+  ]
+}

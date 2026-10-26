@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-26",
+  "meaning": "Réponses HTTP ; le contenu et la méthode ont été vérifiés pendant la comparaison validée. Un 403 réseau peut nécessiter lecture navigateur.",
+  "results": [
+    {
+      "url": "https://arxiv.org/html/2610.11932v1",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://arxiv.org/html/2610.15382v1",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+      "status": "200",
+      "networkError": true
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+      "status": "200",
+      "networkError": true
+    },
+    {
+      "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://developers.google.com/crawling/docs/troubleshooting/http-status-codes",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://developers.google.com/data-manager/api/devguides/concepts/formatting",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://developers.google.com/search/updates",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/code-practice-transparency-ai-generated-content",
+      "status": "403",
+      "networkError": false,
+      "contentVerification": "Contenu obtenu et relu par extraction publique le 26 octobre 2026 malgré le blocage HTTP simple."
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "status": "403",
+      "networkError": false,
+      "contentVerification": "Contenu obtenu et relu par extraction publique le 26 octobre 2026 malgré le blocage HTTP simple."
+    },
+    {
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2150",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://httpwg.org/specs/rfc9110.html",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://ipa.co.uk/knowledge/case-studies/currys-the-superpower-in-store/",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://ipa.co.uk/news/effectiveness-awards-grand-prix",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://nozzle.io/research/poisoned-google-serps/",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://webkit.org/blog/18438/blocking-identity-resolution-infrastructure/",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://www.drupal.org/about/core/policies/core-release-cycles/schedule",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://www.drupal.org/sa-core-2026-014",
+      "status": "200",
+      "networkError": false
+    },
+    {
+      "url": "https://www.linkedin.com/posts/cedrichuesler_relieved-it-was-a-bug-chatgpt-is-tagging-share-7516558430854152192-vTAO/",
+      "status": "200",
+      "networkError": true
+    },
+    {
+      "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+      "status": "000",
+      "networkError": true,
+      "contentVerification": "Contenu obtenu et relu par extraction publique le 26 octobre 2026 malgré le blocage HTTP simple."
+    }
+  ]
+}
