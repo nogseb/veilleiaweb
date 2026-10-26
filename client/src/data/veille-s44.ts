@@ -83,11 +83,11 @@ const sourceRegistry = [
     id: 9,
     nom: "AWS Security — PHP2Shell observé avant divulgation",
     url: "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
-    date: "17 octobre 2026",
+    date: "21 octobre 2026 ; tentative observée le 17 octobre",
     type: "renseignement de menace primaire",
     sourcePrimary: true,
     caveat: "AWS rapporte une tentative observée dans MadPot, sans établir sa réussite ni une exposition propre à TBS Education.",
-    exception: "Antérieur à la fenêtre S44 ; contexte du correctif du 21 octobre, pas fait indépendant recompté.",
+    exception: "Publication du 21 octobre rapportant une observation du 17 ; contexte du correctif, pas une seconde mesure des victimes.",
   },
   {
     id: 10,
@@ -339,6 +339,36 @@ const sourceRegistry = [
     caveat: "Les résultats sont propres au distributeur et la méthode complète demeure inaccessible ; aucune transposition aux admissions n’est établie.",
     exception: "Mémoire S43, non nouveau cas S44.",
   },
+  {
+    id: 35,
+    nom: "W3Techs — Usage statistics of PHP for websites",
+    url: "https://w3techs.com/technologies/details/pl-php",
+    date: "26 octobre 2026",
+    type: "mesure primaire de technologies web",
+    sourcePrimary: true,
+    caveat: "69,2 % des sites dont le langage côté serveur est identifié. Ce taux mesure l’usage de PHP, pas les sites vulnérables, attaqués ou compromis par PHP2Shell.",
+    exception: "Indicateur de contexte, non mesure des victimes de la faille.",
+  },
+  {
+    id: 36,
+    nom: "W3Techs — méthodologie des enquêtes",
+    url: "https://w3techs.com/technologies",
+    date: "consultée le 26 octobre 2026",
+    type: "méthodologie primaire",
+    sourcePrimary: true,
+    caveat: "Les enquêtes portent sur les sites pertinents, non sur chaque page ou sous-domaine ; une technologie détectée sur une page compte comme utilisée par le site.",
+    exception: "Documentation de méthode, non actualité indépendante.",
+  },
+  {
+    id: 37,
+    nom: "CVE Program — glossaire officiel",
+    url: "https://www.cve.org/ResourcesSupport/Glossary",
+    date: "consulté le 26 octobre 2026",
+    type: "définition officielle",
+    sourcePrimary: true,
+    caveat: "CVE signifie Common Vulnerabilities and Exposures ; un identifiant CVE désigne une vulnérabilité publique, pas un nombre de victimes ni un score de gravité.",
+    exception: "Définition de fond.",
+  },
 ];
 
 const selectSources = (...ids: number[]) => sourceRegistry.filter((source) => ids.includes(source.id));
@@ -350,7 +380,7 @@ export const veilleS44 = {
   collectionWindow: "19 au 26 octobre 2026 inclus",
   overlapRule: "Les faits des 19 au 21 octobre, communs avec S43, sont attribués une seule fois ; les publications du 20 et du 21 octobre retenues ici ne sont pas dupliquées ailleurs.",
   domainsCount: 8,
-  sourcesCount: 34,
+  sourcesCount: 37,
   criticalCount: 1,
   importantCount: 6,
   actionsCount: 6,
@@ -359,13 +389,14 @@ export const veilleS44 = {
 
   signalMajeur: {
     label: "SIGNAL MAJEUR DE LA SEMAINE",
-    title: "PHP2SHELL : CORRIGER DEUX CVE SUR LES ENVIRONNEMENTS WEB RÉELLEMENT VULNÉRABLES, ET PROUVER LA RECETTE.",
+    title: "PHP2SHELL : VÉRIFIER LES CORRECTIFS DES ENVIRONNEMENTS WEB EXPOSÉS.",
   },
 
   statDominante: {
-    chiffre: "2 CVE",
-    titre: "CORRIGÉES PAR PHP LE 21 OCTOBRE DANS 8.2.35, 8.3.36, 8.4.27 ET 8.5.12",
-    description: "AWS avait observé une tentative PHP2Shell le 17 octobre sans en démontrer la réussite. Le risque concerne les environnements servant le Web qui exécutent vraiment une version vulnérable ; il ne permet pas de présumer un CMS compromis ou l’architecture de TBS Education.",
+    chiffre: "69,2 %",
+    titre: "DES SITES AU LANGAGE CÔTÉ SERVEUR IDENTIFIÉ UTILISENT PHP — W3TECHS, 26 OCTOBRE 2026",
+    description: "Ce taux mesure l’usage de PHP, pas la part de sites vulnérables ou compromis par PHP2Shell. Le 21 octobre, PHP a corrigé deux vulnérabilités critiques identifiées par des CVE — Common Vulnerabilities and Exposures, le référentiel public des vulnérabilités connues. Pour TBS Education, vérifier les versions et correctifs avec l’hébergeur ; le nombre de sites réellement touchés n’est pas établi par les sources retenues.",
+    source: selectSources(35)[0],
   },
 
   syntheseExecutive: "S44 couvre les huit domaines obligatoires, avec une priorité nette : prouver les versions PHP réellement exécutées, les correctifs et la recette par environnement. Les signaux AI Search et GEO restent des observations à mesurer localement : l’étude Semrush porte sur 400 requêtes commerciales américaines desktop et SISTRIX publie des corrélations DACH, sans preuve sur les admissions françaises. Les données structurées, robots.txt et Google-Extended constituent un socle de fond distinct, non une promesse de visibilité ou de protection. Côté data, le mandat Digital Omnibus du Conseil n’est pas une loi et n’autorise aucun raccourci sur la CMP. Les annonces Walmart, Claude Duet et ChatGPT Ads restent conditionnelles ou situées ; elles justifient des critères de contrôle, pas un déploiement. TBS Education doit lier contenu référentiel, sécurité, accessibilité, preuves de gouvernance et mesure séparée de la citation, de la session et de l’issue CRM.",
@@ -442,15 +473,16 @@ export const veilleS44 = {
       previousBadge: "CRITIQUE",
       editorialStatus: "ACTUALITÉ",
       category: "ARCHI",
-      description: "PHP a corrigé deux CVE le 21 octobre dans quatre versions ; AWS avait observé une tentative le 17, sans établir de succès. TBS Education doit vérifier le runtime réellement servi, pas présumer un CMS compromis.",
-      sources: selectSources(8, 9, 10, 11, 31),
+      description: "PHP a corrigé le 21 octobre deux vulnérabilités critiques référencées CVE — Common Vulnerabilities and Exposures. Le taux d’usage de PHP de 69,2 % publié par W3Techs ne mesure ni exposition à PHP2Shell ni compromission.",
+      sources: selectSources(8, 9, 10, 11, 31, 35, 36, 37),
       details: [
         "PHP a publié le 21 octobre les correctifs des CVE-2026-109618 et CVE-2026-109619 dans 8.2.35, 8.3.36, 8.4.27 et 8.5.12",
         "AWS a observé une tentative liée à PHP2Shell le 17 octobre, sans en démontrer la réussite ni l’exposition de TBS Education",
         "Le risque vise les environnements qui servent réellement le Web avec une version vulnérable ; il ne signifie pas que tous les CMS sont compromis",
         "PHP 8.2 reste supporté jusqu’au 31 décembre : viser 8.3 ou plus selon compatibilité, et préparer un 503 depuis CDN, proxy ou serveur, jamais depuis le DNS",
+        "W3Techs mesure PHP sur 69,2 % des sites au langage côté serveur identifié au 26 octobre ; aucun nombre global de sites vulnérables ou compromis n’est établi ici",
       ],
-      longDescription: "Le 21 octobre, PHP a publié des correctifs pour les CVE-2026-109618 et CVE-2026-109619 dans les versions 8.2.35, 8.3.36, 8.4.27 et 8.5.12. AWS avait auparavant observé, le 17 octobre, une tentative liée à PHP2Shell dans son dispositif MadPot ; la source ne démontre ni une réussite de l’attaque, ni une exposition de TBS Education. Le fait impose une vérification opérationnelle ciblée : le risque concerne les environnements qui exécutent effectivement une version vulnérable et servent le Web. Il ne permet pas de conclure que tous les sites Drupal, WordPress ou Joomla sont compromis, ni de supposer l’architecture de l’école. Chaque environnement doit produire l’image ou le paquet, la version runtime, l’heure du correctif, le résultat de recette et un responsable. PHP 8.2 est supporté jusqu’au 31 décembre ; la cible peut être 8.3 ou une version ultérieure selon la compatibilité applicative, sans migration forcée vers 8.4. Pour TBS Education, un mode maintenance doit retourner HTTP 503 via CDN, proxy ou serveur : le DNS ne produit pas de statut HTTP.",
+      longDescription: "Le 26 octobre, W3Techs indique que PHP est utilisé par 69,2 % des sites dont le langage côté serveur est identifié. Ce taux décrit une diffusion technologique : ce n’est ni la proportion de sites vulnérables à PHP2Shell, ni celle des sites compromis. Le nombre global de sites réellement touchés n’est pas établi par les sources retenues. PHP a corrigé le 21 octobre les vulnérabilités CVE-2026-109618 et CVE-2026-109619 dans 8.2.35, 8.3.36, 8.4.27 et 8.5.12. CVE signifie Common Vulnerabilities and Exposures : le référentiel donne un identifiant commun à une vulnérabilité connue, pas un compteur de victimes. AWS rapporte une tentative le 17 octobre sans en établir la réussite. Pour TBS Education, vérifier les installations qui servent le Web, leur version effective et les correctifs avec l’intégrateur et l’hébergeur. Exiger par environnement l’image ou le paquet, l’heure de correction, la recette et un responsable, sans présumer l’architecture de l’école. La cible au-delà de PHP 8.2 dépend des compatibilités. Un mode maintenance doit retourner HTTP 503 depuis CDN, proxy ou serveur, jamais depuis le DNS.",
     },
     {
       id: 5,

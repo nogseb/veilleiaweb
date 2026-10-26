@@ -6,7 +6,7 @@
   "measurementCount": 1,
   "bonusCount": 1,
   "caseStudiesCount": 0,
-  "sourcesCount": 34,
+  "sourcesCount": 37,
   "countingMethod": "Compter les URL distinctes citées par les huit domaines, le bloc Mesure, le Bonus et les éventuels cas. Les types, la qualité primaire et les limites ne sont pas des preuves supplémentaires.",
   "sources": [
     {
@@ -109,13 +109,14 @@
       "id": 9,
       "domain": "DXP / CMS",
       "publisher": "AWS Security",
-      "date": "2026-10-17",
+      "date": "2026-10-21",
       "title": "PHP2Shell exploitation before public disclosure",
       "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
       "type": "renseignement de menace primaire",
       "sourcePrimary": true,
       "caveat": "AWS rapporte une tentative observée, sans établir sa réussite ni une exposition TBS Education.",
-      "exception": "Antérieur à la fenêtre ; contexte du correctif PHP du 21 octobre, non recompté."
+      "exception": "Publication du 21 octobre rapportant une observation du 17 ; contexte du correctif, pas une seconde mesure des victimes.",
+      "observationDate": "2026-10-17"
     },
     {
       "id": 10,
@@ -419,6 +420,45 @@
       "sourcePrimary": true,
       "caveat": "Résultats propres au distributeur ; méthode complète inaccessible et aucune transposition aux admissions établie.",
       "exception": "Mémoire S43, non nouveau cas S44."
+    },
+    {
+      "id": 35,
+      "domain": "DXP / CMS — signal majeur",
+      "publisher": "W3Techs",
+      "title": "Usage statistics of PHP for websites",
+      "url": "https://w3techs.com/technologies/details/pl-php",
+      "date": "2026-10-26",
+      "accessedAt": "2026-10-26",
+      "type": "statistique primaire",
+      "sourcePrimary": true,
+      "caveat": "69,2 % des sites dont le langage côté serveur est identifié. Ce taux d’usage PHP ne mesure pas les sites vulnérables, attaqués ou compromis.",
+      "exception": "Indicateur de contexte ou définition, non nouvelle faille."
+    },
+    {
+      "id": 36,
+      "domain": "DXP / CMS — signal majeur",
+      "publisher": "W3Techs",
+      "title": "Technologies Overview — Methodology",
+      "url": "https://w3techs.com/technologies",
+      "date": "consultée le 26 octobre 2026",
+      "accessedAt": "2026-10-26",
+      "type": "documentation primaire",
+      "sourcePrimary": true,
+      "caveat": "Sites pertinents ; pages et sous-domaines non comptés comme sites indépendants. Aucun calcul de victimes ne peut être dérivé.",
+      "exception": "Indicateur de contexte ou définition, non nouvelle faille."
+    },
+    {
+      "id": 37,
+      "domain": "DXP / CMS — signal majeur",
+      "publisher": "CVE Program",
+      "title": "Glossary",
+      "url": "https://www.cve.org/ResourcesSupport/Glossary",
+      "date": "consulté le 26 octobre 2026",
+      "accessedAt": "2026-10-26",
+      "type": "documentation primaire",
+      "sourcePrimary": true,
+      "caveat": "CVE = Common Vulnerabilities and Exposures. Un identifiant public de vulnérabilité ne mesure pas les victimes ou la gravité.",
+      "exception": "Indicateur de contexte ou définition, non nouvelle faille."
     }
   ],
   "caseStudySources": [

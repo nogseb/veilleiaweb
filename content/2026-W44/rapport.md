@@ -9,7 +9,13 @@
 
 ## Signal majeur — sécurité de socle
 
-> **PHP2Shell : corriger deux CVE sur les environnements Web réellement vulnérables et documenter la recette.**
+> **PHP2Shell : vérifier les correctifs des environnements Web exposés.**
+
+### 69,2 % — des sites au langage côté serveur identifié utilisent PHP
+
+W3Techs publie ce taux au **26 octobre 2026**. Il s’agit de l’usage de PHP, **pas de la part de sites vulnérables ou compromis par PHP2Shell**. Le nombre global de sites réellement touchés n’est pas établi par les sources retenues. La méthode W3Techs porte sur des sites pertinents et ne compte pas chaque page ou sous-domaine comme un site distinct. [35] [36]
+
+CVE signifie **Common Vulnerabilities and Exposures** : ce référentiel public identifie les vulnérabilités connues, sans mesurer le nombre de victimes. [37]
 
 Le 21 octobre, PHP a publié des correctifs pour les **CVE-2026-109618** et **CVE-2026-109619** dans PHP 8.2.35, 8.3.36, 8.4.27 et 8.5.12. AWS avait observé une tentative liée à PHP2Shell le 17 octobre, sans en établir la réussite. Le risque ne vise pas indistinctement tous les CMS : il dépend d’un environnement qui sert réellement le Web, exécute une version vulnérable et expose le chemin concerné. TBS Education ne doit donc présumer ni compromission, ni architecture technique. La réponse attendue est une attestation par environnement — runtime, image ou paquet, correctif, heure, recette et responsable — puis une vérification de maintenance HTTP 503 depuis le CDN, le proxy ou le serveur. Le DNS ne retourne pas de statut HTTP. [1] [2] [3] [4]
 
@@ -18,7 +24,7 @@ Le 21 octobre, PHP a publié des correctifs pour les **CVE-2026-109618** et **CV
 | Indicateur | Valeur |
 |---|---:|
 | Domaines analysés | 8 |
-| URL sources uniques | 34 |
+| URL sources uniques | 37 |
 | Signaux critiques | 1 |
 | Signaux importants | 6 |
 | Actions | 6 |
@@ -166,3 +172,7 @@ La mémoire est un journal de décisions, pas l’affirmation que des faits anci
 [32]: https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/ "Google — Universal Cart"
 [33]: https://ipa.co.uk/news/effectiveness-awards-grand-prix "IPA — Effectiveness Awards"
 [34]: https://ipa.co.uk/knowledge/case-studies/currys-the-superpower-in-store/ "IPA — Currys"
+
+[35]: https://w3techs.com/technologies/details/pl-php "W3Techs — Usage statistics of PHP, relevé du 26 octobre 2026"
+[36]: https://w3techs.com/technologies "W3Techs — méthodologie"
+[37]: https://www.cve.org/ResourcesSupport/Glossary "CVE Program — glossaire officiel"
