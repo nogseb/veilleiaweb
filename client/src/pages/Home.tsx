@@ -4,7 +4,7 @@ import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
 
-const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "INNOV MKT"] as const;
+const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "MESURE", "INNOV MKT"] as const;
 
 function Metadata() {
   return (

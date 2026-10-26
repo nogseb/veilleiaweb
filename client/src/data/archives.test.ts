@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { currentEdition, getEditionByWeek } from "./archives";
 
 describe("S43 archive integration", () => {
-  it("exposes S43 as the current qualified-domain edition", () => {
+  it("exposes the user-approved S43 as the current edition", () => {
     expect(currentEdition.week).toBe(43);
     expect(currentEdition.year).toBe(2026);
-    expect(currentEdition.domainsCount).toBe(3);
-    expect(currentEdition.domaines).toHaveLength(3);
-    expect(currentEdition.sourcesCount).toBe(6);
+    expect(currentEdition.domainsCount).toBe(9);
+    expect(currentEdition.domaines).toHaveLength(9);
+    expect(currentEdition.sourcesCount).toBe(32);
     expect(currentEdition.bonus).toBeDefined();
   });
 

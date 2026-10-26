@@ -72,9 +72,9 @@
 - [x] Archiver la S41, afficher la S42 et préserver les cartes Bonus distinctes
 - [x] Valider l’intégrité éditoriale, TypeScript, build, 32 tests et les modales Bonus en mobile et desktop pour la S42
 - [x] Sauvegarder le checkpoint S42 et synchroniser GitHub ; rendre la S42 accessible en archive lors de la publication S43
-- [x] Collecter et qualifier les sources S43 dans la fenêtre du 13 au 19 octobre 2026
-- [x] Rédiger les données S43, le rapport et le registre de 6 sources qualifiées
-- [x] Masquer cinq domaines sans signal hebdomadaire conforme plutôt que de les remplir par des contenus faibles ou hors fenêtre
-- [x] Archiver la S42, afficher la S43 et préserver les cartes Bonus distinctes
-- [x] Valider l’intégrité éditoriale, TypeScript, build, 35 tests, les sources et les modales Bonus S43/S42 en mobile et desktop
-- [x] Sauvegarder le checkpoint S43, publier via WebDev et synchroniser GitHub (checkpoint 41a9c676, production et GitHub vérifiés)
+- [x] Collecter et qualifier les sources S43 dans la fenêtre initiale du 13 au 19 octobre 2026
+- [x] Remplacer la S43 initiale par le rapport fourni du 21 octobre : 9 analyses, 32 sources distinctes, Bonus #10 et cas Currys avec réserve de source
+- [x] Retirer les attributions incorrectes de Google Search Central et intégrer les cinq domaines auparavant masqués
+- [x] Valider la correction S43 : intégrité, TypeScript, build, 35 tests, 32 URLs et Bonus S43/S42 en mobile et desktop
+- [ ] Sauvegarder la correction S43 sur GitHub et la rendre accessible comme archive complète lors de la publication S44
+- [ ] Produire, valider, publier et sauvegarder la S44

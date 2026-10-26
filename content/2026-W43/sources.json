@@ -1,130 +1,396 @@
 {
-  "edition": "S43 — 19 octobre 2026",
-  "window": "13 au 19 octobre 2026",
-  "domainsCount": 3,
-  "hiddenDomainsCount": 5,
-  "sourcesCount": 6,
-  "researchSelectionUrlCount": 10,
+  "edition": "S43 — 21 octobre 2026",
+  "window": "14 au 21 octobre 2026 ; cas d’école : 30 jours",
+  "domainsCount": 9,
+  "hiddenDomainsCount": 0,
+  "sourcesCount": 32,
+  "researchSelectionUrlCount": 32,
+  "sourceOfRecord": "/home/ubuntu/upload/veille-ia-web-S43-2026.md",
   "sources": [
     {
       "id": 1,
-      "domain": "Google AI Search",
+      "domain": "Moteurs de réponse IA",
       "publisher": "Google",
       "date": "2026-10-15",
+      "title": "More ways to connect with the web from Search",
       "url": "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
-      "type": "annonce officielle",
-      "use": "Liens inline plus visibles, test de sources officielles avec contexte, carrousels d’articles récents, liens connexes illustrés, profils cliquables de créateurs/éditeurs et déclaration sur Preferred Sources.",
-      "caveat": "Google ne chiffre ni les liens, ni les zones/langues, ni le CTR ou le trafic ; plusieurs évolutions sont des tests et la progression Preferred Sources n’a ni volume ni méthode publiés."
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce Google : liens, sources officielles et Preferred Sources.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     },
     {
       "id": 2,
-      "domain": "Schema.org / données structurées",
-      "publisher": "Google Search Central",
-      "date": "2026-10-17",
-      "url": "https://developers.google.com/search/updates",
-      "type": "journal officiel de documentation",
-      "use": "Retrait de host group, ajout de vehicle listing structured data et clarification du fuseau horaire dans Article structured data.",
-      "caveat": "Journal de documentation sans étude d’impact ni KPI ; la page affiche une dernière mise à jour au 16 octobre UTC malgré une entrée au 17 octobre."
+      "domain": "Moteurs de réponse IA",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-10-14",
+      "title": "Google Testing AI Mode Left Sidebar On Main Google Search Results Page",
+      "url": "https://www.seroundtable.com/google-ai-mode-left-sidebar-42298.html",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Observation de barre latérale AI Mode sur SERP classique.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     },
     {
       "id": 3,
-      "domain": "Schema.org / données structurées",
-      "publisher": "W3C JSON-LD Working Group",
-      "date": "2026-10-18",
-      "url": "https://www.w3.org/groups/wg/json-ld/activity/",
-      "type": "activité institutionnelle de groupe de travail",
-      "use": "Activités des 15, 17 et 18 octobre sur mf:includes, buffering de contextes scopés, @nest et Language Maps.",
-      "caveat": "Issues, commentaires et pull requests en cours ; pas de changement normatif adopté. La page est indiquée comme bêta."
+      "domain": "Moteurs de réponse IA",
+      "publisher": "Search Engine Land",
+      "date": "2026-10-16",
+      "title": "Google begins testing ads in AI Mode for users with Personal Intelligence enabled",
+      "url": "https://searchengineland.com/google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enabled-496990",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Test d’annonces AI Mode lié à Personal Intelligence.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     },
     {
       "id": 4,
-      "domain": "Innovation marketing / MarTech",
-      "publisher": "CMSWire",
-      "date": "2026-10-13",
-      "url": "https://www.cmswire.com/digital-marketing/is-the-era-of-martech-absolutes-over-buyers-are-going-hybrid/",
-      "type": "analyse éditoriale",
-      "use": "Modèle de stack hybride : streaming/batch, déterministe/probabiliste, règles métier/agents ; supervision humaine pour les décisions coûteuses ou irréversibles.",
-      "caveat": "Analyse signée par un responsable marketing de solutions MarTech, sans échantillon, protocole quantitatif ni cas de campagne documenté."
+      "domain": "Moteurs de réponse IA",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-10-19",
+      "title": "Google AI Mode Citations With Preferred Source Preferences",
+      "url": "https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Observation de préférences de sources dans AI Mode.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     },
     {
       "id": 5,
-      "domain": "Innovation marketing / MarTech",
-      "publisher": "CMSWire",
-      "date": "2026-10-16",
-      "url": "https://www.cmswire.com/digital-marketing/why-are-marketers-still-paying-for-martech-they-never-use/",
-      "type": "analyse éditoriale avec chiffres attribués",
-      "use": "Capacités de stack utilisées, budget MarTech, hausse de dépenses prévue et difficulté d’intégration data, chiffres attribués à Gartner et à une enquête MarTech.",
-      "caveat": "Les méthodes complètes, tailles d’échantillon, dates de terrain et marges d’erreur ne sont pas détaillées dans l’article consulté ; il ne mesure pas une campagne."
+      "domain": "Zero-Click / GEO",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-18",
+      "title": "OpenAI's API Only Partly Matched ChatGPT's Citations, Paper Finds",
+      "url": "https://searchenginejournal.com/openais-api-only-partly-matched-chatgpts-citations-paper-finds/593304/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse du préprint sur les citations ChatGPT et les substituts de mesure.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     },
     {
       "id": 6,
-      "domain": "Bonus robotique",
-      "publisher": "arXiv",
+      "domain": "Données structurées et accès des robots",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-16",
+      "title": "Meta's New Terms Expand Crawling Rights Beyond Advertisers",
+      "url": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse des conditions Meta et de leur périmètre de crawl.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 7,
+      "domain": "Données structurées et accès des robots",
+      "publisher": "PPC Land",
+      "date": "2026-10-18",
+      "title": "Meta's AI training clause still in Oct 30 terms after report of removal",
+      "url": "https://ppc.land/metas-ai-training-clause-still-in-oct-30-terms-after-report-of-removal/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Suivi de la clause Meta dans les conditions du 30 octobre.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 8,
+      "domain": "Données structurées et accès des robots",
+      "publisher": "Cloudflare",
+      "date": "2026-10-16",
+      "title": "Continuous accountability for Verified bots",
+      "url": "https://blog.cloudflare.com/verified-bots-accountability/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce de notation comportementale des Verified Bots.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 9,
+      "domain": "Données structurées et accès des robots",
+      "publisher": "Google Search Central",
+      "date": "2026-10-16",
+      "title": "Latest Google Search Documentation Updates",
+      "url": "https://developers.google.com/search/updates",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Mise à jour des quotas de l’API Indexing ; aucun changement de données structurées repris.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 10,
+      "domain": "CMS / DXP / socle technique",
+      "publisher": "Drupal.org",
+      "date": "2026-10-12",
+      "title": "Upcoming critical Drupal core release on October 14, 2026 — PSA-2026-10-12",
+      "url": "https://www.drupal.org/psa-2026-10-12",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Avis de sécurité à l’origine du correctif publié dans la période ; source explicitement signalée comme préavis.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 11,
+      "domain": "CMS / DXP / socle technique",
+      "publisher": "The Hacker News",
       "date": "2026-10-15",
-      "url": "https://arxiv.org/abs/2610.22372",
-      "type": "preprint de recherche primaire",
-      "use": "Benchmark LIBERO-PeRM : cinq suites, 312 tâches et évaluation de préférences robotisées exprimées en langage.",
-      "caveat": "Preprint non évalué par les pairs à cette date ; résultats en simulation LIBERO et absence de taux de réussite globaux détaillés dans le résumé consulté."
+      "title": "Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules",
+      "url": "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse du correctif critique Drupal Field UI.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 12,
+      "domain": "CMS / DXP / socle technique",
+      "publisher": "WordPress",
+      "date": "2026-10-06",
+      "title": "WordPress 7.1.3 Maintenance and Security Release",
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Rappel hors fenêtre, identifié comme tel dans le rapport fourni.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 13,
+      "domain": "Data first-party / CDP / identité",
+      "publisher": "PPC Land",
+      "date": "2026-10-19",
+      "title": "Safari 27 blocks identity firms that turn email addresses into tracking IDs",
+      "url": "https://ppc.land/safari-27-blocks-identity-firms-that-turn-email-addresses-into-tracking-ids/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse du blocage d’infrastructures d’identité tierces par Safari 27.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 14,
+      "domain": "Data first-party / CDP / identité",
+      "publisher": "WebKit Bugzilla",
+      "date": "2026-09-21",
+      "title": "Inclusion of adsrvr.org in IS\\_REQUEST\\_UNCONDITIONALLY\\_BLOCKABLE domain list",
+      "url": "https://bugs.webkit.org/show_bug.cgi?id=324771",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Signalement antérieur cité pour documenter les domaines concernés ; contexte, pas signal hebdomadaire autonome.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 15,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "PPC Land",
+      "date": "2026-10-10",
+      "title": "Google feeds rank trackers swapped results on 8% of pages, Nozzle finds",
+      "url": "https://ppc.land/google-feeds-rank-trackers-swapped-results-on-8-of-pages-nozzle-finds/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Étude Nozzle sur résultats remplacés dans des collectes de rank trackers.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 16,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-14",
+      "title": "Analysis: Google Is Poisoning Search Results For Rank Trackers",
+      "url": "https://searchenginejournal.com/analysis-google-is-poisoning-search-results-for-rank-trackers/592873",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse du phénomène de résultats de suivi SEO remplacés.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 17,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-15",
+      "title": "ChatGPT Traffic Drop Appears To Be A Tracking Problem",
+      "url": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse de la baisse apparente de trafic ChatGPT comme problème de tracking.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 18,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "Relevant Audience",
+      "date": "2026-10-16",
+      "title": "ChatGPT UTM tag loss was a bug, says Adobe's Huesler; fix rolling out",
+      "url": "https://www.relevantaudience.com/analytics/chatgpt-utm-tag-bug-fixed-openai-confirmed-adobe/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Suivi du bug UTM ChatGPT annoncé comme corrigé en déploiement.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 19,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "Relevant Audience",
+      "date": "2026-10-14",
+      "title": "Google Ads API v26: what changes for marketers using API-based tools",
+      "url": "https://www.relevantaudience.com/google-ads-en/google-ads-api-v26-what-changes-for-marketers/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse des changements Google Ads API v26 et Search Lift.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 20,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "Search Engine Land",
+      "date": "2026-10-16",
+      "title": "ChatGPT Ads introduces new measurement tools and visual ad formats",
+      "url": "https://searchengineland.com/chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce des outils de mesure et formats ChatGPT Ads.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 21,
+      "domain": "Mesure / analytics / attribution",
+      "publisher": "PPC Land",
+      "date": "2026-10-15",
+      "title": "Meta will turn on product browsing in existing ads on October 28",
+      "url": "https://ppc.land/meta-will-turn-on-product-browsing-in-existing-ads-on-october-28/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce de navigation produit Meta dans les annonces existantes.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 22,
+      "domain": "UX conversationnelle / web agentique",
+      "publisher": "PPC Land",
+      "date": "2026-10-15",
+      "title": "ChatGPT gains control of Chrome tabs to fill forms and send messages",
+      "url": "https://ppc.land/chatgpt-gains-control-of-chrome-tabs-to-fill-forms-and-send-messages/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce de contrôle des onglets Chrome par ChatGPT.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 23,
+      "domain": "UX conversationnelle / web agentique",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-16",
+      "title": "What Personal AI Agents Like Meta Muse And OpenAI Dots Mean For SEO",
+      "url": "https://www.searchenginejournal.com/personal-ai-agents-meta-muse-openai-dots-seo/592530/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse d’agents personnels, arbre d’accessibilité et SEO ; date affichée de façon incomplète dans la source, à lire comme contexte.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 24,
+      "domain": "UX conversationnelle / web agentique",
+      "publisher": "Nielsen Norman Group",
+      "date": "2026-10-16",
+      "title": "Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation",
+      "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Étude Synthetic Users vs Human Respondents.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 25,
+      "domain": "IA générative en production / gouvernance",
+      "publisher": "Leto",
+      "date": "2026-10-15",
+      "title": "AI Act : le Bureau de l'IA adresse ses premières demandes d'informations après des incidents d'agents d'IA",
+      "url": "https://www.leto.legal/news/bureau-ia-demandes-informations-openai-anthropic-agents-ai-act-2026",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse des demandes d’information du Bureau de l’IA, citant Commission et Euronews.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 26,
+      "domain": "IA générative en production / gouvernance",
+      "publisher": "ActuIA",
+      "date": "2026-10-16",
+      "title": "EU AI Act: probes could extend time limit for fines",
+      "url": "https://www.actuia.com/en/news/eu-ai-act-probes-could-extend-time-limit-for-fines/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse de la prescription des sanctions AI Act.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 27,
+      "domain": "IA générative en production / gouvernance",
+      "publisher": "Let’s Data Science",
+      "date": "2026-10-16",
+      "title": "OpenAI Discloses Model's Unauthorized Sepolia Wallet Spending",
+      "url": "https://letsdatascience.com/news/openai-discloses-models-unauthorized-sepolia-wallet-spending-26cfacd1",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse du rapport OpenAI sur un portefeuille Sepolia non autorisé.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 28,
+      "domain": "IA générative en production / gouvernance",
+      "publisher": "Scalevise",
+      "date": "2026-10-14",
+      "title": "EU Survey Finds 42% of SMEs Use AI, but Trust and Cost Still Shape Adoption",
+      "url": "https://scalevise.com/resources/eu-sme-ai-algorithmic-management-survey/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Relais du Flash Eurobaromètre 3696.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 29,
+      "domain": "Innovation marketing / plateformes publicitaires",
+      "publisher": "B&T",
+      "date": "2026-10-16",
+      "title": "Meta gives brands more ways to get in your feed with new ad tools",
+      "url": "https://www.bandt.com.au/meta-gives-brands-more-ways-to-get-in-your-feed-with-new-ad-tools/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce des formats publicitaires Meta présentés au Brand Building Summit.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 30,
+      "domain": "Innovation marketing / plateformes publicitaires",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-10-15",
+      "title": "Universal Cart Launches In Google Search (U.S.)",
+      "url": "https://seroundtable.com/universal-cart-google-search-42312.html",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Annonce Universal Cart dans Google Search aux États-Unis.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 31,
+      "domain": "Cas d’école — Currys",
+      "publisher": "IPA",
+      "date": "2026-10-01",
+      "title": "IPA Effectiveness Awards 2026 Grand Prix",
+      "url": "https://ipa.co.uk/news/effectiveness-awards-grand-prix/",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Cas d’école, exceptionnellement inclus dans une fenêtre de 30 jours.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
+    },
+    {
+      "id": 32,
+      "domain": "Bonus robotique / fun fact",
+      "publisher": "Search Engine Journal",
+      "date": "2026-10-19",
+      "title": "AI Search Tools Cited A Made-Up Concept Within A Week, Paper Finds",
+      "url": "https://searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472",
+      "type": "source citée dans le rapport utilisateur",
+      "use": "Analyse d’un préprint sur la citation d’un concept inventé par des moteurs de réponse IA.",
+      "caveat": "Reprise fidèle du rapport S43 fourni par Sébastien Noguès ; consulter les limites et réserves citées dans le rapport éditorial."
     }
   ],
-  "hiddenDomains": [
+  "hiddenDomains": [],
+  "exceptions": [
     {
-      "domain": "Zero-Click / GEO",
-      "reason": "Aucune publication ne réunit simultanément la fenêtre stricte, le périmètre et un niveau de preuve vérifiable. Les pistes pertinentes étaient antérieures ou des pages d’index."
+      "url": "https://www.drupal.org/psa-2026-10-12",
+      "reason": "Préavis Drupal du 12 octobre ; l’information de correctif est publiée le 14 octobre et l’exception est explicitement documentée dans le rapport."
     },
     {
-      "domain": "DXP / CMS headless / composable",
-      "reason": "Les contenus vérifiés étaient antérieurs, sans date exploitable dans la fenêtre, événementiels ou promotionnels."
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/",
+      "reason": "WordPress 7.1.3 du 6 octobre est un rappel hors fenêtre, identifié comme tel dans le rapport."
     },
     {
-      "domain": "CDP / first-party data / identité",
-      "reason": "Aucun contenu autorisé, directement pertinent et non promotionnel ne franchit le seuil ; l’article MarTech du 14 octobre annonçait une table ronde sans donnée ni résultat nouveau."
+      "url": "https://bugs.webkit.org/show_bug.cgi?id=324771",
+      "reason": "Signalement WebKit du 21 septembre, utilisé uniquement comme contexte technique du blocage Safari annoncé le 19 octobre."
     },
     {
-      "domain": "UX / IA conversationnelle",
-      "reason": "Les contenus les plus proches ont été écartés pour ancienneté, éditeur non autorisé ou preuve insuffisante."
-    },
-    {
-      "domain": "IA générative en production / gouvernance",
-      "reason": "Aucun signal ne réunit nouveauté, fait vérifiable, portée directe sur la production/gouvernance et niveau de preuve suffisant."
+      "url": "https://ipa.co.uk/news/effectiveness-awards-grand-prix/",
+      "reason": "Cas d’école Currys du 1er octobre, inclus conformément à la fenêtre cas d’école de 30 jours."
     }
   ],
   "excluded": [
     {
-      "domain": "Google AI Search",
-      "reason": "La documentation Preferred Sources du 18 septembre est conservée dans les notes de contexte, mais n’est pas citée dans la veille S43 car elle est hors fenêtre."
+      "domain": "Schema.org",
+      "reason": "La correction du rapport utilisateur confirme que les entrées Google précédemment attribuées à octobre 2026 étaient en réalité datées de 2023 ; elles sont retirées de l’édition."
     },
     {
-      "domain": "Zero-Click / GEO",
-      "reason": "Les études SparkToro/Similarweb, Ahrefs et Search Engine Land retrouvées sont antérieures à la fenêtre du 13–19 octobre."
+      "domain": "GEO",
+      "reason": "Topics Portfolio Bing du 13 octobre et Gemini Argon sont hors fenêtre de la version utilisateur, fixée au 14–21 octobre."
     },
     {
-      "domain": "Schema.org / données structurées",
-      "reason": "JSON-LD Requirements est un document expérimental dont la date du 13 octobre n’est pas reprise dans le corps consulté ; il ne porte pas la qualification ni le compteur des sources publiées."
-    },
-    {
-      "domain": "DXP / CMS headless / composable",
-      "reason": "CMSWire 2025, MACH Alliance 2025, Contentful juin 2026 et Sanity 1er octobre sont hors fenêtre."
-    },
-    {
-      "domain": "CDP / first-party data / identité",
-      "reason": "L’article MarTech du 14 octobre est une promotion de table ronde ; la session W3C pertinente est du 28 octobre, donc hors fenêtre."
-    },
-    {
-      "domain": "UX / IA conversationnelle",
-      "reason": "Les contenus Nielsen Norman Group et W3C ouverts sont antérieurs à la fenêtre ; les autres pistes ne figurent pas dans la liste prioritaire ou manquent de preuve."
-    },
-    {
-      "domain": "IA générative en production / gouvernance",
-      "reason": "L’article CMSWire du 16 octobre est une analyse sans étude primaire, méthode, KPI ni cas de déploiement vérifiable ; les pages AI Act officielles ouvertes étaient générales et non datées dans la fenêtre."
-    },
-    {
-      "domain": "Innovation marketing / cas d’école",
-      "reason": "Aucun cas ne réunit marque, période, mécanisme, KPI chiffré et URL réellement consultée ; les sources publiées décrivent les stacks, pas une campagne."
-    },
-    {
-      "domain": "Bonus robotique",
-      "reason": "Les sources MIT antérieures, les événements et les éditeurs non autorisés ont été écartés ; seul le preprint arXiv porte les faits publiés."
+      "domain": "Innovation marketing",
+      "reason": "WARC Motorway est réservé aux abonnés ; ses chiffres n’ont pas été repris."
     }
   ]
 }
