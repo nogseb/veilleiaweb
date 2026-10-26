@@ -14,4 +14,4 @@
 
 ## Publication
 
-Checkpoint prêt à sauvegarder ; GitHub à synchroniser. L’interface Manus demande actuellement une connexion du propriétaire : la version consolidée n’est pas annoncée comme publiée avant contrôle de production.
+Checkpoint applicatif `ec2c2c7e` sauvegardé. GitHub `nogseb/veilleiaweb`, branche `main`, synchronisé et vérifié sur `ec2c2c7efef77b17eab732c38c4647cbcf1c8ec8`. L’interface Manus demande actuellement une connexion du propriétaire : la version consolidée n’est pas annoncée comme publiée avant contrôle de production.
