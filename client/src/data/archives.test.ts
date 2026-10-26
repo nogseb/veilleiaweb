@@ -1,23 +1,22 @@
 import { describe, expect, it } from "vitest";
 import { currentEdition, getEditionByWeek } from "./archives";
 
-describe("S43 archive integration", () => {
-  it("exposes the user-approved S43 as the current edition", () => {
-    expect(currentEdition.week).toBe(43);
+describe("S44 archive integration", () => {
+  it("exposes S44 as the current qualified-domain edition", () => {
+    expect(currentEdition.week).toBe(44);
     expect(currentEdition.year).toBe(2026);
-    expect(currentEdition.domainsCount).toBe(9);
-    expect(currentEdition.domaines).toHaveLength(9);
-    expect(currentEdition.sourcesCount).toBe(32);
+    expect(currentEdition.domainsCount).toBe(4);
+    expect(currentEdition.domaines).toHaveLength(4);
+    expect(currentEdition.sourcesCount).toBe(12);
     expect(currentEdition.bonus).toBeDefined();
   });
 
-  it("keeps S42 available as an archive with its distinct Bonus", () => {
-    const s42 = getEditionByWeek(42);
-
-    expect(s42).toBeDefined();
-    expect(s42?.domainsCount).toBe(6);
-    expect(s42?.domaines).toHaveLength(6);
-    expect(s42?.bonus?.label).toContain("BONUS #10");
-    expect(s42?.bonus?.source.nom).toBe("MIT News");
+  it("keeps the corrected S43 available as a complete archive with its Bonus", () => {
+    const s43 = getEditionByWeek(43);
+    expect(s43).toBeDefined();
+    expect(s43?.domainsCount).toBe(9);
+    expect(s43?.domaines).toHaveLength(9);
+    expect(s43?.sourcesCount).toBe(32);
+    expect(s43?.bonus?.label).toContain("BONUS #10");
   });
 });
