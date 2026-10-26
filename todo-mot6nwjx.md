@@ -88,3 +88,13 @@
 - [x] Contrôler les neuf analyses et le Bonus, mobile/desktop, clair/sombre.
 - [x] Sauvegarder le checkpoint et synchroniser la consolidation sur GitHub.
 - [ ] Publier S44 via WebDev après connexion du propriétaire, rendre l’archive S43 complète accessible et vérifier la production.
+
+## Aperçus de partage Teams — 26 octobre 2026
+
+- [x] Identifier l’absence de description et la capture de page utilisée comme image Open Graph.
+- [x] Ajouter titre et description par semaine dans le HTML initial, avec synchronisation après navigation React.
+- [x] Remplacer la capture par une vignette dédiée 1200 × 1200, centrée et accessible sur un CDN public permanent.
+- [x] Vérifier la conservation du texte dans les recadrages centrés 1:1, environ 1,25:1 et 1,90:1.
+- [x] Valider TypeScript, 44 tests unitaires, build et contrôles HTTP du build de production.
+- [x] Vérifier la navigation interne et la préservation de la charte, de la balise Google et du consentement.
+- [ ] Publier le checkpoint via WebDev puis vérifier les balises sur le domaine public ; aucune demande d’authentification.

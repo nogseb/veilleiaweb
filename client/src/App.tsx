@@ -11,6 +11,7 @@ import WeekDetail from "./pages/WeekDetail";
 import Timeline from "./pages/Timeline";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import AnalyticsConsent from "./components/AnalyticsConsent";
+import HeadMetadata from "./components/HeadMetadata";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -30,6 +31,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
+      <HeadMetadata />
       <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
           <Toaster />

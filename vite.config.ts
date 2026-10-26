@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+import { injectSocialMetadata } from "./shared/socialMetadata";
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -150,7 +151,14 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+const socialMetadataPlugin: Plugin = {
+  name: "veille-social-metadata",
+  transformIndexHtml: {
+    order: "post",
+    handler: (html, context) => injectSocialMetadata(html, context.path === "/index.html" ? "/" : context.path),
+  },
+};
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), socialMetadataPlugin];
 
 export default defineConfig({
   plugins,

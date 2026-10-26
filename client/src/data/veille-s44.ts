@@ -418,6 +418,7 @@ export const veilleS44 = {
   year: 2026,
   publicationDate: "26 octobre 2026",
   collectionWindow: "19 au 26 octobre 2026 inclus",
+  shareDescription: "PHP2Shell : sécuriser les environnements PHP. Rea et rétro-ingénierie, visibilité IA/GEO et gouvernance data : les priorités de TBS Education.",
   overlapRule: "Les faits des 19 au 21 octobre, communs avec S43, sont attribués une seule fois ; les publications du 20 et du 21 octobre retenues ici ne sont pas dupliquées ailleurs.",
   domainsCount: 8,
   sourcesCount: 41,

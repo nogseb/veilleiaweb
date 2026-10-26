@@ -53,6 +53,7 @@ export interface ArchiveEdition {
   week: number;
   year: number;
   date: string;
+  shareDescription?: string;
   signalMajeur: string;
   domainsCount: number;
   sourcesCount: number;
@@ -84,6 +85,7 @@ const s44: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
+  shareDescription: "shareDescription" in veilleData ? String(veilleData.shareDescription) : undefined,
   signalMajeur: veilleData.signalMajeur.title,
   domainsCount: veilleData.domainsCount,
   sourcesCount: veilleData.sourcesCount,

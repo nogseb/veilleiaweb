@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
+import { injectSocialMetadata } from "../../shared/socialMetadata";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -39,7 +40,7 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx?v=${nanoid()}"`
       );
       const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      res.status(200).set({ "Content-Type": "text/html", "Cache-Control": "no-cache" }).end(injectSocialMetadata(page, url));
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
@@ -58,10 +59,13 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  const template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
+  app.get("/index.html", (_req, res) => res.redirect(301, "/"));
+  app.use(express.static(distPath, { index: false, redirect: false }));
 
   // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  app.use("*", (req, res) => {
+    res.status(200).set({ "Content-Type": "text/html", "Cache-Control": "no-cache" })
+      .end(injectSocialMetadata(template, req.originalUrl));
   });
 }
