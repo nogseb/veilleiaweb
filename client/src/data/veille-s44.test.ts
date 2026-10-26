@@ -19,6 +19,18 @@ describe("S44 consolidée validée", () => {
     expect(veilleS44.statDominante.description).toContain("pas la part de sites vulnérables ou compromis");
     expect(veilleS44.statDominante.source.url).toBe("https://w3techs.com/technologies/details/pl-php");
     expect(veilleS44.domaines[3].description).toContain("Common Vulnerabilities and Exposures");
-    expect(veilleS44.sourcesCount).toBe(37);
+    expect(veilleS44.sourcesCount).toBe(41);
+  });
+  it("rend Rea visible dans la carte IA sans créer un neuvième domaine", () => {
+    const rea = veilleS44.domaines.find((d) => d.category === "IA")!;
+    expect(rea.titre).toMatch(/^REA :/);
+    expect(rea.editorialStatus).toBe("SUIVI");
+    expect(rea.description).toContain("Reverse Engineer Anything");
+    expect(rea.sources.some((s) => s.url === "https://rea.tools/")).toBe(true);
+    expect(rea.longDescription).toContain("la récupération de son code original");
+    expect(rea.longDescription).toContain("ne donne aucun droit sur la cible");
+    expect(rea.longDescription).toContain("OpenAI");
+    expect(veilleS44.domaines).toHaveLength(8);
+    expect(veilleS44.domaines.filter((d) => d.category === "IA")).toHaveLength(1);
   });
 });

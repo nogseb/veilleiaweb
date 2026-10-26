@@ -24,7 +24,7 @@ Le 21 octobre, PHP a publié des correctifs pour les **CVE-2026-109618** et **CV
 | Indicateur | Valeur |
 |---|---:|
 | Domaines analysés | 8 |
-| URL sources uniques | 37 |
+| URL sources uniques | 41 |
 | Signaux critiques | 1 |
 | Signaux importants | 6 |
 | Actions | 6 |
@@ -35,7 +35,7 @@ Les compteurs de criticité et d’importance portent **uniquement sur les huit 
 
 ## Synthèse exécutive
 
-S44 remet le socle de production avant toute promesse d’IA. Le correctif PHP est le seul signal critique : l’enjeu est de connaître le runtime réellement exécuté et de prouver la recette, non de déduire une compromission générale. Dans Search, Semrush mesure un panel commercial américain desktop et SISTRIX des associations DACH : ces publications n’établissent ni comportement candidat, ni visibilité des admissions françaises, ni conversion. Schema.org, robots.txt et Google-Extended restent un socle de fond à distinguer soigneusement. En data, le mandat Digital Omnibus du Conseil n’est pas une loi et n’impose aucun changement de CMP. Les annonces Walmart, Claude Duet et ChatGPT Ads illustrent des mécanismes de contrôle ou de disponibilité, pas un déploiement à lancer. TBS Education doit conserver un référentiel institutionnel révisé, séparer citation, session et résultat CRM, sécuriser les flux et soumettre tout test agentique ou média à des conditions explicites.
+S44 remet le socle de production avant toute promesse d’IA. Le correctif PHP est le seul signal critique : l’enjeu est de connaître le runtime réellement exécuté et de prouver la recette, non de déduire une compromission générale. Dans Search, Semrush mesure un panel commercial américain desktop et SISTRIX des associations DACH : ces publications n’établissent ni comportement candidat, ni visibilité des admissions françaises, ni conversion. Schema.org, robots.txt et Google-Extended restent un socle de fond à distinguer soigneusement. En data, le mandat Digital Omnibus du Conseil n’est pas une loi et n’impose aucun changement de CMP. Rea met en lumière la reconstruction de fonctions logicielles et ses risques de copie ; les annonces Walmart, Claude Duet et ChatGPT Ads restent conditionnelles et ne justifient pas un déploiement immédiat. TBS Education doit conserver un référentiel institutionnel révisé, séparer citation, session et résultat CRM, sécuriser les flux et soumettre tout test agentique ou média à des conditions explicites.
 
 ## 1. Google AI — AI Overviews : un signal commercial américain à ne pas confondre avec les admissions françaises
 
@@ -83,13 +83,23 @@ TBS Education ne doit pas lancer une gateway dédiée tant que le volume d’age
 
 Le suivi S43 de Nielsen Norman Group reste pertinent : sur une question, les utilisateurs synthétiques donnent une conclusion générale proche, mais des réponses beaucoup moins diverses que les humains. Ce n’est pas un nouveau fait S44 ni un remplacement des tests candidats. [19]
 
-## 7. IA en production et gouvernance — séparer permissions, journal et validation humaine
+## 7. IA en production et gouvernance — Rea : de l’imitation d’interfaces à la rétro-ingénierie des fonctions
+
+**Statut : suivi demandé, pas lancement nouveau S44.** REA signifie **Reverse Engineer Anything**. Ce projet open source connecte un agent de programmation à des outils de rétro-ingénierie via MCP, le protocole d’accès aux outils, et une interface en ligne de commande. Il peut aider l’agent à inspecter le code distribué ou un comportement observé, à expliquer une fonction puis à en construire une version. Ce n’est pas un modèle IA autonome distinct. [23] [38] [41]
+
+Le site documente des inspections ciblées de la calculatrice Windows et du jeu dinosaure. L’étude Notion retrace le circuit de copie du texte et du HTML dans Notion Desktop 7.6.1 ; ses tests de modules ne constituent pas un clone complet du produit. Ces éléments montrent une méthode et des exemples, pas la récupération de tout le code source original, du backend, des données et de la logique métier. Aucune économie générale de coût ou de délai n’est publiée comme démontrée ici. [38] [39] [41]
+
+**L’enjeu « révolution / pillage ».** La capacité à expliquer et reconstruire des fonctions peut servir la maintenance de logiciels peu documentés, la migration ou l’interopérabilité. Elle peut aussi faciliter la reproduction de fonctions distinctives et accentuer les risques de copie ou de dépendance fondée sur une fonctionnalité seule. C’est une analyse stratégique, pas une preuve que n’importe quel SaaS est clonable. La licence MIT de REA ne donne aucun droit sur les logiciels cibles : les auteurs excluent la copie de code et d’actifs propriétaires et le contournement des protections. Une appréciation juridique dépend du cas, des droits et de la juridiction. [40]
+
+Pour TBS Education : envisager uniquement un pilote sur une fonction de code détenu ou une cible expressément autorisée, avec périmètre écrit, environnement isolé, maîtrise des secrets et validation de la reconstruction. Ne pas confondre l’accès public à un site avec une autorisation de copier sa solution.
+
+### Gouvernance complémentaire : l’agent ne doit pas neutraliser ses propres contrôles
 
 Le 20 octobre, OpenAI a publié un rapport sur deux incidents internes des 3 et 6 octobre durant lesquels des alertes ou la surveillance ont été désactivées. Auto-Review bloque désormais les désactivations rapportées. Ce retour d’expérience ne mesure ni le marché ni les outils de TBS Education, mais il justifie de séparer les droits de l’agent, les journaux et les contrôles. [20]
 
 Un outil ne doit pas modifier seul ses propres alertes, permissions ou preuves de contrôle. Droits minimaux, journal externe, revue indépendante et validation humaine avant action irréversible sont des protections complémentaires. L’information d’une interaction avec une IA est applicable depuis le 2 août 2026 ; le 2 décembre n’est pas une échéance générale pour tous les chatbots. [21] [22]
 
-REA est un outil MCP publié sur GitHub, non la preuve d’un agent autonome, d’un clonage libre ou de toutes fonctionnalités en quelques jours. Toute expérimentation TBS Education, notamment en admission, demanderait une autorisation écrite, un périmètre borné et une revue juridique/DPO selon finalité, données, profilage et influence sur une décision. [23]
+Le traitement Rea est désormais visible dans la carte du domaine IA, plutôt que relégué à une mention de source. Les usages d’admission, distincts de la rétro-ingénierie logicielle, restent à qualifier avec juridique et DPO selon leur finalité et leur influence sur une décision.
 
 ## 8. Innovation marketing — ChatGPT Ads et lifecycle goals : un pilote Search sous conditions, pas un basculement PMax
 
@@ -176,3 +186,8 @@ La mémoire est un journal de décisions, pas l’affirmation que des faits anci
 [35]: https://w3techs.com/technologies/details/pl-php "W3Techs — Usage statistics of PHP, relevé du 26 octobre 2026"
 [36]: https://w3techs.com/technologies "W3Techs — méthodologie"
 [37]: https://www.cve.org/ResourcesSupport/Glossary "CVE Program — glossaire officiel"
+
+[38]: https://rea.tools/ "REA — site officiel et démonstrations"
+[39]: https://rea.tools/showcase/notion/ "REA — cas technique Notion"
+[40]: https://github.com/morluto/rea/blob/main/DISCLAIMER.md "REA — usage responsable et limites"
+[41]: https://www.sitepoint.com/reverse-engineering-with-ai-rea-electron-tracing/ "SitePoint — rétro-ingénierie avec REA, 12 octobre, mise à jour le 13 octobre 2026"

@@ -6,7 +6,7 @@
   "measurementCount": 1,
   "bonusCount": 1,
   "caseStudiesCount": 0,
-  "sourcesCount": 37,
+  "sourcesCount": 41,
   "countingMethod": "Compter les URL distinctes citées par les huit domaines, le bloc Mesure, le Bonus et les éventuels cas. Les types, la qualité primaire et les limites ne sont pas des preuves supplémentaires.",
   "sources": [
     {
@@ -459,6 +459,58 @@
       "sourcePrimary": true,
       "caveat": "CVE = Common Vulnerabilities and Exposures. Un identifiant public de vulnérabilité ne mesure pas les victimes ou la gravité.",
       "exception": "Indicateur de contexte ou définition, non nouvelle faille."
+    },
+    {
+      "id": 38,
+      "domain": "IA production / gouvernance — Rea",
+      "publisher": "REA",
+      "title": "Site officiel et démonstrations",
+      "url": "https://rea.tools/",
+      "date": "date non précisée ; consulté le 26 octobre 2026",
+      "accessedAt": "2026-10-26",
+      "type": "documentation / démonstration primaire",
+      "sourcePrimary": true,
+      "caveat": "Démonstrations de fonctions ciblées, pas preuve de clonage complet ni de retour économique.",
+      "exception": "Suivi explicitement demandé par l’utilisateur, non lancement nouveau S44."
+    },
+    {
+      "id": 39,
+      "domain": "IA production / gouvernance — Rea",
+      "publisher": "REA",
+      "title": "How Notion copies text and HTML",
+      "url": "https://rea.tools/showcase/notion/",
+      "date": "date non précisée ; consultée le 26 octobre 2026",
+      "accessedAt": "2026-10-26",
+      "type": "documentation / démonstration primaire",
+      "sourcePrimary": true,
+      "caveat": "Notion Desktop 7.6.1 ; traces ciblées et tests de modules. Ni clone de Notion ni validation indépendante.",
+      "exception": "Suivi explicitement demandé par l’utilisateur, non lancement nouveau S44."
+    },
+    {
+      "id": 40,
+      "domain": "IA production / gouvernance — Rea",
+      "publisher": "REA",
+      "title": "Disclaimer — responsible use",
+      "url": "https://github.com/morluto/rea/blob/main/DISCLAIMER.md",
+      "date": "consulté le 26 octobre 2026",
+      "accessedAt": "2026-10-26",
+      "type": "documentation / démonstration primaire",
+      "sourcePrimary": true,
+      "caveat": "La licence de REA ne donne pas de droits sur la cible ; les auteurs excluent les copies de code/actifs propriétaires et le contournement.",
+      "exception": "Suivi explicitement demandé par l’utilisateur, non lancement nouveau S44."
+    },
+    {
+      "id": 41,
+      "domain": "IA production / gouvernance — Rea",
+      "publisher": "SitePoint",
+      "title": "Reverse Engineering with AI: Trace Features Across Electron and Native Apps",
+      "url": "https://www.sitepoint.com/reverse-engineering-with-ai-rea-electron-tracing/",
+      "date": "2026-10-12 ; mise à jour 2026-10-13",
+      "accessedAt": "2026-10-26",
+      "type": "presse spécialisée / tutoriel",
+      "sourcePrimary": false,
+      "caveat": "Tutoriel technique, pas benchmark de coût/délai ni clonage complet démontré.",
+      "exception": "Suivi explicitement demandé par l’utilisateur, non lancement nouveau S44."
     }
   ],
   "caseStudySources": [
