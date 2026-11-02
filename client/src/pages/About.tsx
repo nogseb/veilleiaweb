@@ -22,10 +22,10 @@ export default function About() {
             </h2>
             <div className="space-y-4">
               <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                Cette veille stratégique hebdomadaire a pour objectif de fournir aux équipes digitales, marketing et techniques de TBS Education une synthèse actionnable des évolutions majeures dans les domaines de l'intelligence artificielle, du web, du SEO/GEO, de la data et du marketing digital.
+                Cette veille stratégique hebdomadaire a pour objectif de fournir aux équipes digitales, marketing et techniques d’une école une synthèse actionnable des évolutions majeures dans les domaines de l’intelligence artificielle, du web, du SEO/GEO, de la data et du marketing digital.
               </p>
               <p className="text-sm text-[#8A8A8A] leading-relaxed">
-                Elle vise à identifier les signaux faibles et forts qui impactent directement la stratégie digitale de l'établissement, à prioriser les actions à mener et à anticiper les transformations structurelles du paysage numérique.
+                Elle vise à identifier les signaux faibles et forts qui éclairent la stratégie digitale, à prioriser les sujets à examiner et à anticiper les transformations structurelles du paysage numérique.
               </p>
             </div>
           </div>
@@ -45,19 +45,19 @@ export default function About() {
                 <div className="border-l-2 border-[#FF4757] pl-4">
                   <h4 className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] pb-1">01 — COLLECTE</h4>
                   <p className="text-sm text-[#8A8A8A] leading-relaxed">
-                    Monitoring continu de 50+ sources spécialisées (presse tech, blogs d'experts, publications académiques, communiqués officiels, rapports d'analystes). Filtrage par pertinence pour le contexte enseignement supérieur et marketing digital.
+                    Chaque semaine, trois recherches sont menées pour chacun des neuf domaines et les quatre dernières publications pertinentes sont lues. Les sources prioritaires de niveaux N1 et N2 sont privilégiées ; les contenus promotionnels et les articles sous paywall non lus sont exclus.
                   </p>
                 </div>
                 <div className="border-l-2 border-[#FF4757] pl-4">
                   <h4 className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] pb-1">02 — ANALYSE</h4>
                   <p className="text-sm text-[#8A8A8A] leading-relaxed">
-                    Chaque signal est évalué selon 4 critères : impact potentiel sur TBS Education, urgence d'action, fiabilité de la source, et convergence avec d'autres signaux. Les informations sont croisées entre plusieurs sources pour validation.
+                    Chaque signal est évalué selon 4 critères : impact potentiel, urgence d’action, fiabilité de la source et convergence avec d’autres signaux. Les informations sont croisées entre plusieurs sources pour validation.
                   </p>
                 </div>
                 <div className="border-l-2 border-[#FF4757] pl-4">
                   <h4 className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] pb-1">03 — HIÉRARCHISATION</h4>
                   <p className="text-sm text-[#8A8A8A] leading-relaxed">
-                    Attribution d'un niveau de criticité (Critique / Important / À surveiller) basé sur l'imminence et l'ampleur de l'impact. Les actions prioritaires sont formulées avec responsable et périmètre identifiés.
+                    Attribution d’un niveau de criticité (Critique / Important / À surveiller) selon l’imminence et l’ampleur de l’impact : moins de 30 jours pour les sujets critiques, de 1 à 6 mois pour les sujets importants. Les signaux à horizon plus lointain restent à surveiller.
                   </p>
                 </div>
                 <div className="border-l-2 border-[#FF4757] pl-4">
@@ -79,14 +79,15 @@ export default function About() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { code: "IA / LLM", desc: "Intelligence artificielle, modèles de langage, agents autonomes, gouvernance IA" },
-                { code: "SEO / GEO", desc: "Référencement naturel, optimisation pour moteurs génératifs, visibilité dans les AI Overviews" },
-                { code: "UX / DESIGN", desc: "Expérience utilisateur, UI générative, design systems, accessibilité" },
-                { code: "CDP & DATA", desc: "Données first-party, résolution d'identité, clean rooms, analytics" },
-                { code: "ARCHI / DXP", desc: "Architectures composables, headless CMS, plateformes d'expérience digitale" },
-                { code: "GOOGLE", desc: "Évolutions de l'écosystème Google (Search, Ads, Cloud, Workspace)" },
-                { code: "INNOV MKT", desc: "Innovation marketing, retail media, marketing conversationnel, publicité digitale" },
-                { code: "RÉGLEMENTATION", desc: "EU AI Act, RGPD, accessibilité numérique, conformité" },
+                { code: "MOTEURS DE RÉPONSE IA", desc: "Évolutions des moteurs de réponse, formats de restitution et usages de recherche" },
+                { code: "ZERO-CLICK ET GEO", desc: "Visibilité sans clic, optimisation pour moteurs génératifs et citations" },
+                { code: "DONNÉES STRUCTURÉES ET ACCÈS DES ROBOTS", desc: "Balisage, crawl, indexation et contrôles d’accès aux contenus" },
+                { code: "CMS ET SOCLE TECHNIQUE", desc: "Systèmes de gestion de contenu, architecture et continuité de service" },
+                { code: "DATA FIRST-PARTY, CONSENTEMENT ET NAVIGATEURS", desc: "Collecte, consentement, identité et évolutions des navigateurs" },
+                { code: "MESURE ET ATTRIBUTION", desc: "Indicateurs, qualité des données, marquage et attribution des parcours" },
+                { code: "UX CONVERSATIONNELLE ET WEB AGENTIQUE", desc: "Expérience conversationnelle, accessibilité, permissions et supervision" },
+                { code: "IA EN PRODUCTION ET GOUVERNANCE", desc: "Déploiement responsable, contrôle humain, risques et gouvernance" },
+                { code: "INNOVATION MARKETING ET PLATEFORMES PUBLICITAIRES", desc: "Nouveaux formats, plateformes, audiences et mécanismes publicitaires" },
               ].map((domain) => (
                 <div key={domain.code} className="border border-[#E5E2DC] dark:border-[#333] p-4">
                   <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757] pb-1 block">{domain.code}</span>
@@ -105,7 +106,7 @@ export default function About() {
             </h2>
             <div className="space-y-6">
               <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                Les sources sont sélectionnées selon leur fiabilité, leur expertise reconnue et leur pertinence pour le contexte enseignement supérieur et marketing digital.
+                Les sources sont sélectionnées selon leur fiabilité, leur expertise reconnue et leur pertinence éditoriale. Les sources de niveaux N1 et N2 sont prioritaires ; les contenus promotionnels et les articles sous paywall non lus sont écartés.
               </p>
               <div className="space-y-4">
                 <div>
@@ -147,19 +148,19 @@ export default function About() {
               <div className="flex items-start gap-4 py-4 border-t border-[#E5E2DC] dark:border-[#333]">
                 <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#FF4757] text-white shrink-0">CRITIQUE</span>
                 <p className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                  Impact immédiat et significatif sur la stratégie digitale. Action requise dans les 1-2 semaines. Risque élevé si non traité.
+                  Impact potentiel à moins de 30 jours. Vérification et décision à engager sans délai excessif.
                 </p>
               </div>
               <div className="flex items-start gap-4 py-4 border-t border-[#E5E2DC] dark:border-[#333]">
                 <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#0F0F10] text-white dark:bg-[#F5F4F0] dark:text-[#0F0F10] shrink-0">IMPORTANT</span>
                 <p className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                  Impact notable à moyen terme. Planification recommandée dans le mois. Opportunité ou risque modéré.
+                  Impact potentiel entre 1 et 6 mois. Planification et approfondissement recommandés.
                 </p>
               </div>
               <div className="flex items-start gap-4 py-4 border-t border-[#E5E2DC] dark:border-[#333]">
                 <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-transparent text-[#0F0F10] dark:text-[#F5F4F0] border border-[#0F0F10] dark:border-[#F5F4F0] shrink-0">À SURVEILLER</span>
                 <p className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                  Signal émergent à intégrer dans la réflexion stratégique. Pas d'action immédiate requise mais suivi recommandé.
+                  Signal émergent à horizon plus lointain. Pas d’action immédiate requise, mais suivi éditorial recommandé.
                 </p>
               </div>
             </div>
@@ -174,21 +175,20 @@ export default function About() {
             </h2>
             <div className="space-y-4">
               <p className="text-base text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                Cette veille est produite par la Direction Marketing, Communication & Développement de TBS Education.
+                Cette veille est une publication éditoriale destinée à éclairer les décisions digitales d’une école.
               </p>
               <div className="border-l-2 border-[#FF4757] pl-4">
                 <p className="text-sm text-[#0F0F10] dark:text-[#F5F4F0] leading-relaxed">
-                  <strong className="font-normal">Sébastien Noguès</strong><br />
-                  Responsable Projets Digitaux & Innovation Marketing<br />
-                  Direction Marketing, Communication & Développement<br />
-                  TBS Education
+                  <strong className="font-normal">ÉQUIPE ÉDITORIALE</strong><br />
+                  Veille stratégique IA & Web<br />
+                  Publication hebdomadaire
                 </p>
-                <a href="mailto:s.nogues@tbs-education.fr" className="text-sm text-[#FF4757] hover:underline mt-2 inline-block">
-                  s.nogues@tbs-education.fr →
+                <a href="/about" className="text-sm text-[#FF4757] hover:underline mt-2 inline-block">
+                  Veille éditoriale →
                 </a>
               </div>
               <p className="text-sm text-[#8A8A8A] leading-relaxed">
-                Pour toute question, suggestion de source ou demande d'approfondissement sur un sujet spécifique.
+                Les suggestions de sources et demandes d’approfondissement sont examinées selon les mêmes critères éditoriaux.
               </p>
             </div>
           </div>

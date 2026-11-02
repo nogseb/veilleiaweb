@@ -1,0 +1,45 @@
+[
+  {
+    "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+    "title": "Supporting a shared AI training control for websites",
+    "publisher": "Google Search Central",
+    "date": "2026-10-30",
+    "date_status": "date de publication explicitement affichée dans la page",
+    "level": "N1",
+    "editorial_status": "retenue — annonce officielle ; état annoncé, objectif de prise en charge en 2027",
+    "opened": true,
+    "claims": [
+      "Google annonce son intention de prendre en charge un contrôle partagé des préférences d’entraînement IA dans robots.txt.",
+      "Le signal commun doit permettre d’exprimer une préférence auprès de plusieurs fournisseurs participants dans une seule étape.",
+      "Google prévoit d’interpréter un signal d’exclusion comme une exclusion de son contrôle dédié lorsqu’aucune instruction explicite contraire n’est présente.",
+      "Les contrôles propres à chaque entreprise doivent continuer à fonctionner parallèlement.",
+      "Google vise une prise en charge avec d’autres fournisseurs en 2027."
+    ],
+    "limitations": [
+      "Annonce d’intention, non déploiement.",
+      "La liste des fournisseurs participants et la date précise de disponibilité ne sont pas indiquées.",
+      "L’effet dépendra de l’adoption et de l’interprétation par chaque fournisseur."
+    ]
+  },
+  {
+    "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+    "title": "Machine-Readable Training Preference Signal",
+    "publisher": "IETF Datatracker",
+    "date": "2026-10-30",
+    "date_status": "date de dernière mise à jour explicitement affichée dans la page ; texte daté du 30 octobre 2026",
+    "level": "N1",
+    "editorial_status": "retenue — travail de l’auteur référencé par l’annonce Google ; brouillon non normatif",
+    "opened": true,
+    "claims": [
+      "Le texte décrit une préférence d’usage, telle que l’exclusion de l’entraînement IA, attachée à des chemins au moyen de groupes robots.txt et d’un jeton de politique.",
+      "Il n’introduit pas de nouvelle directive ni de nouvelle grammaire pour robots.txt.",
+      "Les implémentations qui ne reconnaissent pas le mécanisme conserveraient leur comportement antérieur.",
+      "Le document est un Internet-Draft sans approbation ni statut formel dans le processus de normalisation IETF."
+    ],
+    "limitations": [
+      "Travail en cours, susceptible d’être modifié, remplacé ou abandonné.",
+      "Aucune interopérabilité effective ne peut être inférée avant l’adoption par les fournisseurs.",
+      "Le texte ne transforme pas robots.txt en mécanisme de sécurité ou de contrôle d’accès opposable."
+    ]
+  }
+]

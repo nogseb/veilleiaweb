@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { veilleS44 as veilleData } from "../data/veille-s44";
+import { veilleS45 as veilleData } from "../data/veille-s45";
 import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
@@ -14,7 +14,7 @@ function Metadata() {
       <span className="hidden sm:inline">|</span>
       <span>PUBLICATION : {veilleData.publicationDate}</span>
       <span className="hidden sm:inline">|</span>
-      <span>{veilleData.domainsCount} domaines · {veilleData.sourcesCount} sources</span>
+      <span>{veilleData.domainsCount} domaines sur {veilleData.domainsTotal} · {veilleData.sourcesCount} sources · {veilleData.caseStudiesCount} cas d’école</span>
     </div>
   );
 }
@@ -102,7 +102,7 @@ function Dashboard() {
     { value: veilleData.sourcesCount, label: "Sources citées", key: "sources", items: veilleData.dashboardDetails.sources },
     { value: veilleData.criticalCount, label: "Signaux critiques", key: "critiques", items: veilleData.dashboardDetails.critiques },
     { value: veilleData.importantCount, label: "Signaux importants", key: "importants", items: veilleData.dashboardDetails.importants },
-    { value: veilleData.actionsCount, label: "Actions immédiates", key: "actions", items: veilleData.dashboardDetails.actions },
+    { value: veilleData.actionsCount, label: "Actions prioritaires", key: "actions", items: veilleData.dashboardDetails.actions },
     { value: veilleData.emergingCount, label: "Tendances émergentes", key: "emergents", items: veilleData.dashboardDetails.emergents },
   ];
 
@@ -305,7 +305,7 @@ function AnalyseParDomaine() {
   const [isBonusOpen, setIsBonusOpen] = useState(false);
   const { track } = useFirstPartyAnalytics({ route: "home", week: veilleData.week, trackEdition: true });
 
-  const analyses: AnalysisContent[] = [...veilleData.domaines, veilleData.measurement];
+  const analyses: AnalysisContent[] = veilleData.domaines;
   const filteredDomaines = activeFilter === "TOUS"
     ? analyses
     : analyses.filter((d) => d.category === activeFilter);
@@ -366,7 +366,7 @@ function ActionsPrioritaires() {
       <div className="container">
         <div className="flex items-center gap-3 pb-6">
           <div className="w-12 h-px bg-[#FF4757]" />
-          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">ACTIONS CRITIQUES — RÉACTION IMMÉDIATE</span>
+          <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">PRIORITÉS — ÉCHÉANCES ET ARBITRAGES</span>
         </div>
 
         <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase pb-12">
@@ -384,7 +384,7 @@ function ActionsPrioritaires() {
                 <p className="text-sm uppercase tracking-[0.02em] text-[#F5F4F0] leading-snug pb-1">
                   {action.titre}
                 </p>
-                <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">{action.domaine}</span>
+                <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">{action.domaine} · {action.responsable} · {action.echeance}</span>
               </div>
               <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A] hidden md:block">
                 {action.responsable}
@@ -410,7 +410,7 @@ function SignauxEmergents() {
           SIGNAUX<br />ÉMERGENTS
         </h2>
         <p className="text-sm text-[#8A8A8A] leading-relaxed self-center">
-          Ces tendances ne nécessitent pas de réaction immédiate mais doivent être intégrées dans la planification stratégique à 3–12 mois.
+          Ces signaux sont suivis à l’horizon indiqué, selon des faits nouveaux et des indicateurs documentés ; ils ne valent pas engagement de déploiement.
         </p>
       </div>
 

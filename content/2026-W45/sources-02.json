@@ -1,0 +1,48 @@
+[
+  {
+    "url": "https://business.adobe.com/blog/ai-traffic-higher-revenue-per-visit-retail-holiday",
+    "title": "AI traffic now generates 83% higher revenue per visit for U.S. retailers heading into the holiday shopping season.",
+    "publisher": "Adobe",
+    "date": "2026-10-29",
+    "date_status": "date de publication affichée dans la page : 10-29-2026",
+    "level": "N1",
+    "editorial_status": "publication de première partie ; données commerciales Adobe, non indépendante",
+    "opened": true,
+    "claims": [
+      "L'analyse repose sur des transactions en ligne couvrant plus de 1 000 milliards de visites vers des sites de commerce américains, 100 millions de références et 18 catégories.",
+      "Adobe définit ici le trafic IA comme des utilisateurs ayant cliqué sur un lien depuis une interface IA.",
+      "En septembre 2026, le trafic IA vers les sites de commerce américains a progressé de 71 % sur un an.",
+      "En septembre 2026, Adobe indique que le trafic IA a généré 83 % de revenu par visite de plus que le trafic hors IA et a converti 90 % mieux."
+    ],
+    "limitations": [
+      "Périmètre limité au commerce de détail américain.",
+      "Les résultats sont publiés par le fournisseur de données et ne constituent pas une étude indépendante.",
+      "La mesure ne couvre pas les interactions sans clic ni l'attribution causale à une citation précise.",
+      "Les écarts publiés comparent du trafic référé depuis une IA au trafic hors IA et ne sont pas généralisables à l'éducation."
+    ]
+  },
+  {
+    "url": "https://broadcastwell.com/state-of-geo",
+    "title": "The 2026 State of Generative Engine Optimization",
+    "publisher": "Broadcastwell Research",
+    "date": "2026-10-29",
+    "date_status": "métadonnée de page : publié le 29 octobre 2026 à 05:13 UTC ; la page décrit une collecte du 18 au 23 juillet 2026 et le titre interne la présente comme une étude de juillet",
+    "level": "N3",
+    "editorial_status": "étude commerciale ouverte ; données et protocole publiés, non évaluée par les pairs ; le fournisseur vend aussi des prestations GEO",
+    "opened": true,
+    "claims": [
+      "L'étude rapporte 860 réponses IA, 5 160 citations et 1 753 domaines, à partir de 10 questions d'acheteur standardisées pour 85 entreprises de logiciels B2B dans 61 catégories.",
+      "Les réponses ont été générées du 18 au 23 juillet 2026 avec Claude et la recherche web active, en conservant un seul moteur pour toutes les observations.",
+      "Chaque réponse a été notée distinctement selon que l'entreprise était nommée et selon que son domaine était cité.",
+      "Dans 97 réponses sur 860, le domaine de l'entreprise était cité sans que la marque soit nommée dans la recommandation.",
+      "Parmi les 100 domaines les plus cités, 77,4 % des citations classées renvoyaient à des contenus de fournisseurs."
+    ],
+    "limitations": [
+      "La recherche porte sur un seul moteur, Claude avec recherche web active, et une seule exécution par invite.",
+      "Les réponses IA sont variables et l'étude les qualifie elle-même d'estimations ponctuelles, non de classements fixes.",
+      "L'échantillon de 85 entreprises B2B est orienté vers des acteurs challengers et n'est pas un échantillon aléatoire de tous les secteurs.",
+      "Les résultats concernent des logiciels B2B et ne mesurent ni l'exactitude des réponses, ni la satisfaction des utilisateurs, ni des résultats éducatifs.",
+      "La date de publication de la page est dans la fenêtre, mais la collecte et l'intitulé de l'étude sont de juillet ; cette ambiguïté est explicitée dans le rapport."
+    ]
+  }
+]

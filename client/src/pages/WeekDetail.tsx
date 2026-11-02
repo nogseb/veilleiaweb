@@ -290,7 +290,7 @@ export default function WeekDetail() {
         <div className="container">
           <div className="flex items-center gap-3 pb-6">
             <div className="w-12 h-px bg-[#FF4757]" />
-            <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">ACTIONS CRITIQUES — RÉACTION IMMÉDIATE</span>
+            <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">PRIORITÉS — ÉCHÉANCES ET ARBITRAGES</span>
           </div>
           <h2 className="text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase pb-12">
             {edition.actionsCount} ACTIONS<br />
@@ -306,7 +306,7 @@ export default function WeekDetail() {
                   <p className="text-sm uppercase tracking-[0.02em] text-[#F5F4F0] leading-snug pb-1">
                     {action.titre}
                   </p>
-                  <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">{action.domaine}</span>
+                  <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A]">{action.domaine} · {action.responsable}{action.echeance ? ` · ${action.echeance}` : ""}</span>
                 </div>
                 <span className="text-xs tracking-[0.1em] uppercase text-[#8A8A8A] hidden md:block">
                   {action.responsable}

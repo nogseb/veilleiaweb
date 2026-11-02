@@ -1,0 +1,969 @@
+{
+  "checkedAt": "2026-11-02",
+  "results": [
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AIÀ SURVEILLERNOUVEAUACTUALITÉCONNECTED APPS : UN APERÇU À SUIV",
+          "02 — ZERO-CLICK / GEOÀ SURVEILLERNOUVEAUACTUALITÉREDDIT : UN TEST DE PARCOU",
+          "03 — SCHEMA / ACCÈSÀ SURVEILLERNOUVEAUACTUALITÉPRÉFÉRENCE D’ENTRAÎNEMENT IA",
+          "04 — CMS / SOCLECRITIQUESUIVISUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPO",
+          "05 — CDP / DATACRITIQUENOUVEAUACTUALITÉCONSENTEMENT MOBILE : UNE DÉCISION I",
+          "06 — MESURE",
+          "07 — UX",
+          "08 — IA",
+          "09 — INNOV MKT"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "CONNECTED APPS : UN APERÇU À SUIVRE, PAS UN CANAL À PRÉSENTER COMME DISPONIBLE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 166
+        },
+        {
+          "index": 2,
+          "title": "REDDIT : UN TEST DE PARCOURS CONNECTÉ À SUIVRE SANS PRÉDIRE LES CITATIONS IA",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 3,
+          "title": "PRÉFÉRENCE D’ENTRAÎNEMENT IA : UNE INTENTION 2027 À DISTINGUER DU CRAWL ET DE L’ACCÈS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 4,
+          "title": "SUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPOSANTS WEB EFFECTIVEMENT PRÉSENTS",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 5,
+          "title": "CONSENTEMENT MOBILE : UNE DÉCISION INDIVIDUELLE QUI IMPOSE DE PROUVER LA FINALITÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 6,
+          "title": "CLICS IA : UN ÉCART DE VALEUR RETAIL À MESURER SANS LE TRANSFORMER EN ROI",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 197
+        },
+        {
+          "index": 7,
+          "title": "INTERFACES AGENTIQUES : COMPOSANTS CONTRÔLÉS, CONFIRMATION VISIBLE ET REPRISE HUMAINE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 8,
+          "title": "AGENTS EN PRODUCTION : IDENTITÉ DISTINCTE, DROITS LIMITÉS ET JOURNALISATION",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "INVENTAIRES IA : DISPONIBILITÉ PAR MARCHÉ À VÉRIFIER AVANT TOUT TEST",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 167
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AIÀ SURVEILLERNOUVEAUACTUALITÉCONNECTED APPS : UN APERÇU À SUIV",
+          "02 — ZERO-CLICK / GEOÀ SURVEILLERNOUVEAUACTUALITÉREDDIT : UN TEST DE PARCOU",
+          "03 — SCHEMA / ACCÈSÀ SURVEILLERNOUVEAUACTUALITÉPRÉFÉRENCE D’ENTRAÎNEMENT IA",
+          "04 — CMS / SOCLECRITIQUESUIVISUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPO",
+          "05 — CDP / DATACRITIQUENOUVEAUACTUALITÉCONSENTEMENT MOBILE : UNE DÉCISION I",
+          "06 — MESURE",
+          "07 — UX",
+          "08 — IA",
+          "09 — INNOV MKT"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "CONNECTED APPS : UN APERÇU À SUIVRE, PAS UN CANAL À PRÉSENTER COMME DISPONIBLE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 166
+        },
+        {
+          "index": 2,
+          "title": "REDDIT : UN TEST DE PARCOURS CONNECTÉ À SUIVRE SANS PRÉDIRE LES CITATIONS IA",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 3,
+          "title": "PRÉFÉRENCE D’ENTRAÎNEMENT IA : UNE INTENTION 2027 À DISTINGUER DU CRAWL ET DE L’ACCÈS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 4,
+          "title": "SUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPOSANTS WEB EFFECTIVEMENT PRÉSENTS",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 5,
+          "title": "CONSENTEMENT MOBILE : UNE DÉCISION INDIVIDUELLE QUI IMPOSE DE PROUVER LA FINALITÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 6,
+          "title": "CLICS IA : UN ÉCART DE VALEUR RETAIL À MESURER SANS LE TRANSFORMER EN ROI",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 197
+        },
+        {
+          "index": 7,
+          "title": "INTERFACES AGENTIQUES : COMPOSANTS CONTRÔLÉS, CONFIRMATION VISIBLE ET REPRISE HUMAINE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 8,
+          "title": "AGENTS EN PRODUCTION : IDENTITÉ DISTINCTE, DROITS LIMITÉS ET JOURNALISATION",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "INVENTAIRES IA : DISPONIBILITÉ PAR MARCHÉ À VÉRIFIER AVANT TOUT TEST",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 167
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/semaine/44",
+      "width": 1440,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 189
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "REA : L’IA PASSE DE L’IMITATION D’INTERFACES À LA RÉTRO-INGÉNIERIE DES FONCTIONS",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 242
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/semaine/44",
+      "width": 1440,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 373,
+        "gridWidth": 1120,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 189
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "REA : L’IA PASSE DE L’IMITATION D’INTERFACES À LA RÉTRO-INGÉNIERIE DES FONCTIONS",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 242
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/",
+      "width": 375,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AIÀ SURVEILLERNOUVEAUACTUALITÉCONNECTED APPS : UN APERÇU À SUIV",
+          "02 — ZERO-CLICK / GEOÀ SURVEILLERNOUVEAUACTUALITÉREDDIT : UN TEST DE PARCOU",
+          "03 — SCHEMA / ACCÈSÀ SURVEILLERNOUVEAUACTUALITÉPRÉFÉRENCE D’ENTRAÎNEMENT IA",
+          "04 — CMS / SOCLECRITIQUESUIVISUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPO",
+          "05 — CDP / DATACRITIQUENOUVEAUACTUALITÉCONSENTEMENT MOBILE : UNE DÉCISION I",
+          "06 — MESURE",
+          "07 — UX",
+          "08 — IA",
+          "09 — INNOV MKT"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "CONNECTED APPS : UN APERÇU À SUIVRE, PAS UN CANAL À PRÉSENTER COMME DISPONIBLE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 166
+        },
+        {
+          "index": 2,
+          "title": "REDDIT : UN TEST DE PARCOURS CONNECTÉ À SUIVRE SANS PRÉDIRE LES CITATIONS IA",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 3,
+          "title": "PRÉFÉRENCE D’ENTRAÎNEMENT IA : UNE INTENTION 2027 À DISTINGUER DU CRAWL ET DE L’ACCÈS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 4,
+          "title": "SUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPOSANTS WEB EFFECTIVEMENT PRÉSENTS",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 5,
+          "title": "CONSENTEMENT MOBILE : UNE DÉCISION INDIVIDUELLE QUI IMPOSE DE PROUVER LA FINALITÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 6,
+          "title": "CLICS IA : UN ÉCART DE VALEUR RETAIL À MESURER SANS LE TRANSFORMER EN ROI",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 197
+        },
+        {
+          "index": 7,
+          "title": "INTERFACES AGENTIQUES : COMPOSANTS CONTRÔLÉS, CONFIRMATION VISIBLE ET REPRISE HUMAINE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 8,
+          "title": "AGENTS EN PRODUCTION : IDENTITÉ DISTINCTE, DROITS LIMITÉS ET JOURNALISATION",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "INVENTAIRES IA : DISPONIBILITÉ PAR MARCHÉ À VÉRIFIER AVANT TOUT TEST",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 167
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "width": 375,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AIÀ SURVEILLERNOUVEAUACTUALITÉCONNECTED APPS : UN APERÇU À SUIV",
+          "02 — ZERO-CLICK / GEOÀ SURVEILLERNOUVEAUACTUALITÉREDDIT : UN TEST DE PARCOU",
+          "03 — SCHEMA / ACCÈSÀ SURVEILLERNOUVEAUACTUALITÉPRÉFÉRENCE D’ENTRAÎNEMENT IA",
+          "04 — CMS / SOCLECRITIQUESUIVISUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPO",
+          "05 — CDP / DATACRITIQUENOUVEAUACTUALITÉCONSENTEMENT MOBILE : UNE DÉCISION I",
+          "06 — MESURE",
+          "07 — UX",
+          "08 — IA",
+          "09 — INNOV MKT"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "CONNECTED APPS : UN APERÇU À SUIVRE, PAS UN CANAL À PRÉSENTER COMME DISPONIBLE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 166
+        },
+        {
+          "index": 2,
+          "title": "REDDIT : UN TEST DE PARCOURS CONNECTÉ À SUIVRE SANS PRÉDIRE LES CITATIONS IA",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 3,
+          "title": "PRÉFÉRENCE D’ENTRAÎNEMENT IA : UNE INTENTION 2027 À DISTINGUER DU CRAWL ET DE L’ACCÈS",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 4,
+          "title": "SUIVI CISA : VÉRIFIER LES CORRECTIFS DES COMPOSANTS WEB EFFECTIVEMENT PRÉSENTS",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 185
+        },
+        {
+          "index": 5,
+          "title": "CONSENTEMENT MOBILE : UNE DÉCISION INDIVIDUELLE QUI IMPOSE DE PROUVER LA FINALITÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 6,
+          "title": "CLICS IA : UN ÉCART DE VALEUR RETAIL À MESURER SANS LE TRANSFORMER EN ROI",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 197
+        },
+        {
+          "index": 7,
+          "title": "INTERFACES AGENTIQUES : COMPOSANTS CONTRÔLÉS, CONFIRMATION VISIBLE ET REPRISE HUMAINE",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 178
+        },
+        {
+          "index": 8,
+          "title": "AGENTS EN PRODUCTION : IDENTITÉ DISTINCTE, DROITS LIMITÉS ET JOURNALISATION",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "INVENTAIRES IA : DISPONIBILITÉ PAR MARCHÉ À VÉRIFIER AVANT TOUT TEST",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 167
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": [
+        {
+          "name": "GOOGLE",
+          "count": 1
+        },
+        {
+          "name": "SEO",
+          "count": 1
+        },
+        {
+          "name": "DATA",
+          "count": 1
+        },
+        {
+          "name": "ARCHI",
+          "count": 1
+        },
+        {
+          "name": "CDP",
+          "count": 1
+        },
+        {
+          "name": "UX",
+          "count": 1
+        },
+        {
+          "name": "IA",
+          "count": 1
+        },
+        {
+          "name": "INNOV MKT",
+          "count": 1
+        },
+        {
+          "name": "MESURE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "/semaine/44",
+      "width": 375,
+      "theme": "light",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 189
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "REA : L’IA PASSE DE L’IMITATION D’INTERFACES À LA RÉTRO-INGÉNIERIE DES FONCTIONS",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 242
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    },
+    {
+      "path": "/semaine/44",
+      "width": 375,
+      "theme": "dark",
+      "layout": {
+        "cards": 9,
+        "labels": [
+          "01 — GOOGLE AI",
+          "02 — ZERO-CLICK / GEO",
+          "03 — SCHEMA / DONNÉESÀ SURVEILLERFONDJSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED",
+          "04 — DXP / CMSCRITIQUEACTUALITÉPHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT ",
+          "05 — CDP / DATA",
+          "06 — UX",
+          "07 — IA PRODUCTION / GOUVERNANCE",
+          "08 — INNOVATION MARKETING",
+          "TRANSVERSAL — MESUREÀ SURVEILLERACTUALITÉMESURE : DISSOCIER PRÉSENCE, SESSI"
+        ],
+        "bonusWidth": 327,
+        "gridWidth": 327,
+        "overflow": false
+      },
+      "analyses": [
+        {
+          "index": 1,
+          "title": "AI OVERVIEWS : UN SIGNAL COMMERCIAL AMÉRICAIN À NE PAS CONFONDRE AVEC LES ADMISSIONS FRANÇAISES",
+          "sources": 2,
+          "flip": true,
+          "complete": true,
+          "words": 172
+        },
+        {
+          "index": 2,
+          "title": "CITATIONS GEO : DES ASSOCIATIONS À TESTER LOCALEMENT, PAS UNE RECETTE DE CONVERSION",
+          "sources": 1,
+          "flip": true,
+          "complete": true,
+          "words": 177
+        },
+        {
+          "index": 3,
+          "title": "JSON-LD, ROBOTS.TXT ET GOOGLE-EXTENDED : TROIS CONTRÔLES À SÉPARER",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 173
+        },
+        {
+          "index": 4,
+          "title": "PHP2SHELL : LA PRIORITÉ EST L’ENVIRONNEMENT WEB VULNÉRABLE, LE CORRECTIF ET LA PREUVE DE RECETTE",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 189
+        },
+        {
+          "index": 5,
+          "title": "DIGITAL OMNIBUS : UN MANDAT DU CONSEIL, PAS UNE LOI NI UNE RAISON DE MODIFIER LA CMP",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 181
+        },
+        {
+          "index": 6,
+          "title": "WEB AGENTIQUE : DES MODÈLES DE CONTRÔLE À OBSERVER, PAS UNE PASSERELLE À LANCER SANS BESOIN DOCUMENTÉ",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 7,
+          "title": "REA : L’IA PASSE DE L’IMITATION D’INTERFACES À LA RÉTRO-INGÉNIERIE DES FONCTIONS",
+          "sources": 8,
+          "flip": true,
+          "complete": true,
+          "words": 242
+        },
+        {
+          "index": 8,
+          "title": "CHATGPT ADS ET LIFECYCLE GOALS : UN PILOTE SEARCH EXECUTIVE EDUCATION SOUS CONDITIONS, PAS UN BASCULEMENT PMax",
+          "sources": 4,
+          "flip": true,
+          "complete": true,
+          "words": 183
+        },
+        {
+          "index": 9,
+          "title": "MESURE : DISSOCIER PRÉSENCE, SESSION ATTRIBUÉE, DEMANDE CRM ET RÉSULTAT",
+          "sources": 3,
+          "flip": true,
+          "complete": true,
+          "words": 176
+        }
+      ],
+      "bonusFront": {
+        "source": true,
+        "flip": true
+      },
+      "bonusBack": true,
+      "filters": []
+    }
+  ]
+}

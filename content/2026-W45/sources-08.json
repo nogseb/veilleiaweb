@@ -1,0 +1,43 @@
+[
+  {
+    "url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+    "title": "Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents",
+    "publisher": "GitHub",
+    "date": "2026-10-28",
+    "date_status": "Date de publication affichée et vérifiée sur la page",
+    "level": "N1",
+    "editorial_status": "Publication officielle de plateforme ; rapport méthodologique sur ses propres données",
+    "opened": true,
+    "claims": [
+      "GitHub indique que plus de 40 % des pull requests de septembre 2026 ont commencé par un premier jet d’agent, contre 17 % en mars.",
+      "GitHub indique 110 millions de pull requests commencées par un agent en septembre 2026.",
+      "La fenêtre du rapport va du 1er octobre 2025 au 30 septembre 2026 inclus ; sauf indication contraire, les métriques couvrent les dépôts publics et privés.",
+      "GitHub rapporte des différences de rapidité de fusion et de changements multi-fichiers entre pull requests avec implication d’agent détectée et groupe de comparaison."
+    ],
+    "limitations": [
+      "Données auto-publiées et définitions propres à une seule plateforme.",
+      "Détection d’implication d’agent limitée aux agents détectables.",
+      "Les associations observées ne démontrent ni causalité ni qualité ou sécurité supérieure du code."
+    ]
+  },
+  {
+    "url": "https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems",
+    "title": "Design Tenets for Agent Identity Management Systems",
+    "publisher": "National Institute of Standards and Technology",
+    "date": "2026-10-27",
+    "date_status": "Date de publication affichée et vérifiée sur la page",
+    "level": "N1",
+    "editorial_status": "Billet institutionnel officiel ; principes initiaux issus de commentaires publics et d’échanges avec des parties prenantes",
+    "opened": true,
+    "claims": [
+      "Le NIST propose dix principes initiaux pour l’identité, l’authentification et l’autorisation des agents.",
+      "Les principes comprennent une identité distincte, la délégation avec réduction des droits, le moindre privilège sans droits permanents, des autorisations courtes et révocables, la séparation de la politique et du raisonnement, ainsi qu’une journalisation indépendante.",
+      "Le NIST indique que l’application doit dépendre du risque des transactions, de l’environnement et des données, outils et compétences concernés."
+    ],
+    "limitations": [
+      "Billet de cadrage, non une norme contraignante, une certification ou une règle AI Act.",
+      "Le NIST reconnaît que les standards et technologies actuels ne permettent pas immédiatement de satisfaire tous les principes.",
+      "Portée institutionnelle américaine à adapter au cadre juridique et contractuel applicable."
+    ]
+  }
+]

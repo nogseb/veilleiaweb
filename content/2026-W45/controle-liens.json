@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-11-02T05:22:13.450630+00:00",
+  "results": [
+    {
+      "id": 1,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 2,
+      "url": "https://business.adobe.com/blog/ai-traffic-higher-revenue-per-visit-retail-holiday",
+      "http": "000",
+      "network_error": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)",
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 3,
+      "url": "https://www.reddit.com/user/spez/comments/1xiupm0/about_that_login_screen/",
+      "http": "403",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 4,
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 5,
+      "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 6,
+      "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+      "http": "403",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 7,
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 8,
+      "url": "https://www.drupal.org/sa-contrib-2026-254",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 9,
+      "url": "https://www.cnil.fr/fr/sanction-cookies-app-fnac",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 10,
+      "url": "https://blogs.opera.com/news/2026/10/webai-local-ai-for-the-web-now-in-opera/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 11,
+      "url": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 12,
+      "url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 13,
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 14,
+      "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 15,
+      "url": "https://newsroom.pinterest.com/news/pinterest-programmatic-deals/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 16,
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united-states/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 17,
+      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "http": "200",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    },
+    {
+      "id": 18,
+      "url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000055022778",
+      "http": "403",
+      "network_error": null,
+      "opened_by_research": true,
+      "broken": false
+    }
+  ]
+}

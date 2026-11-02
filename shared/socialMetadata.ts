@@ -61,7 +61,7 @@ export function socialMetadataForPath(url: string): SocialMetadata {
     },
     "/about": {
       title: "À propos — Veille Stratégique IA & Web",
-      description: "Une veille hebdomadaire sourcée sur l’IA, le SEO/GEO, les architectures web et la data marketing, au service des décisions digitales de TBS Education.",
+      description: "Une veille hebdomadaire sourcée sur l’IA, le SEO/GEO, les architectures web et la data marketing, au service des décisions digitales d’une école.",
     },
   };
   const page = pages[pathname];

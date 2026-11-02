@@ -5,9 +5,9 @@ import { injectSocialMetadata, renderSocialHead, SHARE_IMAGE_URL, socialMetadata
 
 describe("Aperçus de partage Teams / Open Graph", () => {
   it("fournit titre et description de la semaine actuelle dans le HTML sans JavaScript", () => {
-    const meta = socialMetadataForPath("/?partage=2026-W44");
+    const meta = socialMetadataForPath("/?partage=2026-W45");
     expect(meta.title).toContain(`S${currentEdition.week}`);
-    expect(meta.description).toContain("Rea");
+    expect(meta.description).toContain("une école");
     expect(meta.description.length).toBeLessThanOrEqual(180);
     expect(meta.canonicalUrl).toBe("https://veilleiaweb.digital/");
     const head = renderSocialHead(meta);

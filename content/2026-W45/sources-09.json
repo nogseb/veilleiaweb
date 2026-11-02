@@ -1,0 +1,63 @@
+[
+  {
+    "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+    "title": "Ads in AI Mode expand to new markets.",
+    "publisher": "Google Ads & Commerce Blog",
+    "date": "2026-10-28",
+    "date_status": "verified_on_page",
+    "level": "N1",
+    "editorial_status": "official announcement",
+    "opened": true,
+    "claims": [
+      "Google announced that ads in AI Mode are scaling to Australia, Canada, India, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, the Philippines and Singapore.",
+      "Google plans to expand to Brazil, Mexico and the United Kingdom during Q4 2026.",
+      "Multi-turn ads are launching in the United States, and ads are to be labeled Sponsored.",
+      "Google says AI Mode queries are on average three times longer than traditional searches."
+    ],
+    "limitations": [
+      "Google's statement on click-through-rate similarity relies on Google internal US data from August 20 to September 3, 2026.",
+      "The post does not establish availability in all countries or performance outside the United States.",
+      "Brazil, Mexico and the United Kingdom are planned Q4 expansions rather than confirmed deployments as of the source date."
+    ]
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+    "title": "Google expands AI Search ads globally as core ad growth slows",
+    "publisher": "TechCrunch",
+    "date": "2026-10-28",
+    "date_status": "verified_on_page",
+    "level": "N2",
+    "editorial_status": "independent editorial coverage",
+    "opened": true,
+    "claims": [
+      "TechCrunch reports that Google announced international expansion of ads in AI-powered Search experiences during Alphabet's third-quarter earnings call.",
+      "The article reports Google's launch of multi-turn ads and AI Mode in the United States.",
+      "The article attributes the expansion and claimed early format results to Alphabet's earnings call and Google executives."
+    ],
+    "limitations": [
+      "The article reports company statements; it does not independently measure campaign performance.",
+      "The article does not provide country-by-country operational availability details beyond the company's announcement."
+    ]
+  },
+  {
+    "url": "https://newsroom.pinterest.com/news/pinterest-programmatic-deals/",
+    "title": "Pinterest unlocks premium inventory for programmatic buyers, scaling high-intent discovery",
+    "publisher": "Pinterest Newsroom",
+    "date": "2026-10-26",
+    "date_status": "verified_on_page",
+    "level": "N1",
+    "editorial_status": "official announcement",
+    "opened": true,
+    "claims": [
+      "Pinterest announced general availability of Programmatic Deals in select global markets.",
+      "The announcement states current availability in North America, South America and Asia Pacific.",
+      "Programmatic Deals offer selected Pinterest display and video inventory through programmatic buying workflows.",
+      "Pinterest names Magnite as its primary supply-side partner and lists Amazon Ads DVA+, Google Display & Video 360, Yahoo DSP and DeepIntent among demand-side platforms."
+    ],
+    "limitations": [
+      "The source is a Pinterest supplier announcement, not independent performance research.",
+      "The publication does not list all eligible countries, pricing or contractual requirements.",
+      "Its Moroccanoil example is a June 2026 campaign using Amazon internal data and is explicitly described as not indicative of future performance; it is not retained as a case study."
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "url": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/",
+    "title": "Build Generative UI Apps with A2UI & CopilotKit Agents",
+    "publisher": "Google Developers Blog",
+    "date": "2026-10-29",
+    "date_status": "date affichée dans la page",
+    "level": "N1",
+    "editorial_status": "retenue — documentation primaire ; annoncé et documenté, sans preuve de déploiement",
+    "opened": true,
+    "claims": [
+      "Le guide présente A2UI comme un standard ouvert, indépendant du framework, où l’agent décrit l’interface sous forme de données.",
+      "Le client conserve un catalogue de composants de confiance et écarte les éléments inventés en dehors de ce catalogue.",
+      "Les surfaces A2UI sont bidirectionnelles : les actions de la personne sont renvoyées à l’agent ; l’exemple inclut une confirmation de réservation.",
+      "Le guide décrit une intégration et ne publie ni déploiement client attesté, ni métrique d’usage ou d’accessibilité."
+    ],
+    "limitations": [
+      "Source de l’éditeur de la technologie.",
+      "Guide technique et démonstrations, pas une étude indépendante.",
+      "Aucun résultat mesuré pour des candidats ou pour une école."
+    ]
+  },
+  {
+    "url": "https://a2ui.org/",
+    "title": "A generative UI protocol and framework for cross-platform agentic experiences",
+    "publisher": "Projet A2UI",
+    "date": null,
+    "date_status": "page non datée ; consultée le 2 novembre 2026",
+    "level": "N1",
+    "editorial_status": "retenue comme documentation primaire de spécification ; non utilisée pour dater l’actualité",
+    "opened": true,
+    "claims": [
+      "La documentation présente la version 0.9.1 comme version de production courante et la version 1.0 comme candidate.",
+      "Elle décrit une interface rendue par des composants préapprouvés, sans exécution de code arbitraire.",
+      "Le flux documenté comprend message de l’utilisateur, messages A2UI de l’agent, rendu client, action de l’utilisateur puis mise à jour par l’agent."
+    ],
+    "limitations": [
+      "Page non datée.",
+      "Documentation portée par le projet ; ne prouve pas une adoption ou une accessibilité effective.",
+      "Ne constitue pas un déploiement opérationnel."
+    ]
+  },
+  {
+    "url": "https://ppc.land/googles-a2ui-turns-ai-agent-replies-into-forms-maps-and-cards/",
+    "title": "Google's A2UI turns AI agent replies into forms, maps and cards",
+    "publisher": "PPC Land",
+    "date": "2026-10-31",
+    "date_status": "date affichée dans la page",
+    "level": "N2",
+    "editorial_status": "retenue comme corroboration journalistique ; non nécessaire seule",
+    "opened": true,
+    "claims": [
+      "L’article rapporte la publication conjointe Google–CopilotKit du 29 octobre et le principe d’un catalogue de composants préenregistrés.",
+      "Il indique que la publication ne nomme pas de déploiement de production ni de chiffre d’adoption."
+    ],
+    "limitations": [
+      "Source secondaire ; les affirmations de produit sont vérifiées par la source primaire Google.",
+      "Aucun résultat indépendant d’accessibilité ou d’usage par des candidats."
+    ]
+  }
+]

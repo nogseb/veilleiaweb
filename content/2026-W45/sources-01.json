@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+    "title": "Build and manage Connected Apps in one place",
+    "publisher": "Google",
+    "date": "2026-10-28",
+    "date_status": "publication_date_verified_on_page",
+    "level": "N1",
+    "editorial_status": "official_product_announcement_non_sponsored",
+    "opened": true,
+    "claims": [
+      "Google annonce le lancement de l’aperçu de Connected Apps Platform pour construire et gérer des applications destinées à Search et à l’application Gemini.",
+      "Les développeurs peuvent enregistrer, tester et soumettre une application puis choisir Search, Gemini ou les deux comme surface de publication.",
+      "Google déclare ouvrir l’accès par phases et ajouter des développeurs, marchés et produits dans les mois à venir.",
+      "Des applications partenaires déjà actives dans Gemini doivent arriver dans Search dans les prochaines semaines."
+    ],
+    "limitations": [
+      "Annonce de l’éditeur : elle décrit le produit et son calendrier déclaré, sans résultat indépendant d’adoption ou de trafic.",
+      "Aucun calendrier de disponibilité générale, critère détaillé d’admission ni déploiement par marché n’est publié."
+    ]
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+    "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+    "publisher": "TechCrunch",
+    "date": "2026-10-28",
+    "date_status": "publication_date_verified_on_page",
+    "level": "N2",
+    "editorial_status": "editorial_non_sponsored",
+    "opened": true,
+    "claims": [
+      "TechCrunch rapporte que l’aperçu est en bêta pour des développeurs aux États-Unis.",
+      "L’article indique que Google n’a pas communiqué de date de disponibilité plus large.",
+      "Il précise que les développeurs peuvent choisir de rendre l’application disponible dans Search, l’application Gemini ou les deux, puis suivre notamment trafic, latence et erreurs."
+    ],
+    "limitations": [
+      "Source journalistique qui rapporte l’annonce Google ; elle ne remplace pas les conditions contractuelles ou techniques de la plateforme.",
+      "L’article ne fournit pas de mesure indépendante d’usage ni d’impact sur la découverte dans Search."
+    ]
+  }
+]

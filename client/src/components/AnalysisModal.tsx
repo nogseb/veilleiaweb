@@ -17,7 +17,7 @@ export type AnalysisContent = {
 };
 
 export function analysisLabel(content: AnalysisContent) {
-  return content.category === "MESURE"
+  return content.category === "MESURE" && content.id === 9
     ? `TRANSVERSAL — ${content.code}`
     : `${String(content.id).padStart(2, "0")} — ${content.code}`;
 }

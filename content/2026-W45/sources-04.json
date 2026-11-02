@@ -1,0 +1,78 @@
+[
+  {
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+    "title": "Critical Vulnerabilities in PHP Require Immediate Patching",
+    "publisher": "CISA",
+    "date": "2026-10-26",
+    "date_status": "Date de dernière révision vérifiée dans la page ; mise à jour du 26 octobre explicitement datée.",
+    "level": "N1",
+    "editorial_status": "retenue — SUIVI",
+    "opened": true,
+    "claims": [
+      "La page a été révisée le 26 octobre 2026.",
+      "La mise à jour du 26 octobre indique l’ajout de deux vulnérabilités PHP au catalogue CISA des vulnérabilités connues comme exploitées.",
+      "CISA demande de prioriser les systèmes exposés à Internet et indique que les organisations ne pouvant pas corriger immédiatement devraient retirer les systèmes concernés du service jusqu’à correction."
+    ],
+    "limitations": [
+      "L’alerte est américaine et ne mesure pas l’exposition d’une école française.",
+      "Elle ne permet pas d’identifier les technologies employées par une organisation donnée."
+    ]
+  },
+  {
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "title": "Known Exploited Vulnerabilities Catalog",
+    "publisher": "CISA",
+    "date": "2026-10-26",
+    "date_status": "Date d’ajout vérifiée dans les deux entrées PHP affichées dans le catalogue.",
+    "level": "N1",
+    "editorial_status": "retenue — corroboration du SUIVI",
+    "opened": true,
+    "claims": [
+      "Les deux entrées PHP ont été ajoutées au catalogue le 26 octobre 2026.",
+      "Le catalogue les qualifie de vulnérabilités permettant une exécution de code à distance sans authentification.",
+      "Le catalogue demande l’application des mesures de l’éditeur et l’évaluation de l’exposition Internet."
+    ],
+    "limitations": [
+      "Le catalogue atteste un statut d’exploitation connue mais ne quantifie pas les attaques ni leur répartition géographique.",
+      "La date d’échéance affichée relève des directives CISA et n’est pas transposée telle quelle à une école."
+    ]
+  },
+  {
+    "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+    "title": "WordPress 7.1.4",
+    "publisher": "WordPress.org",
+    "date": "2026-10-28",
+    "date_status": "Date de publication vérifiée dans l’en-tête de la page ; dernière modification le 29 octobre 2026.",
+    "level": "N1",
+    "editorial_status": "retenue",
+    "opened": true,
+    "claims": [
+      "WordPress.org qualifie la publication de mise à jour de sécurité et recommande une application immédiate.",
+      "La publication mentionne notamment un risque d’exécution de code pendant une fenêtre de mise à jour, plusieurs problèmes de script stocké, de confidentialité et de disponibilité.",
+      "Les correctifs sont annoncés comme reportés vers les branches encore éligibles aux correctifs de sécurité."
+    ],
+    "limitations": [
+      "La page ne permet pas de savoir si une école utilise WordPress.",
+      "La publication ne fournit pas de mesure d’exploitation active pour les problèmes WordPress décrits."
+    ]
+  },
+  {
+    "url": "https://www.drupal.org/sa-contrib-2026-254",
+    "title": "Commerce Core - Highly critical - Access bypass - SA-CONTRIB-2026-254",
+    "publisher": "Drupal.org",
+    "date": "2026-10-28",
+    "date_status": "Date de l’avis vérifiée dans la page.",
+    "level": "N1",
+    "editorial_status": "retenue",
+    "opened": true,
+    "claims": [
+      "L’avis concerne Commerce Core, un projet Drupal contribué, et non le cœur Drupal.",
+      "Drupal.org qualifie le risque de très critique et indique une exploitation active dans la nature.",
+      "L’éditeur demande l’installation du correctif et l’audit d’incohérences dans les commandes."
+    ],
+    "limitations": [
+      "L’applicabilité dépend de l’emploi réel du module contribué ; aucune utilisation par une école n’est inférée.",
+      "L’avis ne permet pas d’évaluer l’ampleur de l’exploitation ni le nombre de sites affectés."
+    ]
+  }
+]

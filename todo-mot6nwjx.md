@@ -98,3 +98,13 @@
 - [x] Valider TypeScript, 44 tests unitaires, build et contrôles HTTP du build de production.
 - [x] Vérifier la navigation interne et la préservation de la charte, de la balise Google et du consentement.
 - [ ] Publier le checkpoint via WebDev puis vérifier les balises sur le domaine public ; aucune demande d’authentification.
+
+## S45 — 2 novembre 2026
+
+- [x] Lire S41–S44, collecter neuf domaines et le Bonus avec journal, puis exclure les doublons non qualifiés.
+- [x] Rédiger S45 : neuf domaines, 18 sources, sept actions, six signaux émergents, zéro cas d’école.
+- [x] Séparer dates et statuts, citer le texte juridique, reclasser Adobe et écarter l’étude GEO ambiguë.
+- [x] Intégrer S45 à l’accueil, archiver S44 avec mesure et Bonus, anonymiser les textes publics.
+- [x] Valider 50 tests, TypeScript, build, références, modales, filtres et responsive sans nouveau composant ni CSS.
+- [ ] Créer le commit « veille: semaine W45 — 2026-11-02 », checkpoint et push main confirmé.
+- [ ] Publier le checkpoint via WebDev, puis vérifier S45 et l’archive S44 sur le domaine existant ; aucune demande d’authentification.

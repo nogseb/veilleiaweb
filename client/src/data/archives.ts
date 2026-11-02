@@ -1,4 +1,5 @@
-import { veilleS44 as veilleData } from "./veille-s44";
+import { veilleS45 as veilleData } from "./veille-s45";
+import { veilleS44 as s44Data } from "./veille-s44";
 import { veilleS43 as s43Data } from "./veille-s43";
 import { veilleS42 as s42Data } from "./veille-s42";
 import { veilleS41 as s41Data } from "./veille-s41";
@@ -56,6 +57,7 @@ export interface ArchiveEdition {
   shareDescription?: string;
   signalMajeur: string;
   domainsCount: number;
+  domainsTotal?: number;
   sourcesCount: number;
   criticalCount: number;
   importantCount: number;
@@ -66,7 +68,7 @@ export interface ArchiveEdition {
   domaines: ArchiveDomain[];
   measurement?: ArchiveDomain;
   caseStudiesCount?: number;
-  actions: Array<{ id: number; titre: string; domaine: string; responsable: string }>;
+  actions: Array<{ id: number; titre: string; domaine: string; responsable: string; echeance?: string }>;
   signauxEmergents: Array<{ titre: string; description: string; horizon: string }>;
   tendancesPassees: Array<{ titre: string; description: string }>;
   dashboardDetails: {
@@ -80,14 +82,15 @@ export interface ArchiveEdition {
   bonus?: ArchiveBonus;
 }
 
-// Semaine 44 — édition actuelle (données complètes depuis veille-s44.ts)
-const s44: ArchiveEdition = {
+// Semaine 45 — édition actuelle ; mesure intégrée aux neuf domaines
+const s45: ArchiveEdition = {
   week: veilleData.week,
   year: veilleData.year,
   date: veilleData.publicationDate,
   shareDescription: "shareDescription" in veilleData ? String(veilleData.shareDescription) : undefined,
   signalMajeur: veilleData.signalMajeur.title,
   domainsCount: veilleData.domainsCount,
+  domainsTotal: veilleData.domainsTotal,
   sourcesCount: veilleData.sourcesCount,
   criticalCount: veilleData.criticalCount,
   importantCount: veilleData.importantCount,
@@ -103,6 +106,31 @@ const s44: ArchiveEdition = {
   tendancesPassees: veilleData.tendancesPassees,
   dashboardDetails: veilleData.dashboardDetails,
   bonus: veilleData.bonus,
+};
+
+// Semaine 44 — archive complète, mesure transversale et Bonus conservés
+const s44: ArchiveEdition = {
+  week: s44Data.week,
+  year: s44Data.year,
+  date: s44Data.publicationDate,
+  shareDescription: s44Data.shareDescription,
+  signalMajeur: s44Data.signalMajeur.title,
+  domainsCount: s44Data.domainsCount,
+  sourcesCount: s44Data.sourcesCount,
+  criticalCount: s44Data.criticalCount,
+  importantCount: s44Data.importantCount,
+  actionsCount: s44Data.actionsCount,
+  emergingCount: s44Data.emergingCount,
+  syntheseExecutive: s44Data.syntheseExecutive,
+  statDominante: s44Data.statDominante,
+  domaines: s44Data.domaines,
+  measurement: s44Data.measurement,
+  caseStudiesCount: s44Data.caseStudiesCount,
+  actions: s44Data.actions,
+  signauxEmergents: s44Data.signauxEmergents,
+  tendancesPassees: s44Data.tendancesPassees,
+  dashboardDetails: s44Data.dashboardDetails,
+  bonus: s44Data.bonus,
 };
 
 // Semaine 43 — archive corrigée (données complètes depuis veille-s43.ts)
@@ -793,10 +821,53 @@ const s17: ArchiveEdition = {
   },
 };
 
+const SCHOOL_IDENTITY_PATTERN = /\b(?:Toulouse Business School|TBS(?:\s+Education)?)\b/gi;
+const CVE_PATTERN = /\bCVE-\d{4}-\d{4,7}\b/gi;
+const EXPLICIT_VERSION_PATTERN = /\b(?:versions?|v)\.?\s*\d+(?:\.\d+){0,3}\b/gi;
+const DOTTED_VERSION_PATTERN = /\b\d+(?:\.\d+){2,3}\b/g;
+const PRODUCT_VERSION_PATTERN = /\b((?:PHP|Drupal|WordPress|Safari(?:\/WebKit)?|WebKit|Schema\.org|JSON-LD|RoboDojo|ChatGPT|Claude(?:\s+(?:Sonnet|Opus|Haiku))?|Gemini(?:\s+\w+)?|GPT(?:-[\w.-]+)?|Llama|Mistral|Copilot|Sitecore|Agent)\s+)(?:v(?:ersion)?\s*)?\d+(?:\.\d+){0,3}\b/gi;
+
+function publicArchiveText(value: string): string {
+  return value
+    .replace(SCHOOL_IDENTITY_PATTERN, "une école")
+    .replace(CVE_PATTERN, "référence de vulnérabilité publique")
+    .replace(PRODUCT_VERSION_PATTERN, "$1version masquée")
+    .replace(EXPLICIT_VERSION_PATTERN, "version masquée")
+    .replace(DOTTED_VERSION_PATTERN, "version masquée");
+}
+
+function publicSourceName(value: string): string {
+  return publicArchiveText(value);
+}
+
+/**
+ * Crée la représentation publique d’une édition sans modifier les données
+ * historiques brutes. Les URL, dates, compteurs et chiffres restent intacts.
+ */
+export function publicEdition(edition: ArchiveEdition): ArchiveEdition {
+  const sanitize = (value: unknown, key?: string, sourceEntry = false): unknown => {
+    if (typeof value === "string") {
+      if (key === "url" || key === "date") return value;
+      if (sourceEntry && key === "nom") return publicSourceName(value);
+      return publicArchiveText(value);
+    }
+    if (Array.isArray(value)) return value.map((item) => sanitize(item, key, key === "sources"));
+    if (value && typeof value === "object") {
+      return Object.fromEntries(
+        Object.entries(value).map(([childKey, childValue]) => [childKey, sanitize(childValue, childKey, sourceEntry || childKey === "source")]),
+      );
+    }
+    return value;
+  };
+
+  return sanitize(edition) as ArchiveEdition;
+}
+
 // Export de toutes les éditions (ordre chronologique inversé)
-export const archives: ArchiveEdition[] = [s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+const rawArchives: ArchiveEdition[] = [s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+export const archives: ArchiveEdition[] = rawArchives.map(publicEdition);
 // Export de l'édition courante
-export const currentEdition = s44;
+export const currentEdition: ArchiveEdition = archives[0] ?? publicEdition(s45);
 
 // Alias pour compatibilité
 export const allArchives = archives;

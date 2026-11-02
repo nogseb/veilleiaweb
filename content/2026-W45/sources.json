@@ -1,0 +1,389 @@
+{
+  "week": 45,
+  "year": 2026,
+  "publicationDate": "2026-11-02",
+  "windowStart": "2026-10-26",
+  "windowEnd": "2026-11-02",
+  "domainsCount": 9,
+  "sourcesCount": 18,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+      "title": "Build and manage Connected Apps in one place",
+      "publisher": "Google",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_product_announcement_non_sponsored; cited",
+      "opened": true,
+      "claims": [
+        "Google annonce l’aperçu de Connected Apps Platform pour Search et l’application Gemini.",
+        "Les développeurs peuvent enregistrer, tester et soumettre une application vers Search, Gemini ou les deux.",
+        "L’accès doit être ouvert par phases selon les développeurs, marchés et produits."
+      ],
+      "limitations": [
+        "Annonce de l’éditeur, sans mesure indépendante d’adoption ou de trafic.",
+        "Aucun calendrier de disponibilité générale ou critère complet d’admission n’est publié."
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://business.adobe.com/blog/ai-traffic-higher-revenue-per-visit-retail-holiday",
+      "title": "AI traffic now generates 83% higher revenue per visit for U.S. retailers heading into the holiday shopping season.",
+      "publisher": "Adobe",
+      "date": "2026-10-29",
+      "date_status": "publication_date_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "first_party_commercial_data; cited with limitations",
+      "opened": true,
+      "claims": [
+        "L’analyse couvre plus de 1 000 milliards de visites, 100 millions de références et 18 catégories de commerce américain.",
+        "Adobe définit le trafic IA comme des utilisateurs ayant cliqué depuis une interface IA.",
+        "En septembre 2026, Adobe indique 83 % de revenu par visite supplémentaire pour le trafic IA par rapport au trafic hors IA."
+      ],
+      "limitations": [
+        "Périmètre limité au commerce de détail américain et aux visites avec clic.",
+        "Publication de première partie, sans mesure du sans-clic ni attribution causale à une citation."
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://www.reddit.com/user/spez/comments/1xiupm0/about_that_login_screen/",
+      "title": "About that login screen",
+      "publisher": "Reddit",
+      "date": "2026-10-29",
+      "date_status": "datecorroborated byTechCrunch Oct29, primaryrelative timestamp",
+      "level": "N1",
+      "editorial_status": "official_platform_post; cited with independent date corroboration",
+      "opened": true,
+      "claims": [
+        "Le dirigeant de Reddit annonce un test de parcours principalement connecté dans certains marchés hors États-Unis au cours des prochains mois.",
+        "Les motifs annoncés sont la personnalisation, la publicité et la licence intentionnelle de données.",
+        "La page d’accueil déconnectée, les visiteurs depuis la recherche et les contenus liés restent décrits comme importants."
+      ],
+      "limitations": [
+        "Le billet primaire affiche un horodatage relatif ; la date du 29 octobre est corroborée par la couverture TechCrunch.",
+        "Aucun calendrier de déploiement général ni effet futur sur les citations IA n’est établi.",
+        "Les conditions et limites du test annoncé restent à préciser."
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "title": "Supporting a shared AI training control for websites",
+      "publisher": "Google Search Central",
+      "date": "2026-10-30",
+      "date_status": "publication_date_explicitly_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "official_announcement; cited",
+      "opened": true,
+      "claims": [
+        "Google annonce son intention de prendre en charge un contrôle partagé de préférences d’entraînement IA dans robots.txt.",
+        "Les contrôles propres aux entreprises doivent rester disponibles.",
+        "Google vise une prise en charge avec d’autres fournisseurs en 2027."
+      ],
+      "limitations": [
+        "Intention annoncée et non déploiement.",
+        "Liste des participants et date précise de disponibilité non publiées."
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+      "title": "Machine-Readable Training Preference Signal",
+      "publisher": "IETF Datatracker",
+      "date": "2026-10-30",
+      "date_status": "draft_and_last_update_date_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "internet_draft; cited as non_normative_support",
+      "opened": true,
+      "claims": [
+        "Le texte décrit une préférence d’usage attachée à des chemins via des groupes robots.txt et un jeton de politique.",
+        "Il n’introduit pas de nouvelle directive ni de grammaire robots.txt.",
+        "Il est présenté comme un Internet-Draft sans approbation IETF."
+      ],
+      "limitations": [
+        "Travail susceptible d’être modifié, remplacé ou abandonné.",
+        "Ne démontre aucune interopérabilité effective ni contrôle d’accès opposable."
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+      "title": "Alerte CISA : correctifs prioritaires pour des services web",
+      "publisher": "CISA",
+      "date": "2026-10-26",
+      "date_status": "revision_date_explicitly_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "official_alert_follow_up; cited",
+      "opened": true,
+      "claims": [
+        "La mise à jour du 26 octobre indique l’ajout de deux vulnérabilités au catalogue des vulnérabilités connues comme exploitées.",
+        "CISA appelle à prioriser les systèmes exposés à Internet et à retirer du service ceux qui ne peuvent être corrigés immédiatement."
+      ],
+      "limitations": [
+        "Statut américain d’exploitation connue, sans mesure de prévalence dans l’éducation française.",
+        "La source ne permet pas d’identifier les technologies d’une école."
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+      "title": "Publication de sécurité WordPress",
+      "publisher": "WordPress.org",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_security_release; cited",
+      "opened": true,
+      "claims": [
+        "WordPress.org qualifie la publication de mise à jour de sécurité et recommande une application immédiate.",
+        "La publication mentionne des problèmes d’exécution de code durant une fenêtre de mise à jour, de script stocké, de confidentialité et de disponibilité."
+      ],
+      "limitations": [
+        "La source ne permet pas de savoir si une école utilise WordPress.",
+        "Aucune mesure d’exploitation active n’est fournie pour les problèmes décrits."
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.drupal.org/sa-contrib-2026-254",
+      "title": "Avis de sécurité Commerce Core",
+      "publisher": "Drupal.org",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_contributed_project_advisory; cited",
+      "opened": true,
+      "claims": [
+        "L’avis concerne Commerce Core, un projet Drupal contribué et non le cœur Drupal.",
+        "Drupal.org indique une exploitation active et demande l’application du correctif ainsi qu’un contrôle d’incohérences dans les commandes."
+      ],
+      "limitations": [
+        "Applicabilité conditionnée à la présence effective du composant.",
+        "L’avis ne quantifie pas l’ampleur de l’exploitation."
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.cnil.fr/fr/sanction-cookies-app-fnac",
+      "title": "Cookies et application mobile : sanctions de 7 millions d’euros à l’encontre des sociétés FNAC DARTY PARTICIPATIONS ET SERVICES et FNAC DIRECT",
+      "publisher": "CNIL",
+      "date": "2026-10-29",
+      "date_status": "publication_date_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "official_enforcement_announcement; cited",
+      "opened": true,
+      "claims": [
+        "La CNIL annonce une sanction totale de 7 millions d’euros concernant des règles applicables aux traceurs.",
+        "Le traceur concerné alimentait personnalisation et entraînement d’un algorithme à partir de données d’activité.",
+        "La CNIL indique que le consentement préalable était requis et annonce une injonction sous un mois avec astreinte de 10 000 euros par jour de retard."
+      ],
+      "limitations": [
+        "Décision individuelle, non transposable automatiquement à un autre service.",
+        "Montants et délais reproduits tels que publiés, sans recalcul."
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://blogs.opera.com/news/2026/10/webai-local-ai-for-the-web-now-in-opera/",
+      "title": "WebAI: Local AI for the web, now in Opera",
+      "publisher": "Opera",
+      "date": "2026-10-27",
+      "date_status": "publication_date_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "official_product_preview; cited with vendor limitations",
+      "opened": true,
+      "claims": [
+        "Opera annonce WebAI comme aperçu précoce de modèles exécutés localement dans le navigateur.",
+        "L’activation est volontaire et aucun modèle n’est téléchargé avant activation dans les réglages.",
+        "Opera indique une disponibilité limitée et une dépendance aux performances de l’appareil."
+      ],
+      "limitations": [
+        "Déclaration d’éditeur sur une préversion, sans preuve d’adoption ou d’interopérabilité.",
+        "Le traitement local n’exclut pas d’autres flux de données d’un site ou d’une extension."
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/",
+      "title": "Build Generative UI Apps with A2UI & CopilotKit Agents",
+      "publisher": "Google Developers Blog",
+      "date": "2026-10-29",
+      "date_status": "publication_date_displayed_on_page",
+      "level": "N1",
+      "editorial_status": "official_integration_documentation; cited",
+      "opened": true,
+      "claims": [
+        "Le guide décrit une interface agentique exprimée sous forme de données et rendue depuis un catalogue de composants de confiance.",
+        "Le flux est bidirectionnel et inclut la remontée des actions de la personne, notamment une confirmation.",
+        "Le guide ne publie ni déploiement client attesté ni métrique d’usage ou d’accessibilité."
+      ],
+      "limitations": [
+        "Documentation et démonstration de l’éditeur, pas une étude indépendante.",
+        "Aucune preuve de résultat pour des candidats ou pour une école."
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
+      "title": "Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents",
+      "publisher": "GitHub",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "platform_methodological_report; cited with limitations",
+      "opened": true,
+      "claims": [
+        "GitHub indique que plus de 40 % des pull requests de septembre 2026 ont commencé par un premier jet d’agent, contre 17 % en mars.",
+        "GitHub indique 110 millions de pull requests commencées par un agent en septembre.",
+        "Le rapport couvre du 1er octobre 2025 au 30 septembre 2026 et, sauf indication contraire, des dépôts publics et privés."
+      ],
+      "limitations": [
+        "Données et définitions propres à une seule plateforme.",
+        "Détection limitée aux agents détectables ; aucune causalité ni qualité ou sécurité supérieure du code démontrée."
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://www.nist.gov/blogs/cybersecurity-insights/design-tenets-agent-identity-management-systems",
+      "title": "Design Tenets for Agent Identity Management Systems",
+      "publisher": "National Institute of Standards and Technology",
+      "date": "2026-10-27",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_institutional_guidance; cited",
+      "opened": true,
+      "claims": [
+        "Le NIST propose dix principes initiaux pour l’identité, l’authentification et l’autorisation des agents.",
+        "Les principes incluent identité distincte, réduction des droits délégués, moindre privilège, autorisations courtes et révocables, séparation entre raisonnement et décision d’accès, et journalisation indépendante.",
+        "Le NIST demande une adaptation au risque, à l’environnement et aux données concernés."
+      ],
+      "limitations": [
+        "Orientation initiale, non norme obligatoire, certification ou position juridique AI Act.",
+        "Le NIST note que les standards et technologies ne permettent pas immédiatement de remplir tous les principes."
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+      "title": "Ads in AI Mode expand to new markets.",
+      "publisher": "Google Ads & Commerce Blog",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_advertising_announcement; cited",
+      "opened": true,
+      "claims": [
+        "Google annonce l’extension des annonces AI Mode à dix marchés : Australie, Canada, Inde, Kenya, Malaisie, Nouvelle-Zélande, Nigeria, Pakistan, Philippines et Singapour.",
+        "Brésil, Mexique et Royaume-Uni sont annoncés pour le quatrième trimestre 2026.",
+        "Google indique que les annonces seront libellées Sponsored et que les requêtes AI Mode sont en moyenne trois fois plus longues."
+      ],
+      "limitations": [
+        "Les résultats de clic cités par Google reposent sur des données internes américaines de courte période.",
+        "Les trois extensions du quatrième trimestre sont annoncées, non déployées au 2 novembre."
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://newsroom.pinterest.com/news/pinterest-programmatic-deals/",
+      "title": "Pinterest unlocks premium inventory for programmatic buyers, scaling high-intent discovery",
+      "publisher": "Pinterest Newsroom",
+      "date": "2026-10-26",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_supplier_announcement; cited with limitations",
+      "opened": true,
+      "claims": [
+        "Pinterest annonce la disponibilité générale de Programmatic Deals dans certains marchés mondiaux.",
+        "La publication indique une disponibilité en Amérique du Nord, Amérique du Sud et Asie-Pacifique.",
+        "Le dispositif propose des inventaires display et vidéo sélectionnés dans des flux d’achat programmatique."
+      ],
+      "limitations": [
+        "Annonce fournisseur, pas une étude indépendante de performance.",
+        "Les pays éligibles, prix et conditions ne sont pas listés de manière exhaustive.",
+        "Le cas Moroccanoil publié est de juin 2026, repose sur des données internes et n’est pas prédictif."
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united-states/",
+      "title": "Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components into the United States",
+      "publisher": "The White House",
+      "date": "2026-10-28",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "primary_presidential_proclamation; cited as bonus",
+      "opened": true,
+      "claims": [
+        "La proclamation traite les importations de robotique, machines industrielles et composants comme un enjeu de sécurité nationale.",
+        "Elle ordonne des négociations avec les partenaires jugés appropriés et prévoit un point d’étape dans les 180 jours.",
+        "Elle mentionne des options ultérieures, dont tarifs, quotas, redevances ou incitations, sans les fixer."
+      ],
+      "limitations": [
+        "La proclamation exprime constats et intentions, sans mesurer l’effet commercial futur.",
+        "Aucun tarif, quota, redevance, pays concerné ou calendrier de déploiement n’est fixé."
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
+      "publisher": "TechCrunch",
+      "date": "2026-10-29",
+      "date_status": "publication_date_displayed_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_press_coverage; date corroboration for primary post; cited with limitations",
+      "opened": true,
+      "claims": [
+        "TechCrunch date au 29 octobre l’annonce de Reddit sur une expérience principalement connectée.",
+        "L’article rapporte un test dans certains marchés hors États-Unis dans les prochains mois, sans annonce de déploiement général.",
+        "La couverture contextualise les motifs annoncés par la plateforme sans démontrer l’effet sur la recherche IA."
+      ],
+      "limitations": [
+        "Source N2 utilisée avec le billet primaire Reddit, jamais seule.",
+        "Elle ne démontre ni une baisse future de citations IA ni une prévision de trafic."
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000055022778",
+      "title": "Délibération SAN-2026-015 du 22 octobre 2026",
+      "publisher": "Légifrance / CNIL",
+      "date": "2026-10-29",
+      "date_status": "publication_date_displayed_on_page; decision_dated_2026-10-22",
+      "level": "N1",
+      "editorial_status": "primary_legal_decision; cited with CNIL announcement",
+      "opened": true,
+      "claims": [
+        "La délibération est une sanction publiée sur Légifrance le 29 octobre 2026 et datée du 22 octobre 2026.",
+        "La formation restreinte constate que les sociétés n’ont pas démontré la mise en œuvre des mesures évoquées pour être conformes à l’article 82.",
+        "Elle prononce une injonction assortie d’une astreinte de 10 000 euros par jour de retard et fixe un délai d’un mois à compter de la notification."
+      ],
+      "limitations": [
+        "Décision individuelle, non règle générale nouvelle applicable automatiquement à un autre service.",
+        "Les détails techniques factuels ne sont pas transposables automatiquement à une autre application."
+      ]
+    }
+  ],
+  "audit": {
+    "excluded": [
+      "Broadcastwell / State of GEO : métadonnée de page du 29 octobre, mais corps qualifié d’original research v1.0 de juillet et collecte du 18 au 23 juillet ; publication ambiguë hors fenêtre éditoriale, donc exclue.",
+      "Aucun préprint ni sujet MLOps ne répond aux critères de publication de la semaine.",
+      "Aucun cas d’école n’est retenu faute de KPI indépendant, vérifié et compatible avec la fenêtre."
+    ],
+    "limits": [
+      "Les annonces, aperçus et brouillons sont distingués des déploiements effectifs.",
+      "Les données de plateformes et fournisseurs ne sont ni recalculées ni transposées à une école.",
+      "La décision CNIL et la délibération Légifrance sont individuelles ; l’Internet-Draft IETF et l’orientation NIST ne sont pas des obligations juridiques générales.",
+      "L’annonce Reddit ne permet ni prévision de trafic ni conclusion causale sur les citations IA."
+    ],
+    "duplicates": [
+      "CMS : seul le nouveau statut CISA du 26 octobre est retenu en suivi ; le correctif initial déjà traité en S44 n’est pas réédité.",
+      "Google : distribution applicative, préférence d’entraînement et annonces AI Mode sont distinguées par surface et statut ; les sujets antérieurs ne sont pas répétés.",
+      "Mesure : aucune nouveauté GA4, Search Console ou UTM n’est recyclée ; Adobe est reclassé comme fait de mesure de clics IA dans le retail américain.",
+      "Les cas Chili’s et Currys, ainsi que les bonus robotiques antérieurs, restent en mémoire sans republication."
+    ]
+  }
+}
