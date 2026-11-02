@@ -32,3 +32,13 @@ Le contrôle réseau est enregistré dans `controle-liens.json`. Aucun lien n’
 ## Publication
 
 À ce stade, la prévisualisation est validée ; cela ne vaut pas publication publique. Le commit hebdomadaire et son push sur `main` doivent être vérifiés avant toute publication du checkpoint dans WebDev. Après déploiement, contrôler la semaine affichée, l’archive S44, les routes et les métadonnées sur le domaine existant. Si le push ou le build échoue, ne pas publier. Aucune nouvelle demande d’authentification n’est autorisée.
+
+## Résultat de livraison — 2 novembre, 06 h 27 CET
+
+Le commit hebdomadaire `d4b509aef9a67b58949ceb0bcb455ccd57f97ef9`, message `veille: semaine W45 — 2026-11-02`, a été poussé sur `main` ; l’égalité local/GitHub a été vérifiée. Le checkpoint WebDev `d4b509ae` correspond exactement à ce commit.
+
+L’ouverture du panneau WebDev avec la session sandbox existante redirige vers une page de connexion. Aucun outil direct de déploiement n’est disponible dans cette session. Conformément à la restriction utilisateur, aucune authentification n’a été demandée et aucun changement de navigateur personnel n’a été effectué. Aucun clic de déploiement n’a donc eu lieu : S45 reste prête à publier, pas publiée.
+
+Le navigateur public, avec paramètre de vérification non mis en cache, affiche encore S44 (26 octobre, 8 domaines, 41 sources) après rendu JavaScript. L’extracteur HTML renvoie une ancienne S43 : il ne sert pas ici à confirmer la semaine effectivement affichée. Les contrôles de S45 et de S44 archivée ont été réussis dans la prévisualisation, mais ne constituent pas une vérification de leur déploiement public.
+
+Le HTML de build S45 fournit le descriptif de partage de la nouvelle édition et ne contient aucune occurrence de l’identifiant institutionnel masqué. Le dossier de livraison contient également le journal final, le registre des sources et les résultats des contrôles de liens et d’interactions. La seule étape restante est la publication depuis WebDev, puis la vérification en ligne de S45 et de son archive S44.

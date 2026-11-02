@@ -106,5 +106,5 @@
 - [x] Séparer dates et statuts, citer le texte juridique, reclasser Adobe et écarter l’étude GEO ambiguë.
 - [x] Intégrer S45 à l’accueil, archiver S44 avec mesure et Bonus, anonymiser les textes publics.
 - [x] Valider 50 tests, TypeScript, build, références, modales, filtres et responsive sans nouveau composant ni CSS.
-- [ ] Créer le commit « veille: semaine W45 — 2026-11-02 », checkpoint et push main confirmé.
-- [ ] Publier le checkpoint via WebDev, puis vérifier S45 et l’archive S44 sur le domaine existant ; aucune demande d’authentification.
+- [x] Créer le commit « veille: semaine W45 — 2026-11-02 », checkpoint d4b509ae et push main confirmé (d4b509a).
+- [ ] Publier via WebDev, puis vérifier S45 et S44 archivée : panneau redirigé vers la connexion, aucune authentification demandée ; S44 encore affichée en public après rendu JavaScript.
