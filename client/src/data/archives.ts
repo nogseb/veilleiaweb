@@ -1,4 +1,5 @@
-import { veilleS45 as veilleData } from "./veille-s45";
+import { veilleS48 } from "./veille-s48";
+import { veilleS45 } from "./veille-s45";
 import { veilleS44 as s44Data } from "./veille-s44";
 import { veilleS43 as s43Data } from "./veille-s43";
 import { veilleS42 as s42Data } from "./veille-s42";
@@ -82,31 +83,35 @@ export interface ArchiveEdition {
   bonus?: ArchiveBonus;
 }
 
-// Semaine 45 — édition actuelle ; mesure intégrée aux neuf domaines
-const s45: ArchiveEdition = {
-  week: veilleData.week,
-  year: veilleData.year,
-  date: veilleData.publicationDate,
-  shareDescription: "shareDescription" in veilleData ? String(veilleData.shareDescription) : undefined,
-  signalMajeur: veilleData.signalMajeur.title,
-  domainsCount: veilleData.domainsCount,
-  domainsTotal: veilleData.domainsTotal,
-  sourcesCount: veilleData.sourcesCount,
-  criticalCount: veilleData.criticalCount,
-  importantCount: veilleData.importantCount,
-  actionsCount: veilleData.actionsCount,
-  emergingCount: veilleData.emergingCount,
-  syntheseExecutive: veilleData.syntheseExecutive,
-  statDominante: veilleData.statDominante,
-  domaines: veilleData.domaines,
-  measurement: veilleData.measurement,
-  caseStudiesCount: veilleData.caseStudiesCount,
-  actions: veilleData.actions,
-  signauxEmergents: veilleData.signauxEmergents,
-  tendancesPassees: veilleData.tendancesPassees,
-  dashboardDetails: veilleData.dashboardDetails,
-  bonus: veilleData.bonus,
-};
+function recentEdition(veilleData: typeof veilleS48 | typeof veilleS45): ArchiveEdition {
+  return {
+    week: veilleData.week,
+    year: veilleData.year,
+    date: veilleData.publicationDate,
+    shareDescription: veilleData.shareDescription,
+    signalMajeur: veilleData.signalMajeur.title,
+    domainsCount: veilleData.domainsCount,
+    domainsTotal: veilleData.domainsTotal,
+    sourcesCount: veilleData.sourcesCount,
+    criticalCount: veilleData.criticalCount,
+    importantCount: veilleData.importantCount,
+    actionsCount: veilleData.actionsCount,
+    emergingCount: veilleData.emergingCount,
+    syntheseExecutive: veilleData.syntheseExecutive,
+    statDominante: veilleData.statDominante,
+    domaines: veilleData.domaines,
+    measurement: veilleData.measurement,
+    caseStudiesCount: veilleData.caseStudiesCount,
+    actions: veilleData.actions,
+    signauxEmergents: veilleData.signauxEmergents,
+    tendancesPassees: veilleData.tendancesPassees,
+    dashboardDetails: veilleData.dashboardDetails,
+    bonus: veilleData.bonus,
+  };
+}
+
+const s48 = recentEdition(veilleS48);
+const s45 = recentEdition(veilleS45);
 
 // Semaine 44 — archive complète, mesure transversale et Bonus conservés
 const s44: ArchiveEdition = {
@@ -864,10 +869,10 @@ export function publicEdition(edition: ArchiveEdition): ArchiveEdition {
 }
 
 // Export de toutes les éditions (ordre chronologique inversé)
-const rawArchives: ArchiveEdition[] = [s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+const rawArchives: ArchiveEdition[] = [s48, s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 export const archives: ArchiveEdition[] = rawArchives.map(publicEdition);
 // Export de l'édition courante
-export const currentEdition: ArchiveEdition = archives[0] ?? publicEdition(s45);
+export const currentEdition: ArchiveEdition = archives[0] ?? publicEdition(s48);
 
 // Alias pour compatibilité
 export const allArchives = archives;

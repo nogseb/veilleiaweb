@@ -3,6 +3,7 @@ import { archives, currentEdition, getEditionByWeek, publicEdition } from "./arc
 import { veilleS43 } from "./veille-s43";
 import { veilleS44 } from "./veille-s44";
 import { veilleS45 } from "./veille-s45";
+import { veilleS48 } from "./veille-s48";
 
 function visibleStrings(value: unknown, key = ""): string[] {
   if (typeof value === "string") return key === "url" || key === "date" ? [] : [value];
@@ -11,16 +12,25 @@ function visibleStrings(value: unknown, key = ""): string[] {
   return [];
 }
 
-describe("Archives S45 et confidentialité publique", () => {
-  it("présente S45 complète, sans doublon de mesure transversale", () => {
-    expect(currentEdition.week).toBe(45);
+describe("Archives et confidentialité publique", () => {
+  it("présente S48 complète, sans doublon de mesure transversale", () => {
+    expect(currentEdition.week).toBe(48);
     expect(currentEdition.domainsCount).toBe(9);
     expect(currentEdition.domaines).toHaveLength(9);
-    expect(currentEdition.sourcesCount).toBe(veilleS45.sourcesCount);
+    expect(currentEdition.sourcesCount).toBe(veilleS48.sourcesCount);
     expect(currentEdition.measurement).toBeUndefined();
     expect(currentEdition.domaines.find(d => d.id === 6)?.category).toBe("MESURE");
-    expect(currentEdition.bonus?.source).toEqual(veilleS45.bonus.source);
-    expect(archives.slice(0, 3).map(e => e.week)).toEqual([45, 44, 43]);
+    expect(currentEdition.bonus?.source).toEqual(veilleS48.bonus.source);
+  });
+
+  it("archive S45 avec son descriptif, sa mesure et son Bonus", () => {
+    expect(archives.slice(0, 4).map(({ week }) => week)).toEqual([48, 45, 44, 43]);
+    const s45 = getEditionByWeek(45)!;
+    expect(s45.shareDescription).toBe(veilleS45.shareDescription);
+    expect(s45.sourcesCount).toBe(veilleS45.sourcesCount);
+    expect(s45.domaines.find(d => d.id === 6)?.category).toBe("MESURE");
+    expect(s45.measurement).toBeUndefined();
+    expect(s45.bonus?.source).toEqual(veilleS45.bonus.source);
   });
   it("archive S44 complète avec sa mesure transversale, son descriptif et son Bonus", () => {
     const s44 = getEditionByWeek(44)!;

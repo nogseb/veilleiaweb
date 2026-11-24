@@ -1,4 +1,8 @@
-# Web App Template (Static Frontend)
+# Veille IA & Web
+
+Dernière édition du dépôt · [S48 2026, 24 novembre](content/2026-W48/rapport.md). Consultez aussi le [registre des sources](content/2026-W48/sources.json), le [journal de vérification](content/2026-W48/journal.md) et l’[édition S45](content/2026-W45/rapport.md).
+
+## Web App Template (Static Frontend)
 
 Pure React 19 + Tailwind 4 template with shadcn/ui baked in. **Use this README as the checklist for shipping static experiences.**
 
