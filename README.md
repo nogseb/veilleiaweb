@@ -1,6 +1,6 @@
 # Veille IA & Web
 
-Dernière édition du dépôt · [S48 2026, 24 novembre](content/2026-W48/rapport.md). Consultez aussi le [registre des sources](content/2026-W48/sources.json), le [journal de vérification](content/2026-W48/journal.md) et l’[édition S45](content/2026-W45/rapport.md).
+Dernière édition du dépôt · [S48 2026, 24 novembre](content/2026-W48/rapport.md) (consolidée ChatGPT, Claude et Manus). Registre : [sources](content/2026-W48/sources.json) · [journal](content/2026-W48/journal.md). Archives récentes : [S47](content/2026-W47/rapport.md) · [S46](content/2026-W46/rapport.md) · [S45](content/2026-W45/rapport.md).
 
 ## Web App Template (Static Frontend)
 

@@ -2,337 +2,564 @@
   "week": 48,
   "year": 2026,
   "publicationDate": "2026-11-24",
-  "windowStart": "2026-11-17",
+  "windowStart": "2026-11-16",
   "windowEnd": "2026-11-24",
-  "timeZone": "Europe/Paris",
   "domainsCount": 9,
-  "sourcesCount": 25,
-  "caseStudiesCount": 0,
+  "domainsTotal": 9,
+  "sourcesCount": 27,
   "sources": [
     {
       "id": 1,
-      "title": "Temporary threads are now available in AI Mode in Search",
+      "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "title": "Personal Intelligence : nouvelles applications connectées",
       "publisher": "Google",
-      "date": "2026-11-17",
-      "date_status": "publication",
-      "url": "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/",
+      "date": "2026-11-23",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "déploiement progressif",
-      "motif": "Annonce le périmètre et l’effet sur l’historique et la personnalisation",
-      "domain": 1,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Wallet commence son déploiement dans AI Mode, en lecture seule.",
+        "Drive et le partage de contexte avec Gemini sont annoncés pour les prochaines semaines ; les connexions sont facultatives."
+      ],
+      "limitations": [
+        "Annonce fournisseur ; pays et langues non exhaustifs.",
+        "Icône de contexte annoncée à venir ; aucun résultat de visibilité ou de recrutement démontré."
+      ]
     },
     {
       "id": 2,
-      "title": "Tailored Google Search with Personal Intelligence apps",
+      "url": "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/",
+      "title": "Fils temporaires dans AI Mode",
       "publisher": "Google",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "date": "2026-11-17",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "déploiement progressif et annonce",
-      "motif": "Distingue le début d’ouverture de Wallet du calendrier de Drive et Gemini",
-      "domain": 1,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Déploiement mondial sur ordinateur et navigateurs mobiles dans les langues AI Mode.",
+        "Session détachée du compte, sans préférences passées, sans historique ni personnalisation future."
+      ],
+      "limitations": [
+        "Ne garantit ni réponse stable ni confidentialité absolue de tous les traitements.",
+        "Annonce de l’éditeur, sans test indépendant."
+      ]
     },
     {
       "id": 3,
-      "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
-      "publisher": "TechCrunch",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+      "url": "https://www.seroundtable.com/google-november-2026-core-update-done-42571.html",
+      "title": "Fin de la mise à jour principale de novembre rapportée",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-24",
+      "date_status": "publication_date_verified_on_page",
       "level": "N2",
-      "status": "corroboration",
-      "motif": "Article lu sur les connexions facultatives. Le calendrier est repris de la source primaire",
-      "domain": 1,
-      "opened": true
+      "editorial_status": "SUIVI — clôture rapportée avec désaccord documentaire",
+      "opened": true,
+      "claims": [
+        "Le média rapporte une clôture le 24 novembre à 9 h 03, heure de New York."
+      ],
+      "limitations": [
+        "L’incident primaire rouvert ne restitue que le démarrage du 10 novembre ; clôture attribuée à N2 et non confirmée directement.",
+        "Aucun effet causal sur le trafic d’une école ne peut être inféré."
+      ]
     },
     {
       "id": 4,
-      "title": "AI citations to social media & UGC grew 52% on Google’s AI platforms, fell 44% on ChatGPT",
-      "publisher": "Semrush",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://www.semrush.com/blog/ai-citations-social-media-ugc/",
+      "url": "https://status.search.google.com/incidents/AXrqxXXdtSjj3672ux7X",
+      "title": "Préavis de la mise à jour principale de décembre",
+      "publisher": "Google Search Status Dashboard",
+      "date": "2026-11-24",
+      "date_status": "announcement_date_in_primary_incident; US/Pacific_display",
       "level": "N1",
-      "status": "étude d’éditeur",
-      "motif": "Source du chiffre, période, périmètre américain et méthode. Semrush commercialise des outils de visibilité IA",
-      "domain": 2,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Préannonce pour décembre, sans jour de lancement, pour toutes les langues et lieux de Search.",
+        "L’annonce vise les questions longues et complexes et les résultats personnalisés pour les personnes ayant activé cette option."
+      ],
+      "limitations": [
+        "Préavis et non déploiement ; l’étiquette d’incident actif ne prouve pas un lancement.",
+        "Le tableau primaire affiche 7 h 03 US/Pacific ; la couverture rapporte 10 h 20, heure de New York."
+      ]
     },
     {
       "id": 5,
-      "title": "Google AI cites social media 52% more, ChatGPT 44% less: Study",
-      "publisher": "Search Engine Land",
+      "url": "https://www.semrush.com/blog/ai-citations-social-media-ugc/",
+      "title": "Citations IA des plateformes sociales et communautaires",
+      "publisher": "Semrush",
       "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://searchengineland.com/google-ai-cites-social-media-more-chatgpt-less-study-502787",
-      "level": "N2",
-      "status": "analyse spécialisée",
-      "motif": "Explicite la distinction entre volumes de citations, part des citations et visites",
-      "domain": 2,
-      "opened": true
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "ACTUALITÉ — étude fournisseur avec limites",
+      "opened": true,
+      "claims": [
+        "18 domaines, requêtes américaines, janvier–août 2026.",
+        "Semrush publie +52 % de citations agrégées sur ses surfaces Google et −44 % dans ChatGPT."
+      ],
+      "limitations": [
+        "Étude d’un éditeur commercial de mesure SEO/GEO.",
+        "Parts limitées au panel ; pas de France, d’éducation, de causalité ou de taux de clic.",
+        "Les produits utilisés pour citations et visites référées diffèrent."
+      ]
     },
     {
       "id": 6,
-      "title": "RDF 1.2 Schema",
-      "publisher": "W3C",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://www.w3.org/TR/2026/WD-rdf12-schema-20261123/",
-      "level": "N1",
-      "status": "brouillon de travail",
-      "motif": "Établit le statut et le périmètre du vocabulaire de modélisation RDF",
-      "domain": 3,
-      "opened": true
+      "url": "https://www.seroundtable.com/google-pushing-links-in-ai-overviews-down-42600.html",
+      "title": "Position du premier lien dans AI Overviews : relevé Peec AI",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-24",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Selon Peec AI, la part plaçant le premier lien dans le premier tiers passe de 76,8 % le 21 septembre à 51,8 % le 20 novembre."
+      ],
+      "limitations": [
+        "Taille, sélection et couverture de l’échantillon absentes de la page.",
+        "Observation relayée, sans confirmation Google ni preuve de perte de clics.",
+        "Peec AI commercialise de la mesure de visibilité IA."
+      ]
     },
     {
       "id": 7,
-      "title": "RDF 1.2 Primer",
-      "publisher": "W3C",
-      "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://www.w3.org/TR/2026/DNOTE-rdf12-primer-20261119/",
+      "url": "https://developers.google.com/crawling/docs/changelog",
+      "title": "Documentation de crawlers et fetchers existants",
+      "publisher": "Google Crawling",
+      "date": "2026-11-23",
+      "date_status": "dated_changelog_entry_and_last_update",
       "level": "N1",
-      "status": "projet de note informative",
-      "motif": "Présente des exemples de représentation des entités et relations dans le cadre RDF",
-      "domain": 3,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Six crawlers particuliers et six fetchers déclenchés par utilisateur sont documentés ; ils ne sont pas nouveaux.",
+        "APIs-Google est déplacé vers les fetchers et sa chaîne documentée est corrigée.",
+        "Ses requêtes de webhook ignorent robots.txt selon Google."
+      ],
+      "limitations": [
+        "Documenter des agents ne justifie pas de les autoriser globalement.",
+        "Comportement d’APIs-Google non généralisable aux autres agents ; aucun effet SEO mesuré."
+      ]
     },
     {
       "id": 8,
-      "title": "Drupal core — avis de sécurité hautement critique",
+      "url": "https://www.drupal.org/sa-core-2026-017",
+      "title": "Avis SA-CORE-2026-017 : installateur et exploitation signalée",
       "publisher": "Drupal Security Team",
       "date": "2026-11-18",
-      "date_status": "publication",
-      "url": "https://www.drupal.org/sa-core-2026-017",
+      "date_status": "publication_date_on_page; revision_2026-11-21T16:14:36Z_verified_in_same_page_HTML",
       "level": "N1",
-      "status": "correctif publié et exploitation signalée",
-      "motif": "Source du score éditeur et du signalement d’exploitation à partir du 19 novembre",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ — avis révisé",
+      "opened": true,
+      "claims": [
+        "Sous conditions, l’installateur permet une prise de contrôle ou une exécution de code sans authentification.",
+        "L’avis courant signale une exploitation sur des sites depuis le 19 novembre à 19 h UTC.",
+        "Il publie un score de 20 sur 25, « hautement critique », selon la grille Drupal."
+      ],
+      "limitations": [
+        "Applicabilité à vérifier en privé ; aucune exposition d’une école établie.",
+        "Score de gravité, pas nombre de victimes ; aucun score initial reconstruit.",
+        "Révision du 21 novembre confirmée dans le HTML article:modified_time, non affichée par l’extraction."
+      ]
     },
     {
       "id": 9,
-      "title": "WordPress — publication d’une mise à jour de sécurité",
+      "url": "https://wordpress.org/news/2026/11/wordpress-7-1-5-release/",
+      "title": "Publication de sécurité WordPress du 18 novembre",
       "publisher": "WordPress.org",
       "date": "2026-11-18",
-      "date_status": "publication",
-      "url": "https://wordpress.org/news/2026/11/wordpress-7-1-5-release/",
+      "date_status": "publication_2026-11-18; updated_2026-11-20",
       "level": "N1",
-      "status": "correctif publié",
-      "motif": "Annonce la disponibilité du correctif et la recommandation de mise à jour",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Publication de correctifs de sécurité ; application immédiate recommandée.",
+        "Plusieurs risques sont décrits, dont exécution de code, confidentialité et disponibilité."
+      ],
+      "limitations": [
+        "Le texte primaire ne totalise pas explicitement 18 failles : aucun total dérivé publié.",
+        "Aucune présence, mise à jour ou exploitation attribuée à une école."
+      ]
     },
     {
       "id": 10,
-      "title": "Archives des publications PHP 2026 — correctifs de novembre",
-      "publisher": "PHP.net",
+      "url": "https://www.php.net/",
+      "title": "Annonces officielles de sécurité des 18 et 19 novembre",
+      "publisher": "PHP",
       "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://www.php.net/archive/2026.php#2026-11-19-4",
+      "date_status": "dated_entries_2026-11-18_and_2026-11-19_on_index",
       "level": "N1",
-      "status": "correctifs publiés",
-      "motif": "Entrées du 19 novembre pour les branches maintenues, distinctes du lancement d’une branche majeure le même jour",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Préannonce critique le 18 novembre ; correctifs disponibles le 19 novembre.",
+        "Le risque critique dépend de configurations non standards ou peu courantes selon PHP."
+      ],
+      "limitations": [
+        "Page d’accueil évolutive ; seules les annonces datées des 18–19 novembre sont utilisées.",
+        "Aucun total de failles ni exploitation généralisée établi ici.",
+        "Correctif de sécurité et migration majeure sont des décisions distinctes."
+      ]
     },
     {
       "id": 11,
-      "title": "Multiples vulnérabilités dans PHP",
+      "url": "https://cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-049/",
+      "title": "Bulletin d’actualité CERTFR-2026-ACT-049",
       "publisher": "CERT-FR",
-      "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1580/",
+      "date": "2026-11-23",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "avis de sécurité",
-      "motif": "Identifie les branches couvertes par les correctifs PHP",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Bulletin daté du 23 novembre couvrant le 16 au 22 novembre.",
+        "Il récapitule les avis de sécurité et renvoie vers les éditeurs."
+      ],
+      "limitations": [
+        "L’absence d’information d’exploitation dans une ligne n’est pas une garantie d’absence d’attaque.",
+        "Le bulletin ne décrit pas les composants d’une école."
+      ]
     },
     {
       "id": 12,
-      "title": "Multiples vulnérabilités dans Drupal",
+      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1580/",
+      "title": "Avis CERTFR-2026-AVI-1580 — PHP",
       "publisher": "CERT-FR",
       "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1579/",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "avis de sécurité",
-      "motif": "Recoupe les publications de sécurité du 18 novembre",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Avis de vulnérabilités PHP avec renvoi aux bulletins de l’éditeur pour la solution."
+      ],
+      "limitations": [
+        "Première et dernière version datées du 19 novembre.",
+        "Aucune exposition institutionnelle déduite."
+      ]
     },
     {
       "id": 13,
-      "title": "Multiples vulnérabilités dans WordPress",
+      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1579/",
+      "title": "Avis CERTFR-2026-AVI-1579 — WordPress",
       "publisher": "CERT-FR",
       "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1574/",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "avis de sécurité",
-      "motif": "Recoupe la mise à jour du 18 novembre et renvoie au bulletin de l’éditeur",
-      "domain": 4,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Avis de vulnérabilités WordPress avec renvoi à l’éditeur pour les correctifs."
+      ],
+      "limitations": [
+        "Ne constitue pas une mesure d’incidents ni une preuve d’installation."
+      ]
     },
     {
       "id": 14,
-      "title": "Pixels de suivi dans les courriels : la CNIL sollicite un premier retour d’expérience sur sa recommandation",
-      "publisher": "CNIL",
-      "date": "2026-11-20",
-      "date_status": "publication",
-      "url": "https://www.cnil.fr/fr/recommandation-pixels-retour-dexperience",
+      "url": "https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1574/",
+      "title": "Avis CERTFR-2026-AVI-1574 — Drupal",
+      "publisher": "CERT-FR",
+      "date": "2026-11-19",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "appel à contributions",
-      "motif": "Source de l’objet de l’appel et de l’échéance du 3 décembre",
-      "domain": 5,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Avis de vulnérabilités Drupal avec renvoi aux avis de sécurité officiels."
+      ],
+      "limitations": [
+        "Les informations d’exploitation actualisées sont prises dans l’avis Drupal révisé.",
+        "Aucune architecture d’une école présumée."
+      ]
     },
     {
       "id": 15,
-      "title": "Recommandation relative aux pixels de suivi dans les courriers électroniques",
+      "url": "https://www.cnil.fr/fr/recommandation-pixels-retour-dexperience",
+      "title": "Pixels de courriel : premier retour d’expérience",
       "publisher": "CNIL",
-      "date": "2026-04-14",
-      "date_status": "publication de la recommandation de référence",
-      "url": "https://www.cnil.fr/sites/default/files/2026-04/recommandation-pixels_de_suivi.pdf",
+      "date": "2026-11-20",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "texte de référence hors fenêtre",
-      "motif": "Texte primaire lu, cité en contexte pour qualifier l’appel du 20 novembre",
-      "domain": 5,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Appel aux entreprises privées, expéditeurs et fournisseurs, jusqu’au 3 décembre 2026.",
+        "La recommandation d’origine a été publiée le 14 avril 2026 ; le bilan concerne coûts, mesure, personnalisation et alternatives."
+      ],
+      "limitations": [
+        "Le 3 décembre est une clôture de contributions, pas une nouvelle échéance de conformité.",
+        "Aucun nouveau délai de trois mois ne commence le 20 novembre.",
+        "Analyse indicative ; aucune pratique ou conformité d’une école présumée."
+      ]
     },
     {
       "id": 16,
-      "title": "Matomo — notes de la mise à jour majeure de novembre",
-      "publisher": "Matomo",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://matomo.org/changelog/matomo-6-0-0/",
+      "url": "https://developers.google.com/search/blog/2026/11/search-analytics-api-update",
+      "title": "Nouveaux filtres et rapports Search Analytics API",
+      "publisher": "Google Search Central",
+      "date": "2026-11-16",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "version stable publiée",
-      "motif": "Notes techniques de l’éditeur sur les changements de mesure",
-      "domain": 6,
-      "opened": true
+      "editorial_status": "RATTRAPAGE",
+      "opened": true,
+      "claims": [
+        "brandedClassification distingue marque et hors marque pour les propriétés éligibles.",
+        "webMultimodal couvre Lens, Circle to Search et images envoyées dans Search.",
+        "filterLists permet plusieurs pays ou appareils dans une requête."
+      ],
+      "limitations": [
+        "Rattrapage du 16 novembre, non traité dans la collecte mesure S47.",
+        "Réponse de classification vide sur les propriétés non éligibles ; pas de diagnostic automatique d’absence de trafic.",
+        "Aucun taux de clic propre aux réponses IA ni résultat d’admission démontré."
+      ]
     },
     {
       "id": 17,
-      "title": "Matomo — changements de calcul et dates d’application",
-      "publisher": "Matomo",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://fr.matomo.org/blog/2026/11/matomo-6-new-version-numbers-trust-faster/",
-      "level": "N1",
-      "status": "documentation de migration",
-      "motif": "Retenu pour le tableau technique distinguant la date Cloud et la migration auto-hébergée",
-      "domain": 6,
-      "opened": true
+      "url": "https://www.seroundtable.com/google-ads-book-appointment-conversion-goal-42599.html",
+      "title": "Documentation Book Appointment actualisée",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-24",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Le média relève une mise à jour importante du document Partner bookings vers Book Appointment.",
+        "Le document couvre réservations partenaires, site et appels depuis les annonces."
+      ],
+      "limitations": [
+        "Ce n’est pas une preuve de lancement produit le 24 novembre.",
+        "Pays et calendrier exacts non établis par le compte rendu."
+      ]
     },
     {
       "id": 18,
-      "title": "Automate Mac tasks with Gemini computer use",
-      "publisher": "Google",
-      "date": "2026-11-19",
-      "date_status": "publication",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+      "url": "https://support.google.com/google-ads/answer/17199940?hl=en",
+      "title": "About the Book Appointment conversion goal",
+      "publisher": "Google Ads",
+      "date": "2026-11-24",
+      "date_status": "undated_documentation; dated_N2_observation_2026-11-24",
       "level": "N1",
-      "status": "déploiement progressif limité",
-      "motif": "Décrit l’aperçu en direct, la pause, les autorisations et les conditions de disponibilité",
-      "domain": 7,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Les réservations partenaires nécessitent un compte éligible et un partenaire compatible.",
+        "Les réservations sur site sont suivies à la confirmation ; un appel peut compter par seuil de durée.",
+        "L’objectif n’est pas automatiquement appliqué à chaque campagne hors réglage par défaut du compte."
+      ],
+      "limitations": [
+        "Date d’ancrage du fait documentaire fournie par N2 ; page primaire non datée.",
+        "Une durée d’appel ne prouve pas un rendez-vous confirmé ni honoré.",
+        "Annonce fournisseur, sans preuve d’efficacité pour l’éducation."
+      ]
     },
     {
       "id": 19,
-      "title": "IA et éducation : une résolution mondiale pour la protection des données",
-      "publisher": "CNIL",
-      "date": "2026-11-20",
-      "date_status": "publication",
-      "url": "https://www.cnil.fr/fr/gpa-ia-education",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+      "title": "Gemini : computer use sur Mac",
+      "publisher": "Google",
+      "date": "2026-11-19",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "présentation d’une résolution adoptée",
-      "motif": "Date publique et synthèse des onze principes",
-      "domain": 8,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Déploiement en anglais aux États-Unis sur comptes personnels majeurs et abonnements éligibles.",
+        "Fenêtre isolée, aperçu en direct, applications autorisées par l’utilisateur, pause et confirmation des actions clés."
+      ],
+      "limitations": [
+        "Pas d’ouverture française ou de disponibilité pour les comptes professionnels établie.",
+        "Fonction limitée, sans résultat indépendant d’accessibilité, de sécurité ou de fiabilité."
+      ]
     },
     {
       "id": 20,
-      "title": "Résolution sur l’intelligence artificielle dans le secteur de l’éducation",
-      "publisher": "Global Privacy Assembly",
+      "url": "https://www.cnil.fr/fr/gpa-ia-education",
+      "title": "Résolution mondiale sur l’IA dans l’éducation",
+      "publisher": "CNIL",
       "date": "2026-11-20",
-      "date_status": "mise à disposition attestée au plus tard à cette date par la CNIL",
-      "url": "https://globalprivacyassembly.com/wp-content/uploads/2026/11/DEWG-GPA-Resolution-sur-lAI-dans-le-secteur-de-leducation.20261118-FRA_.pdf",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "texte adopté",
-      "motif": "Texte primaire en français accessible au plus tard à la date de la présentation de la CNIL",
-      "domain": 8,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "La CNIL présente la résolution de la Global Privacy Assembly et ses principes de protection des données."
+      ],
+      "limitations": [
+        "Orientation institutionnelle, pas nouvelle loi générale.",
+        "Le périmètre exact des mineurs est vérifié dans le texte primaire lié."
+      ]
     },
     {
       "id": 21,
-      "title": "Introducing Claude Ship",
-      "publisher": "Anthropic",
-      "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "url": "https://globalprivacyassembly.com/wp-content/uploads/2026/11/DEWG-GPA-Resolution-sur-lAI-dans-le-secteur-de-leducation.20261118-FRA_.pdf",
+      "title": "Résolution sur l’IA dans le secteur de l’éducation — texte français",
+      "publisher": "Global Privacy Assembly",
+      "date": "2026-11-20",
+      "date_status": "November_2026_document; CNIL_publication_anchor_2026-11-20",
       "level": "N1",
-      "status": "disponibilité générale et bêtas",
-      "motif": "Détaille le statut des fonctions et les contrôles d’approbation",
-      "domain": 8,
-      "opened": true
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "La note 1 page 2 vise les moins de 18 ans inscrits aux deux premiers niveaux de l’éducation formelle.",
+        "Le texte distingue les responsabilités, la limitation des finalités et les garanties de traitement des données des enfants."
+      ],
+      "limitations": [
+        "Texte de novembre sans jour de publication affiché ; date de présentation CNIL du 20 novembre utilisée comme ancrage.",
+        "Pas d’obligation nouvelle automatiquement applicable à l’enseignement supérieur ni de prévision des décisions de la CNIL."
+      ]
     },
     {
       "id": 22,
-      "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
-      "publisher": "TechCrunch",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "title": "Introducing Claude Ship",
+      "publisher": "Anthropic",
       "date": "2026-11-23",
-      "date_status": "publication",
-      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
-      "level": "N2",
-      "status": "corroboration",
-      "motif": "Éclairage sur la délégation de l’approbation et le périmètre commercial",
-      "domain": 8,
-      "opened": true
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "ACTUALITÉ",
+      "opened": true,
+      "claims": [
+        "Code Review est généralement disponible ; PR Steward et Claude Approvals sont en bêta.",
+        "PR Steward est conçu pour ne pas approuver ni fusionner ; Approvals applique une politique de dépôt.",
+        "Team et Enterprise sur GitHub ; démarrage en observation recommandé."
+      ],
+      "limitations": [
+        "L’éditeur avertit que des bugs et vulnérabilités peuvent être manqués.",
+        "Indisponible avec conservation nulle des données, configuration de santé ou clés de chiffrement gérées par client.",
+        "Coûts variables de tokens et annonces fournisseur, pas preuve indépendante de sécurité."
+      ]
     },
     {
       "id": 23,
-      "title": "Google Marketing Platform Drop — novembre",
-      "publisher": "Google Marketing Platform",
-      "date": "2026-11-18",
-      "date_status": "publication",
-      "url": "https://blog.google/products/marketingplatform/360/google-marketing-platform-drop-november/",
-      "level": "N1",
-      "status": "disponibilité annoncée",
-      "motif": "Source produit sur le canal d’achat Pinterest et la limite géographique Spotify",
-      "domain": 9,
-      "opened": true
+      "url": "https://searchengineland.com/google-ads-clarifies-how-url-exclusions-work-in-ai-max-for-search-campaigns-502192",
+      "title": "Exclusions d’URL AI Max : clarification des règles",
+      "publisher": "Search Engine Land",
+      "date": "2026-11-16",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "RATTRAPAGE",
+      "opened": true,
+      "claims": [
+        "La publication datée rapporte les trois méthodes d’exclusion et la correspondance par tokens complets.",
+        "Les underscores ne sont pas des séparateurs ; les espaces agissent comme ET ; anciennes règles DSA en lecture seule après migration."
+      ],
+      "limitations": [
+        "Rattrapage réservé à S48 par S47.",
+        "Search Engine Land appartient à Semrush ; publication rédactionnelle, pas étude indépendante."
+      ]
     },
     {
       "id": 24,
-      "title": "SOFA Week 2026 — programme de la semaine",
-      "publisher": "SOFA Consortium",
-      "date": "2026-11-23",
-      "date_status": "date d’ouverture au programme",
-      "url": "https://www.sofa-framework.org/sofa-events/sofa-week-2026/",
+      "url": "https://support.google.com/google-ads/answer/18788711",
+      "title": "About URL exclusions in AI Max for Search campaigns",
+      "publisher": "Google Ads",
+      "date": "2026-11-16",
+      "date_status": "undated_documentation; dated_N2_observation_2026-11-16",
       "level": "N1",
-      "status": "programme d’événement",
-      "motif": "Programme de l’organisateur. La date est celle de l’ouverture prévue",
-      "domain": 10,
-      "opened": true
+      "editorial_status": "RATTRAPAGE — documentation d’appui",
+      "opened": true,
+      "claims": [
+        "Exclusions par URL exacte, libellé de flux et règle URL Contains.",
+        "Text customization et Final URL expansion doivent être activés pour utiliser ces exclusions.",
+        "Correspondance par tokens complets ; migration des anciennes règles en lecture seule."
+      ],
+      "limitations": [
+        "Documentation primaire non datée ; l’article N2 du 16 novembre date la clarification.",
+        "Ne justifie pas l’activation des options ni une migration à lui seul."
+      ]
     },
     {
       "id": 25,
-      "title": "SOFA Week 2026 — annonce de l’événement",
-      "publisher": "CRIStAL, Université de Lille",
-      "date": "2026-11-23",
-      "date_status": "date d’ouverture au programme",
-      "url": "https://www.cristal.univ-lille.fr/actualites/2026-11-23-1192/?force_lang=true",
+      "url": "https://blog.google/products/marketingplatform/360/google-marketing-platform-drop-november/",
+      "title": "Inventaires Pinterest et audiences Google sur Spotify",
+      "publisher": "Google Marketing Platform",
+      "date": "2026-11-18",
+      "date_status": "publication_date_verified_on_page",
       "level": "N1",
-      "status": "programme d’événement",
-      "motif": "Recoupe le lieu et les dates. La date est celle de l’ouverture prévue",
-      "domain": 10,
-      "opened": true
+      "editorial_status": "SUIVI",
+      "opened": true,
+      "claims": [
+        "Pinterest devient accessible dans Display & Video 360 selon l’annonce.",
+        "Google Audiences sur Spotify est annoncé pour les acheteurs des États-Unis et de l’Inde."
+      ],
+      "limitations": [
+        "Suivi du fait Pinterest S45 : nouvelle voie d’achat, non nouveau lancement général.",
+        "Les limites États-Unis/Inde s’appliquent à Spotify, pas automatiquement à Pinterest.",
+        "Cas Ford et chiffres fournisseur exclus ; aucune performance attendue pour une école."
+      ]
+    },
+    {
+      "id": 26,
+      "url": "https://www.sofa-framework.org/sofa-events/sofa-week-2026/",
+      "title": "SOFA Week : programme 2026",
+      "publisher": "Consortium SOFA",
+      "date": "2026-11-23",
+      "date_status": "event_start_date; publication_date_not_displayed",
+      "level": "N1",
+      "editorial_status": "BONUS — événement programmé",
+      "opened": true,
+      "claims": [
+        "Événement programmé du 23 au 27 novembre dans la métropole lilloise.",
+        "Formations prévues le 23 et symposium le 24 novembre."
+      ],
+      "limitations": [
+        "Date d’événement, pas date de publication de la page.",
+        "Programme annoncé, aucun compte rendu ou résultat ; prix, quotas et liens anciens non repris."
+      ]
+    },
+    {
+      "id": 27,
+      "url": "https://www.cristal.univ-lille.fr/actualites/2026-11-23-1192/?force_lang=true",
+      "title": "SOFA Week : annonce CRIStAL",
+      "publisher": "CRIStAL / Université de Lille",
+      "date": "2026-11-23",
+      "date_status": "event_date_on_page; publication_date_not_established",
+      "level": "N1",
+      "editorial_status": "BONUS — événement programmé",
+      "opened": true,
+      "claims": [
+        "Annonce institutionnelle du programme de la SOFA Week et de ses dates du 23 au 27 novembre."
+      ],
+      "limitations": [
+        "Date d’événement ; pas de preuve de tenue ou de résultat pédagogique.",
+        "L’organisateur et le laboratoire impliqué ne sont pas des validations indépendantes."
+      ]
     }
-  ]
+  ],
+  "maskedDomains": [],
+  "audit": {
+    "excluded": [
+      "Préannonce Drupal PSA-2026-11-16 ouverte : titre et URL suggèrent le 16, corps daté du 15 novembre ; exclue du registre, antérieure à la fenêtre et datation contradictoire. https://www.drupal.org/psa-2026-11-16",
+      "Historique et incident Google de novembre ouverts : ils ne restituent que le démarrage ; non cités comme preuve de clôture. https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history ; https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc",
+      "Préavis décembre SER ouvert mais redondant avec incident primaire retenu ; pas de déploiement établi. https://www.seroundtable.com/google-december-2026-core-update-42615.html",
+      "Index Drupal ouvert pour contrôle obligatoire ; les faits finaux s’appuient sur l’avis individuel. https://www.drupal.org/security",
+      "Matomo : page primaire du 23 novembre ouverte et changement de méthode vérifié ; écarté par priorité éditoriale au couple API/rendez-vous, sans présumer un outil de mesure utilisé par une école. https://fr.matomo.org/blog/2026/11/matomo-6-new-version-numbers-trust-faster/",
+      "RDF W3C et projet IETF non rouverts : aucun effet daté de référencement ou d’accès qualifié ; pas de source publique retenue.",
+      "GPT chat et modèles supplémentaires non retenus : choix des deux sujets par domaine, pas de preuve finale nouvelle nécessaire ; annonces non rouverts non citées.",
+      "Propos Elizabeth Reid et prévisions Black Friday non retenus : deux sujets GEO et marketing déjà vérifiés ; pas de projection de conversion scolaire.",
+      "Biscoff/Effie : note historique de sélection sans résultats chiffrés/méthode qualifiés ; page non rouverte, pas de source finale. Ford : page Google lue, chiffres fournisseur sans validation indépendante. Currys reste mémoire S43.",
+      "Couverture TechCrunch Claude Ship et SER robots ouvertes, mais redondantes avec primaires retenus ; pas comptées. https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/ ; https://www.seroundtable.com/googlebots-additions-42604.html"
+    ],
+    "limits": [
+      "Consolidation vérifiée le 25 novembre ; publication éditoriale et faits arrêtés au 24 novembre 2026.",
+      "Fenêtre principale 17–24 novembre ; windowStart 16 novembre autorise les rattrapages explicitement identifiés API et AI Max. S47 couvre déjà le 16 : ce jour n’est pas déclaré globalement absent de l’historique.",
+      "Toutes les URL retenues ont été ouvertes et lues par le consolidateur. Certaines dates de documentation et du bonus sont ancrages de fait ou d’événement, non dates de publication.",
+      "Fin de mise à jour Google attribuée à N2 : primaire non concordant. Aucun rappel de comparaison au 1er décembre imposé.",
+      "Annonce produit, déploiement limité, bêta, orientation et événement programmé restent séparés ; aucune conformité, exposition ou performance d’une école inférée.",
+      "Aucun chiffre dérivé : pas de délai J+1, ni total WordPress reconstitué, ni écart en points calculé depuis Peec AI.",
+      "Les anciennes collectes comportent des limites d’accès et budget ; les six masquages de la collecte limitée ne prouvent pas une absence d’actualité.",
+      "Rapports S46/S47 absents au premier contrôle puis disponibles et intégralement lus à la clôture ; leurs vingt fichiers recherche avaient été lus. Aucun doublon supplémentaire identifié.",
+      "Contrôles finaux : neuf tests S48 réussis ; pnpm run check sans erreur, code 0. Le calendrier de classement n’est pas qualifié de suivi S47, où il n’était pas traité."
+    ],
+    "duplicates": [
+      "S44/S45 : les correctifs et statuts antérieurs restent archivés ; les avis et correctifs des 18–19 novembre sont des faits nouveaux, pas répétition de PHP2Shell ou Commerce Core.",
+      "S46 : Data Manager bêta, Dots Enterprise/Edu, Guided Learning et Canadarm2 restent en mémoire ; pas réédition.",
+      "S47 : modèles Search, Business Hub, CDN, modules de téléversement/PDF, diagnostic UPD, modèles Claude, CTV britannique et plateforme quantique ne sont pas repris.",
+      "S47 mesure : la Search Analytics API du 16 avait été laissée hors de sa collecte ; rattrapage explicite sans duplication. AI Max réservé à S48 dans les collectes S47.",
+      "Pinterest S45 : nouveau canal Display & Video 360 publié le 18, identifié comme SUIVI. Pas extrapolation des limites Spotify à Pinterest."
+    ]
+  }
 }

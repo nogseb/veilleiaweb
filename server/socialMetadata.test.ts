@@ -5,7 +5,7 @@ import { injectSocialMetadata, renderSocialHead, SHARE_IMAGE_URL, socialMetadata
 
 describe("Aperçus de partage Teams / Open Graph", () => {
   it("fournit titre et description de la semaine actuelle dans le HTML sans JavaScript", () => {
-    const meta = socialMetadataForPath("/?partage=2026-W45");
+    const meta = socialMetadataForPath("/?partage=2026-W48");
     expect(meta.title).toContain(`S${currentEdition.week}`);
     expect(meta.description).toContain("une école");
     expect(meta.description.length).toBeLessThanOrEqual(180);

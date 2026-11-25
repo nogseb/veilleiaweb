@@ -4,6 +4,8 @@ import { veilleS43 } from "./veille-s43";
 import { veilleS44 } from "./veille-s44";
 import { veilleS45 } from "./veille-s45";
 import { veilleS48 } from "./veille-s48";
+import { veilleS47 } from "./veille-s47";
+import { veilleS46 } from "./veille-s46";
 
 function visibleStrings(value: unknown, key = ""): string[] {
   if (typeof value === "string") return key === "url" || key === "date" ? [] : [value];
@@ -24,7 +26,11 @@ describe("Archives et confidentialité publique", () => {
   });
 
   it("archive S45 avec son descriptif, sa mesure et son Bonus", () => {
-    expect(archives.slice(0, 4).map(({ week }) => week)).toEqual([48, 45, 44, 43]);
+    expect(archives.slice(0, 6).map(({ week }) => week)).toEqual([48, 47, 46, 45, 44, 43]);
+    expect(getEditionByWeek(47)?.sourcesCount).toBe(veilleS47.sourcesCount);
+    expect(getEditionByWeek(46)?.sourcesCount).toBe(veilleS46.sourcesCount);
+    expect(getEditionByWeek(47)?.bonus?.source).toEqual(veilleS47.bonus.source);
+    expect(getEditionByWeek(46)?.bonus?.source).toEqual(veilleS46.bonus.source);
     const s45 = getEditionByWeek(45)!;
     expect(s45.shareDescription).toBe(veilleS45.shareDescription);
     expect(s45.sourcesCount).toBe(veilleS45.sourcesCount);

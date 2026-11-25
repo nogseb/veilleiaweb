@@ -1,4 +1,6 @@
 import { veilleS48 } from "./veille-s48";
+import { veilleS47 } from "./veille-s47";
+import { veilleS46 } from "./veille-s46";
 import { veilleS45 } from "./veille-s45";
 import { veilleS44 as s44Data } from "./veille-s44";
 import { veilleS43 as s43Data } from "./veille-s43";
@@ -83,7 +85,7 @@ export interface ArchiveEdition {
   bonus?: ArchiveBonus;
 }
 
-function recentEdition(veilleData: typeof veilleS48 | typeof veilleS45): ArchiveEdition {
+function recentEdition(veilleData: typeof veilleS48 | typeof veilleS47 | typeof veilleS46 | typeof veilleS45): ArchiveEdition {
   return {
     week: veilleData.week,
     year: veilleData.year,
@@ -111,6 +113,8 @@ function recentEdition(veilleData: typeof veilleS48 | typeof veilleS45): Archive
 }
 
 const s48 = recentEdition(veilleS48);
+const s47 = recentEdition(veilleS47);
+const s46 = recentEdition(veilleS46);
 const s45 = recentEdition(veilleS45);
 
 // Semaine 44 — archive complète, mesure transversale et Bonus conservés
@@ -869,7 +873,7 @@ export function publicEdition(edition: ArchiveEdition): ArchiveEdition {
 }
 
 // Export de toutes les éditions (ordre chronologique inversé)
-const rawArchives: ArchiveEdition[] = [s48, s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
+const rawArchives: ArchiveEdition[] = [s48, s47, s46, s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
 export const archives: ArchiveEdition[] = rawArchives.map(publicEdition);
 // Export de l'édition courante
 export const currentEdition: ArchiveEdition = archives[0] ?? publicEdition(s48);
