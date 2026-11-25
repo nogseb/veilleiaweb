@@ -121,5 +121,12 @@
 - [x] Adapter les balises Teams / Open Graph et vérifier les erreurs 404 des éditions absentes.
 - [x] Valider tests multi-années, TypeScript, build et affichage desktop/mobile.
 - [x] Synchroniser GitHub main et créer le checkpoint WebDev prêt à publier.
-
 Contrôle final : 116 tests, TypeScript et build valides ; 38 éditions vérifiées en HTTP avec canoniques et redirections. Attente de validation redondante arrêtée ; migration prête à publier via WebDev, sans changement de charte.
+
+## Pages d’archives par année (25 novembre 2026)
+- [x] Ajouter /2026/ avec une carte par semaine disponible, tri décroissant et navigation entre années.
+- [x] Relier la liste globale et le détail d’une semaine aux pages annuelles ; traiter les années sans édition.
+- [x] Vérifier canoniques, métadonnées Teams, HTTP 200/301, tests, TypeScript, build et responsive clair/sombre.
+- [x] Synchroniser GitHub main et créer le checkpoint WebDev prêt à publier.
+
+Validation : 178 tests, TypeScript et build verts. 38 cartes 2026 vérifiées en clair/sombre et mobile ; années sans édition en HTTP 200 avec noindex ; /2026 redirigé vers /2026/ en 301.

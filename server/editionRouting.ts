@@ -1,5 +1,5 @@
 import type { RequestHandler } from "express";
-import { resolveEditionRoute } from "../shared/editionRouting";
+import { resolveEditionRoute, resolveYearRoute } from "../shared/editionRouting";
 
 /** Normalize edition URLs before the existing HTML fallback handles the page. */
 export const editionRouting: RequestHandler = (req, res, next) => {
@@ -9,6 +9,15 @@ export const editionRouting: RequestHandler = (req, res, next) => {
   }
 
   const url = new URL(req.originalUrl, "http://localhost");
+  const yearRoute = resolveYearRoute(url.pathname);
+  if (yearRoute.isYearPath) {
+    if (yearRoute.canonicalPath !== url.pathname) {
+      res.redirect(301, `${yearRoute.canonicalPath}${url.search}`);
+    } else {
+      next();
+    }
+    return;
+  }
   const route = resolveEditionRoute(url.pathname);
 
   if (!route.isEditionPath) {

@@ -1,5 +1,5 @@
 import { currentEdition, type ArchiveEdition } from "../client/src/data/archives";
-import { resolveEditionRoute } from "./editionRouting";
+import { resolveEditionRoute, resolveYearRoute } from "./editionRouting";
 
 export const SITE_ORIGIN = "https://veilleiaweb.digital";
 export const SITE_NAME = "Veille Stratégique IA & Web";
@@ -35,6 +35,19 @@ export function socialMetadataForPath(url: string): SocialMetadata {
   let pathname = "/";
   try { pathname = new URL(url, SITE_ORIGIN).pathname; } catch { /* safe default */ }
   if (pathname !== "/") pathname = pathname.replace(/\/+$/, "");
+  const yearRoute = resolveYearRoute(url);
+  if (yearRoute.isYearPath) return {
+    title: `Archives ${yearRoute.year} — Veille IA & Web`,
+    description: yearRoute.editions.length
+      ? `${yearRoute.editions.length} éditions de la veille IA & Web pour ${yearRoute.year} : retrouvez les semaines couvertes, leurs signaux majeurs et leurs sources.`
+      : `Archives ${yearRoute.year} de la veille IA & Web : aucune édition n’est encore disponible pour cette année.`,
+    canonicalUrl: new URL(yearRoute.canonicalPath!, SITE_ORIGIN).href,
+    image: SHARE_IMAGE_URL,
+    imageWidth: 1200,
+    imageHeight: 1200,
+    type: "website",
+    ...(!yearRoute.editions.length ? { noindex: true } : {}),
+  };
   const route = resolveEditionRoute(url);
   const edition = pathname === "/" || pathname === "/index.html"
     ? currentEdition

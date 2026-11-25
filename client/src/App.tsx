@@ -24,6 +24,7 @@ function Router() {
       <Route path={"/stats"} component={AnalyticsDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route path={"/:year/:week"} component={WeekDetail} />
+      <Route path={"/:year"} component={Archives} />
       <Route component={NotFound} />
     </Switch>
   );

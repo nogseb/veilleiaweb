@@ -6,7 +6,7 @@ import type { ArchiveEdition } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
 import AnalysisModal, { analysisLabel } from "@/components/AnalysisModal";
-import { editionPath, resolveEditionRoute } from "../../../shared/editionRouting";
+import { editionPath, resolveEditionRoute, yearPath } from "../../../shared/editionRouting";
 function Badge({ type }: { type: string }) {
   if (type === "CRITIQUE") {
     return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#FF4757] text-white">CRITIQUE</span>;
@@ -164,6 +164,8 @@ export default function WeekDetail() {
         {/* Navigation retour */}
         <div className="flex items-center gap-4 pt-20 pb-4">
           <a href="/archives" className="text-xs tracking-[0.15em] uppercase text-[#FF4757] hover:underline">← ARCHIVES</a>
+          <span className="text-xs text-[#8A8A8A]">/</span>
+          <a href={yearPath(edition.year)} className="text-xs tracking-[0.15em] uppercase text-[#FF4757] hover:underline">{edition.year}</a>
         </div>
 
         {/* Metadata */}
