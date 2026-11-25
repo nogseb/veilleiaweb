@@ -26,7 +26,7 @@ import { veilleData as s24Data } from "./veille-s24";
 import { veilleData as s23Data } from "./veille-s23";
 import { veilleData as s22Data } from "./veille-s22";
 import { s16, s15, s14, s13, s12, s11, s10 } from "./archives-history";
-
+import { compareEditions, isValidEditionIdentity } from "../../../shared/editionIdentity";
 type ArchiveDomain = {
   id: number;
   code: string;
@@ -874,13 +874,19 @@ export function publicEdition(edition: ArchiveEdition): ArchiveEdition {
 
 // Export de toutes les éditions (ordre chronologique inversé)
 const rawArchives: ArchiveEdition[] = [s48, s47, s46, s45, s44, s43, s42, s41, s40, s39, s38, s37, s36, s35, s34, s33, s32, s31, s30, s29, s28, s27, s26, s25, s24, s23, s22, s21, s19, s18, s17, s16, s15, s14, s13, s12, s11, s10];
-export const archives: ArchiveEdition[] = rawArchives.map(publicEdition);
+export const archives: ArchiveEdition[] = rawArchives.map(publicEdition).sort((a, b) => compareEditions(b, a));
 // Export de l'édition courante
 export const currentEdition: ArchiveEdition = archives[0] ?? publicEdition(s48);
 
 // Alias pour compatibilité
 export const allArchives = archives;
 
+export function getEdition(year: number, week: number, editions: readonly ArchiveEdition[] = archives): ArchiveEdition | undefined {
+  if (!isValidEditionIdentity(year, week)) return undefined;
+  return editions.find((edition) => edition.year === year && edition.week === week);
+}
+
+/** @deprecated Les anciens appels et liens sans année sont figés sur le millésime 2026. */
 export function getEditionByWeek(week: number): ArchiveEdition | undefined {
-  return archives.find((e) => e.week === week);
+  return getEdition(2026, week);
 }

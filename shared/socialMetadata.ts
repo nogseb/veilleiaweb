@@ -1,4 +1,5 @@
-import { currentEdition, getEditionByWeek, type ArchiveEdition } from "../client/src/data/archives";
+import { currentEdition, type ArchiveEdition } from "../client/src/data/archives";
+import { resolveEditionRoute } from "./editionRouting";
 
 export const SITE_ORIGIN = "https://veilleiaweb.digital";
 export const SITE_NAME = "Veille Stratégique IA & Web";
@@ -34,15 +35,15 @@ export function socialMetadataForPath(url: string): SocialMetadata {
   let pathname = "/";
   try { pathname = new URL(url, SITE_ORIGIN).pathname; } catch { /* safe default */ }
   if (pathname !== "/") pathname = pathname.replace(/\/+$/, "");
-  const weekMatch = /^\/semaine\/(\d{1,2})$/.exec(pathname);
+  const route = resolveEditionRoute(url);
   const edition = pathname === "/" || pathname === "/index.html"
     ? currentEdition
-    : weekMatch ? getEditionByWeek(Number(weekMatch[1])) : undefined;
+    : route.edition;
   const base = {
     image: SHARE_IMAGE_URL,
     imageWidth: 1200,
     imageHeight: 1200,
-    canonicalUrl: new URL(pathname === "/index.html" ? "/" : pathname, SITE_ORIGIN).href,
+    canonicalUrl: new URL(route.canonicalPath ?? (pathname === "/index.html" ? "/" : pathname), SITE_ORIGIN).href,
   };
   if (edition) return {
     ...base,

@@ -3,9 +3,10 @@ import { Header, Footer } from "@/components/Layout";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { createSingleEventGuard, trackGa4ArchivesView } from "@/lib/ga4";
 import { useCallback, useEffect, useRef } from "react";
+import { editionKey, editionPath } from "../../../shared/editionIdentity";
 
 export default function Archives() {
-  const latestWeek = allArchives[0]?.week;
+  const latestEdition = allArchives[0];
   const { track } = useFirstPartyAnalytics({ route: "archives" });
   const firstPartyArchiveGuard = useRef(createSingleEventGuard());
   const ga4ArchiveGuard = useRef(createSingleEventGuard());
@@ -41,12 +42,12 @@ export default function Archives() {
 
         <div className="space-y-0">
           {allArchives.map((archive) => {
-            const isCurrent = archive.week === latestWeek;
-            const href = isCurrent ? "/" : `/semaine/${archive.week}`;
+            const isCurrent = archive.year === latestEdition?.year && archive.week === latestEdition?.week;
+            const href = editionPath(archive);
 
             return (
               <a
-                key={archive.week}
+                key={editionKey(archive)}
                 href={href}
                 onClick={() => track({ name: "archive_edition_open", week: archive.week, target: isCurrent ? "current_edition" : "archive_edition" })}
                 className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 py-6 border-t border-[#E5E2DC] dark:border-[#333] hover:bg-white/50 dark:hover:bg-white/5 transition-colors duration-150 px-4 -mx-4"

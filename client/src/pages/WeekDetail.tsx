@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { useParams } from "wouter";
-import { getEditionByWeek, allArchives } from "@/data/archives";
+import { useParams, useLocation } from "wouter";
+import { allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
 import type { ArchiveEdition } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
 import AnalysisModal, { analysisLabel } from "@/components/AnalysisModal";
-
+import { editionPath, resolveEditionRoute } from "../../../shared/editionRouting";
 function Badge({ type }: { type: string }) {
   if (type === "CRITIQUE") {
     return <span className="inline-block px-2 py-0.5 text-[10px] tracking-[0.1em] uppercase bg-[#FF4757] text-white">CRITIQUE</span>;
@@ -112,17 +112,25 @@ function BonusModal({ bonus, onClose, onTrack, week }: { bonus: NonNullable<Arch
 }
 
 export default function WeekDetail() {
-  const params = useParams<{ week: string }>();
-  const weekNum = parseInt(params.week || "0", 10);
-  const edition = getEditionByWeek(weekNum);
+  const params = useParams<{ year?: string; week: string }>();
+  const [location, navigate] = useLocation();
+  const route = resolveEditionRoute(params.year ? `/${params.year}/${params.week}` : `/semaine/${params.week}`);
+  const edition = route.edition;
   const [openPopover, setOpenPopover] = useState<string | null>(null);
   const [selectedDomaine, setSelectedDomaine] = useState<ArchiveEdition["domaines"][0] | null>(null);
   const [selectedBonus, setSelectedBonus] = useState<NonNullable<ArchiveEdition["bonus"]> | null>(null);
-  const { track } = useFirstPartyAnalytics({ route: "archives", week: weekNum, trackEdition: true });
+  const { track } = useFirstPartyAnalytics({ route: "archives", week: edition?.week, trackEdition: Boolean(edition) });
+
+  // Filet de compatibilité pour une navigation React sans requête HTTP complète.
+  useEffect(() => {
+    if (route.canonicalPath && window.location.pathname !== route.canonicalPath) {
+      navigate(route.canonicalPath + window.location.search + window.location.hash, { replace: true });
+    }
+  }, [location, navigate, route.canonicalPath]);
 
   // Navigation entre semaines
-  const currentIndex = allArchives.findIndex((a) => a.week === weekNum);
-  const prevWeek = currentIndex < allArchives.length - 1 ? allArchives[currentIndex + 1] : null;
+  const currentIndex = allArchives.findIndex((a) => a.year === edition?.year && a.week === edition?.week);
+  const prevWeek = currentIndex >= 0 && currentIndex < allArchives.length - 1 ? allArchives[currentIndex + 1] : null;
   const nextWeek = currentIndex > 0 ? allArchives[currentIndex - 1] : null;
 
   if (!edition) {
@@ -368,13 +376,13 @@ export default function WeekDetail() {
       <div className="container py-12">
         <div className="flex items-center justify-between border-t border-[#E5E2DC] dark:border-[#333] pt-8">
           {prevWeek ? (
-            <a href={`/semaine/${prevWeek.week}`} className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] px-4 py-2 hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150">
-              ← S{prevWeek.week}
+            <a href={editionPath(prevWeek)} className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] px-4 py-2 hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150">
+              ← S{prevWeek.week}{prevWeek.year !== edition.year ? ` · ${prevWeek.year}` : ""}
             </a>
           ) : <div />}
           {nextWeek ? (
-            <a href={`/semaine/${nextWeek.week}`} className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] px-4 py-2 hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150">
-              S{nextWeek.week} →
+            <a href={editionPath(nextWeek)} className="text-xs tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] px-4 py-2 hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150">
+              S{nextWeek.week}{nextWeek.year !== edition.year ? ` · ${nextWeek.year}` : ""} →
             </a>
           ) : <div />}
         </div>

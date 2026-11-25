@@ -1,6 +1,7 @@
 import { Header, Footer } from "@/components/Layout";
 import { allArchives } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
+import { compareEditions, editionKey, editionPath } from "../../../shared/editionIdentity";
 
 // Extraire tous les domaines uniques à travers toutes les semaines
 const allDomainCodes = Array.from(
@@ -8,7 +9,14 @@ const allDomainCodes = Array.from(
 );
 
 // Semaines triées par ordre chronologique (croissant)
-const weeks = [...allArchives].sort((a, b) => a.week - b.week);
+const weeks = [...allArchives].sort(compareEditions);
+const recentWeek = weeks.at(-1);
+const previousWeek = weeks.at(-2);
+const recentKey = recentWeek ? editionKey(recentWeek) : "";
+const previousKey = previousWeek ? editionKey(previousWeek) : "";
+const recentPairLabel = previousWeek && recentWeek
+  ? `S${previousWeek.week} ${previousWeek.year} → S${recentWeek.week} ${recentWeek.year}`
+  : "";
 
 // Construire la matrice domaine × semaine
 interface CellData {
@@ -16,15 +24,15 @@ interface CellData {
   titre: string;
 }
 
-const matrix: Record<string, Record<number, CellData>> = {};
+const matrix: Record<string, Record<string, CellData>> = {};
 allDomainCodes.forEach((code) => {
   matrix[code] = {};
   weeks.forEach((w) => {
     const domaine = w.domaines.find((d) => d.code === code);
     if (domaine) {
-      matrix[code][w.week] = { badge: domaine.badge, titre: domaine.titre };
+      matrix[code][editionKey(w)] = { badge: domaine.badge, titre: domaine.titre };
     } else {
-      matrix[code][w.week] = { badge: null, titre: "" };
+      matrix[code][editionKey(w)] = { badge: null, titre: "" };
     }
   });
 });
@@ -69,8 +77,8 @@ function getEvolutionIndicator(
   weekIndex: number
 ): { direction: "up" | "down" | "stable" | "new"; color: string } | null {
   if (weekIndex === 0) return null;
-  const currentWeek = weeks[weekIndex].week;
-  const prevWeek = weeks[weekIndex - 1].week;
+  const currentWeek = editionKey(weeks[weekIndex]);
+  const prevWeek = editionKey(weeks[weekIndex - 1]);
   const current = matrix[code][currentWeek]?.badge;
   const prev = matrix[code][prevWeek]?.badge;
 
@@ -159,14 +167,14 @@ export default function Timeline() {
                   </th>
                   {weeks.map((w) => (
                     <th
-                      key={w.week}
+                      key={editionKey(w)}
                       className="text-center text-[10px] tracking-[0.15em] uppercase text-[#8A8A8A] pb-4 px-2 min-w-[120px]"
                     >
                       <a
-                        href={w.week === 19 ? "/" : `/semaine/${w.week}`}
+                        href={editionPath(w)}
                         className="hover:text-[#FF4757] transition-colors duration-150"
                       >
-                        S{w.week}
+                        S{w.week} · {w.year}
                       </a>
                       <br />
                       <span className="text-[9px] text-[#8A8A8A] normal-case">
@@ -188,10 +196,10 @@ export default function Timeline() {
                       </span>
                     </td>
                     {weeks.map((w, weekIdx) => {
-                      const cell = matrix[code][w.week];
+                      const cell = matrix[code][editionKey(w)];
                       const evolution = getEvolutionIndicator(code, weekIdx);
                       return (
-                        <td key={w.week} className="py-4 px-2">
+                        <td key={editionKey(w)} className="py-4 px-2">
                           <div className="flex flex-col items-center gap-1">
                             <div className="flex items-center gap-1">
                               {evolution && evolution.direction === "up" && (
@@ -247,17 +255,17 @@ export default function Timeline() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-[#FF4757] text-lg">▲</span>
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">
-                    EN HAUSSE (S18 → S19)
+                    EN HAUSSE ({recentPairLabel})
                   </span>
                 </div>
                 <div className="space-y-2">
                   {allDomainCodes
                     .filter((code) => {
-                      const s19Badge = matrix[code][19]?.badge;
-                      const s18Badge = matrix[code][18]?.badge;
-                      if (!s19Badge) return false;
-                      if (!s18Badge) return true; // nouveau
-                      return (badgeLevel[s19Badge] || 0) > (badgeLevel[s18Badge] || 0);
+                      const currentBadge = matrix[code][recentKey]?.badge;
+                      const previousBadge = matrix[code][previousKey]?.badge;
+                      if (!currentBadge) return false;
+                      if (!previousBadge) return true; // nouveau
+                      return (badgeLevel[currentBadge] || 0) > (badgeLevel[previousBadge] || 0);
                     })
                     .map((code) => (
                       <div key={code} className="flex items-center justify-between">
@@ -265,16 +273,16 @@ export default function Timeline() {
                           {code}
                         </span>
                         <span className="text-[9px] text-[#8A8A8A]">
-                          {matrix[code][18]?.badge || "—"} → {matrix[code][19]?.badge}
+                          {matrix[code][previousKey]?.badge || "—"} → {matrix[code][recentKey]?.badge}
                         </span>
                       </div>
                     ))}
                   {allDomainCodes.filter((code) => {
-                    const s19Badge = matrix[code][19]?.badge;
-                    const s18Badge = matrix[code][18]?.badge;
-                    if (!s19Badge) return false;
-                    if (!s18Badge) return true;
-                    return (badgeLevel[s19Badge] || 0) > (badgeLevel[s18Badge] || 0);
+                    const currentBadge = matrix[code][recentKey]?.badge;
+                    const previousBadge = matrix[code][previousKey]?.badge;
+                    if (!currentBadge) return false;
+                    if (!previousBadge) return true;
+                    return (badgeLevel[currentBadge] || 0) > (badgeLevel[previousBadge] || 0);
                   }).length === 0 && (
                     <span className="text-xs text-[#8A8A8A]">Aucun mouvement</span>
                   )}
@@ -286,16 +294,16 @@ export default function Timeline() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-[#8A8A8A] text-lg">●</span>
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">
-                    STABLE (S18 → S19)
+                    STABLE ({recentPairLabel})
                   </span>
                 </div>
                 <div className="space-y-2">
                   {allDomainCodes
                     .filter((code) => {
-                      const s19Badge = matrix[code][19]?.badge;
-                      const s18Badge = matrix[code][18]?.badge;
-                      if (!s19Badge || !s18Badge) return false;
-                      return (badgeLevel[s19Badge] || 0) === (badgeLevel[s18Badge] || 0);
+                      const currentBadge = matrix[code][recentKey]?.badge;
+                      const previousBadge = matrix[code][previousKey]?.badge;
+                      if (!currentBadge || !previousBadge) return false;
+                      return (badgeLevel[currentBadge] || 0) === (badgeLevel[previousBadge] || 0);
                     })
                     .map((code) => (
                       <div key={code} className="flex items-center justify-between">
@@ -303,7 +311,7 @@ export default function Timeline() {
                           {code}
                         </span>
                         <span className="text-[9px] text-[#8A8A8A]">
-                          {matrix[code][19]?.badge}
+                          {matrix[code][recentKey]?.badge}
                         </span>
                       </div>
                     ))}
@@ -315,16 +323,16 @@ export default function Timeline() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-green-600 dark:text-green-400 text-lg">▼</span>
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#0F0F10] dark:text-[#F5F4F0]">
-                    EN BAISSE (S18 → S19)
+                    EN BAISSE ({recentPairLabel})
                   </span>
                 </div>
                 <div className="space-y-2">
                   {allDomainCodes
                     .filter((code) => {
-                      const s19Badge = matrix[code][19]?.badge;
-                      const s18Badge = matrix[code][18]?.badge;
-                      if (!s19Badge || !s18Badge) return false;
-                      return (badgeLevel[s19Badge] || 0) < (badgeLevel[s18Badge] || 0);
+                      const currentBadge = matrix[code][recentKey]?.badge;
+                      const previousBadge = matrix[code][previousKey]?.badge;
+                      if (!currentBadge || !previousBadge) return false;
+                      return (badgeLevel[currentBadge] || 0) < (badgeLevel[previousBadge] || 0);
                     })
                     .map((code) => (
                       <div key={code} className="flex items-center justify-between">
@@ -332,15 +340,15 @@ export default function Timeline() {
                           {code}
                         </span>
                         <span className="text-[9px] text-[#8A8A8A]">
-                          {matrix[code][18]?.badge} → {matrix[code][19]?.badge}
+                          {matrix[code][previousKey]?.badge} → {matrix[code][recentKey]?.badge}
                         </span>
                       </div>
                     ))}
                   {allDomainCodes.filter((code) => {
-                    const s19Badge = matrix[code][19]?.badge;
-                    const s18Badge = matrix[code][18]?.badge;
-                    if (!s19Badge || !s18Badge) return false;
-                    return (badgeLevel[s19Badge] || 0) < (badgeLevel[s18Badge] || 0);
+                    const currentBadge = matrix[code][recentKey]?.badge;
+                    const previousBadge = matrix[code][previousKey]?.badge;
+                    if (!currentBadge || !previousBadge) return false;
+                    return (badgeLevel[currentBadge] || 0) < (badgeLevel[previousBadge] || 0);
                   }).length === 0 && (
                     <span className="text-xs text-[#8A8A8A]">Aucun mouvement</span>
                   )}

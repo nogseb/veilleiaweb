@@ -20,18 +20,19 @@ describe("Aperçus de partage Teams / Open Graph", () => {
   });
   it("personnalise chaque édition archivée et ignore les paramètres de tracking", () => {
     for (const edition of archives) {
-      const meta = socialMetadataForPath(`/semaine/${edition.week}?from=teams`);
+      const meta = socialMetadataForPath(`/${edition.year}/${String(edition.week).padStart(2, "0")}?from=teams`);
       expect(meta.title).toContain(`S${edition.week} ${edition.year}`);
-      expect(meta.canonicalUrl).toBe(`https://veilleiaweb.digital/semaine/${edition.week}`);
+      expect(meta.canonicalUrl).toBe(`https://veilleiaweb.digital/${edition.year}/${String(edition.week).padStart(2, "0")}`);
       expect(meta.description.length).toBeGreaterThan(10);
       expect(meta.noindex).toBeUndefined();
     }
-    expect(socialMetadataForPath("/semaine/43").title).not.toBe(socialMetadataForPath("/").title);
+    expect(socialMetadataForPath("/2026/43").title).not.toBe(socialMetadataForPath("/").title);
+    expect(socialMetadataForPath("/semaine/43")).toEqual(socialMetadataForPath("/2026/43"));
   });
   it("préserve la balise Google et supprime les doublons de titre, description et image", () => {
     const template = readFileSync(new URL("../client/index.html", import.meta.url), "utf8");
     const dirty = template.replace("</head>", '<meta property="og:image" content="https://example.com/old.png"><title>ancien</title><link rel="canonical" href="https://example.com/"></head>');
-    const output = injectSocialMetadata(dirty, "/semaine/43");
+    const output = injectSocialMetadata(dirty, "/2026/43");
     expect(output.match(/<title>/g)).toHaveLength(1);
     expect(output.match(/property="og:image"/g)).toHaveLength(1);
     expect(output.match(/rel="canonical"/g)).toHaveLength(1);

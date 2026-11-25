@@ -57,7 +57,7 @@ describe("Archives et confidentialité publique", () => {
     expect(s43.bonus?.source.url).toBe(veilleS43.bonus.source.url);
     expect(getEditionByWeek(42)?.bonus?.label).toContain("BONUS #10");
     expect(getEditionByWeek(35)?.bonus?.label).toContain("BONUS");
-    expect(new Set(archives.map(e => e.week)).size).toBe(archives.length);
+    expect(new Set(archives.map(e => `${e.year}-W${e.week}`)).size).toBe(archives.length);
   });
   it("anonymise les textes publics mais préserve les données brutes, dates et liens", () => {
     for (const edition of archives) expect(visibleStrings(edition).join("\n")).not.toMatch(/\bTBS(?:\s+Education)?\b|Toulouse Business School|CVE-\d{4}-\d+|\b\d+(?:\.\d+){2,3}\b/i);

@@ -114,3 +114,12 @@
 - [x] S48 consolidée ChatGPT, Claude et Manus (9 domaines, 27 sources) : commit c908912, GitHub main identique.
 - [x] TypeScript, 73 tests et build validés ; pages S48, S47 et S46 contrôlées ; index.css inchangé.
 - [x] Checkpoint c908912c remis au propriétaire pour publication avec le bouton Publier. À cette date, la production affiche encore S45 ; aucune authentification n'a été demandée.
+
+## Migration des archives ANNÉE/SEMAINE (25 novembre 2026)
+- [x] Remplacer routes, liens, identifiants et navigation par année ISO + semaine ; préserver le design.
+- [x] Ajouter les redirections HTTP 301 depuis /semaine/N vers les éditions 2026 et les URL canoniques.
+- [x] Adapter les balises Teams / Open Graph et vérifier les erreurs 404 des éditions absentes.
+- [x] Valider tests multi-années, TypeScript, build et affichage desktop/mobile.
+- [x] Synchroniser GitHub main et créer le checkpoint WebDev prêt à publier.
+
+Contrôle final : 116 tests, TypeScript et build valides ; 38 éditions vérifiées en HTTP avec canoniques et redirections. Attente de validation redondante arrêtée ; migration prête à publier via WebDev, sans changement de charte.
