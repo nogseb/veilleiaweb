@@ -1,0 +1,411 @@
+{
+  "week": 46,
+  "year": 2026,
+  "publicationDate": "2026-11-09",
+  "windowStart": "2026-11-02",
+  "windowEnd": "2026-11-09",
+  "domainsCount": 8,
+  "domainsTotal": 9,
+  "sourcesCount": 17,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.searchenginejournal.com/google-ai-mode-home-services-booking-quote-links/595871/",
+      "title": "Google Adds Home Service Booking & Quote Links To AI Mode",
+      "publisher": "Search Engine Journal",
+      "date": "2026-11-04",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_news_report; cited with secondary_source_limits",
+      "opened": true,
+      "claims": [
+        "Le 4 novembre, Search Engine Journal rapporte une annonce Google de liens de réservation et de devis de services à domicile dans AI Mode aux États-Unis.",
+        "Les liens conduisent vers des plateformes partenaires ; les calendriers de disponibilité varient selon le partenaire.",
+        "La réservation intégralement exécutée dans une réponse IA et une extension française ou éducative ne sont pas établies."
+      ],
+      "limitations": [
+        "La publication est secondaire ; le message Google et les pages partenaires ne sont pas retenus comme pages lues.",
+        "Aucune mesure de trafic ou de conversion ; aucune éligibilité d’une école démontrée."
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.seroundtable.com/chatgpt-tools-for-business-42476.html",
+      "title": "OpenAI Working On ChatGPT Tools For Business For Analytics & Citations",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-06",
+      "date_status": "initial_publication_date_verified_on_page; undated_update_excluded",
+      "level": "N2",
+      "editorial_status": "initial_observation_of_work_in_progress; cited",
+      "opened": true,
+      "claims": [
+        "Le récit initial du 6 novembre rapporte un Business Hub de ChatGPT en développement.",
+        "Le témoignage distingue apparitions dans les réponses et clics quotidiens vers un site, pour des entreprises dont la propriété a été vérifiée.",
+        "Le témoignage ne fournit ni prompts, données personnelles des utilisateurs, classement ni benchmark concurrentiel."
+      ],
+      "limitations": [
+        "La mise à jour indiquant une disponibilité n’est pas datée dans le texte lu et est exclue de S46.",
+        "Même auteur et témoin que Search Engine Land : pas de corroboration indépendante.",
+        "Absence d’annonce officielle ouverte, de méthode de comptage et d’éligibilité universelle."
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://searchengineland.com/openai-testing-business-tools-to-track-performance-within-chatgpt-500841",
+      "title": "OpenAI testing business tools to track performance within ChatGPT",
+      "publisher": "Search Engine Land",
+      "date": "2026-11-06",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_observation; cited with shared_origin_limits",
+      "opened": true,
+      "claims": [
+        "L’article du 6 novembre décrit la même observation et indique explicitement que le produit n’est pas encore lancé.",
+        "Les fonctions rapportées distinguent apparitions et clics, sans données permettant d’expliquer leurs variations."
+      ],
+      "limitations": [
+        "Même auteur, même capture et même témoignage que la source précédente.",
+        "Le média déclare être détenu par Semrush ; actualité rédactionnelle, pas une étude indépendante de performance.",
+        "Aucun lancement officiel dans la fenêtre n’est établi."
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://developers.google.com/search/updates",
+      "title": "Latest documentation updates — entrée du 9 novembre",
+      "publisher": "Google Search Central",
+      "date": "2026-11-09",
+      "date_status": "dated_changelog_entry_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_documentation_change; cited",
+      "opened": true,
+      "claims": [
+        "L’entrée du 9 novembre ajoute les requêtes « things to do » aux unités agrégateur et fournisseur.",
+        "Google indique que ces unités prennent désormais en charge les requêtes concernées."
+      ],
+      "limitations": [
+        "La date technique exacte de mise en service n’est pas précisée.",
+        "Les entrées postérieures au 9 novembre sont exclues ; même URL historique, fait daté nouveau."
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://developers.google.com/search/docs/appearance/aggregator-unit",
+      "title": "Aggregator unit in Google Search",
+      "publisher": "Google Search Central",
+      "date": "2026-11-09",
+      "date_status": "last_updated_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_documentation_support; cited",
+      "opened": true,
+      "claims": [
+        "La fonctionnalité est disponible aux utilisateurs de l’Espace économique européen pour les requêtes concernées.",
+        "Les agrégateurs doivent être approuvés comme services de recherche verticale, fournir les données et satisfaire les critères de qualité.",
+        "Pour les activités et entreprises locales, l’alimentation passe par des intégrations directes de flux de données."
+      ],
+      "limitations": [
+        "Documentation fournisseur, sans métrique de performance.",
+        "Ce n’est pas un nouveau balisage universel ; les écoles ne sont pas mentionnées comme éligibles."
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://developers.google.com/search/docs/appearance/supplier-unit",
+      "title": "Supplier unit in Google Search",
+      "publisher": "Google Search Central",
+      "date": "2026-11-09",
+      "date_status": "last_updated_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_documentation_support; cited",
+      "opened": true,
+      "claims": [
+        "L’unité fournisseur vise les fournisseurs directs et ne paraît que lorsque l’unité agrégateur apparaît.",
+        "Aucune donnée supplémentaire au-delà de celles accessibles par exploration n’est requise ; les flux peuvent enrichir les résultats."
+      ],
+      "limitations": [
+        "La documentation ne garantit pas l’affichage ni l’éligibilité d’une école.",
+        "Aucune donnée de visites ou de candidatures."
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://www.drupal.org/security",
+      "title": "Security advisories — avis contribués du 4 novembre",
+      "publisher": "Drupal.org",
+      "date": "2026-11-04",
+      "date_status": "advisory_dates_verified_in_official_index",
+      "level": "N1",
+      "editorial_status": "official_advisory_index; cited for selected_entries_only",
+      "opened": true,
+      "claims": [
+        "Les avis SA-CONTRIB-2026-305 et SA-CONTRIB-2026-306 sont datés du 4 novembre.",
+        "Ils concernent des composants contribués de réinitialisation de comptes et de calendrier éditorial, pas le cœur Drupal.",
+        "L’exploitation est qualifiée de théorique dans les deux avis."
+      ],
+      "limitations": [
+        "L’index contient d’autres avis non sélectionnés ; aucune exhaustivité de la sécurité web n’est revendiquée.",
+        "Aucune utilisation, exposition ou compromission d’une école n’est inférée."
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.drupal.org/sa-contrib-2026-305",
+      "title": "SA-CONTRIB-2026-305 — réinitialisation des comptes bloqués",
+      "publisher": "Drupal.org",
+      "date": "2026-11-04",
+      "date_status": "advisory_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_contributed_project_advisory; cited",
+      "opened": true,
+      "claims": [
+        "L’avis décrit une validation insuffisante de la réinitialisation du mot de passe des utilisateurs bloqués.",
+        "Une personne disposant des permissions appropriées doit débloquer le compte pour que le nouveau mot de passe soit utilisable par l’attaquant.",
+        "La page individuelle publie une instruction de mise à jour corrective."
+      ],
+      "limitations": [
+        "L’exploitation est théorique, non une attaque observée.",
+        "Applicabilité conditionnée à la présence du composant ; aucun correctif appliqué à une école n’est établi."
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.drupal.org/sa-contrib-2026-306",
+      "title": "SA-CONTRIB-2026-306 — permissions du calendrier éditorial",
+      "publisher": "Drupal.org",
+      "date": "2026-11-04",
+      "date_status": "advisory_date_verified_on_page_via_browser_after_fetch_failure",
+      "level": "N1",
+      "editorial_status": "official_contributed_project_advisory; cited",
+      "opened": true,
+      "claims": [
+        "Scheduler vérifie insuffisamment les permissions de modification des dates de publication et de dépublication.",
+        "L’attaquant doit déjà pouvoir modifier le contenu, lequel doit être éditable par une interface de services web.",
+        "La page individuelle publie des instructions correctives et signale une branche non supportée."
+      ],
+      "limitations": [
+        "Le fetch a renvoyé un message de chargement ; la page complète a ensuite été lue dans le navigateur.",
+        "Exploitation théorique ; aucun déploiement de correctif ni exposition d’une école n’est établi."
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.cnil.fr/en/privacy-kids-edpb-launches-platform-dedicated-childrens-online-privacy",
+      "title": "EDPB helps kids stay safe online",
+      "publisher": "Comité européen de la protection des données — via une URL CNIL",
+      "date": "2026-11-04",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_institutional_launch; cited",
+      "opened": true,
+      "claims": [
+        "Le Comité européen de la protection des données annonce Privacy for Kids le 4 novembre.",
+        "Le portail destiné aux parents, enseignants et éducateurs réunit jeux, vidéos et quiz de sensibilisation aux données personnelles.",
+        "Les ressources sont filtrables par âge, pays, format et thème."
+      ],
+      "limitations": [
+        "Aucune mesure d’adoption ni d’efficacité pédagogique ; portail non audité.",
+        "Ce lancement n’est ni une nouvelle obligation de consentement ni un changement de navigateur."
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://support.google.com/analytics/answer/9164320?hl=en",
+      "title": "What’s new in Google Analytics — Data Manager du 6 novembre",
+      "publisher": "Google Analytics Help",
+      "date": "2026-11-06",
+      "date_status": "dated_release_note_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_open_beta_launch; cited",
+      "opened": true,
+      "claims": [
+        "L’entrée du 6 novembre annonce Data Manager en bêta dans Google Analytics.",
+        "Le point d’entrée rassemble liens produits, flux de données, données de première partie, alertes de diagnostic et état des connexions."
+      ],
+      "limitations": [
+        "Bêta ouverte susceptible de changer, non nouveau modèle d’attribution.",
+        "Les entrées des 11 et 18 novembre sont exclues ; aucune amélioration chiffrée indépendante."
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://support.google.com/analytics/answer/18107176?hl=en",
+      "title": "About Data Manager in Google Analytics — bêta",
+      "publisher": "Google Analytics Help",
+      "date": null,
+      "date_status": "no_visible_publication_date; undated_support_linked_from_2026-11-06_release",
+      "level": "N1",
+      "editorial_status": "undated_official_support_documentation; not_a_separate_current_event",
+      "opened": true,
+      "claims": [
+        "Une carte représente les sources en entrée et les destinations en sortie.",
+        "La documentation avertit qu’un pipeline identique activé dans deux interfaces peut enregistrer les conversions deux fois.",
+        "Les données ingérées dans Google Analytics circulent vers les comptes liés, pas en sens inverse ; les connexions existantes restent gérées dans leur interface d’origine."
+      ],
+      "limitations": [
+        "Page sans date visible, consultée le 25 novembre ; appui au lancement, pas datation autonome de l’avertissement.",
+        "Impossible d’établir une version historique figée de cet avertissement au 9 novembre.",
+        "La page d’accueil Data Manager ne prend pas en charge les sous-propriétés et propriétés agrégées ; aucun incident d’une école n’est établi."
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+      "title": "Designing responsible AI for learning",
+      "publisher": "Google",
+      "date": "2026-11-03",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_product_announcement; cited with rollout_distinctions",
+      "opened": true,
+      "claims": [
+        "Google déclare Guided Learning disponible mondialement dans Classroom à compter du 3 novembre.",
+        "Le guidage s’appuie sur des questions ouvertes, une progression pas à pas et le matériel du cours.",
+        "Le pilote Search dans certains établissements américains reste futur dans la fenêtre ; les futurs contrôles des comptes élèves du primaire et secondaire n’ont pas de date officielle de mise en œuvre."
+      ],
+      "limitations": [
+        "Annonce fournisseur ; aucune étude liée n’est utilisée comme preuve d’efficacité.",
+        "Éligibilité, langues et accès effectifs à tous les comptes non vérifiés.",
+        "Les contrôles des comptes du primaire et secondaire ne se transposent pas automatiquement à l’enseignement supérieur."
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
+      "title": "Google will let schools disable its AI tools, but not without sacrificing Search",
+      "publisher": "TechCrunch",
+      "date": "2026-11-03",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_press_coverage; cited with primary_announcement",
+      "opened": true,
+      "claims": [
+        "TechCrunch souligne que la restriction complète des fonctions IA peut aussi supprimer l’accès à Search pour les comptes scolaires concernés.",
+        "La couverture éclaire une dépendance entre contrôle des fonctionnalités et accès au service."
+      ],
+      "limitations": [
+        "Pas de preuve d’un changement déjà déployé au 9 novembre.",
+        "Le calendrier secondaire évoqué pour l’année suivante n’est pas présenté comme une date officielle.",
+        "Aucune mesure d’efficacité pédagogique."
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes",
+      "title": "ChatGPT Enterprise & Edu — Release Notes, entrée dots du 4 novembre",
+      "publisher": "OpenAI",
+      "date": "2026-11-04",
+      "date_status": "dated_release_note_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_availability_follow_up; cited",
+      "opened": true,
+      "claims": [
+        "Dots est annoncé disponible pour les espaces Enterprise, Edu et Healthcare éligibles, avec une prévisualisation administrateur jusqu’au 18 novembre 2026.",
+        "Les propriétaires et administrateurs peuvent autoriser l’accès ou s’y opposer avant l’activation par défaut annoncée au 18 novembre.",
+        "Les contrôles documentés couvrent membres, connexions, pause, reprise et revue d’activité ; les propriétaires peuvent supprimer les dots personnels."
+      ],
+      "limitations": [
+        "L’annonce exclut les espaces ayant une résidence des données ou de l’inférence aux Émirats arabes unis.",
+        "La clôture au 9 novembre ne confirme pas l’exécution ultérieure de l’activation annoncée.",
+        "Notes fournisseur évolutives, pas audit d’efficacité de sécurité ni preuve d’usage d’une école."
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://www.asc-csa.gc.ca/fra/actualites/nouvelles/2026/2026-11-05-deuxieme-sortie-dans-l-espace-de-l-astronaute-de-l-asc-joshua-kutryk.asp",
+      "title": "Deuxième sortie dans l’espace de l’astronaute de l’Agence spatiale canadienne Joshua Kutryk",
+      "publisher": "Agence spatiale canadienne",
+      "date": "2026-11-05",
+      "date_status": "publication_and_modification_dates_verified_on_page",
+      "level": "N1",
+      "editorial_status": "primary_completed_operation_report; cited_as_bonus",
+      "opened": true,
+      "claims": [
+        "Le compte rendu du 5 novembre rapporte l’installation d’un panneau solaire lors d’une sortie de 6 heures et 59 minutes.",
+        "L’opération clôt la campagne de mise à niveau commencée en 2021.",
+        "Canadarm2 est manœuvré depuis la Station et surveillé par des équipes au sol."
+      ],
+      "limitations": [
+        "Deux pages de la même agence impliquée, sans corroboration indépendante retenue.",
+        "Aucun gain de puissance chiffré, aucune autonomie robotique ou performance transposable à une école."
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://www.asc-csa.gc.ca/fra/multimedia/recherche/video/20242",
+      "title": "Apprenez à connaitre les opérateurs de robot canadiens",
+      "publisher": "Agence spatiale canadienne",
+      "date": "2026-11-06",
+      "date_status": "explicit_publication_date_verified; modified_2026-11-09",
+      "level": "N1",
+      "editorial_status": "official_transcribed_educational_video; support_for_same_bonus",
+      "opened": true,
+      "claims": [
+        "La page vidéo est publiée le 6 novembre et modifiée le 9 novembre.",
+        "La transcription décrit simulation en réalité virtuelle, entraînement en piscine et répétition collective.",
+        "La préparation et la supervision sont réparties entre des responsables humains."
+      ],
+      "limitations": [
+        "Présentation institutionnelle du même sujet, pas deuxième actualité ni preuve indépendante.",
+        "La durée prévue dans la transcription ne remplace pas la durée réelle du compte rendu."
+      ]
+    }
+  ],
+  "maskedDomains": [
+    {
+      "id": 9,
+      "domain": "Innovation marketing et plateformes publicitaires",
+      "reason": "Aucun sujet qualifié après trois requêtes et quatre pages lues : reprises promotionnelles, annonces primaires d’octobre et documentation non datée. Les sujets S44–S45 ne sont pas recyclés.",
+      "queries": [
+        "publicité Google Meta LinkedIn TikTok nouveautés 2 9 novembre 2026",
+        "TechCrunch The Verge 404 Media advertising ads November 2 9 2026",
+        "Google Meta LinkedIn TikTok official advertising announcements November 2 9 2026"
+      ]
+    }
+  ],
+  "audit": {
+    "excluded": [
+      "https://blog.google/products-and-platforms/products/search/search-io-2026/ — annonce du 19 mai hors fenêtre ; les réservations de mai ne deviennent pas une nouveauté S46.",
+      "https://agencyaeo.com/insights/the-shift-november-9-2026/ — synthèse commerciale N3, utilisée seulement pour le repérage.",
+      "https://www.seroundtable.com/recap-11-09-2026-42485.html — récapitulatif redondant du Business Hub ; sujets publicitaires non retenus comme nouveauté autonome.",
+      "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/ — hors fenêtre et sujet Preferred Sources antérieur.",
+      "Mise à jour de disponibilité ajoutée à la source 2 — non datée dans le texte extrait, exclue de l’état historique S46.",
+      "https://www.leannewong.co/seo-search-news/ — synthèse commerciale N3 ; aucune date primaire admissible établie pour la piste Cloudflare.",
+      "https://www.php.net/archive/2026.php — relecture ici : annonce de test du 5 novembre, explicitement interdite en production ; correctifs voisins hors fenêtre.",
+      "https://wordpress.org/news/2026/11/ — relecture ici : bêta du 3 novembre réservée aux tests ; contribution académique du 9 novembre hors sujet technique ; publications suivantes hors fenêtre.",
+      "https://www.cert.ssi.gouv.fr/ — relecture ici : alerte du 5 novembre, bulletins des 2 et 9 novembre et rapport de menace du 9 novembre repérés dans l’index, documents non lus individuellement et non retenus comme preuves techniques.",
+      "Autres avis Drupal du 4 novembre — non sélectionnés pour conserver le sujet comptes et calendrier ; avis postérieurs au 9 novembre exclus.",
+      "https://www.cnil.fr/en — index évolutif de repérage, non source autonome ; sanction du 29 octobre hors fenêtre et déjà traitée en S45.",
+      "https://www.theverge.com/news/823788/europe-cookie-prompt-browser-changes-proposal — publication du 19 novembre 2025, hors fenêtre.",
+      "https://www.edpb.europa.eu/news/digital-omnibus-edpb-and-edps-support-simplification-and-competitiveness-while-raising-key_en — publication du 11 février, hors fenêtre.",
+      "https://developers.google.com/ads/blog — mise à jour du 10 novembre et aucune annonce exploitable dans le texte lu.",
+      "Études liées par l’annonce Google Education — non ouvertes, aucun chiffre ni gain d’apprentissage retenu.",
+      "https://alliancy.fr/agents-ia-une-main-doeuvre-numerique-deployee-partout-mais-encadree-presque-nulle-part-793f4418-4d4f-4889-ad80-fdacac85ab0c — date de page du 16 novembre, malgré événement du 9 ; hors fenêtre et étude sous-jacente non lue.",
+      "https://techcrunch.com/tag/ai-agents/ — index évolutif, pas preuve d’un fait de gouvernance actuel.",
+      "https://www.linkedin.com/pulse/9-social-media-updates-you-need-know-november-2026-alison-battisby-7ibke — synthèse promotionnelle du 9 novembre renvoyant aux annonces d’octobre.",
+      "https://admakeai.com/blog/meta-ads-updates-november-2026 — synthèse fournisseur du 2 novembre couvrant septembre–octobre, pas de nouveau fait admissible établi.",
+      "https://www.facebook.com/business/news/advertising-week-new-york-2026 — annonce primaire du 6 octobre, hors fenêtre.",
+      "https://help.instagram.com/921445700768602/ — documentation officielle non datée, pas preuve d’une nouveauté S46.",
+      "https://www.asc-csa.gc.ca/fra/actualites/nouvelles/ — index de repérage, pas une troisième preuve du bonus.",
+      "https://www.theverge.com/archives/science/2026/11/1 — contenu extrait daté du 13 novembre ou après, hors fenêtre.",
+      "Aucun cas d’école retenu : aucun cas de la collecte ne réunit période, mécanisme et indicateur vérifié ; les anciens cas restent en mémoire.",
+      "Résultats non ouverts, prépublications et contenus commerciaux faibles — non utilisés comme preuves ; aucun fait ni chiffre dérivé de leurs extraits."
+    ],
+    "limits": [
+      "Les 17 URL citées ne représentent pas 17 preuves indépendantes ; les origines partagées sont explicites.",
+      "La page d’appui Data Manager est non datée : date null et libellé public non daté, sans rétrodatation au lancement du 6 novembre.",
+      "Les annonces, observations, bêtas, pilotes et opérations réalisées restent distingués ; aucune disponibilité universelle n’est présumée.",
+      "L’échéance du 18 novembre est un chiffre-calendrier publié le 4 novembre, pas une statistique de performance ni un délai recalculé.",
+      "La vérification CERT-FR est limitée à l’index, non exhaustive ; les documents repérés dans la fenêtre ne sont pas qualifiés sans lecture.",
+      "Aucune version logicielle, configuration, prestataire interne, identité institutionnelle ou exposition d’une école n’est publiée."
+    ],
+    "duplicates": [
+      "S42 — notes Enterprise/Edu déjà présentes pour les plugins : même URL, nouvelle entrée du 4 novembre sur dots, marquée SUIVI.",
+      "S43 — journal Search Central déjà consulté : seule l’entrée du 9 novembre sur les unités est actuelle ; les rappels de balisage, robots et accès ne sont pas réédités.",
+      "S43–S45 — cœur Drupal, correctifs PHP, WordPress et Commerce Core exclus comme nouveautés ; les deux avis contribués du 4 novembre sont distincts.",
+      "S43–S44 — Data Manager API et format des données distincts du lancement du point d’entrée Google Analytics du 6 novembre.",
+      "S45 — Connected Apps, Reddit, préférence d’entraînement, CNIL, WebAI, A2UI, Octoverse, NIST, inventaires IA et proclamation robotique non recyclés.",
+      "Business Hub — deux pages N2 mais même auteur et observation ; Google Education et bonus — plusieurs pages pour un même sujet, sans double comptage des actualités.",
+      "Cas Chili’s S42, Currys S43, bonus Fudan S43 et RoboDojo S44 conservés comme mémoire, pas comme nouveaux cas ou bonus S46."
+    ]
+  }
+}
