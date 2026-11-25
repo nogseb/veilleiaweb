@@ -1,0 +1,384 @@
+{
+  "week": 47,
+  "year": 2026,
+  "publicationDate": "2026-11-16",
+  "windowStart": "2026-11-09",
+  "windowEnd": "2026-11-16",
+  "domainsCount": 7,
+  "domainsTotal": 9,
+  "sourcesCount": 15,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "publisher": "Google",
+      "date": "2026-11-12",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_product_announcement; SUIVI; cited",
+      "opened": true,
+      "claims": [
+        "Google annonce la disponibilité mondiale de Gemini 4 Hydrogen dans Search pour tous les utilisateurs.",
+        "L’éditeur décrit une meilleure compréhension des questions multiparties, une recherche simultanée de sous-thèmes et des réponses plus visuelles avec davantage de liens."
+      ],
+      "limitations": [
+        "Annonce fournisseur sans mesure indépendante de trafic, de conversion ou d’efficacité pour une école.",
+        "La disponibilité annoncée ne prouve pas une interface identique pour chaque langue ou requête."
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.seroundtable.com/google-search-gemini-4-hydrogen-42526.html",
+      "title": "Google Search Gets Massive Upgrade With Gemini 4 Hydrogen",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-12",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_news; SUIVI; cited",
+      "opened": true,
+      "claims": [
+        "Le compte rendu reproduit l’annonce Google selon laquelle Hydrogen devient le modèle par défaut d’AI Mode et intervient pour les questions difficiles dans AI Overviews."
+      ],
+      "limitations": [
+        "Le statut précis de modèle par défaut est attribué à l’annonce Google reproduite par N2.",
+        "La source et le billet Google ne sont pas deux preuves indépendantes de performance."
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "title": "Introducing Businesses in ChatGPT",
+      "publisher": "OpenAI",
+      "date": "2026-11-10",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_beta_launch; SUIVI_S46; cited",
+      "opened": true,
+      "claims": [
+        "Businesses in ChatGPT est lancé en bêta le 10 novembre ; Business Hub permet aux entreprises éligibles de revendiquer et mettre à jour leurs informations.",
+        "Les indicateurs agrégés couvrent mentions, clics et thèmes de découverte ; ils ne sont disponibles qu’au-delà de seuils non chiffrés dans le billet.",
+        "Business Hub est ouvert aux entreprises éligibles là où ChatGPT est disponible ; les Business Agents démarrent séparément pour le commerce électronique et les services en ligne éligibles aux États-Unis."
+      ],
+      "limitations": [
+        "L’éligibilité sectorielle d’une école n’est pas établie.",
+        "Le billet ne publie ni seuil numérique des indicateurs ni preuve de résultat de recrutement.",
+        "Fait nouveau après l’observation du 6 novembre en S46 : lancement officiel en bêta, pas première découverte du sujet."
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
+      "title": "Businesses in ChatGPT Business Hub Live With Click Data",
+      "publisher": "Search Engine Roundtable",
+      "date": "2026-11-10",
+      "date_status": "initial_publication_date_verified; update_2026-11-18_excluded",
+      "level": "N2",
+      "editorial_status": "editorial_interface_observation; SUIVI_S46; cited",
+      "opened": true,
+      "claims": [
+        "Le journaliste décrit une revendication de profil effectuée et une interface comportant mentions, vues de profil et clics.",
+        "Le texte d’aide reproduit précise que les clics enregistrés ne confirment ni visite sur le site ni conversion."
+      ],
+      "limitations": [
+        "Observation d’interface, pas étude d’efficacité ; aucune donnée n’était encore disponible pour le journaliste à la publication.",
+        "L’ajout du 18 novembre est hors fenêtre et n’est pas utilisé."
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://www.searchenginejournal.com/ziff-davis-organic-google-referrals-decline/596279/",
+      "title": "Ziff Davis CEO: Not Planning On A Search Recovery",
+      "publisher": "Search Engine Journal",
+      "date": "2026-11-09",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N2",
+      "editorial_status": "editorial_methodological_analysis; cited",
+      "opened": true,
+      "claims": [
+        "L’analyse du 9 novembre distingue impressions des fonctionnalités IA et ensemble des clics Search.",
+        "Comparer les impressions IA à tous les clics Search ne permet pas de calculer un taux de clic propre à l’IA."
+      ],
+      "limitations": [
+        "Les déclarations chiffrées de Ziff Davis du 6 novembre sont hors fenêtre et ne sont pas republiées.",
+        "L’observation documentaire arrêtée au 8 novembre ne prouve pas l’état de Search Console au 16 novembre.",
+        "Aucune causalité de baisse du trafic due à l’IA seule n’est démontrée."
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://support.google.com/webmasters/answer/16984139",
+      "title": "Generative AI performance report — Search",
+      "publisher": "Google Search Console",
+      "date": null,
+      "date_status": "undated_support_document; consulted_2026-11-25; not_weekly_news",
+      "level": "N1",
+      "editorial_status": "support_document_only_for_analysis_2026-11-09; cited",
+      "opened": true,
+      "claims": [
+        "Le rapport décrit les impressions des liens dans AI Overviews et AI Mode.",
+        "Les données proviennent du type de recherche Web du rapport Performance."
+      ],
+      "limitations": [
+        "Documentation évolutive sans date de publication visible, utilisée comme appui de définition uniquement.",
+        "La lecture du 25 novembre ne reconstitue pas l’état historique exact au 16 novembre ; aucun lancement de rapport n’est annoncé ici."
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://developers.google.com/search/blog/2026/11/crawling-cdn?hl=en",
+      "title": "Moving to a CDN without overwhelming your origin or blocking Googlebot",
+      "publisher": "Google Search Central",
+      "date": "2026-11-11",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_operational_guidance; SUIVI; cited",
+      "opened": true,
+      "claims": [
+        "Un cache initialement vide peut renvoyer les premières requêtes vers le serveur d’origine ; l’augmentation du rythme d’exploration est progressive et conditionnée à la demande.",
+        "Un défi automatique imposé aux robots vérifiés peut bloquer Googlebot et, s’il persiste, réduire l’exploration et la présence dans Search.",
+        "Google recommande un préchauffage maîtrisé, l’accueil des robots vérifiés souhaités et des réponses HTTP 429 ou 503 pour quelques heures ou 1 à 2 jours au maximum en cas de surcharge."
+      ],
+      "limitations": [
+        "Publication pédagogique, pas nouvelle fonctionnalité ou nouveau déploiement.",
+        "Ne décrit pas le comportement de tous les robots IA et ne prouve aucun gain de référencement."
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.drupal.org/sa-contrib-2026-338",
+      "title": "Avis SA-CONTRIB-2026-338 — File Resumable Upload",
+      "publisher": "Drupal.org",
+      "date": "2026-11-11",
+      "date_status": "advisory_date_verified_on_individual_page",
+      "level": "N1",
+      "editorial_status": "official_contributed_project_advisory; solution_read_in_browser_after_fetch_failure; cited",
+      "opened": true,
+      "claims": [
+        "Un défaut de contrôle d’accès permet à une personne non authentifiée de commencer des téléversements non autorisés et de stocker des données partielles.",
+        "Les données partielles ne sont pas exécutables et leur rattachement au contenu conserve les contrôles du formulaire normal.",
+        "Un correctif est indiqué dans la solution de l’avis individuel ; l’exploitation est qualifiée de théorique et le risque de modérément critique."
+      ],
+      "limitations": [
+        "Composant contribué, pas cœur Drupal ; présence effective à vérifier en privé.",
+        "La publication ne démontre pas une exploitation active ni une correction installée dans une école."
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.drupal.org/sa-contrib-2026-327",
+      "title": "Avis SA-CONTRIB-2026-327 — Entity Print",
+      "publisher": "Drupal.org",
+      "date": "2026-11-11",
+      "date_status": "advisory_date_verified_on_individual_page",
+      "level": "N1",
+      "editorial_status": "official_contributed_project_advisory; solution_read_in_browser_after_fetch_failure; cited",
+      "opened": true,
+      "claims": [
+        "Un export PDF chargeant des ressources tierces peut transmettre des données privées de session et d’authentification au serveur tiers.",
+        "Une exploitation délibérée requiert la capacité à créer ou modifier du contenu autorisant des images ou feuilles de style de sites arbitraires.",
+        "L’avis fournit un correctif et une atténuation par désactivation du chargement d’adresses distantes ; l’exploitation est qualifiée de théorique."
+      ],
+      "limitations": [
+        "Composant contribué, pas cœur Drupal ; aucune exposition d’une école n’est déduite.",
+        "Ni ampleur d’exploitation ni déploiement de remédiation ne sont établis."
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://support.google.com/analytics/answer/9164320?hl=en",
+      "title": "What’s new in Google Analytics — diagnostic du 11 novembre",
+      "publisher": "Google Analytics",
+      "date": "2026-11-11",
+      "date_status": "dated_release_entry_verified_on_page",
+      "level": "N1",
+      "editorial_status": "official_product_release_entry; cited",
+      "opened": true,
+      "claims": [
+        "Google annonce le lancement d’un diagnostic des problèmes de collecte de données fournies par les utilisateurs.",
+        "Les alertes d’absence de réception ou de qualité apparaissent dans Administration et Flux de données."
+      ],
+      "limitations": [
+        "Outil de diagnostic, pas nouveau modèle d’attribution ni preuve de conformité.",
+        "Data Manager du 6 novembre et les compétences Firebase du 18 novembre ne sont pas retenus."
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://support.google.com/analytics/answer/17141398?hl=en",
+      "title": "Troubleshoot diagnostics for user-provided data collection",
+      "publisher": "Google Analytics",
+      "date": null,
+      "date_status": "undated_support_document; consulted_in_english_2026-11-25",
+      "level": "N1",
+      "editorial_status": "support_document_for_dated_launch_2026-11-11; cited",
+      "opened": true,
+      "claims": [
+        "La documentation distingue absence de données malgré l’activation et proportion insuffisante d’informations identifiantes.",
+        "Elle aide à repérer un défaut de méthode ou de formatage de la collecte."
+      ],
+      "limitations": [
+        "Page non datée : pas une deuxième actualité, ni preuve de l’état historique exact de tous ses détails.",
+        "Les incitations du fournisseur à accroître la collecte ne deviennent pas des recommandations pour une école."
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "title": "Claude Fable 5.2 and Mythos 5.2 — accès et conservation",
+      "publisher": "Anthropic",
+      "date": "2026-11-09",
+      "date_status": "publication_date_verified_on_page; edit_2026-11-11_unrelated_to_retained_claims",
+      "level": "N1",
+      "editorial_status": "official_model_announcement; no_benchmarks_published; cited",
+      "opened": true,
+      "claims": [
+        "Fable est annoncé disponible sur les plateformes indiquées ; l’accès direct à Mythos passe par les programmes de vérification en cybersécurité ou sciences du vivant.",
+        "Enterprise Frontier Safeguards est en bêta privée et exécute la surveillance sur les requêtes et réponses stockées dans l’infrastructure du client.",
+        "L’éditeur le présente comme compatible avec la zéro rétention de données, dite ZDR ; les clients éligibles peuvent continuer en ZDR avant la mise en œuvre du dispositif.",
+        "Pour les autres clients, Anthropic annonce 30 jours de conservation pour la surveillance de sécurité."
+      ],
+      "limitations": [
+        "Ce délai ne décrit pas nécessairement toutes les finalités de conservation.",
+        "Annonce fournisseur, pas garantie contractuelle universelle ni validation indépendante de sécurité.",
+        "Aucun benchmark, score, témoignage de performance ni gain mesuré n’est publié dans cette édition."
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://news.linkedin.com/2026/linkedin-expands-ctv-ads-to-the-uk",
+      "title": "LinkedIn Expands CTV Ads to the UK",
+      "publisher": "LinkedIn",
+      "date": "2026-11-12",
+      "date_status": "publication_date_verified_in_original_html_time_datetime_2026-11-12",
+      "level": "N1",
+      "editorial_status": "official_advertising_availability_announcement; cited",
+      "opened": true,
+      "claims": [
+        "LinkedIn annonce l’extension de ses publicités de télévision connectée au Royaume-Uni.",
+        "Le ciblage professionnel porte sur fonction, secteur et niveau de responsabilité ; les clients internationaux peuvent cibler les États-Unis, le Canada et le Royaume-Uni."
+      ],
+      "limitations": [
+        "La publication ne documente pas de ciblage de télévision connectée en France.",
+        "Les chiffres commerciaux de campagnes passées ne sont pas des preuves causales ou des objectifs pour une école ; aucun n’est repris."
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://news.fnal.gov/2026/11/fermilab-ibm-and-nvidia-plan-modular-quantum-computing-co-design-platform-to-advance-scientific-discovery/",
+      "title": "Fermilab, IBM and NVIDIA plan modular quantum computing co-design platform to advance scientific discovery",
+      "publisher": "Fermilab",
+      "date": "2026-11-16",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "primary_project_announcement; bonus_only; cited",
+      "opened": true,
+      "claims": [
+        "Fermilab, IBM et NVIDIA annoncent leur intention de créer une plateforme de co-conception quantique modulaire associant processeurs quantiques et calcul accéléré.",
+        "Les communications entre modules, leurs erreurs et leur latence seraient d’abord modélisées et émulées avant de guider des connexions physiques."
+      ],
+      "limitations": [
+        "Projet annoncé, pas plateforme déployée ni ordinateur tolérant aux fautes déjà disponible.",
+        "Source partenaire institutionnelle, sans validation indépendante des résultats futurs."
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://newsroom.ibm.com/2026-11-16-ibm,-fermilab,-and-nvidia-announce-plans-for-new-co-design-platform-to-accelerate-the-development-of-next-generation,-modular-quantum-computers",
+      "title": "IBM, Fermilab, and NVIDIA Announce Plans for a Modular Quantum Co-Design Platform",
+      "publisher": "IBM",
+      "date": "2026-11-16",
+      "date_status": "publication_date_verified_on_page",
+      "level": "N1",
+      "editorial_status": "partner_project_announcement; bonus_only; cited",
+      "opened": true,
+      "claims": [
+        "IBM confirme le même projet de collaboration modulaire avec Fermilab et NVIDIA."
+      ],
+      "limitations": [
+        "Partenaire industriel du même projet : pas une preuve indépendante.",
+        "Les performances matérielles, l’intégration Slurm et les simulations moléculaires sont des faits distincts non retenus dans le bonus."
+      ]
+    }
+  ],
+  "maskedDomains": [
+    {
+      "id": 5,
+      "domain": "Data first-party, consentement, navigateurs",
+      "domainName": "Data first-party, consentement, navigateurs",
+      "status": "MASQUÉ",
+      "reason": "Aucun sujet suffisamment qualifié après les trois requêtes de la collecte limitée ; masquage maintenu pour S47, sans conclusion d’absence exhaustive d’actualité.",
+      "queries": [
+        "CNIL consentement cookies Digital Omnibus navigateurs 9 16 novembre 2026",
+        "TechCrunch The Verge 404 Media browser privacy cookies consent November 9 16 2026",
+        "European Commission EDPB Mozilla Apple Chrome privacy consent Digital Omnibus November 9 16 2026"
+      ]
+    },
+    {
+      "id": 7,
+      "domain": "UX conversationnelle et web agentique",
+      "domainName": "UX conversationnelle et web agentique",
+      "status": "MASQUÉ",
+      "reason": "Aucun sujet suffisamment qualifié après les trois requêtes de la collecte limitée ; masquage maintenu pour S47, sans conclusion d’absence exhaustive d’actualité.",
+      "queries": [
+        "agents navigateurs commerce agentique MCP A2A novembre 2026 9 16",
+        "TechCrunch The Verge 404 Media AI browser agents agentic commerce November 9 16 2026",
+        "Google OpenAI Anthropic official agent browser MCP A2A AP2 November 9 16 2026"
+      ]
+    }
+  ],
+  "audit": {
+    "excluded": [
+      "https://www.seroundtable.com/video-11-13-2026-42523.html — récapitulatif sponsorisé, non retenu comme preuve.",
+      "https://www.seroundtable.com/recap-11-13-2026-42531.html — récapitulatif d’orientation redondant.",
+      "https://searchengineland.com/chatgpt-citation-drops-unannounced-google-core-updates-501912 — reprise d’observations anciennes d’un fournisseur ; aucune donnée nouvelle de la fenêtre retenue.",
+      "https://www.seroundtable.com/recap-11-09-2026-42485.html — orientation redondante.",
+      "https://www.seroundtable.com/chatgpt-tools-for-business-42476.html — observation du 6 novembre rattachée à S46 ; ajout « now live » non daté, non utilisé pour dater le lancement.",
+      "https://www.cloudflare.com/press/press-releases/2026/cloudflare-helps-end-the-search-or-ai-training-tradeoff/ — publication du 15 septembre, hors fenêtre.",
+      "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/ — publication de juillet, hors fenêtre.",
+      "https://developers.google.com/search/news — index de repérage, pas une source supplémentaire de la carte CDN.",
+      "https://www.drupal.org/security — index ouvert et relu, remplacé pour les faits retenus par les avis individuels ; annonce du 16 novembre réservée à S48.",
+      "https://www.php.net/ — fetch du 25 novembre : candidate de test du 12 novembre, non destinée à la production ; publications de sécurité des 18 et 19 novembre hors fenêtre.",
+      "https://wordpress.org/news/ — fetch du 25 novembre : Reprint repéré au 13 novembre, pas de fait de sécurité établi par la seule entrée ; publications des 17 et 18 novembre hors fenêtre.",
+      "https://www.cert.ssi.gouv.fr/ — fetch du 25 novembre : redirection au portail CERT-FR, bulletins des 9 et 16 novembre seulement repérés ; leur contenu n’est pas une preuve lue ; alertes visibles des 18 novembre hors fenêtre.",
+      "https://consultant-analytics-rk.fr/blog/digital-omnibus-tracking/ — commentaire commercial, texte primaire non établi et mandat d’octobre déjà traité en S44.",
+      "https://www.edpb.europa.eu/documents/legislative-opinion/edpb-edps-joint-opinion-22026-on-the-proposal-for-a-regulation-as_en — rouvert : 11 février, hors fenêtre.",
+      "https://www.edpb.europa.eu/documents/guideline/guidelines-12024-on-processing-of-personal-data-based-on-article-61f-gdpr_en — page primaire rouverte, datée du 10 novembre ; document téléchargeable non analysé, aucun changement juridique affirmé ; pas de carte selon le masquage demandé.",
+      "https://www.edpb.europa.eu/documents/edpb-correspondence/edpb-letter-to-the-european-commission-on-the-need-for-a-legal-basis_en — page primaire rouverte, datée du 12 novembre ; échanges interrégulateurs, pas un fait de consentement web qualifié ; lettre non analysée.",
+      "https://www.cnil.fr/fr/cookies-traceurs-outils-et-codes-sources-0 — rouvert, ressource non datée de fond ; aucun fait hebdomadaire établi.",
+      "https://www.theverge.com/privacy — index seulement ; décision juridique primaire non lue, aucun montant ou constat repris.",
+      "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/ — lancement du 9 avril 2025 hors fenêtre.",
+      "https://techcrunch.com/tag/agentic-ai/ — index, aucune entrée thématique qualifiée dans la fenêtre.",
+      "https://techcrunch.com/tag/agentic-commerce/ — index ; annonce shopping du 13 novembre 2025, pas de 2026.",
+      "https://business.google.com/us/accelerate/announcements/ — annonces pertinentes antérieures à la fenêtre.",
+      "https://www.mcdonoughvoice.com/press-release/story/149190/media-challengers-and-analytic-route-release-joint-2026-ai-search-attribution-framework-to-help-marketers-track-user/ — communiqué payant du 18 novembre hors fenêtre.",
+      "https://www.anthropic.com/news — index de date redondant avec l’annonce substantielle rouverte.",
+      "https://alliancy.fr/agents-ia-une-main-doeuvre-numerique-deployee-partout-mais-encadree-presque-nulle-part-793f4418-4d4f-4889-ad80-fdacac85ab0c — date corrigée au 16 novembre dans la collecte, étude primaire non ouverte, média hors sélection N2 ; aucun chiffre repris.",
+      "https://techcrunch.com/tag/ai-agents/ — index, pas preuve des articles liés.",
+      "https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite — rouvert : publication du 8 novembre hors fenêtre, même si une disponibilité est annoncée pour le 9.",
+      "https://www.advertain.com/blog/social-media-marketing-news-13-november-2026 — newsletter commerciale de repérage, pas preuve autonome.",
+      "https://techcrunch.com/tag/advertising-20/ — index sans article visible qualifié dans la fenêtre.",
+      "https://newsroom.ibm.com/press-releases-research-and-innovation?l=25 — index de repérage ; annonces voisines hors fenêtre.",
+      "Exclusions d’URL AI Max dans Search Engine Land du 16 novembre et annonce Drupal du 16 novembre : réservées à S48, non utilisées.",
+      "Aucun cas d’école retenu : absence de KPI indépendant suffisamment vérifié ; aucun cas ancien réédité."
+    ],
+    "limits": [
+      "Les annonces sont distinguées des bêtas, projets, documentations et déploiements déclarés ; aucune efficacité indépendante n’est inférée.",
+      "Les deux pages de documentation non datées ont date null : la consultation ne vaut jamais date de publication ; elles soutiennent seulement des faits datés cités.",
+      "Les avis Drupal individuels ont été lus au navigateur après un fetch ne retournant qu’un message d’erreur ; corrections et atténuation sont documentées sans publier de configuration.",
+      "Le portail CERT-FR est contrôlé à l’index, pas de façon exhaustive dans ses archives ; aucun bulletin non lu n’est cité comme preuve.",
+      "Les 30 jours Anthropic concernent la surveillance de sécurité des clients hors modalités éligibles de zéro rétention de données, pas toutes les finalités.",
+      "Les contenus de LinkedIn, OpenAI, Google, Anthropic et IBM comportent un intérêt commercial ou institutionnel ; aucun résultat marketing ou benchmark n’est transposé à une école.",
+      "Les domaines 5 et 7 restent masqués sur instruction ; leurs trois requêtes sont conservées, sans affirmer une absence exhaustive d’actualité."
+    ],
+    "duplicates": [
+      "S43–S44 : accès des robots repris uniquement pour la publication opérationnelle CDN du 11 novembre ; pas de réédition du fond Schema.org ou robots.txt.",
+      "S43 : liens Google du 15 octobre conservés en mémoire ; suivi distinct du nouveau modèle Search du 12 novembre.",
+      "S43–S45 : avis du cœur Drupal, PHP2Shell, alerte CISA, WordPress et Commerce Core non réédités ; nouveaux avis d’extensions du 11 novembre seulement.",
+      "S46 : observation Business Hub du 6 novembre déjà traitée ; S47 est un SUIVI du lancement officiel bêta du 10 novembre, pas une ACTUALITÉ initiale.",
+      "S46 : Data Manager du 6 novembre, Guided Learning du 3 novembre et accès dots du 4 novembre ne sont pas réédités ; diagnostic Analytics du 11 novembre distinct.",
+      "S45 : consentement mobile, Adobe, Octoverse, NIST, annonces publicitaires IA, Pinterest et bonus commercial robotique non recyclés.",
+      "S46 : bonus Canadarm2 distinct de la plateforme quantique annoncée le 16 novembre ; Currys et les bonus S43–S45 restent des mémoires historiques."
+    ]
+  }
+}
