@@ -87,7 +87,7 @@
 - [x] Contrôler TypeScript, 37 tests et build.
 - [x] Contrôler les neuf analyses et le Bonus, mobile/desktop, clair/sombre.
 - [x] Sauvegarder le checkpoint et synchroniser la consolidation sur GitHub.
-- [ ] Publier S44 via WebDev après connexion du propriétaire, rendre l’archive S43 complète accessible et vérifier la production.
+- [x] Publier S44 via WebDev après connexion du propriétaire, rendre l’archive S43 complète accessible et vérifier la production.
 
 ## Aperçus de partage Teams — 26 octobre 2026
 
@@ -97,7 +97,7 @@
 - [x] Vérifier la conservation du texte dans les recadrages centrés 1:1, environ 1,25:1 et 1,90:1.
 - [x] Valider TypeScript, 44 tests unitaires, build et contrôles HTTP du build de production.
 - [x] Vérifier la navigation interne et la préservation de la charte, de la balise Google et du consentement.
-- [ ] Publier le checkpoint via WebDev puis vérifier les balises sur le domaine public ; aucune demande d’authentification.
+- [x] Publier le checkpoint via WebDev puis vérifier les balises sur le domaine public ; aucune demande d’authentification.
 
 ## S45 — 2 novembre 2026
 
@@ -107,4 +107,10 @@
 - [x] Intégrer S45 à l’accueil, archiver S44 avec mesure et Bonus, anonymiser les textes publics.
 - [x] Valider 50 tests, TypeScript, build, références, modales, filtres et responsive sans nouveau composant ni CSS.
 - [x] Créer le commit « veille: semaine W45 — 2026-11-02 », checkpoint d4b509ae et push main confirmé (d4b509a).
-- [ ] Publier via WebDev, puis vérifier S45 et S44 archivée : panneau redirigé vers la connexion, aucune authentification demandée ; S44 encore affichée en public après rendu JavaScript.
+- [x] Publier via WebDev, puis vérifier S45 et S44 archivée : panneau redirigé vers la connexion, aucune authentification demandée ; S44 encore affichée en public après rendu JavaScript. Constaté le 25 nov. 2026 : S45 en ligne sur veilleiaweb.digital.
+
+## Rattrapage S46–S48 et consolidation S48 (25 nov. 2026)
+- [x] S46 (8 domaines, 17 sources) et S47 (7 domaines, 15 sources) produites et archivées : commits 54e4f90 et 0592915.
+- [x] S48 consolidée ChatGPT, Claude et Manus (9 domaines, 27 sources) : commit c908912, GitHub main identique.
+- [x] TypeScript, 73 tests et build validés ; pages S48, S47 et S46 contrôlées ; index.css inchangé.
+- [x] Checkpoint c908912c remis au propriétaire pour publication avec le bouton Publier. À cette date, la production affiche encore S45 ; aucune authentification n'a été demandée.
