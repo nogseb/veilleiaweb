@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/editorial-motion.css";
+import "../styles/card-interactions.css";
 
 /**
  * Option A : trame décorative dessinée une fois, puis statique.

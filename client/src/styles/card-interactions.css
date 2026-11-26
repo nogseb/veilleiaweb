@@ -1,0 +1,65 @@
+/* Retour visuel commun aux cartes cliquables uniquement. */
+.viw-interactive-card {
+  --viw-card-accent: #FF4757;
+  --viw-card-hover-bg: #F5F4F0;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dark .viw-interactive-card { --viw-card-hover-bg: #2C2E33; }
+.viw-interactive-card.viw-card--bonus { --viw-card-hover-bg: #FFFFFF; }
+.dark .viw-interactive-card.viw-card--bonus { --viw-card-hover-bg: #2C2E33; }
+.dark .viw-interactive-card.viw-week-card { --viw-card-hover-bg: #1A1A1D; }
+
+.viw-interactive-card .viw-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.viw-interactive-card .viw-card-arrow {
+  display: inline-block;
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Aucun état hover collant sur écran tactile. */
+@media (hover: hover) and (pointer: fine) {
+  .viw-interactive-card:hover {
+    border-color: var(--viw-card-accent);
+    background-color: var(--viw-card-hover-bg);
+  }
+}
+
+.viw-interactive-card:focus-visible {
+  border-color: var(--viw-card-accent);
+  background-color: var(--viw-card-hover-bg);
+  outline: 2px solid var(--viw-card-accent);
+  outline-offset: -4px;
+  transition: none;
+}
+
+.viw-interactive-card:focus-visible .viw-card-arrow { transition: none; }
+
+/* Feedback de pression, y compris au toucher ; pas de déplacement de la carte. */
+.viw-interactive-card:active {
+  border-color: var(--viw-card-accent);
+  background-color: var(--viw-card-hover-bg);
+  transition: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) and (pointer: fine) {
+    .viw-interactive-card:hover .viw-card-arrow { transform: translateX(3px); }
+  }
+  .viw-interactive-card:focus-visible .viw-card-arrow { transform: translateX(3px); }
+  .viw-interactive-card:active .viw-card-arrow { transform: translateX(1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viw-interactive-card,
+  .viw-interactive-card .viw-card-arrow { transition: none; }
+  .viw-interactive-card .viw-card-arrow { transform: none !important; }
+}

@@ -5,6 +5,7 @@ import EditorialBackground from "@/components/EditorialBackground";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
 import AnalysisModal, { analysisLabel, type AnalysisContent } from "@/components/AnalysisModal";
+import { activateCardOnKey } from "@/lib/cardInteraction";
 
 const FILTER_CATEGORIES = ["TOUS", "IA", "SEO", "UX", "CDP", "ARCHI", "GOOGLE", "DATA", "MESURE", "INNOV MKT"] as const;
 
@@ -179,7 +180,12 @@ function DomaineCard({ domaine, onClick }: { domaine: AnalysisContent; onClick: 
 
   return (
     <div
-      className="bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-5 sm:p-8 cursor-pointer hover:border-[#0F0F10] dark:hover:border-[#888] transition-colors duration-150"
+      className="viw-interactive-card flex flex-col bg-white dark:bg-[#1A1A1D] border border-[#E5E2DC] dark:border-[#333] p-5 sm:p-8"
+      role="button"
+      tabIndex={0}
+      aria-haspopup="dialog"
+      aria-label={`Ouvrir l’analyse : ${domaine.titre}`}
+      onKeyDown={activateCardOnKey}
       onClick={onClick}
     >
       <div className="flex items-start justify-between pb-4">
@@ -198,6 +204,7 @@ function DomaineCard({ domaine, onClick }: { domaine: AnalysisContent; onClick: 
       <p className="text-xs sm:text-sm text-[#8A8A8A] leading-relaxed">
         {domaine.description}
       </p>
+      <span className="viw-card-cta mt-auto pt-5 text-[10px] sm:text-xs tracking-[0.15em] uppercase text-[#FF4757]" aria-hidden="true">Ouvrir l’analyse <span className="viw-card-arrow">→</span></span>
     </div>
   );
 }
@@ -207,7 +214,12 @@ function BonusCard({ onClick }: { onClick: () => void }) {
 
   return (
     <article
-      className="col-span-2 sm:col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] cursor-pointer hover:border-[#FF4757] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)] transition-colors duration-150"
+      className="viw-interactive-card viw-card--bonus col-span-2 sm:col-span-1 bg-[#F5F4F0] dark:bg-[#1A1A1D] border border-[#0F0F10] dark:border-[#E5E2DC] p-5 sm:p-8 min-h-[280px] [background-image:repeating-linear-gradient(-45deg,rgba(15,15,16,0.08)_0,rgba(15,15,16,0.08)_1px,transparent_1px,transparent_8px)] dark:[background-image:repeating-linear-gradient(-45deg,rgba(245,244,240,0.12)_0,rgba(245,244,240,0.12)_1px,transparent_1px,transparent_8px)]"
+      role="button"
+      tabIndex={0}
+      aria-haspopup="dialog"
+      aria-label={`Ouvrir le bonus : ${bonus.titre}`}
+      onKeyDown={activateCardOnKey}
       onClick={onClick}
     >
       <div className="max-w-[calc(50%-0.25rem)] sm:max-w-md">
@@ -218,7 +230,7 @@ function BonusCard({ onClick }: { onClick: () => void }) {
         <div className="text-5xl leading-none tracking-tight text-[#FF4757] pb-2">{bonus.chiffre}</div>
         <p className="text-[10px] tracking-[0.15em] uppercase text-[#2C2E33] dark:text-[#E5E2DC] pb-4">{bonus.statLabel}</p>
         <h3 className="text-base sm:text-xl uppercase tracking-[0.02em] text-[#0F0F10] dark:text-[#F5F4F0] pb-5 leading-tight">{bonus.titre}</h3>
-        <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">OUVRIR LE BONUS →</span>
+        <span className="viw-card-cta text-xs tracking-[0.15em] uppercase text-[#FF4757]" aria-hidden="true">OUVRIR LE BONUS <span className="viw-card-arrow">→</span></span>
       </div>
     </article>
   );

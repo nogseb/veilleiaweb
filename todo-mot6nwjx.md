@@ -137,4 +137,10 @@ Validation : 178 tests, TypeScript et build verts. 38 cartes 2026 vérifiées en
 - [x] Conserver les contenus, routes, modales, header, CSS global et balises de mesure ; dessin sans boucle terminé après environ deux secondes.
 - [x] Valider TypeScript, 188 tests dont 10 nouveaux tests dédiés, build et arrêt de la trame avec reduced-motion.
 - [x] Contrôler les cartes annuelles (38 liens), le header et le menu mobile ; recette clair/sombre sur la copie de préparation conservée hors dépôt.
-- [ ] Publier le checkpoint WebDev et vérifier l’option A sur veilleiaweb.digital. Le panneau navigateur redirige vers la connexion ; aucune demande d’authentification n’est faite.
+- [x] Publier le checkpoint WebDev et vérifier l’option A sur veilleiaweb.digital : notification réussie et contrôle public du 26 novembre, SVG présent, 38 cartes et assets du build 0d03629 confirmés.
+
+## Retour visuel des cartes renforcé (26 novembre 2026)
+- [x] Étendre le survol aux analyses de l’accueil et des archives, au Bonus et aux cartes annuelles : bordure rouge, fond adapté au thème et flèche +3 px en 180 ms.
+- [x] Ajouter focus et activation Enter/Espace aux cartes de modales ; feedback tactile, pas de zoom ni d’ombre, hachures Bonus conservées.
+- [x] Valider TypeScript, 195 tests dont sept nouveaux tests d’interaction, build et contrôles hover, modales, clavier et toucher en clair/sombre.
+- [x] Préparer la version validée pour un nouveau checkpoint WebDev ; l’ancienne option A est en production, le survol renforcé doit être publié depuis ce nouveau checkpoint.
