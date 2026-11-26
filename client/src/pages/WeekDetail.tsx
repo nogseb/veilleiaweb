@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useParams, useLocation } from "wouter";
 import { allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
+import EditorialBackground from "@/components/EditorialBackground";
 import type { ArchiveEdition } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
@@ -157,8 +158,9 @@ export default function WeekDetail() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
+    <div className="viw-editorial-page min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
       <Header activePage="archives" />
+      <EditorialBackground />
 
       <div className="container">
         {/* Navigation retour */}

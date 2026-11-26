@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { veilleS48 as veilleData } from "../data/veille-s48";
 import { Header, Footer } from "@/components/Layout";
+import EditorialBackground from "@/components/EditorialBackground";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { trackGa4Engagement } from "@/lib/ga4";
 import AnalysisModal, { analysisLabel, type AnalysisContent } from "@/components/AnalysisModal";
@@ -464,8 +465,9 @@ function TendancesPassees() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
+    <div className="viw-editorial-page min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
       <Header activePage="home" />
+      <EditorialBackground />
       <div className="container">
         <Metadata />
         <HeroTitle />

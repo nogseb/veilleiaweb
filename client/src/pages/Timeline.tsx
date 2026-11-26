@@ -1,4 +1,5 @@
 import { Header, Footer } from "@/components/Layout";
+import EditorialBackground from "@/components/EditorialBackground";
 import { allArchives } from "@/data/archives";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { compareEditions, editionKey, editionPath } from "../../../shared/editionIdentity";
@@ -100,8 +101,9 @@ export default function Timeline() {
   useFirstPartyAnalytics({ route: "timeline" });
 
   return (
-    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] transition-colors duration-200">
+    <div className="viw-editorial-page min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] transition-colors duration-200">
       <Header activePage="timeline" />
+      <EditorialBackground />
       <main className="pt-14">
         <div className="container py-16">
           {/* Titre */}

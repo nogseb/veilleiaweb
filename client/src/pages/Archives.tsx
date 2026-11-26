@@ -1,5 +1,6 @@
 import { archives as allArchives } from "@/data/archives";
 import { Header, Footer } from "@/components/Layout";
+import EditorialBackground from "@/components/EditorialBackground";
 import { useFirstPartyAnalytics } from "@/hooks/useFirstPartyAnalytics";
 import { createSingleEventGuard, trackGa4ArchivesView } from "@/lib/ga4";
 import { useCallback, useEffect, useRef } from "react";
@@ -42,8 +43,9 @@ export default function Archives() {
   if (params.year && !isAnnual) return <NotFound />;
 
   return (
-    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
+    <div className="viw-editorial-page min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
       <Header activePage="archives" />
+      <EditorialBackground />
       <main className="container pt-20 pb-16">
         {isAnnual && <a href="/archives" className="inline-block pb-6 text-xs tracking-[0.15em] uppercase text-[#FF4757] hover:underline">← Toutes les archives</a>}
         <div className="flex items-center gap-3 pb-4">
@@ -69,10 +71,10 @@ export default function Archives() {
         {isAnnual ? (
           editions.length ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" aria-label={`Éditions disponibles en ${yearRoute.year}`}>
-              {editions.map((edition) => {
+              {editions.map((edition, index) => {
                 const isCurrent = edition.year === latestEdition?.year && edition.week === latestEdition?.week;
                 return (
-                  <a key={editionKey(edition)} href={editionPath(edition)} aria-label={`Lire la veille semaine ${edition.week} de ${edition.year}`} onClick={() => track({ name: "archive_edition_open", week: edition.week, target: isCurrent ? "current_edition" : "archive_edition" })} className="group flex flex-col bg-white dark:bg-[#2C2E33] text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] p-6 hover:border-[#FF4757] dark:hover:border-[#FF4757] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF4757] transition-colors duration-150">
+                  <a key={editionKey(edition)} data-viw-reveal={index < 4 ? "true" : undefined} data-viw-delay={index < 4 ? index : undefined} href={editionPath(edition)} aria-label={`Lire la veille semaine ${edition.week} de ${edition.year}`} onClick={() => track({ name: "archive_edition_open", week: edition.week, target: isCurrent ? "current_edition" : "archive_edition" })} className="viw-week-card group flex flex-col bg-white dark:bg-[#2C2E33] text-[#0F0F10] dark:text-[#F5F4F0] border border-[#E5E2DC] dark:border-[#333] p-6 hover:border-[#FF4757] dark:hover:border-[#FF4757] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF4757] transition-colors duration-150">
                     <div className="flex items-center justify-between gap-2 pb-5">
                       <span className="text-[10px] tracking-[0.15em] uppercase">SEMAINE {edition.week} — {edition.year}</span>
                       {isCurrent && <span className="px-2 py-0.5 text-[10px] tracking-[0.05em] bg-[#FF4757] text-white">ACTUELLE</span>}
@@ -84,7 +86,7 @@ export default function Archives() {
                       <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] tracking-[0.1em] uppercase text-[#8A8A8A] pb-4">
                         <span>{edition.domainsCount} domaines</span><span>{edition.sourcesCount} sources</span>
                       </div>
-                      <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">Lire la veille →</span>
+                      <span className="text-xs tracking-[0.15em] uppercase text-[#FF4757]">Lire la veille <span className="viw-card-arrow" aria-hidden="true">→</span></span>
                     </div>
                   </a>
                 );

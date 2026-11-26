@@ -1,0 +1,159 @@
+/* Veille IA & Web — option A. Préfixe viw- pour ne pas modifier la charte globale. */
+.viw-editorial-page {
+  position: relative;
+  isolation: isolate;
+  --viw-accent: #FF4757;
+  --viw-trame-color: #8A8A8A;
+  --viw-trame-opacity: 0.22;
+  --viw-accent-opacity: 0.52;
+}
+
+.dark .viw-editorial-page {
+  --viw-trame-color: #8A8A8A;
+  --viw-trame-opacity: 0.27;
+  --viw-accent-opacity: 0.58;
+}
+
+/* Derrière le contenu, mais au-dessus du fond du parent isolé.
+   Pas de position fixed, pas de parallax, aucun effet sur le header ou les modales. */
+.viw-editorial-bg {
+  position: absolute;
+  inset: 56px 0 auto;
+  height: 520px;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: paint;
+}
+
+.viw-editorial-svg {
+  position: absolute;
+  top: 18px;
+  right: max(0px, calc((100% - 1440px) / 2));
+  width: min(650px, 46vw);
+  height: auto;
+  display: block;
+  stroke-width: 1;
+  stroke-linecap: butt;
+  shape-rendering: geometricPrecision;
+}
+
+/* L’état de base est visible et statique, même sans animation disponible. */
+.viw-trame-line {
+  stroke: var(--viw-trame-color);
+  opacity: var(--viw-trame-opacity);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  vector-effect: non-scaling-stroke;
+}
+
+.viw-trame-accent {
+  stroke: var(--viw-accent);
+  opacity: var(--viw-accent-opacity);
+  vector-effect: non-scaling-stroke;
+}
+
+.viw-week-card {
+  transition: border-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.viw-week-card:focus-visible {
+  border-color: var(--viw-accent, #FF4757);
+  outline: 2px solid var(--viw-accent, #FF4757);
+  outline-offset: 4px;
+  /* La navigation au clavier reste immédiate. */
+  animation: none !important;
+  transition: none;
+}
+
+.viw-card-arrow {
+  display: inline-block;
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.viw-week-card:focus-visible .viw-card-arrow { transition: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  .viw-week-card:hover { border-color: var(--viw-accent, #FF4757); }
+}
+
+@media (max-width: 767px) {
+  .viw-editorial-bg { height: 260px; }
+  .viw-editorial-svg { top: 12px; right: -22px; width: 260px; }
+  .viw-trame-line--4,
+  .viw-trame-line--5 { display: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Cinq traits seulement : animation SVG ponctuelle, sans boucle.
+     Le dernier trait finit à 1 990 ms ; le segment rouge finit à 1 900 ms. */
+  .viw-trame-line {
+    animation: viw-trame-draw 1350ms cubic-bezier(0.23, 1, 0.32, 1) backwards;
+    animation-iteration-count: 1;
+  }
+  .viw-trame-line--2 { animation-delay: 160ms; }
+  .viw-trame-line--3 { animation-delay: 320ms; }
+  .viw-trame-line--4 { animation-delay: 480ms; }
+  .viw-trame-line--5 { animation-delay: 640ms; }
+  .viw-trame-accent {
+    animation: viw-trame-accent-in 350ms ease-out 1550ms backwards;
+    animation-iteration-count: 1;
+  }
+
+  /* Seulement la première rangée visible à l’ouverture :
+     1 carte mobile, 2 cartes tablette, 4 cartes desktop.
+     Pas d’IntersectionObserver et pas de cascade sur toutes les éditions. */
+  .viw-week-card[data-viw-reveal="true"][data-viw-delay="0"] {
+    animation: viw-card-enter 200ms cubic-bezier(0.23, 1, 0.32, 1) backwards;
+  }
+
+  .viw-week-card:focus-visible .viw-card-arrow { transform: translateX(3px); }
+
+  @media (hover: hover) and (pointer: fine) {
+    .viw-week-card:hover .viw-card-arrow { transform: translateX(3px); }
+  }
+
+  @media (min-width: 768px) {
+    .viw-week-card[data-viw-reveal="true"][data-viw-delay="1"] {
+      animation: viw-card-enter 200ms cubic-bezier(0.23, 1, 0.32, 1) 50ms backwards;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .viw-week-card[data-viw-reveal="true"][data-viw-delay="1"] { animation-delay: 30ms; }
+    .viw-week-card[data-viw-reveal="true"][data-viw-delay="2"] {
+      animation: viw-card-enter 200ms cubic-bezier(0.23, 1, 0.32, 1) 60ms backwards;
+    }
+    .viw-week-card[data-viw-reveal="true"][data-viw-delay="3"] {
+      animation: viw-card-enter 200ms cubic-bezier(0.23, 1, 0.32, 1) 90ms backwards;
+    }
+  }
+}
+
+@keyframes viw-trame-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes viw-trame-accent-in {
+  from { opacity: 0; }
+  to { opacity: var(--viw-accent-opacity); }
+}
+
+@keyframes viw-card-enter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viw-trame-line,
+  .viw-trame-accent,
+  .viw-week-card {
+    animation: none !important;
+  }
+  .viw-trame-line { stroke-dashoffset: 0; }
+  .viw-week-card,
+  .viw-card-arrow { transition: none; }
+  .viw-card-arrow { transform: none !important; }
+}

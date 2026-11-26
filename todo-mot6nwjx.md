@@ -130,3 +130,11 @@ Contrôle final : 116 tests, TypeScript et build valides ; 38 éditions vérifi�
 - [x] Synchroniser GitHub main et créer le checkpoint WebDev prêt à publier.
 
 Validation : 178 tests, TypeScript et build verts. 38 cartes 2026 vérifiées en clair/sombre et mobile ; années sans édition en HTTP 200 avec noindex ; /2026 redirigé vers /2026/ en 301.
+
+## Option A — trame éditoriale et cartes (26 novembre 2026)
+- [x] Intégrer le SVG inline et le CSS préfixé viw- sur l’accueil, les archives, les éditions disponibles, À propos et Timeline.
+- [x] Ajouter bordure de survol, focus clavier et flèche +3 px aux cartes annuelles ; apparition limitée à la première rangée responsive.
+- [x] Conserver les contenus, routes, modales, header, CSS global et balises de mesure ; dessin sans boucle terminé après environ deux secondes.
+- [x] Valider TypeScript, 188 tests dont 10 nouveaux tests dédiés, build et arrêt de la trame avec reduced-motion.
+- [x] Contrôler les cartes annuelles (38 liens), le header et le menu mobile ; recette clair/sombre sur la copie de préparation conservée hors dépôt.
+- [ ] Publier le checkpoint WebDev et vérifier l’option A sur veilleiaweb.digital. Le panneau navigateur redirige vers la connexion ; aucune demande d’authentification n’est faite.

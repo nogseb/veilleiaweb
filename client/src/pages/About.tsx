@@ -1,9 +1,11 @@
 import { Header, Footer } from "@/components/Layout";
+import EditorialBackground from "@/components/EditorialBackground";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
+    <div className="viw-editorial-page min-h-screen bg-[#F5F4F0] dark:bg-[#0F0F10] overflow-x-hidden">
       <Header activePage="about" />
+      <EditorialBackground />
       <div className="container pt-20 pb-16">
         <div className="flex items-center gap-3 pb-4">
           <div className="w-12 h-px bg-[#FF4757]" />
